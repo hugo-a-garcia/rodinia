@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="be.kuleuven.rodinia.dsl.datatypes.sdk"
+	label="Datatypes SDK Feature "
+	version="1.0.0.qualifier">
+	<plugin
+			id="be.kuleuven.rodinia.dsl.datatypes"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+	<plugin
+			id="be.kuleuven.rodinia.dsl.datatypes.ui"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+</feature>
