@@ -1,0 +1,42 @@
+grammar be.kuleuven.rodinia.dsl.datatypes.Datatypes with org.eclipse.xtext.common.Terminals
+
+generate datatypes "http://www.kuleuven.be/rodinia/dsl/datatypes/Datatypes"
+
+Domainmodel:
+		(elements+=AbstractElement)*;
+
+QualifiedName:
+  ID ('.' ID)*
+;
+
+QualifiedNameWithWildcard:
+  QualifiedName '.*'?
+;
+
+AbstractElement:
+	DataTypeLibrary | DataType | Import;
+	
+DataTypeLibrary:
+	'DataTypeLibrary' name=QualifiedName
+	'{'
+		(elements+=AbstractElement)*
+	'}';
+
+Import:
+  'import' importedNamespace = QualifiedNameWithWildcard
+;
+
+DataType:
+	SimpleType | CustomType;
+
+SimpleType:
+	'SimpleType' name=ID;
+
+CustomType:
+	'CustomType' name=ID ('superType' superType=[CustomType|QualifiedName])?
+		('fields' '{' fields+=Field ( "," fields+=Field)* '}' )?;
+
+Field:
+	(many?='many')? name=ID ':' type=[DataType|QualifiedName];	
+
+
