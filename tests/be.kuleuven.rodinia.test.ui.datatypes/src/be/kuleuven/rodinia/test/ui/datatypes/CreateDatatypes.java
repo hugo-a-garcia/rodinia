@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;
+import org.eclipse.swtbot.eclipse.finder.widgets.SWTBotEclipseEditor;
+import org.eclipse.swtbot.eclipse.finder.widgets.SWTBotEditor;
 import org.eclipse.swtbot.swt.finder.junit.SWTBotJunit4ClassRunner;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotShell;
 import org.junit.AfterClass;
@@ -45,6 +47,15 @@ public class CreateDatatypes {
 		bot.button("Yes").click();
 		// FIXME: assert that the project is actually created, for later
 	}
+	
+	@Test
+	public void addSomeTextToTheEditor() throws Exception {
+		SWTBotEditor editor = bot.editorByTitle("test_datatypes.datatypes");
+		SWTBotEclipseEditor editor2 = editor.toTextEditor();
+		editor2.setText("DataTypeLibrary one {}");
+		editor.save();
+	}
+	
  
 	@AfterClass
 	public static void sleep() {
