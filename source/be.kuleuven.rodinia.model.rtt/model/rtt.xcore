@@ -1,0 +1,12 @@
+package be.kueleuven.rodinia.model.rtt
+
+class Package {
+	String name
+	contains resolving TaskContext[] taskContexts
+}
+
+class TaskContext {
+	String [1] name
+	String [1] namespace
+	String [1] ^type = ""
+}
