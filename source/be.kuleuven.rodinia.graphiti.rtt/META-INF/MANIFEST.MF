@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Rtt Graphiti
+Bundle-SymbolicName: be.kuleuven.rodinia.graphiti.rtt;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: be.kuleuven.rodinia.graphiti.rtt.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources;bundle-version="3.8.100",
+ org.eclipse.graphiti;bundle-version="0.10.0",
+ org.eclipse.graphiti.ui;bundle-version="0.10.0",
+ be.kuleuven.rodinia.model.rtt;bundle-version="0.1.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
