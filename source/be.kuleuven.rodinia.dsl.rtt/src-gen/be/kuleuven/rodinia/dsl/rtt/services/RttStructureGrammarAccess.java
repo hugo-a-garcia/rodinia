@@ -21,8 +21,8 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 	public class PackageElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Package");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cPackageAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cPackageKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Action cOrocosPackageAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cOrocosPackageKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
@@ -38,20 +38,20 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_4_4 = (Keyword)cGroup_4.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//Package:
-		//	{Package} "Package" name=EString "{" ("taskContexts" "{" taskContexts+=TaskContext ("," taskContexts+=TaskContext)*
-		//	"}")? "}";
+		//Package returns OrocosPackage:
+		//	{OrocosPackage} "OrocosPackage" name=EString "{" ("taskContexts" "{" taskContexts+=TaskContext (","
+		//	taskContexts+=TaskContext)* "}")? "}";
 		public ParserRule getRule() { return rule; }
 
-		//{Package} "Package" name=EString "{" ("taskContexts" "{" taskContexts+=TaskContext ("," taskContexts+=TaskContext)*
-		//"}")? "}"
+		//{OrocosPackage} "OrocosPackage" name=EString "{" ("taskContexts" "{" taskContexts+=TaskContext (","
+		//taskContexts+=TaskContext)* "}")? "}"
 		public Group getGroup() { return cGroup; }
 
-		//{Package}
-		public Action getPackageAction_0() { return cPackageAction_0; }
+		//{OrocosPackage}
+		public Action getOrocosPackageAction_0() { return cOrocosPackageAction_0; }
 
-		//"Package"
-		public Keyword getPackageKeyword_1() { return cPackageKeyword_1; }
+		//"OrocosPackage"
+		public Keyword getOrocosPackageKeyword_1() { return cOrocosPackageKeyword_1; }
 
 		//name=EString
 		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
@@ -215,9 +215,9 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//Package:
-	//	{Package} "Package" name=EString "{" ("taskContexts" "{" taskContexts+=TaskContext ("," taskContexts+=TaskContext)*
-	//	"}")? "}";
+	//Package returns OrocosPackage:
+	//	{OrocosPackage} "OrocosPackage" name=EString "{" ("taskContexts" "{" taskContexts+=TaskContext (","
+	//	taskContexts+=TaskContext)* "}")? "}";
 	public PackageElements getPackageAccess() {
 		return (pPackage != null) ? pPackage : (pPackage = new PackageElements());
 	}

@@ -1,5 +1,6 @@
 package be.kuleuven.rodinia.dsl.rtt.serializer;
 
+import be.kueleuven.rodinia.model.rtt.OrocosPackage;
 import be.kueleuven.rodinia.model.rtt.RttPackage;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
 import be.kuleuven.rodinia.dsl.rtt.services.RttStructureGrammarAccess;
@@ -25,9 +26,9 @@ public abstract class AbstractRttStructureSemanticSequencer extends AbstractDele
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == RttPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
-			case RttPackage.PACKAGE:
+			case RttPackage.OROCOS_PACKAGE:
 				if(context == grammarAccess.getPackageRule()) {
-					sequence_Package(context, (be.kueleuven.rodinia.model.rtt.Package) semanticObject); 
+					sequence_Package(context, (OrocosPackage) semanticObject); 
 					return; 
 				}
 				else break;
@@ -45,7 +46,7 @@ public abstract class AbstractRttStructureSemanticSequencer extends AbstractDele
 	 * Constraint:
 	 *     (name=EString (taskContexts+=TaskContext taskContexts+=TaskContext*)?)
 	 */
-	protected void sequence_Package(EObject context, be.kueleuven.rodinia.model.rtt.Package semanticObject) {
+	protected void sequence_Package(EObject context, OrocosPackage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

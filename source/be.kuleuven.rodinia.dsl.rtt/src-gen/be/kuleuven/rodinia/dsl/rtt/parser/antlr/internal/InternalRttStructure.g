@@ -80,12 +80,12 @@ rulePackage returns [EObject current=null]
 ((
     {
         $current = forceCreateModelElement(
-            grammarAccess.getPackageAccess().getPackageAction_0(),
+            grammarAccess.getPackageAccess().getOrocosPackageAction_0(),
             $current);
     }
-)	otherlv_1='Package' 
+)	otherlv_1='OrocosPackage' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getPackageAccess().getPackageKeyword_1());
+    	newLeafNode(otherlv_1, grammarAccess.getPackageAccess().getOrocosPackageKeyword_1());
     }
 (
 (

@@ -183,11 +183,11 @@ rule__Package__Group__0__Impl
     }
 :
 (
-{ before(grammarAccess.getPackageAccess().getPackageAction_0()); }
+{ before(grammarAccess.getPackageAccess().getOrocosPackageAction_0()); }
 (
 
 )
-{ after(grammarAccess.getPackageAccess().getPackageAction_0()); }
+{ after(grammarAccess.getPackageAccess().getOrocosPackageAction_0()); }
 )
 
 ;
@@ -214,11 +214,11 @@ rule__Package__Group__1__Impl
     }
 :
 (
-{ before(grammarAccess.getPackageAccess().getPackageKeyword_1()); }
+{ before(grammarAccess.getPackageAccess().getOrocosPackageKeyword_1()); }
 
-	'Package' 
+	'OrocosPackage' 
 
-{ after(grammarAccess.getPackageAccess().getPackageKeyword_1()); }
+{ after(grammarAccess.getPackageAccess().getOrocosPackageKeyword_1()); }
 )
 
 ;

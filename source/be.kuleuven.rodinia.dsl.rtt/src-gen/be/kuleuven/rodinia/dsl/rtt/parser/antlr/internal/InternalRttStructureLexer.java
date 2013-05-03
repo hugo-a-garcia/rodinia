@@ -47,10 +47,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:11:7: ( 'Package' )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:11:9: 'Package'
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:11:7: ( 'OrocosPackage' )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:11:9: 'OrocosPackage'
             {
-            match("Package"); 
+            match("OrocosPackage"); 
 
 
             }
@@ -840,32 +840,33 @@ public class InternalRttStructureLexer extends Lexer {
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
         "\1\uffff\1\21\1\uffff\1\21\2\uffff\2\21\1\17\2\uffff\3\17\2\uffff"+
-        "\1\21\2\uffff\2\21\2\uffff\2\21\5\uffff\7\21\1\52\4\21\1\uffff\6"+
-        "\21\1\65\3\21\1\uffff\5\21\1\76\2\21\1\uffff\1\21\1\102\1\103\2"+
-        "\uffff";
+        "\1\21\2\uffff\2\21\2\uffff\2\21\5\uffff\7\21\1\52\4\21\1\uffff\21"+
+        "\21\1\100\3\21\1\uffff\2\21\1\106\1\21\1\110\1\uffff\1\111\2\uffff";
     static final String DFA12_eofS =
-        "\104\uffff";
+        "\112\uffff";
     static final String DFA12_minS =
-        "\1\0\1\141\1\uffff\1\141\2\uffff\2\141\1\101\2\uffff\2\0\1\52\2"+
-        "\uffff\1\143\2\uffff\1\163\1\160\2\uffff\1\163\1\155\5\uffff\2\153"+
-        "\1\145\1\153\1\145\1\141\1\103\1\60\1\103\1\163\1\147\1\157\1\uffff"+
-        "\1\157\1\160\1\145\2\156\1\141\1\60\2\164\1\143\1\uffff\3\145\2"+
-        "\170\1\60\2\164\1\uffff\1\163\2\60\2\uffff";
+        "\1\0\1\162\1\uffff\1\141\2\uffff\2\141\1\101\2\uffff\2\0\1\52\2"+
+        "\uffff\1\157\2\uffff\1\163\1\160\2\uffff\1\163\1\155\5\uffff\1\143"+
+        "\1\153\1\145\1\153\1\145\1\157\1\103\1\60\1\103\2\163\1\157\1\uffff"+
+        "\1\157\1\160\1\120\2\156\2\141\2\164\2\143\3\145\1\153\2\170\1\60"+
+        "\1\141\2\164\1\uffff\1\147\1\163\1\60\1\145\1\60\1\uffff\1\60\2"+
+        "\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\141\1\uffff\1\171\2\uffff\2\141\1\172\2\uffff\2\uffff"+
-        "\1\57\2\uffff\1\143\2\uffff\1\163\1\160\2\uffff\1\163\1\155\5\uffff"+
-        "\2\153\1\145\1\153\1\145\1\141\1\103\1\172\1\103\1\163\1\147\1\157"+
-        "\1\uffff\1\157\1\160\1\145\2\156\1\141\1\172\2\164\1\143\1\uffff"+
-        "\3\145\2\170\1\172\2\164\1\uffff\1\163\2\172\2\uffff";
+        "\1\uffff\1\162\1\uffff\1\171\2\uffff\2\141\1\172\2\uffff\2\uffff"+
+        "\1\57\2\uffff\1\157\2\uffff\1\163\1\160\2\uffff\1\163\1\155\5\uffff"+
+        "\1\143\1\153\1\145\1\153\1\145\1\157\1\103\1\172\1\103\2\163\1\157"+
+        "\1\uffff\1\157\1\160\1\120\2\156\2\141\2\164\2\143\3\145\1\153\2"+
+        "\170\1\172\1\141\2\164\1\uffff\1\147\1\163\1\172\1\145\1\172\1\uffff"+
+        "\1\172\2\uffff";
     static final String DFA12_acceptS =
         "\2\uffff\1\2\1\uffff\1\4\1\5\3\uffff\1\11\1\12\3\uffff\1\16\1\17"+
         "\1\uffff\1\11\1\2\2\uffff\1\4\1\5\2\uffff\1\12\1\13\1\14\1\15\1"+
-        "\16\14\uffff\1\10\12\uffff\1\1\10\uffff\1\7\3\uffff\1\6\1\3";
+        "\16\14\uffff\1\10\25\uffff\1\7\5\uffff\1\6\1\uffff\1\3\1\1";
     static final String DFA12_specialS =
-        "\1\2\12\uffff\1\1\1\0\67\uffff}>";
+        "\1\0\12\uffff\1\2\1\1\75\uffff}>";
     static final String[] DFA12_transitionS = {
             "\11\17\2\16\2\17\1\16\22\17\1\16\1\17\1\13\4\17\1\14\4\17\1"+
-            "\4\2\17\1\15\12\12\7\17\17\11\1\1\3\11\1\6\6\11\3\17\1\10\1"+
+            "\4\2\17\1\15\12\12\7\17\16\11\1\1\4\11\1\6\6\11\3\17\1\10\1"+
             "\11\1\17\15\11\1\7\5\11\1\3\6\11\1\2\1\17\1\5\uff82\17",
             "\1\20",
             "",
@@ -915,22 +916,28 @@ public class InternalRttStructureLexer extends Lexer {
             "\1\62",
             "\1\63",
             "\1\64",
-            "\12\21\7\uffff\32\21\4\uffff\1\21\1\uffff\32\21",
+            "\1\65",
             "\1\66",
             "\1\67",
             "\1\70",
-            "",
             "\1\71",
             "\1\72",
             "\1\73",
             "\1\74",
             "\1\75",
-            "\12\21\7\uffff\32\21\4\uffff\1\21\1\uffff\32\21",
+            "\1\76",
             "\1\77",
-            "\1\100",
-            "",
-            "\1\101",
             "\12\21\7\uffff\32\21\4\uffff\1\21\1\uffff\32\21",
+            "\1\101",
+            "\1\102",
+            "\1\103",
+            "",
+            "\1\104",
+            "\1\105",
+            "\12\21\7\uffff\32\21\4\uffff\1\21\1\uffff\32\21",
+            "\1\107",
+            "\12\21\7\uffff\32\21\4\uffff\1\21\1\uffff\32\21",
+            "",
             "\12\21\7\uffff\32\21\4\uffff\1\21\1\uffff\32\21",
             "",
             ""
@@ -973,30 +980,10 @@ public class InternalRttStructureLexer extends Lexer {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA12_12 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_12>='\u0000' && LA12_12<='\uFFFF')) ) {s = 26;}
-
-                        else s = 15;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA12_11 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_11>='\u0000' && LA12_11<='\uFFFF')) ) {s = 26;}
-
-                        else s = 15;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
-                        if ( (LA12_0=='P') ) {s = 1;}
+                        if ( (LA12_0=='O') ) {s = 1;}
 
                         else if ( (LA12_0=='{') ) {s = 2;}
 
@@ -1012,7 +999,7 @@ public class InternalRttStructureLexer extends Lexer {
 
                         else if ( (LA12_0=='^') ) {s = 8;}
 
-                        else if ( ((LA12_0>='A' && LA12_0<='O')||(LA12_0>='Q' && LA12_0<='S')||(LA12_0>='U' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='m')||(LA12_0>='o' && LA12_0<='s')||(LA12_0>='u' && LA12_0<='z')) ) {s = 9;}
+                        else if ( ((LA12_0>='A' && LA12_0<='N')||(LA12_0>='P' && LA12_0<='S')||(LA12_0>='U' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='m')||(LA12_0>='o' && LA12_0<='s')||(LA12_0>='u' && LA12_0<='z')) ) {s = 9;}
 
                         else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 10;}
 
@@ -1025,6 +1012,26 @@ public class InternalRttStructureLexer extends Lexer {
                         else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 14;}
 
                         else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='+')||(LA12_0>='-' && LA12_0<='.')||(LA12_0>=':' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 15;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA12_12 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_12>='\u0000' && LA12_12<='\uFFFF')) ) {s = 26;}
+
+                        else s = 15;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA12_11 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_11>='\u0000' && LA12_11<='\uFFFF')) ) {s = 26;}
+
+                        else s = 15;
 
                         if ( s>=0 ) return s;
                         break;

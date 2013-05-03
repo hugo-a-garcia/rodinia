@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalRttStructureParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Package'", "'{'", "'}'", "'taskContexts'", "','", "'TaskContext'", "'namespace'", "'type'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'OrocosPackage'", "'{'", "'}'", "'taskContexts'", "','", "'TaskContext'", "'namespace'", "'type'"
     };
     public static final int RULE_ID=5;
     public static final int RULE_STRING=4;
@@ -431,13 +431,13 @@ public class InternalRttStructureParser extends AbstractInternalContentAssistPar
             // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:185:1: ( () )
             // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:186:1: ()
             {
-             before(grammarAccess.getPackageAccess().getPackageAction_0()); 
+             before(grammarAccess.getPackageAccess().getOrocosPackageAction_0()); 
             // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:187:1: ()
             // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:189:1: 
             {
             }
 
-             after(grammarAccess.getPackageAccess().getPackageAction_0()); 
+             after(grammarAccess.getPackageAccess().getOrocosPackageAction_0()); 
 
             }
 
@@ -494,21 +494,21 @@ public class InternalRttStructureParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Package__Group__1__Impl"
-    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:211:1: rule__Package__Group__1__Impl : ( 'Package' ) ;
+    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:211:1: rule__Package__Group__1__Impl : ( 'OrocosPackage' ) ;
     public final void rule__Package__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:215:1: ( ( 'Package' ) )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:216:1: ( 'Package' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:215:1: ( ( 'OrocosPackage' ) )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:216:1: ( 'OrocosPackage' )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:216:1: ( 'Package' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:217:1: 'Package'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:216:1: ( 'OrocosPackage' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:217:1: 'OrocosPackage'
             {
-             before(grammarAccess.getPackageAccess().getPackageKeyword_1()); 
+             before(grammarAccess.getPackageAccess().getOrocosPackageKeyword_1()); 
             match(input,11,FollowSets000.FOLLOW_11_in_rule__Package__Group__1__Impl389); 
-             after(grammarAccess.getPackageAccess().getPackageKeyword_1()); 
+             after(grammarAccess.getPackageAccess().getOrocosPackageKeyword_1()); 
 
             }
 

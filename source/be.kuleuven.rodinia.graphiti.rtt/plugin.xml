@@ -22,5 +22,19 @@
          </diagramType>
       </diagramTypeProvider>
    </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="be.kuleuven.rodinia.graphiti.rtt.category"
+            name="RTT">
+      </category>
+      <wizard
+            category="be.kuleuven.rodinia.graphiti.rtt.category"
+            class="be.kuleuven.rodinia.graphiti.rtt.wizards.NewRttStructuralDiagramWizard"
+            icon="icons/newfile_wiz.png"
+            id="be.kuleuven.rodinia.graphiti.rtt.wizard1"
+            name="New RTT Structural Graph">
+      </wizard>
+   </extension>
 
 </plugin>

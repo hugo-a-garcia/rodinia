@@ -22,9 +22,9 @@
   <modelPluginVariables>org.eclipse.emf.ecore.xcore.lib</modelPluginVariables>
   <genPackages prefix="Rtt" basePackage="be.kueleuven.rodinia.model" disposableProviderFactory="true"
       ecorePackage="rtt.ecore#/">
-    <genClasses ecoreClass="rtt.ecore#//Package">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//Package/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rtt.ecore#//Package/taskContexts"/>
+    <genClasses ecoreClass="rtt.ecore#//OrocosPackage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//OrocosPackage/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rtt.ecore#//OrocosPackage/taskContexts"/>
     </genClasses>
     <genClasses ecoreClass="rtt.ecore#//TaskContext">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//TaskContext/name"/>
