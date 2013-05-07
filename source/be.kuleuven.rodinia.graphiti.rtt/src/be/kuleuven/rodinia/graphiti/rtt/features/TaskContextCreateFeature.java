@@ -1,7 +1,5 @@
 package be.kuleuven.rodinia.graphiti.rtt.features;
 
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EcoreFactory;
 import org.eclipse.graphiti.features.IFeatureProvider;
 import org.eclipse.graphiti.features.context.ICreateContext;
 import org.eclipse.graphiti.features.impl.AbstractCreateFeature;
@@ -15,7 +13,7 @@ public class TaskContextCreateFeature extends AbstractCreateFeature {
 
 	private static final String TITLE = "Create Task Context";
 
-	private static final String USER_QUESTION = "Enter new Task Content name";
+	private static final String USER_QUESTION = "Enter new Task Context name";
 
 	public TaskContextCreateFeature(IFeatureProvider fp) {
 		super(fp, "TaskContext", TITLE);
@@ -28,28 +26,21 @@ public class TaskContextCreateFeature extends AbstractCreateFeature {
 
 	@Override
 	public Object[] create(ICreateContext context) {
-		// ask user for EClass name
-		String newClassName = Util.askString(TITLE, USER_QUESTION, "");
-		if (newClassName == null || newClassName.trim().length() == 0) {
+		String taskContentName = Util.askString(TITLE, USER_QUESTION, "");
+		if (taskContentName == null || taskContentName.trim().length() == 0) {
 			return EMPTY;
 		}
 
-		// create EClass
-
-		TaskContext newClass = RttFactory.eINSTANCE.createTaskContext();
-		//EClass newClass = EcoreFactory.eINSTANCE.createEClass();
-		// Add model element to resource.
-		// We add the model element to the resource of the diagram for
-		// simplicity's sake. Normally, a customer would use its own
-		// model persistence layer for storing the business model separately.
-		getDiagram().eResource().getContents().add(newClass);
-		newClass.setName(newClassName);
-
+		TaskContext taskContext = RttFactory.eINSTANCE.createTaskContext();
+		taskContext.setName(taskContentName);
+		taskContext.setNamespace("");
+		taskContext.setType("");
+        
 		// do the add
-		addGraphicalRepresentation(context, newClass);
+		addGraphicalRepresentation(context, taskContext);
 
 		// return newly created business object(s)
-		return new Object[] { newClass };
+		return new Object[] { taskContext };
 	}
 
 }

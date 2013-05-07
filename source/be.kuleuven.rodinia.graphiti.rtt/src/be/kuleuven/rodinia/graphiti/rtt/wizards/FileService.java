@@ -37,6 +37,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.transaction.RecordingCommand;
 import org.eclipse.emf.transaction.Transaction;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
@@ -45,6 +46,7 @@ import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipse.graphiti.mm.pictograms.PictogramLink;
 import org.eclipse.graphiti.mm.pictograms.PictogramsFactory;
 import org.eclipse.graphiti.ui.internal.services.GraphitiUiInternal;
+import org.eclipse.xtext.EcoreUtil2;
 
 import be.kueleuven.rodinia.model.rtt.OrocosPackage;
 import be.kueleuven.rodinia.model.rtt.RttFactory;
@@ -52,10 +54,11 @@ import be.kueleuven.rodinia.model.rtt.RttFactory;
 public class FileService {
 
 	/**
-	 * @param graphPathName 
+	 * @param ocorocsPackagePathName 
+	 * @param orocosPackageName 
 	 * @since 0.9
 	 */
-	public static void createEmfFileForDiagram(URI diagramResourceUri, final Diagram diagram, String graphPathName) {
+	public static void createEmfFileForDiagram(URI diagramResourceUri, final Diagram diagram, String orocosPackageName, String ocorocsPackagePathName) {
 
 		// Create a resource set and EditingDomain
 		final TransactionalEditingDomain editingDomain = GraphitiUiInternal.getEmfService()
@@ -64,19 +67,18 @@ public class FileService {
 		// Create a resource for this file.
 		final Resource resource = resourceSet.createResource(diagramResourceUri);
 		
-		//Create Graph and add it to the diagram resourceSet
+		//Create OrocosPackage and add it to the diagram resourceSet
 		final OrocosPackage orocosPackage = RttFactory.eINSTANCE.createOrocosPackage();
-		URI uri = URI.createPlatformResourceURI(graphPathName, false);
+		orocosPackage.setName(orocosPackageName);
+		URI uri = URI.createPlatformResourceURI(ocorocsPackagePathName, false);
 		final Resource orocosPackageResource = resourceSet.createResource(uri);
 		
 		//Create a link between the diagram and the graph
 		PictogramLink link = PictogramsFactory.eINSTANCE.createPictogramLink();
-		
 		link.getBusinessObjects().addAll(Arrays.asList(orocosPackage));
 		diagram.setLink(link);
 		
-		
-		final CommandStack commandStack = editingDomain.getCommandStack();
+		CommandStack commandStack = editingDomain.getCommandStack();
 		commandStack.execute(new RecordingCommand(editingDomain) {
 
 			@Override
@@ -85,18 +87,11 @@ public class FileService {
 				resource.getContents().add(diagram);
 				orocosPackageResource.setTrackingModification(true);
 				orocosPackageResource.getContents().add(orocosPackage);
-
 			}
 		});
 
 		save(editingDomain, Collections.<Resource, Map<?, ?>> emptyMap());
 		editingDomain.dispose();
-	}
-
-	private static Resource createGraph(ResourceSet resourceSet, String graphPathName) {
-		
-		
-		return null;
 	}
 
 	private static void save(TransactionalEditingDomain editingDomain, Map<Resource, Map<?, ?>> options) {

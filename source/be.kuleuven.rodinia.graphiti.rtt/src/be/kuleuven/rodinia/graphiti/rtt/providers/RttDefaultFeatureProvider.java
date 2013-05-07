@@ -7,7 +7,7 @@ import org.eclipse.graphiti.features.context.IAddContext;
 import org.eclipse.graphiti.ui.features.DefaultFeatureProvider;
 
 import be.kueleuven.rodinia.model.rtt.TaskContext;
-import be.kuleuven.rodinia.graphiti.rtt.features.AddTaskContextFeature;
+import be.kuleuven.rodinia.graphiti.rtt.features.TaskContextAddFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.TaskContextCreateFeature;
 
 public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
@@ -18,12 +18,9 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 
 	@Override
 	public IAddFeature getAddFeature(IAddContext context) {
-		
-		// is object for add request a EClass?
 	    if (context.getNewObject() instanceof TaskContext) {
-	        return new AddTaskContextFeature(this);
+	        return new TaskContextAddFeature(this);
 	    }
-	    
 		return super.getAddFeature(context);
 	}
 
