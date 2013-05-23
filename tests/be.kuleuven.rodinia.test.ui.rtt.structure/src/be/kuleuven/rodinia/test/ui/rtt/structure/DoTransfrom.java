@@ -85,6 +85,13 @@ public class DoTransfrom {
 		assertNotNull(editor);
 	}
 	
+	@Test
+	public void test004() throws Exception {
+		SWTBotTree projectTree = bot.viewByTitle("Project Explorer").bot().tree();
+		projectTree.expandNode(PROJECT_NAME).getNode("model").select().getNode("rtt_structural.rtt").select();
+		bot.menu("Transform").menu("Orocos").menu("Create Structural Code").click();
+	}
+	
 	@AfterClass
 	public static void sleep() {
 		bot.sleep(3000);
