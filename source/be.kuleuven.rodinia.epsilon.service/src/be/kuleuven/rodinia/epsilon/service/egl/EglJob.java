@@ -36,7 +36,7 @@ public class EglJob extends WorkspaceJob {
 		monitor.beginTask(getName(), 4);
 
 		URL transformationEntry = Platform.getBundle(parameter.getPluginID())
-				.getEntry(parameter.getEglTransformation());
+				.getEntry(parameter.getEglTransformationFileName());
 		URL resolvedTransformationURL = null;
 		URI transformURI = null;
 		try {

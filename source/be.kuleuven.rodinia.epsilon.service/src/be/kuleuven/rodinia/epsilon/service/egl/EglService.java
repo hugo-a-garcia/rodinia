@@ -7,8 +7,6 @@ import org.eclipse.core.resources.WorkspaceJob;
 import org.eclipse.core.runtime.jobs.ISchedulingRule;
 import org.eclipse.core.runtime.jobs.Job;
 
-import be.kuleuven.rodinia.epsilon.service.ITransformParameter;
-
 public class EglService implements IEglTransformService {
 	
 	public EglService() {
@@ -25,7 +23,7 @@ public class EglService implements IEglTransformService {
 	}
 
 	@Override
-	public void doEglTransform(ITransformParameter transformParameter) {
+	public void doEglTransform(IEglTransformParameter transformParameter) {
 		WorkspaceJob job = null;
 		job = EglJob.createJob((EglTransformParameter) transformParameter);
 		executeJob(job);

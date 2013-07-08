@@ -1,0 +1,3 @@
+[% for (c in Box.all) { %]
+[%=c.name%]
+[% } %]

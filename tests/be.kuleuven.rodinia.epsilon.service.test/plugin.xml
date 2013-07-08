@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated box -->
+      <package
+            uri="be.kuleuven.rodinia.epsilon.service.test.model.box"
+            class="be.kuleuven.rodinia.epsilon.service.test.model.box.BoxPackage"
+            genModel="model/box.xcore"/>
+   </extension>
+
+</plugin>

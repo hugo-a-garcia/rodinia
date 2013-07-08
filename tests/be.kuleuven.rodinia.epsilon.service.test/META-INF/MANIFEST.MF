@@ -1,13 +1,23 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Rodinia Epsilon Service Test
-Bundle-SymbolicName: be.kuleuven.rodinia.epsilon.service.test
+Bundle-Name: %pluginName
+Bundle-SymbolicName: be.kuleuven.rodinia.epsilon.service.test;singleton:=true
 Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
 Bundle-Activator: be.kuleuven.rodinia.epsilon.service.test.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.xtext.xbase.lib;visibility:=reexport,
+ org.eclipse.emf.ecore.xcore.lib;visibility:=reexport,
  org.junit,
- be.kuleuven.rodinia.epsilon.service;bundle-version="1.0.0"
+ be.kuleuven.rodinia.epsilon.service;bundle-version="1.0.0",
+ org.eclipse.emf.ecore.xcore;bundle-version="1.1.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: be.kuleuven.rodinia.epsilon.service.test.model.box,
+ be.kuleuven.rodinia.epsilon.service.test.model.box.impl,
+ be.kuleuven.rodinia.epsilon.service.test.model.box.util
 Bundle-ActivationPolicy: lazy
 Service-Component: OSGI-INF/egl_service_test.xml

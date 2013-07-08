@@ -2,18 +2,23 @@ package be.kuleuven.rodinia.epsilon.service.egl;
 
 import be.kuleuven.rodinia.epsilon.service.AbstractTransformParameter;
 
+/**
+ * Parameter object for the EGL transformation.
+ * 
+ * @author Hugo A. Garcia
+ */
+public class EglTransformParameter extends AbstractTransformParameter implements
+		IEglTransformParameter {
 
-public class EglTransformParameter extends AbstractTransformParameter implements IEglTransformParameter {
-	
-	private String pluginID;
-	private String eglTransformation;
-	private String sourceName;
+	private String pluginID = null;
+	private String eglTransformationFileName;
+	private String sourceName = "Source";
 	private String sourceMetaModelURI;
 	private String sourceModelFilePath;
-	private boolean sourceReadOnLoad;
-	private boolean sourceStoreOnDisposal;
-	private String outputRoot;
-	
+	private boolean sourceReadOnLoad = true;
+	private boolean sourceStoreOnDisposal = false;
+	private String outputRoot = "output";
+
 	public EglTransformParameter() {
 	}
 
@@ -22,19 +27,28 @@ public class EglTransformParameter extends AbstractTransformParameter implements
 		return pluginID;
 	}
 
+	/*
+	 * The pluginID is the OSGI Bundle-SymbolicName for this plug-in. It is
+	 * needed in order to find the root directory for accessing the resources
+	 * included in the bundle such as the transformation files.
+	 * 
+	 * The pluginID is accessed from the Activator of the bundle:
+	 * String pluginID = Activator.PLUGIN_ID;
+	 * 
+	 */
 	@Override
 	public void setPluginID(String pluginID) {
 		this.pluginID = pluginID;
 	}
 
 	@Override
-	public String getEglTransformation() {
-		return eglTransformation;
+	public String getEglTransformationFileName() {
+		return eglTransformationFileName;
 	}
 
 	@Override
-	public void setEglTransform(String eglTransformation) {
-		this.eglTransformation = eglTransformation;
+	public void setEglTransformFileName(String eglTransformation) {
+		this.eglTransformationFileName = eglTransformation;
 	}
 
 	@Override
@@ -95,6 +109,15 @@ public class EglTransformParameter extends AbstractTransformParameter implements
 	@Override
 	public void setOutputRoot(String outputRoot) {
 		this.outputRoot = outputRoot;
+	}
+
+	public boolean checkParameters() {
+		if (pluginID == null) return false;
+		if (eglTransformationFileName == null) return false;
+		if (sourceModelFilePath == null) return false;
+		if (sourceModelFilePath == null) return false;
+		if (outputRoot == null) return false;
+		return true;
 	}
 
 }

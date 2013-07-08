@@ -9,9 +9,9 @@ public interface IEglTransformParameter extends ITransformParameter {
 
 	public void setPluginID(String pluginID);
 
-	public String getEglTransformation();
+	public String getEglTransformationFileName();
 
-	public void setEglTransform(String eglTransformation);
+	public void setEglTransformFileName(String eglTransformation);
 
 	public String getSourceName();
 
