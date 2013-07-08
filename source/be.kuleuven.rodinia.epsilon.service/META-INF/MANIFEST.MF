@@ -8,9 +8,11 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;bundle-version="3.8.100",
  org.eclipse.epsilon.egl.engine;bundle-version="1.0.0",
  org.eclipse.epsilon.eol.engine;bundle-version="1.0.0",
- org.eclipse.epsilon.emc.emf;bundle-version="1.0.0"
+ org.eclipse.epsilon.emc.emf;bundle-version="1.0.0",
+ org.eclipse.epsilon.etl.engine;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
-Service-Component: OSGI-INF/egl_service.xml
+Service-Component: OSGI-INF/egl_service.xml,
+ OSGI-INF/etl_service.xml
 Export-Package: be.kuleuven.rodinia.epsilon.service,
  be.kuleuven.rodinia.epsilon.service.egl
