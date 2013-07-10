@@ -2,6 +2,7 @@
  */
 package be.kueleuven.rodinia.model.rtt.impl;
 
+import be.kueleuven.rodinia.model.rtt.ConnectionPolicy;
 import be.kueleuven.rodinia.model.rtt.OrocosPackage;
 import be.kueleuven.rodinia.model.rtt.RttPackage;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.OrocosPackageImpl#getName <em>Name</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.OrocosPackageImpl#getTaskContexts <em>Task Contexts</em>}</li>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.OrocosPackageImpl#getConnectionPolicies <em>Connection Policies</em>}</li>
  * </ul>
  * </p>
  *
@@ -67,6 +69,16 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
    * @ordered
    */
   protected EList<TaskContext> taskContexts;
+
+  /**
+   * The cached value of the '{@link #getConnectionPolicies() <em>Connection Policies</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getConnectionPolicies()
+   * @generated
+   * @ordered
+   */
+  protected EList<ConnectionPolicy> connectionPolicies;
 
   /**
    * <!-- begin-user-doc -->
@@ -131,6 +143,20 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<ConnectionPolicy> getConnectionPolicies()
+  {
+    if (connectionPolicies == null)
+    {
+      connectionPolicies = new EObjectContainmentEList.Resolving<ConnectionPolicy>(ConnectionPolicy.class, this, RttPackage.OROCOS_PACKAGE__CONNECTION_POLICIES);
+    }
+    return connectionPolicies;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -138,6 +164,8 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
     {
       case RttPackage.OROCOS_PACKAGE__TASK_CONTEXTS:
         return ((InternalEList<?>)getTaskContexts()).basicRemove(otherEnd, msgs);
+      case RttPackage.OROCOS_PACKAGE__CONNECTION_POLICIES:
+        return ((InternalEList<?>)getConnectionPolicies()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -156,6 +184,8 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
         return getName();
       case RttPackage.OROCOS_PACKAGE__TASK_CONTEXTS:
         return getTaskContexts();
+      case RttPackage.OROCOS_PACKAGE__CONNECTION_POLICIES:
+        return getConnectionPolicies();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -178,6 +208,10 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
         getTaskContexts().clear();
         getTaskContexts().addAll((Collection<? extends TaskContext>)newValue);
         return;
+      case RttPackage.OROCOS_PACKAGE__CONNECTION_POLICIES:
+        getConnectionPolicies().clear();
+        getConnectionPolicies().addAll((Collection<? extends ConnectionPolicy>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -198,6 +232,9 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
       case RttPackage.OROCOS_PACKAGE__TASK_CONTEXTS:
         getTaskContexts().clear();
         return;
+      case RttPackage.OROCOS_PACKAGE__CONNECTION_POLICIES:
+        getConnectionPolicies().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -216,6 +253,8 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case RttPackage.OROCOS_PACKAGE__TASK_CONTEXTS:
         return taskContexts != null && !taskContexts.isEmpty();
+      case RttPackage.OROCOS_PACKAGE__CONNECTION_POLICIES:
+        return connectionPolicies != null && !connectionPolicies.isEmpty();
     }
     return super.eIsSet(featureID);
   }

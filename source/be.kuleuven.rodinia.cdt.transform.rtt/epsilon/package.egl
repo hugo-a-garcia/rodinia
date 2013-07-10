@@ -1,24 +1,25 @@
 [%
 	
-	var package : Package := Package.allInstances().at(0);
-	var taskContexts : OrderedSet := package.taskContext;
+	var package : OrocosPackage := OrocosPackage.allInstances().at(0);
+	var taskContexts : OrderedSet := package.taskContexts;
 
 	//TaskContext
-	for(taskContext in package.taskContext) {
+	for(taskContext in package.taskContexts) {
 		var taskContextHeaderTemplate := TemplateFactory.load('taskContextHeader.egl');
 		var taskContextSourceTemplate := TemplateFactory.load('taskContextSource.egl');
 		var taskContextPropertiesTemplate := TemplateFactory.load('taskContextProperties.egl');
 		
 		taskContextHeaderTemplate.populate('taskContext', taskContext);
 		taskContextHeaderTemplate.generate('src/' + taskContext.type + '.hpp');
-		
+	
 		taskContextSourceTemplate.populate('taskContext', taskContext);
 		taskContextSourceTemplate.generate('src/' + taskContext.type + '.cpp');
-		
-		if (not taskContext.property.isEmpty()) {
-			taskContextPropertiesTemplate.populate('taskContext', taskContext);
-			taskContextPropertiesTemplate.generate('deployment/' + taskContext.type + '.cpf');
-		}
+
+//		if (not taskContext.property.isEmpty()) {
+//			taskContextPropertiesTemplate.populate('taskContext', taskContext);
+//			taskContextPropertiesTemplate.generate('deployment/' + taskContext.type + '.cpf');
+//		}
+
 	}
 	
 	//CMakeList

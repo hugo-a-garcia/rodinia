@@ -35,7 +35,7 @@ find_package(OROCOS-RTT REQUIRED ${RTT_HINTS})
 
 include(${OROCOS-RTT_USE_FILE_PATH}/UseOROCOS-RTT.cmake)
 
-[%for(taskContext in package.taskContext) {%]
+[%for(taskContext in package.taskContexts) {%]
 
 # Creates a component library lib[%=taskContext.name%]-<target>.so
 # and installs in the directory lib/orocos/[%=taskContext.name%]/

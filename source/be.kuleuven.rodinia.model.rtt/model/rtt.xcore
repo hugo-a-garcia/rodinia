@@ -1,12 +1,55 @@
 package be.kueleuven.rodinia.model.rtt
 
+import be.kuleuven.rodinia.dsl.datatypes.datatypes.DataType
+
 class OrocosPackage {
 	String name
 	contains resolving TaskContext[] taskContexts
+	contains resolving ConnectionPolicy [] connectionPolicies
 }
 
 class TaskContext {
 	String [1] name
 	String [1] namespace
 	String [1] ^type = ""
+	contains resolving InputPort [] inputPorts
+	contains resolving OutputPort [] outputPorts
+}
+
+class InputPort
+{
+	Boolean [1] isEventPort = "false"
+	String [1] name
+	refers DataType dataType
+	refers ConnectionPolicy inputConnectionPolicy opposite inputPort
+}
+
+class OutputPort
+{
+	String [1] name
+	refers DataType dataType
+	refers ConnectionPolicy outputConnectionPolicy opposite outputPort
+}
+
+class ConnectionPolicy
+{
+	refers InputPort [1] inputPort opposite inputConnectionPolicy
+	refers OutputPort [1] outputPort opposite outputConnectionPolicy
+	short bufferSize
+	String name
+	ConnectionPolicyLockPolicy lockPolicy = "LOCK_FREE"
+	ConnectionPolicyType ^type = "DATA"
+}
+
+enum ConnectionPolicyType
+{
+	DATA
+	BUFFER = 1
+}
+
+enum ConnectionPolicyLockPolicy
+{
+	UNSYNC
+	LOCKED = 1
+	LOCK_FREE = 2
 }

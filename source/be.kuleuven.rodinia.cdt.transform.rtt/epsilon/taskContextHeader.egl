@@ -12,10 +12,11 @@ namespace [%=taskContext.namespace%]
 {
 	class [%=taskContext.type%]: public RTT::TaskContext
 	{
-		[%for(anInputPort in taskContext.inputPort) {%]
+
+		[%for(anInputPort in taskContext.inputPorts) {%]
 		InputPort<[%=anInputPort.type%]> [%=anInputPort.name%];
 		[%}%]
-		[%for(anOutputPort in taskContext.outputPort) {%]
+		[%for(anOutputPort in taskContext.outputPorts) {%]
 		OutputPort<[%=anOutputPort.type%]> [%=anOutputPort.name%];
 		[%}%]
 		
@@ -30,17 +31,20 @@ namespace [%=taskContext.namespace%]
         void updateHook();
         void stopHook();
         void cleanupHook();
+[*  
         [%for(anOperation in taskContext.operacion) {%]
         [%=anOperation.returnType%] [%=anOperation.name%]();
         [%}%]
-        
+*]        
         [%=out.startPreserve("/*", "*/", "public", true)%]
         [%=out.stopPreserve()%]
         
     protected:
+[*
     	[%for(aProperty in taskContext.property) {%]
     	[%=aProperty.name%] [%=aProperty.name%];
     	[%}%]
+*]
     	[%=out.startPreserve("/*", "*/", "protected", true)%]
     	[%=out.stopPreserve()%]
     	

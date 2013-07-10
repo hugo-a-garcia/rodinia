@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.OrocosPackage#getName <em>Name</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.OrocosPackage#getTaskContexts <em>Task Contexts</em>}</li>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.OrocosPackage#getConnectionPolicies <em>Connection Policies</em>}</li>
  * </ul>
  * </p>
  *
@@ -66,5 +67,21 @@ public interface OrocosPackage extends EObject
    * @generated
    */
   EList<TaskContext> getTaskContexts();
+
+  /**
+   * Returns the value of the '<em><b>Connection Policies</b></em>' containment reference list.
+   * The list contents are of type {@link be.kueleuven.rodinia.model.rtt.ConnectionPolicy}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Connection Policies</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Connection Policies</em>' containment reference list.
+   * @see be.kueleuven.rodinia.model.rtt.RttPackage#getOrocosPackage_ConnectionPolicies()
+   * @model containment="true" resolveProxies="true"
+   * @generated
+   */
+  EList<ConnectionPolicy> getConnectionPolicies();
 
 } // OrocosPackage

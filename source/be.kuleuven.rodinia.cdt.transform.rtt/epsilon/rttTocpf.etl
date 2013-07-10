@@ -2,7 +2,7 @@ rule TaskContextToComponent
 	transform s : Source!Package
 	to t : Target!Properties {
 	
-	var featureMapUtilTool = new Native("org.best_of_robotics.transform.rtt.to.cplusplus.tools.FeautreMapUtilTool");
+	var featureMapUtilTool = new Native("be.kuleuven.rodinia.epsilon.service.tools.FeautreMapUtilTool");
 	
 	//Package
 	if (s.name.isDefined()) {
@@ -32,18 +32,18 @@ rule TaskContextToComponent
 			var port = null;
 			
 			//Properties
-			if (not taskContext.property.isEmpty()) {
-				for (aProperty in taskContext.property) {
-					var propertySimple = new Target!Simple;
-					propertySimple.name = "UpdateProperties";
-					propertySimple.type = Target!SimpleType#string;
-					var value = new Target!Value;
-					var mixed = value.mixed;
-					featureMapUtilTool.addText(mixed, taskContext.type + ".cpf");
-					propertySimple.value = value;
-					component.simple.add(propertySimple);
-				}
-			}
+//			if (not taskContext.property.isEmpty()) {
+//				for (aProperty in taskContext.property) {
+	//				var propertySimple = new Target!Simple;
+	//				propertySimple.name = "UpdateProperties";
+	//				propertySimple.type = Target!SimpleType#string;
+	//				var value = new Target!Value;
+	//				var mixed = value.mixed;
+	//				featureMapUtilTool.addText(mixed, taskContext.type + ".cpf");
+	//				propertySimple.value = value;
+	//				component.simple.add(propertySimple);
+	//			}
+	//		}
 			
 			//Ports
 			if (not taskContext.outputPort.isEmpty() or not taskContext.inputPort.isEmpty()) {
@@ -89,7 +89,7 @@ rule TaskContextToComponent
 			
 			//Activity
 			if (s.activity.isDefined()) {
-				
+			
 				for (activity in s.activity) {
 				
 					if (activity.taskContext == taskContext) {

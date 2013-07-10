@@ -15,4 +15,5 @@ Bundle-ActivationPolicy: lazy
 Service-Component: OSGI-INF/egl_service.xml,
  OSGI-INF/etl_service.xml
 Export-Package: be.kuleuven.rodinia.epsilon.service,
- be.kuleuven.rodinia.epsilon.service.egl
+ be.kuleuven.rodinia.epsilon.service.egl,
+ be.kuleuven.rodinia.epsilon.service.etl

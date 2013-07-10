@@ -10,24 +10,26 @@ using namespace [%=taskContext.namespace%];
 
 [%=taskContext.type%]::[%=taskContext.type%](string const& name = "[%=taskContext.name%]") :
 		TaskContext(name)
-		[%for(aProperty in taskContext.property) {%]
+[*		[%for(aProperty in taskContext.property) {%]
 			,[%=aProperty.name%]("[%=aProperty.value%]")
     	[%}%]
+*]
 {
-	[%for(aProperty in taskContext.property) {%]
+[*	[%for(aProperty in taskContext.property) {%]
 	this->addProperty("[%=aProperty.name%]", [%=aProperty.name%]).doc("[%=aProperty.description%]");
     [%}%]
     [%for(anOperation in taskContext.operacion) {%]
     this->addOperation("[%=anOperation.name%]", &[%=taskContext.type%]::[%=anOperation.name%], this);
     [%}%]
-	[%for(anInputPort in taskContext.inputPort)
+*]	
+	[%for(anInputPort in taskContext.inputPorts)
 		if (anInputPort.isEventPort == true) {%]
 	this->ports()->addEventPort( "[%=anInputPort.name%]", [%=anInputPort.name%] ).doc(
 	"Input Port that raises an event." );
 	[%} else {%]
 	this->ports()->addPort( "[%=anInputPort.name%]", [%=anInputPort.name%] ).doc( "Input Port that does *not* raise an event." );
 	[%}%]
-	[%for(anOutputPort in taskContext.outputPort) {%]
+	[%for(anOutputPort in taskContext.outputPorts) {%]
 	this->ports()->addPort( "[%=anOutputPort.name%]", [%=anOutputPort.name%] ).doc( "Output Port, here write our data to." );
 	[%}%]
 	[%=out.startPreserve("/*", "*/", "constructor", true)%]
@@ -71,16 +73,16 @@ void [%=taskContext.type%]::cleanupHook()
     std::cout << "[%=taskContext.name%] cleaning up !" <<std::endl;
     [%=out.stopPreserve()%]
 }
-
+[*
 [%for(anOperation in taskContext.operacion) {%]
 [%=anOperation.returnType%] [%=taskContext.type%]::[%=anOperation.name%]()
+
 {
 	[%=out.startPreserve("/*", "*/", %anOperation.name%, true)%]
 	[%=out.stopPreserve()%]
 }
-
 [%}%]
-
+*]
 [%=out.startPreserve("/*", "*/", "User Code", true)%]
 [%=out.stopPreserve()%]
 
