@@ -15,6 +15,7 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.epsilon.common.parse.problem.ParseProblem;
 import org.eclipse.epsilon.emc.emf.EmfModel;
 import org.eclipse.epsilon.eol.IEolExecutableModule;
+import org.eclipse.epsilon.eol.dt.ExtensionPointToolNativeTypeDelegate;
 import org.eclipse.epsilon.eol.exceptions.EolRuntimeException;
 import org.eclipse.epsilon.eol.exceptions.models.EolModelLoadingException;
 import org.eclipse.epsilon.etl.EtlModule;
@@ -71,6 +72,7 @@ public class EtlJob extends WorkspaceJob {
 		etlModule.getContext().getModelRepository().addModel(createSource());
 		EmfModel model = createTarget();
 		etlModule.getContext().getModelRepository().addModel(model);
+		etlModule.getContext().getNativeTypeDelegates().add(new ExtensionPointToolNativeTypeDelegate());
 		try {
 			etlModule.execute();
 		} catch (EolRuntimeException e) {

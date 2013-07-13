@@ -14,4 +14,12 @@
             genModel="model/box.xcore"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated thing -->
+      <package
+            uri="be.kuleuven.rodinia.epsilon.service.test.model.thing"
+            class="be.kuleuven.rodinia.epsilon.service.test.model.thing.ThingPackage"
+            genModel="model/thing.xcore"/>
+   </extension>
+
 </plugin>

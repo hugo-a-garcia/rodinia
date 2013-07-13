@@ -1,0 +1,7 @@
+rule Box2Thing 
+  transform t : Source!Box
+  to n : Target!Thing {
+  
+  n.name = t.label;
+  
+}

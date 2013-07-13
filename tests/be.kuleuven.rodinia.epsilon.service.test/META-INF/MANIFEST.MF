@@ -18,6 +18,10 @@ Require-Bundle: org.eclipse.ui,
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: be.kuleuven.rodinia.epsilon.service.test.model.box,
  be.kuleuven.rodinia.epsilon.service.test.model.box.impl,
- be.kuleuven.rodinia.epsilon.service.test.model.box.util
+ be.kuleuven.rodinia.epsilon.service.test.model.box.util,
+ be.kuleuven.rodinia.epsilon.service.test.model.thing,
+ be.kuleuven.rodinia.epsilon.service.test.model.thing.impl,
+ be.kuleuven.rodinia.epsilon.service.test.model.thing.util
 Bundle-ActivationPolicy: lazy
-Service-Component: OSGI-INF/egl_service_test.xml
+Service-Component: OSGI-INF/egl_service_test.xml,
+ OSGI-INF/etl_service_test.xml

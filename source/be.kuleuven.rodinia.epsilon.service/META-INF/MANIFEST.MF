@@ -1,19 +1,23 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Rodinia Epsilon Service
-Bundle-SymbolicName: be.kuleuven.rodinia.epsilon.service
+Bundle-SymbolicName: be.kuleuven.rodinia.epsilon.service;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: be.kuleuven.rodinia.epsilon.service.Activator
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;bundle-version="3.8.100",
  org.eclipse.epsilon.egl.engine;bundle-version="1.0.0",
- org.eclipse.epsilon.eol.engine;bundle-version="1.0.0",
  org.eclipse.epsilon.emc.emf;bundle-version="1.0.0",
- org.eclipse.epsilon.etl.engine;bundle-version="1.0.0"
+ org.eclipse.epsilon.eol.dt,
+ org.eclipse.epsilon.eol.engine;bundle-version="1.0.0",
+ org.eclipse.epsilon.eol.tools;bundle-version="1.0.0",
+ org.eclipse.epsilon.etl.engine;bundle-version="1.0.0",
+ org.eclipse.epsilon.common.dt;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
 Service-Component: OSGI-INF/egl_service.xml,
  OSGI-INF/etl_service.xml
 Export-Package: be.kuleuven.rodinia.epsilon.service,
  be.kuleuven.rodinia.epsilon.service.egl,
- be.kuleuven.rodinia.epsilon.service.etl
+ be.kuleuven.rodinia.epsilon.service.etl,
+ be.kuleuven.rodinia.epsilon.service.tools
