@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/be.kuleuven.rodinia.epsilon.service.ui.test/src"
+    modelPluginID="be.kuleuven.rodinia.epsilon.service.ui.test" runtimeJar="true"
+    modelName="Sqaure" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    testsDirectory="" booleanFlagsField="eFlags" booleanFlagsReservedBits="8" importerID="org.eclipse.emf.ecore.xcore.importer"
+    containmentProxies="true" complianceLevel="7.0" language="en" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
+    operationReflection="true" importOrganizing="true" decoration="Live">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/exporter/org.eclipse.xsd.ecore.exporter">
+    <genAnnotations source="selectedPackages">
+      <details key="http://www.eclipse.org/emf/2002/Ecore" value="Ecore.xsd"/>
+    </genAnnotations>
+    <details key="directoryURI" value="."/>
+  </genAnnotations>
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/exporter/org.eclipse.xsd.ecore.exporter.xmi">
+    <genAnnotations source="selectedPackages">
+      <details key="http://www.eclipse.org/emf/2002/Ecore" value="EcoreXMI.xsd"/>
+    </genAnnotations>
+    <details key="directoryURI" value="."/>
+  </genAnnotations>
+  <foreignModel>sqaure.xcore</foreignModel>
+  <modelPluginVariables>org.eclipse.xtext.xbase.lib</modelPluginVariables>
+  <modelPluginVariables>org.eclipse.emf.ecore.xcore.lib</modelPluginVariables>
+  <genPackages prefix="Square" basePackage="be.kuleuven.rodinia.epsilon.service.ui.test.model"
+      disposableProviderFactory="true" ecorePackage="square.ecore#/">
+    <genClasses ecoreClass="square.ecore#//Square">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute square.ecore#//Square/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,7 @@
+rule SquareToCircle 
+  transform t : Source!Square
+  to n : Target!Circle {
+  
+  n.name = t.name;
+  
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="be.kuleuven.rodinia.epsilon.service.ui.test.command.doEtlTransform"
+            name="Do ETL Transform">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="be.kuleuven.rodinia.epsilon.service.ui.test.command.DoEtlTransform"
+            commandId="be.kuleuven.rodinia.epsilon.service.ui.test.command.doEtlTransform">
+      </handler>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sqaure -->
+      <package
+            uri="be.kuleuven.rodinia.epsilon.service.ui.test.model.square"
+            class="be.kuleuven.rodinia.epsilon.service.ui.test.model.square.SquarePackage"
+            genModel="models/sqaure.xcore"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated circle -->
+      <package
+            uri="be.kuleuven.rodinia.epsilon.service.ui.test.model.circle"
+            class="be.kuleuven.rodinia.epsilon.service.ui.test.model.circle.CirclePackage"
+            genModel="models/circle.xcore"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:be.kuleuven.rodinia.menu.transform?after=additions">
+         <menu
+               id="be.kuleuven.rodinia.menu.test"
+               label="Test Transform">
+            <command
+                  commandId="be.kuleuven.rodinia.epsilon.service.ui.test.command.doEtlTransform"
+                  id="be.kuleuven.rodinia.epsilon.service.ui.test.command.contribution.doEtlTransform"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>
