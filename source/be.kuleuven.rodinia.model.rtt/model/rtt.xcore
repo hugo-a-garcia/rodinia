@@ -4,31 +4,19 @@ import be.kuleuven.rodinia.dsl.datatypes.datatypes.DataType
 
 class OrocosPackage {
 	String name
-	contains resolving TaskContext[] taskContexts
-	contains resolving ConnectionPolicy [] connectionPolicies
+	contains TaskContext[] taskContexts
+	contains ConnectionPolicy [] connectionPolicies
+	contains IActivity activities
 }
 
 class TaskContext {
 	String [1] name
 	String [1] namespace
 	String [1] ^type = ""
-	contains resolving InputPort [] inputPorts
-	contains resolving OutputPort [] outputPorts
-}
-
-class InputPort
-{
-	Boolean [1] isEventPort = "false"
-	String [1] name
-	refers DataType dataType
-	refers ConnectionPolicy inputConnectionPolicy opposite inputPort
-}
-
-class OutputPort
-{
-	String [1] name
-	refers DataType dataType
-	refers ConnectionPolicy outputConnectionPolicy opposite outputPort
+	contains InputPort [] inputPorts
+	contains OutputPort [] outputPorts
+	contains Property[] properties
+	contains Operation[] operations
 }
 
 class ConnectionPolicy
@@ -52,4 +40,54 @@ enum ConnectionPolicyLockPolicy
 	UNSYNC
 	LOCKED = 1
 	LOCK_FREE = 2
+}
+
+interface IActivity {
+	String[1] name = "Activity"
+	refers TaskContext taskContext
+}
+
+class Activity extends IActivity {
+	contains Slave[] slave opposite master
+	Scheduler[1] scheduler = "ORO_SCHED_OTHER"
+	String[1] cpuAffinity = "~0"
+	float[1] period = "0"
+	int[1] priority = "0"
+}
+
+class Slave extends IActivity {
+	container Activity master opposite slave
+}
+
+enum Scheduler {
+	ORO_SCHED_OTHER
+	ORO_SCHED_RT = 1
+}
+
+class InputPort
+{
+	Boolean [1] isEventPort = "false"
+	String [1] name
+	refers DataType dataType
+	refers ConnectionPolicy inputConnectionPolicy opposite inputPort
+}
+
+class OutputPort
+{
+	String [1] name
+	refers DataType dataType
+	refers ConnectionPolicy outputConnectionPolicy opposite outputPort
+}
+
+class Property {
+	String name
+	String description
+	refers DataType ^type
+	String value
+}
+
+class Operation {
+	String name
+	refers DataType returnType
+	String documentation
 }

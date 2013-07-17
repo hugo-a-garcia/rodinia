@@ -3,6 +3,7 @@
 package be.kueleuven.rodinia.model.rtt.impl;
 
 import be.kueleuven.rodinia.model.rtt.ConnectionPolicy;
+import be.kueleuven.rodinia.model.rtt.IActivity;
 import be.kueleuven.rodinia.model.rtt.OrocosPackage;
 import be.kueleuven.rodinia.model.rtt.RttPackage;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
@@ -33,6 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.OrocosPackageImpl#getName <em>Name</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.OrocosPackageImpl#getTaskContexts <em>Task Contexts</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.OrocosPackageImpl#getConnectionPolicies <em>Connection Policies</em>}</li>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.OrocosPackageImpl#getActivities <em>Activities</em>}</li>
  * </ul>
  * </p>
  *
@@ -79,6 +81,16 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
    * @ordered
    */
   protected EList<ConnectionPolicy> connectionPolicies;
+
+  /**
+   * The cached value of the '{@link #getActivities() <em>Activities</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getActivities()
+   * @generated
+   * @ordered
+   */
+  protected IActivity activities;
 
   /**
    * <!-- begin-user-doc -->
@@ -133,7 +145,7 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
   {
     if (taskContexts == null)
     {
-      taskContexts = new EObjectContainmentEList.Resolving<TaskContext>(TaskContext.class, this, RttPackage.OROCOS_PACKAGE__TASK_CONTEXTS);
+      taskContexts = new EObjectContainmentEList<TaskContext>(TaskContext.class, this, RttPackage.OROCOS_PACKAGE__TASK_CONTEXTS);
     }
     return taskContexts;
   }
@@ -147,9 +159,57 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
   {
     if (connectionPolicies == null)
     {
-      connectionPolicies = new EObjectContainmentEList.Resolving<ConnectionPolicy>(ConnectionPolicy.class, this, RttPackage.OROCOS_PACKAGE__CONNECTION_POLICIES);
+      connectionPolicies = new EObjectContainmentEList<ConnectionPolicy>(ConnectionPolicy.class, this, RttPackage.OROCOS_PACKAGE__CONNECTION_POLICIES);
     }
     return connectionPolicies;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IActivity getActivities()
+  {
+    return activities;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetActivities(IActivity newActivities, NotificationChain msgs)
+  {
+    IActivity oldActivities = activities;
+    activities = newActivities;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RttPackage.OROCOS_PACKAGE__ACTIVITIES, oldActivities, newActivities);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setActivities(IActivity newActivities)
+  {
+    if (newActivities != activities)
+    {
+      NotificationChain msgs = null;
+      if (activities != null)
+        msgs = ((InternalEObject)activities).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RttPackage.OROCOS_PACKAGE__ACTIVITIES, null, msgs);
+      if (newActivities != null)
+        msgs = ((InternalEObject)newActivities).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RttPackage.OROCOS_PACKAGE__ACTIVITIES, null, msgs);
+      msgs = basicSetActivities(newActivities, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RttPackage.OROCOS_PACKAGE__ACTIVITIES, newActivities, newActivities));
   }
 
   /**
@@ -166,6 +226,8 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
         return ((InternalEList<?>)getTaskContexts()).basicRemove(otherEnd, msgs);
       case RttPackage.OROCOS_PACKAGE__CONNECTION_POLICIES:
         return ((InternalEList<?>)getConnectionPolicies()).basicRemove(otherEnd, msgs);
+      case RttPackage.OROCOS_PACKAGE__ACTIVITIES:
+        return basicSetActivities(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -186,6 +248,8 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
         return getTaskContexts();
       case RttPackage.OROCOS_PACKAGE__CONNECTION_POLICIES:
         return getConnectionPolicies();
+      case RttPackage.OROCOS_PACKAGE__ACTIVITIES:
+        return getActivities();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -212,6 +276,9 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
         getConnectionPolicies().clear();
         getConnectionPolicies().addAll((Collection<? extends ConnectionPolicy>)newValue);
         return;
+      case RttPackage.OROCOS_PACKAGE__ACTIVITIES:
+        setActivities((IActivity)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -235,6 +302,9 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
       case RttPackage.OROCOS_PACKAGE__CONNECTION_POLICIES:
         getConnectionPolicies().clear();
         return;
+      case RttPackage.OROCOS_PACKAGE__ACTIVITIES:
+        setActivities((IActivity)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -255,6 +325,8 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
         return taskContexts != null && !taskContexts.isEmpty();
       case RttPackage.OROCOS_PACKAGE__CONNECTION_POLICIES:
         return connectionPolicies != null && !connectionPolicies.isEmpty();
+      case RttPackage.OROCOS_PACKAGE__ACTIVITIES:
+        return activities != null;
     }
     return super.eIsSet(featureID);
   }

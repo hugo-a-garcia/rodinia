@@ -7,9 +7,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="OrocosPackage">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="taskContexts" upperBound="-1"
-        eType="#//TaskContext" containment="true"/>
+        eType="#//TaskContext" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="connectionPolicies" upperBound="-1"
-        eType="#//ConnectionPolicy" containment="true"/>
+        eType="#//ConnectionPolicy" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activities" eType="#//IActivity"
+        containment="true" resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TaskContext">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" lowerBound="1"
@@ -20,26 +22,13 @@
         eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputPorts" upperBound="-1"
-        eType="#//InputPort" containment="true"/>
+        eType="#//InputPort" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputPorts" upperBound="-1"
-        eType="#//OutputPort" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InputPort">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isEventPort" unique="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBooleanObject"
-        defaultValueLiteral="false"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" lowerBound="1"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dataType" eType="ecore:EClass ../../be.kuleuven.rodinia.dsl.datatypes/src-gen/be/kuleuven/rodinia/dsl/datatypes/Datatypes.ecore#//DataType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="inputConnectionPolicy"
-        eType="#//ConnectionPolicy" eOpposite="#//ConnectionPolicy/inputPort"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OutputPort">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" lowerBound="1"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dataType" eType="ecore:EClass ../../be.kuleuven.rodinia.dsl.datatypes/src-gen/be/kuleuven/rodinia/dsl/datatypes/Datatypes.ecore#//DataType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="outputConnectionPolicy"
-        eType="#//ConnectionPolicy" eOpposite="#//ConnectionPolicy/outputPort"/>
+        eType="#//OutputPort" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//Property" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operations" upperBound="-1"
+        eType="#//Operation" containment="true" resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConnectionPolicy">
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputPort" lowerBound="1"
@@ -62,5 +51,64 @@
     <eLiterals name="UNSYNC"/>
     <eLiterals name="LOCKED" value="1"/>
     <eLiterals name="LOCK_FREE" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IActivity" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" lowerBound="1"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
+        defaultValueLiteral="Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="taskContext" eType="#//TaskContext"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Activity" eSuperTypes="#//IActivity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="slave" upperBound="-1"
+        eType="#//Slave" containment="true" resolveProxies="false" eOpposite="#//Slave/master"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scheduler" unique="false"
+        lowerBound="1" eType="#//Scheduler" defaultValueLiteral="ORO_SCHED_OTHER"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cpuAffinity" unique="false"
+        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
+        defaultValueLiteral="~0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="period" unique="false"
+        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EFloat"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" unique="false"
+        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"
+        defaultValueLiteral="0"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Slave" eSuperTypes="#//IActivity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="master" eType="#//Activity"
+        eOpposite="#//Activity/slave"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Scheduler">
+    <eLiterals name="ORO_SCHED_OTHER"/>
+    <eLiterals name="ORO_SCHED_RT" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InputPort">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isEventPort" unique="false"
+        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBooleanObject"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" lowerBound="1"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataType" eType="ecore:EClass ../../be.kuleuven.rodinia.dsl.datatypes/src-gen/be/kuleuven/rodinia/dsl/datatypes/Datatypes.ecore#//DataType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputConnectionPolicy"
+        eType="#//ConnectionPolicy" eOpposite="#//ConnectionPolicy/inputPort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OutputPort">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" lowerBound="1"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataType" eType="ecore:EClass ../../be.kuleuven.rodinia.dsl.datatypes/src-gen/be/kuleuven/rodinia/dsl/datatypes/Datatypes.ecore#//DataType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputConnectionPolicy"
+        eType="#//ConnectionPolicy" eOpposite="#//ConnectionPolicy/outputPort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Property">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass ../../be.kuleuven.rodinia.dsl.datatypes/src-gen/be/kuleuven/rodinia/dsl/datatypes/Datatypes.ecore#//DataType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Operation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="returnType" eType="ecore:EClass ../../be.kuleuven.rodinia.dsl.datatypes/src-gen/be/kuleuven/rodinia/dsl/datatypes/Datatypes.ecore#//DataType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="documentation" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link be.kueleuven.rodinia.model.rtt.OrocosPackage#getName <em>Name</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.OrocosPackage#getTaskContexts <em>Task Contexts</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.OrocosPackage#getConnectionPolicies <em>Connection Policies</em>}</li>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.OrocosPackage#getActivities <em>Activities</em>}</li>
  * </ul>
  * </p>
  *
@@ -63,7 +64,7 @@ public interface OrocosPackage extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Task Contexts</em>' containment reference list.
    * @see be.kueleuven.rodinia.model.rtt.RttPackage#getOrocosPackage_TaskContexts()
-   * @model containment="true" resolveProxies="true"
+   * @model containment="true"
    * @generated
    */
   EList<TaskContext> getTaskContexts();
@@ -79,9 +80,35 @@ public interface OrocosPackage extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Connection Policies</em>' containment reference list.
    * @see be.kueleuven.rodinia.model.rtt.RttPackage#getOrocosPackage_ConnectionPolicies()
-   * @model containment="true" resolveProxies="true"
+   * @model containment="true"
    * @generated
    */
   EList<ConnectionPolicy> getConnectionPolicies();
+
+  /**
+   * Returns the value of the '<em><b>Activities</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Activities</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Activities</em>' containment reference.
+   * @see #setActivities(IActivity)
+   * @see be.kueleuven.rodinia.model.rtt.RttPackage#getOrocosPackage_Activities()
+   * @model containment="true"
+   * @generated
+   */
+  IActivity getActivities();
+
+  /**
+   * Sets the value of the '{@link be.kueleuven.rodinia.model.rtt.OrocosPackage#getActivities <em>Activities</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Activities</em>' containment reference.
+   * @see #getActivities()
+   * @generated
+   */
+  void setActivities(IActivity value);
 
 } // OrocosPackage
