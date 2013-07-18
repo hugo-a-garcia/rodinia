@@ -1,10 +1,14 @@
 package be.kuleuven.rodinia.dsl.rtt.serializer;
 
+import be.kueleuven.rodinia.model.rtt.Activity;
 import be.kueleuven.rodinia.model.rtt.ConnectionPolicy;
 import be.kueleuven.rodinia.model.rtt.InputPort;
+import be.kueleuven.rodinia.model.rtt.Operation;
 import be.kueleuven.rodinia.model.rtt.OrocosPackage;
 import be.kueleuven.rodinia.model.rtt.OutputPort;
+import be.kueleuven.rodinia.model.rtt.Property;
 import be.kueleuven.rodinia.model.rtt.RttPackage;
+import be.kueleuven.rodinia.model.rtt.Slave;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
 import be.kuleuven.rodinia.dsl.rtt.services.RttStructureGrammarAccess;
 import com.google.inject.Inject;
@@ -26,6 +30,13 @@ public abstract class AbstractRttStructureSemanticSequencer extends AbstractDele
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == RttPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case RttPackage.ACTIVITY:
+				if(context == grammarAccess.getActivityRule() ||
+				   context == grammarAccess.getIActivityRule()) {
+					sequence_Activity(context, (Activity) semanticObject); 
+					return; 
+				}
+				else break;
 			case RttPackage.CONNECTION_POLICY:
 				if(context == grammarAccess.getConnectionPolicyRule()) {
 					sequence_ConnectionPolicy(context, (ConnectionPolicy) semanticObject); 
@@ -35,6 +46,12 @@ public abstract class AbstractRttStructureSemanticSequencer extends AbstractDele
 			case RttPackage.INPUT_PORT:
 				if(context == grammarAccess.getInputPortRule()) {
 					sequence_InputPort(context, (InputPort) semanticObject); 
+					return; 
+				}
+				else break;
+			case RttPackage.OPERATION:
+				if(context == grammarAccess.getOperationRule()) {
+					sequence_Operation(context, (Operation) semanticObject); 
 					return; 
 				}
 				else break;
@@ -50,6 +67,19 @@ public abstract class AbstractRttStructureSemanticSequencer extends AbstractDele
 					return; 
 				}
 				else break;
+			case RttPackage.PROPERTY:
+				if(context == grammarAccess.getPropertyRule()) {
+					sequence_Property(context, (Property) semanticObject); 
+					return; 
+				}
+				else break;
+			case RttPackage.SLAVE:
+				if(context == grammarAccess.getIActivityRule() ||
+				   context == grammarAccess.getSlaveRule()) {
+					sequence_Slave(context, (Slave) semanticObject); 
+					return; 
+				}
+				else break;
 			case RttPackage.TASK_CONTEXT:
 				if(context == grammarAccess.getTaskContextRule()) {
 					sequence_TaskContext(context, (TaskContext) semanticObject); 
@@ -59,6 +89,23 @@ public abstract class AbstractRttStructureSemanticSequencer extends AbstractDele
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=EString 
+	 *         scheduler=Scheduler 
+	 *         cpuAffinity=EString 
+	 *         period=EFloat 
+	 *         priority=EInt 
+	 *         taskContext=[TaskContext|EString]? 
+	 *         (slave+=Slave slave+=Slave*)?
+	 *     )
+	 */
+	protected void sequence_Activity(EObject context, Activity semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
 	
 	/**
 	 * Constraint:
@@ -78,7 +125,7 @@ public abstract class AbstractRttStructureSemanticSequencer extends AbstractDele
 	
 	/**
 	 * Constraint:
-	 *     (isEventPort?='isEventPort' name=EString dataType=[DataType|EString]? inputConnectionPolicy=[ConnectionPolicy|EString]?)
+	 *     (isEventPort?='isEventPort' name=EString dataType=[DataType|QualifiedNameWithDot]? inputConnectionPolicy=[ConnectionPolicy|EString]?)
 	 */
 	protected void sequence_InputPort(EObject context, InputPort semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -87,7 +134,16 @@ public abstract class AbstractRttStructureSemanticSequencer extends AbstractDele
 	
 	/**
 	 * Constraint:
-	 *     (name=EString dataType=[DataType|EString]? outputConnectionPolicy=[ConnectionPolicy|EString]?)
+	 *     (name=EString documentation=EString? returnType=[DataType|QualifiedNameWithDot]?)
+	 */
+	protected void sequence_Operation(EObject context, Operation semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=EString dataType=[DataType|QualifiedNameWithDot]? outputConnectionPolicy=[ConnectionPolicy|EString]?)
 	 */
 	protected void sequence_OutputPort(EObject context, OutputPort semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -99,7 +155,8 @@ public abstract class AbstractRttStructureSemanticSequencer extends AbstractDele
 	 *     (
 	 *         name=EString 
 	 *         (taskContexts+=TaskContext taskContexts+=TaskContext*)? 
-	 *         (connectionPolicies+=ConnectionPolicy connectionPolicies+=ConnectionPolicy*)?
+	 *         (connectionPolicies+=ConnectionPolicy connectionPolicies+=ConnectionPolicy*)? 
+	 *         activities=IActivity?
 	 *     )
 	 */
 	protected void sequence_Package(EObject context, OrocosPackage semanticObject) {
@@ -109,7 +166,33 @@ public abstract class AbstractRttStructureSemanticSequencer extends AbstractDele
 	
 	/**
 	 * Constraint:
-	 *     (name=EString namespace=EString type=EString (inputPorts+=InputPort inputPorts+=InputPort*)? (outputPorts+=OutputPort outputPorts+=OutputPort*)?)
+	 *     (name=EString description=EString? value=EString? type=[DataType|QualifiedNameWithDot]?)
+	 */
+	protected void sequence_Property(EObject context, Property semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=EString taskContext=[TaskContext|EString]?)
+	 */
+	protected void sequence_Slave(EObject context, Slave semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=EString 
+	 *         namespace=QualifiedNameWithDot 
+	 *         type=QualifiedNameWithDot 
+	 *         (inputPorts+=InputPort inputPorts+=InputPort*)? 
+	 *         (outputPorts+=OutputPort outputPorts+=OutputPort*)? 
+	 *         (properties+=Property properties+=Property*)? 
+	 *         (operations+=Operation operations+=Operation*)?
+	 *     )
 	 */
 	protected void sequence_TaskContext(EObject context, TaskContext semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

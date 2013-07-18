@@ -12,20 +12,19 @@ Package returns OrocosPackage:
 	'{'
 		('taskContexts' '{' taskContexts+=TaskContext ( "," taskContexts+=TaskContext)* '}' )?
 		('connectionPolicies' '{' connectionPolicies+=ConnectionPolicy ( "," connectionPolicies+=ConnectionPolicy)* '}' )?
+		('activities' activities=IActivity)?
 	'}';
-
-
-EString returns ecore::EString:
-	STRING | ID;
 
 TaskContext returns TaskContext:
 	'TaskContext'
 	name=EString
 	'{'
-		'namespace' namespace=EString
-		'type' type=EString
+		'namespace' namespace=QualifiedNameWithDot
+		'type' type=QualifiedNameWithDot
 		('inputPorts' '{' inputPorts+=InputPort ( "," inputPorts+=InputPort)* '}' )?
 		('outputPorts' '{' outputPorts+=OutputPort ( "," outputPorts+=OutputPort)* '}' )?
+		('properties' '{' properties+=Property ( "," properties+=Property)* '}' )?
+		('operations' '{' operations+=Operation ( "," operations+=Operation)* '}' )?
 	'}';
 
 ConnectionPolicy returns ConnectionPolicy:
@@ -44,7 +43,7 @@ InputPort returns InputPort:
 	'InputPort'
 	name=EString
 	'{'
-		('dataType' dataType=[datatypes::DataType|EString])?
+		('dataType' dataType=[datatypes::DataType|QualifiedNameWithDot])?
 		('inputConnectionPolicy' inputConnectionPolicy=[ConnectionPolicy|EString])?
 	'}';
 
@@ -52,8 +51,27 @@ OutputPort returns OutputPort:
 	'OutputPort'
 	name=EString
 	'{'
-		('dataType' dataType=[datatypes::DataType|EString])?
+		('dataType' dataType=[datatypes::DataType|QualifiedNameWithDot])?
 		('outputConnectionPolicy' outputConnectionPolicy=[ConnectionPolicy|EString])?
+	'}';
+	
+Property returns Property:
+	{Property}
+	'Property'
+	name=EString
+	'{'
+		('description' description=EString)?
+		('value' value=EString)?
+		('type' type=[datatypes::DataType|QualifiedNameWithDot])?
+	'}';
+
+Operation returns Operation:
+	{Operation}
+	'Operation'
+	name=EString
+	'{'
+		('documentation' documentation=EString)?
+		('returnType' returnType=[datatypes::DataType|QualifiedNameWithDot])?
 	'}';
 
 EShort returns ecore::EShort:
@@ -64,3 +82,47 @@ enum ConnectionPolicyLockPolicy returns ConnectionPolicyLockPolicy:
 
 enum ConnectionPolicyType returns ConnectionPolicyType:
 	DATA | BUFFER;
+	
+IActivity returns IActivity:
+	Activity | Slave;
+	
+Activity returns Activity:
+	'Activity'
+	name=EString
+	'{'
+		'scheduler' scheduler=Scheduler
+		'cpuAffinity' cpuAffinity=EString
+		'period' period=EFloat
+		'priority' priority=EInt
+		('taskContext' taskContext=[TaskContext|EString])?
+		('slave' '{' slave+=Slave ( "," slave+=Slave)* '}' )?
+	'}';
+
+Slave returns Slave:
+	{Slave}
+	'Slave'
+	name=EString
+	'{'
+		('taskContext' taskContext=[TaskContext|EString])?
+	'}';
+
+enum Scheduler returns Scheduler:
+	ORO_SCHED_OTHER | ORO_SCHED_RT
+;
+
+EString returns ecore::EString:
+	STRING | ID;
+	
+EFloat returns ecore::EFloat:
+	'-'? INT? '.' INT (('E'|'e') '-'? INT)?;
+
+EInt returns ecore::EInt:
+	'-'? INT;
+	
+QualifiedName:
+  ID ('::' ID)*
+;
+
+QualifiedNameWithDot:
+  QualifiedName ('.' ID)*
+;

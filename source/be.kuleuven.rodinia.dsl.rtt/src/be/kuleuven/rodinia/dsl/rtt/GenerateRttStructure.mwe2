@@ -16,6 +16,11 @@ Workflow {
 		platformUri = "${runtimeProject}/.."
 		registerGeneratedEPackage = "be.kueleuven.rodinia.model.rtt.RttPackage"
 		registerGenModelFile = "platform:/resource/be.kuleuven.rodinia.model.rtt/model/rtt.genmodel"
+		registerGeneratedEPackage = "be.kuleuven.rodinia.dsl.datatypes.datatypes.DatatypesPackage"
+		registerGenModelFile = "platform:/resource/be.kuleuven.rodinia.dsl.datatypes/src-gen/be/kuleuven/rodinia/dsl/datatypes/Datatypes.genmodel"
+		registerGeneratedEPackage = "org.eclipse.xtext.xbase.XbasePackage"
+    	registerGenModelFile = "platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel"
+		//PUT HERE THE REGISTERED PACKAGES FOR THE DATATYPES
 	}
 
 	component = DirectoryCleaner {
