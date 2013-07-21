@@ -1,0 +1,25 @@
+package cz.cuni.mff.d3s.model.deeco
+
+class System {
+	String name
+	contains Component[] components
+	contains Ensemble[] ensembles
+}
+
+class Component {
+	String name
+	contains Process[1] process
+	refers Ensemble[1] ensembleMember opposite members
+	refers Ensemble[1] ensembleCordinator opposite coordinator 
+}
+
+class Process {
+	String name
+}
+
+class Ensemble {
+	String name
+	refers Component[] members opposite ensembleMember
+	refers Component[1] coordinator opposite ensembleCordinator
+}
+
