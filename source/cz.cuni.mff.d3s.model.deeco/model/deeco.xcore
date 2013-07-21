@@ -9,8 +9,8 @@ class System {
 class Component {
 	String name
 	contains Process[1] process
-	refers Ensemble[1] ensembleMember opposite members
-	refers Ensemble[1] ensembleCordinator opposite coordinator 
+	refers Ensemble ensembleMember opposite members
+	refers Ensemble ensembleCordinator opposite coordinator 
 }
 
 class Process {
@@ -19,7 +19,7 @@ class Process {
 
 class Ensemble {
 	String name
-	refers Component[] members opposite ensembleMember
+	refers Component[*] members opposite ensembleMember
 	refers Component[1] coordinator opposite ensembleCordinator
 }
 
