@@ -8,8 +8,7 @@
 using namespace RTT;
 using namespace [%=taskContext.namespace%];
 
-[%=taskContext.type%]::[%=taskContext.type%](string const& name = "[%=taskContext.name%]") :
-		TaskContext(name)
+[%=taskContext.type%]::[%=taskContext.type%](std::string const& name = "[%=taskContext.name%]") : TaskContext(name)
 [*		[%for(aProperty in taskContext.property) {%]
 			,[%=aProperty.name%]("[%=aProperty.value%]")
     	[%}%]

@@ -24,7 +24,7 @@ namespace [%=taskContext.namespace%]
 		[%=out.stopPreserve()%]
 	
     public:
-        [%=taskContext.type%](const string& name);
+        [%=taskContext.type%](const std::string& name);
         
         bool configureHook();
         bool startHook();
