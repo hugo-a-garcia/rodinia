@@ -18,7 +18,7 @@ public class Component {
 	}
 
 	public void setEglTransformService(IEglTransformService eglTransformService) {
-		System.out.println("eglTransformService2 set");
+		System.out.println("be.kuleuven.rodinia.cdt.transform.rtt eglTransformService set");
 		this.eglTransformService = eglTransformService;
 	}
 
@@ -27,17 +27,17 @@ public class Component {
 	}
 
 	public void setEtlTransformService(IEtlTransformService etlTransformService) {
-		System.out.println("etlTransformService2 set");
+		System.out.println("be.kuleuven.rodinia.cdt.transform.rtt etlTransformService set");
 		this.etlTransformService = etlTransformService;
 	}
 	
 	public void start() {
-		System.out.println("eglTransformService2 start");
+		System.out.println("be.kuleuven.rodinia.cdt.transform.rtt eglTransformService start");
 		component = this;
 	}
 	
 	public void stop() {
-		System.out.println("eglTransformService2 stop");
+		System.out.println("be.kuleuven.rodinia.cdt.transform.rtt eglTransformService stop");
 		component = null;
 	}
 	
