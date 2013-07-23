@@ -1,0 +1,17 @@
+rule Deeco2Rtt 
+  transform system : Source!System
+  to orocosPackage : Target!OrocosPackage {
+  
+  orocosPackage.name = system.name;
+  
+  if (system.components.isDefined()) {
+  	for (component in system.components) {
+  		var taskContext : new Target!TaskContext;
+  		taskContext.name = component.name;
+  		taskContext.namespace = system.name;
+  		taskContext.type = component.name + "_Impl";
+  		orocosPackage.taskContexts.add(taskContext);
+  	}
+  	
+  }  
+}

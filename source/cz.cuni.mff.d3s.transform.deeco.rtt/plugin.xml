@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="cz.cuni.mff.d3s.transform.deeco.rtt.command"
+            name="Transform DEECo to RTT">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="cz.cuni.mff.d3s.transform.deeco.rtt.handler.DEECoToRttHandler"
+            commandId="cz.cuni.mff.d3s.transform.deeco.rtt.command">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:be.kuleuven.rodinia.menu.transform?after=additions">
+         <menu
+               id="cz.cuni.mff.d3s.transform.deeco.rtt.menu"
+               label="DEECo">
+            <command
+                  commandId="cz.cuni.mff.d3s.transform.deeco.rtt.command"
+                  id="cz.cuni.mff.d3s.transform.deeco.rtt.command.menu.id"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>
