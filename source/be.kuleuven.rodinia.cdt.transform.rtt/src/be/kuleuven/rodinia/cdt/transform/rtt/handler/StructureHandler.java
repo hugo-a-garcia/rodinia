@@ -1,19 +1,10 @@
 package be.kuleuven.rodinia.cdt.transform.rtt.handler;
 
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
-import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.ui.handlers.HandlerUtil;
@@ -60,7 +51,6 @@ public class StructureHandler extends AbstractHandler {
 		String pluginID = Activator.PLUGIN_ID;
 		String sourceMetaModelURI = "be.kueleuven.rodinia.model.rtt";
 		String sourceModelFilePath = resource.getLocation().toOSString();
-		//String sourceName = null;
 		boolean sourceReadOnLoad = true;
 		boolean sourceStoreOnDisposal = false;
 		String transformName = "RTT ETL Transform";
@@ -71,10 +61,8 @@ public class StructureHandler extends AbstractHandler {
 		transformParameter.setPluginID(pluginID);
 		transformParameter.setSourceMetaModelURI(sourceMetaModelURI);
 		transformParameter.setSourceModelFilePath(sourceModelFilePath);
-		//transformParameter.setSourceName(sourceName);
 		transformParameter.setSourceReadOnLoad(sourceReadOnLoad);
 		transformParameter.setSourceStoreOnDisposal(sourceStoreOnDisposal);
-		//IEglTransformService eglTransformService = EglComponent.getInstance().getEglTransformService();
 		
 		Component componentInstance = Component.getInstance();
 		componentInstance.getEglTransformService().doEglTransform(transformParameter);
@@ -120,27 +108,10 @@ public class StructureHandler extends AbstractHandler {
 	}
 	
 	private String createTarget(String projectPath, String name) {
-		//String name = targetFile.getName();
 		String fileName = name.substring(0, name.indexOf(".rtt"));
-		
 		String fileString = projectPath + "/deployment/"
 				+ fileName + ".cpf";
-
 		CpfPackage cpfPackage = CpfFactory.eINSTANCE.getCpfPackage().eINSTANCE;
-//
-//		ResourceSet resourceSet = new ResourceSetImpl();
-//		URI cpfFilelURI = org.eclipse.emf.common.util.URI
-//				.createFileURI(cpfFile);
-//		Resource resource = resourceSet.createResource(cpfFilelURI);
-//		try {
-//			//resource.load(null);
-//			//Map<String, Boolean> options = new HashMap<String, Boolean>();
-//			//options.put(XMLResource.OPTION_SCHEMA_LOCATION, Boolean.FALSE);
-//			resource.save(null);
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//		String fileString = cpfFilelURI.toFileString();
 		return fileString;
 	}
 
