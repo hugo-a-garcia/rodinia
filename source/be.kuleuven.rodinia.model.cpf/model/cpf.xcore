@@ -1,0 +1,141 @@
+@ExtendedMetaData(qualified="false")
+package be.kuleuven.rodinia.model.cpf
+
+import org.eclipse.emf.ecore.EFeatureMapEntry
+import org.eclipse.emf.ecore.EStringToStringMapEntry
+import org.eclipse.emf.ecore.xml.^type.String
+
+@ExtendedMetaData(name="choice", kind="mixed")
+class Choice {
+	@ExtendedMetaData(kind="elementWildcard", name=":mixed")
+	EFeatureMapEntry[] mixed
+}
+
+@ExtendedMetaData(name="choices", kind="elementOnly")
+class Choices {
+	@ExtendedMetaData(kind="element", name="choice", namespace="##targetNamespace")
+	contains Choice[] choice
+}
+
+@ExtendedMetaData(name="defaultvalue", kind="mixed")
+class Defaultvalue {
+	@ExtendedMetaData(kind="elementWildcard", name=":mixed")
+	EFeatureMapEntry[] mixed
+}
+
+@ExtendedMetaData(name="description", kind="mixed")
+class Description {
+	@ExtendedMetaData(kind="elementWildcard", name=":mixed")
+	EFeatureMapEntry[] mixed
+}
+
+@ExtendedMetaData(name="", kind="mixed")
+class DocumentRoot {
+	@ExtendedMetaData(kind="elementWildcard", name=":mixed")
+	EFeatureMapEntry[] mixed
+	@ExtendedMetaData(kind="attribute", name="xmlns:prefix")
+	contains transient EStringToStringMapEntry[] xMLNSPrefixMap
+	@ExtendedMetaData(kind="attribute", name="xsi:schemaLocation")
+	contains transient EStringToStringMapEntry[] xSISchemaLocation
+	@ExtendedMetaData(kind="element", name="choice", namespace="##targetNamespace")
+	contains transient volatile derived Choice[0..?] choice
+	@ExtendedMetaData(kind="element", name="choices", namespace="##targetNamespace")
+	contains transient volatile derived Choices[0..?] choices
+	@ExtendedMetaData(kind="element", name="defaultvalue", namespace="##targetNamespace")
+	contains transient volatile derived Defaultvalue[0..?] defaultvalue
+	@ExtendedMetaData(kind="element", name="description", namespace="##targetNamespace")
+	contains transient volatile derived Description[0..?] description
+	@ExtendedMetaData(kind="element", name="properties", namespace="##targetNamespace")
+	contains transient volatile derived Properties[0..?] properties
+	@ExtendedMetaData(kind="element", name="sequence", namespace="##targetNamespace")
+	contains transient volatile derived Sequence[0..?] sequence
+	@ExtendedMetaData(kind="element", name="simple", namespace="##targetNamespace")
+	contains transient volatile derived Simple[0..?] simple
+	@ExtendedMetaData(kind="element", name="struct", namespace="##targetNamespace")
+	contains transient volatile derived Struct[0..?] struct
+	@ExtendedMetaData(kind="element", name="value", namespace="##targetNamespace")
+	contains transient volatile derived Value[0..?] value
+}
+
+@ExtendedMetaData(name="properties", kind="elementOnly")
+class Properties {
+	@ExtendedMetaData(kind="element", name="description", namespace="##targetNamespace")
+	contains Description description
+	@ExtendedMetaData(kind="element", name="simple", namespace="##targetNamespace")
+	contains Simple[] simple
+	@ExtendedMetaData(kind="element", name="sequence", namespace="##targetNamespace")
+	contains Sequence sequence
+	@ExtendedMetaData(kind="element", name="struct", namespace="##targetNamespace")
+	contains Struct[] struct
+}
+
+@ExtendedMetaData(name="sequence", kind="elementOnly")
+class Sequence {
+	@ExtendedMetaData(kind="element", name="description", namespace="##targetNamespace")
+	contains Description description
+	@ExtendedMetaData(kind="element", name="simple", namespace="##targetNamespace")
+	contains Simple[] simple
+	@ExtendedMetaData(kind="element", name="struct", namespace="##targetNamespace")
+	contains Struct[] struct
+	@ExtendedMetaData(kind="element", name="sequence", namespace="##targetNamespace")
+	contains Sequence[] sequence
+	@ExtendedMetaData(kind="attribute", name="name", namespace="##targetNamespace")
+	String name
+	@ExtendedMetaData(kind="attribute", name="type", namespace="##targetNamespace")
+	String[1] ^type
+}
+
+@ExtendedMetaData(name="simple", kind="elementOnly")
+class Simple {
+	@ExtendedMetaData(kind="element", name="description", namespace="##targetNamespace")
+	contains Description description
+	@ExtendedMetaData(kind="element", name="value", namespace="##targetNamespace")
+	contains Value[1] value
+	@ExtendedMetaData(kind="element", name="choices", namespace="##targetNamespace")
+	contains Choices choices
+	@ExtendedMetaData(kind="element", name="defaultvalue", namespace="##targetNamespace")
+	contains Defaultvalue defaultvalue
+	@ExtendedMetaData(kind="attribute", name="name", namespace="##targetNamespace")
+	String name
+	@ExtendedMetaData(kind="attribute", name="type", namespace="##targetNamespace")
+	unsettable SimpleType[1] ^type
+}
+
+@ExtendedMetaData(name="simpleType")
+enum SimpleType {
+	boolean
+	char = 1
+	double = 2
+	float = 3
+	short = 4
+	long = 5
+	objref = 6
+	octet = 7
+	string = 8
+	ulong = 9
+	ushort = 10
+}
+
+@ ExtendedMetaData ( name = "simpleType:Object" , baseType = "simpleType" ) type SimpleTypeObject wraps org.eclipse.emf.common.util.Enumerator
+
+@ExtendedMetaData(name="struct", kind="elementOnly")
+class Struct {
+	@ExtendedMetaData(kind="element", name="description", namespace="##targetNamespace")
+	contains Description description
+	@ExtendedMetaData(kind="element", name="simple", namespace="##targetNamespace")
+	contains Simple[] simple
+	@ExtendedMetaData(kind="element", name="sequence", namespace="##targetNamespace")
+	contains Sequence sequence
+	@ExtendedMetaData(kind="element", name="struct", namespace="##targetNamespace")
+	contains Struct[] struct
+	@ExtendedMetaData(kind="attribute", name="name", namespace="##targetNamespace")
+	String name
+	@ExtendedMetaData(kind="attribute", name="type", namespace="##targetNamespace")
+	String[1] ^type
+}
+
+@ExtendedMetaData(name="value", kind="mixed")
+class Value {
+	@ExtendedMetaData(kind="elementWildcard", name=":mixed")
+	EFeatureMapEntry[] mixed
+}

@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.best_of_robotics.model.Cpf.CpfFactory;
-import org.best_of_robotics.model.Cpf.CpfPackage;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
@@ -24,6 +22,8 @@ import be.kuleuven.rodinia.cdt.transform.rtt.Activator;
 import be.kuleuven.rodinia.cdt.transform.rtt.Component;
 import be.kuleuven.rodinia.epsilon.service.egl.EglTransformParameter;
 import be.kuleuven.rodinia.epsilon.service.etl.EtlTransformParameter;
+import be.kuleuven.rodinia.model.cpf.CpfFactory;
+import be.kuleuven.rodinia.model.cpf.CpfPackage;
 
 public class StructureHandler extends AbstractHandler {
 	
@@ -91,7 +91,7 @@ public class StructureHandler extends AbstractHandler {
 		boolean sourceReadOnLoad = true;
 		boolean sourceStoreOnDisposal = false;
 		String targetName = "Target";
-		String targetMetaModelURI = "http://Cpf/1.0";
+		String targetMetaModelURI = "be.kuleuven.rodinia.model.cpf";
 		String targetModelFilePath = createTarget(projectPath, resource.getName());;
 		boolean targetReadOnLoad = false;
 		boolean targetStoreOnDisposal = true;

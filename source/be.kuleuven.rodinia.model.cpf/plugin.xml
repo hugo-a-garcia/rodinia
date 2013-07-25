@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cpf -->
+      <package
+            uri="be.kuleuven.rodinia.model.cpf"
+            class="be.kuleuven.rodinia.model.cpf.CpfPackage"
+            genModel="model/cpf.xcore"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated cpf -->
+      <parser
+            type="cpf"
+            class="be.kuleuven.rodinia.model.cpf.util.CpfResourceFactoryImpl"/>
+   </extension>
+
+</plugin>
