@@ -38,4 +38,12 @@
 	manifestTemplate.populate('package', package);
 	manifestTemplate.generate('manifest.xml');
 	
+	//lua
+	var deploymentDriver = TemplateFactory.load('deploymentDriver.egl');
+	deploymentDriver.generate('deployment/deploymentDriver.ops');
+	
+	var luaDeployScript = TemplateFactory.load('luaDeploymentScript.egl');
+	luaDeployScript.populate('package', package);
+	luaDeployScript.generate('deployment/luaDeploymentScript.lua');
+	
 %]

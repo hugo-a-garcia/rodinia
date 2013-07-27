@@ -1,0 +1,17 @@
+-- deploy_app.lua
+tc = rtt.getTC()
+depl = tc
+ 
+--get import and loadComponent
+import = depl:getOperation("import")
+loadComponent = depl:getOperation("loadComponent")
+
+--import the packages (you don't need to do "depl:import" at this point)
+import("[%=package.name%]")
+
+-- create components
+[%for(taskContext in package.taskContexts) {%]
+loadComponent("[%=taskContext.name%]", "[%=taskContext.namespace%]::[%=taskContext.type%]")
+ [%}%]
+ 
+ 

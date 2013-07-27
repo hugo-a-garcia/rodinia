@@ -17,6 +17,14 @@ class TaskContext {
 	contains OutputPort [] outputPorts
 	contains Property[] properties
 	contains Operation[] operations
+	refers PeerGroup peerGroupCoordinator opposite coordinator
+	refers PeerGroup peerGroupMember opposite members
+}
+
+class PeerGroup {
+	String name
+	refers TaskContext [1] coordinator opposite peerGroupCoordinator
+	refers TaskContext [*] members opposite peerGroupMember
 }
 
 class ConnectionPolicy
