@@ -214,31 +214,61 @@ rulePackage returns [EObject current=null]
     {
     	newLeafNode(otherlv_15, grammarAccess.getPackageAccess().getRightCurlyBracketKeyword_5_4());
     }
-)?(	otherlv_16='activities' 
+)?(	otherlv_16='peerGroups' 
     {
-    	newLeafNode(otherlv_16, grammarAccess.getPackageAccess().getActivitiesKeyword_6_0());
+    	newLeafNode(otherlv_16, grammarAccess.getPackageAccess().getPeerGroupsKeyword_6_0());
+    }
+	otherlv_17='{' 
+    {
+    	newLeafNode(otherlv_17, grammarAccess.getPackageAccess().getLeftCurlyBracketKeyword_6_1());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getPackageAccess().getActivitiesIActivityParserRuleCall_6_1_0()); 
+	        newCompositeNode(grammarAccess.getPackageAccess().getPeerGroupsPeerGroupParserRuleCall_6_2_0()); 
 	    }
-		lv_activities_17_0=ruleIActivity		{
+		lv_peerGroups_18_0=rulePeerGroup		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getPackageRule());
 	        }
-       		set(
+       		add(
        			$current, 
-       			"activities",
-        		lv_activities_17_0, 
-        		"IActivity");
+       			"peerGroups",
+        		lv_peerGroups_18_0, 
+        		"PeerGroup");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))?	otherlv_18='}' 
+)(	otherlv_19=',' 
     {
-    	newLeafNode(otherlv_18, grammarAccess.getPackageAccess().getRightCurlyBracketKeyword_7());
+    	newLeafNode(otherlv_19, grammarAccess.getPackageAccess().getCommaKeyword_6_3_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getPackageAccess().getPeerGroupsPeerGroupParserRuleCall_6_3_1_0()); 
+	    }
+		lv_peerGroups_20_0=rulePeerGroup		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getPackageRule());
+	        }
+       		add(
+       			$current, 
+       			"peerGroups",
+        		lv_peerGroups_20_0, 
+        		"PeerGroup");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*	otherlv_21='}' 
+    {
+    	newLeafNode(otherlv_21, grammarAccess.getPackageAccess().getRightCurlyBracketKeyword_6_4());
+    }
+)?	otherlv_22='}' 
+    {
+    	newLeafNode(otherlv_22, grammarAccess.getPackageAccess().getRightCurlyBracketKeyword_7());
     }
 )
 ;
@@ -542,6 +572,122 @@ ruleTaskContext returns [EObject current=null]
 )?	otherlv_31='}' 
     {
     	newLeafNode(otherlv_31, grammarAccess.getTaskContextAccess().getRightCurlyBracketKeyword_11());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRulePeerGroup
+entryRulePeerGroup returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getPeerGroupRule()); }
+	 iv_rulePeerGroup=rulePeerGroup 
+	 { $current=$iv_rulePeerGroup.current; } 
+	 EOF 
+;
+
+// Rule PeerGroup
+rulePeerGroup returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='PeerGroup' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getPeerGroupAccess().getPeerGroupKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getPeerGroupAccess().getNameEStringParserRuleCall_1_0()); 
+	    }
+		lv_name_1_0=ruleEString		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getPeerGroupRule());
+	        }
+       		set(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"EString");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_2='{' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getPeerGroupAccess().getLeftCurlyBracketKeyword_2());
+    }
+	otherlv_3='coordinator' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getPeerGroupAccess().getCoordinatorKeyword_3());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPeerGroupRule());
+	        }
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getPeerGroupAccess().getCoordinatorTaskContextCrossReference_4_0()); 
+	    }
+		ruleEString		{ 
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_5='members' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getPeerGroupAccess().getMembersKeyword_5_0());
+    }
+	otherlv_6='(' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getPeerGroupAccess().getLeftParenthesisKeyword_5_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPeerGroupRule());
+	        }
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getPeerGroupAccess().getMembersTaskContextCrossReference_5_2_0()); 
+	    }
+		ruleEString		{ 
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_8=',' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getPeerGroupAccess().getCommaKeyword_5_3_0());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPeerGroupRule());
+	        }
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getPeerGroupAccess().getMembersTaskContextCrossReference_5_3_1_0()); 
+	    }
+		ruleEString		{ 
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*	otherlv_10=')' 
+    {
+    	newLeafNode(otherlv_10, grammarAccess.getPeerGroupAccess().getRightParenthesisKeyword_5_4());
+    }
+)?	otherlv_11='}' 
+    {
+    	newLeafNode(otherlv_11, grammarAccess.getPeerGroupAccess().getRightCurlyBracketKeyword_6());
     }
 )
 ;
@@ -1147,44 +1293,6 @@ ruleEShort returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
     ;
 
 
-
-
-
-// Entry rule entryRuleIActivity
-entryRuleIActivity returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getIActivityRule()); }
-	 iv_ruleIActivity=ruleIActivity 
-	 { $current=$iv_ruleIActivity.current; } 
-	 EOF 
-;
-
-// Rule IActivity
-ruleIActivity returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(
-    { 
-        newCompositeNode(grammarAccess.getIActivityAccess().getActivityParserRuleCall_0()); 
-    }
-    this_Activity_0=ruleActivity
-    { 
-        $current = $this_Activity_0.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getIActivityAccess().getSlaveParserRuleCall_1()); 
-    }
-    this_Slave_1=ruleSlave
-    { 
-        $current = $this_Slave_1.current; 
-        afterParserOrEnumRuleCall();
-    }
-)
-;
 
 
 

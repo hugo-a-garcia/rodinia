@@ -6,7 +6,7 @@ class OrocosPackage {
 	String name
 	contains TaskContext[] taskContexts
 	contains ConnectionPolicy [] connectionPolicies
-	contains IActivity activities
+	contains PeerGroup[] peerGroups
 }
 
 class TaskContext {
@@ -17,14 +17,12 @@ class TaskContext {
 	contains OutputPort [] outputPorts
 	contains Property[] properties
 	contains Operation[] operations
-	refers PeerGroup peerGroupCoordinator opposite coordinator
-	refers PeerGroup peerGroupMember opposite members
 }
 
 class PeerGroup {
 	String name
-	refers TaskContext [1] coordinator opposite peerGroupCoordinator
-	refers TaskContext [*] members opposite peerGroupMember
+	refers TaskContext [1] coordinator
+	refers TaskContext [*] members
 }
 
 class ConnectionPolicy

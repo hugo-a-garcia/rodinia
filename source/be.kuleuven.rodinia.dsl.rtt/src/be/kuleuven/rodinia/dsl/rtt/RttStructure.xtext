@@ -12,7 +12,7 @@ Package returns OrocosPackage:
 	'{'
 		('taskContexts' '{' taskContexts+=TaskContext ( "," taskContexts+=TaskContext)* '}' )?
 		('connectionPolicies' '{' connectionPolicies+=ConnectionPolicy ( "," connectionPolicies+=ConnectionPolicy)* '}' )?
-		('activities' activities=IActivity)?
+		('peerGroups' '{' peerGroups+=PeerGroup ( "," peerGroups+=PeerGroup)* '}' )?
 	'}';
 
 TaskContext returns TaskContext:
@@ -25,6 +25,14 @@ TaskContext returns TaskContext:
 		('outputPorts' '{' outputPorts+=OutputPort ( "," outputPorts+=OutputPort)* '}' )?
 		('properties' '{' properties+=Property ( "," properties+=Property)* '}' )?
 		('operations' '{' operations+=Operation ( "," operations+=Operation)* '}' )?
+	'}';
+	
+PeerGroup returns PeerGroup:
+	'PeerGroup'
+	name=EString
+	'{'
+		'coordinator' coordinator=[TaskContext|EString]
+		('members' '(' members+=[TaskContext|EString] ( "," members+=[TaskContext|EString])* ')' )?
 	'}';
 
 ConnectionPolicy returns ConnectionPolicy:

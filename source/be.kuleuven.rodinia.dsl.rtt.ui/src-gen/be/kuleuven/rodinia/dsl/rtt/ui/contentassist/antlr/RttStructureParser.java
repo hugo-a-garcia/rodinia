@@ -49,6 +49,7 @@ public class RttStructureParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPackageAccess().getGroup_5(), "rule__Package__Group_5__0");
 					put(grammarAccess.getPackageAccess().getGroup_5_3(), "rule__Package__Group_5_3__0");
 					put(grammarAccess.getPackageAccess().getGroup_6(), "rule__Package__Group_6__0");
+					put(grammarAccess.getPackageAccess().getGroup_6_3(), "rule__Package__Group_6_3__0");
 					put(grammarAccess.getTaskContextAccess().getGroup(), "rule__TaskContext__Group__0");
 					put(grammarAccess.getTaskContextAccess().getGroup_7(), "rule__TaskContext__Group_7__0");
 					put(grammarAccess.getTaskContextAccess().getGroup_7_3(), "rule__TaskContext__Group_7_3__0");
@@ -58,6 +59,9 @@ public class RttStructureParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTaskContextAccess().getGroup_9_3(), "rule__TaskContext__Group_9_3__0");
 					put(grammarAccess.getTaskContextAccess().getGroup_10(), "rule__TaskContext__Group_10__0");
 					put(grammarAccess.getTaskContextAccess().getGroup_10_3(), "rule__TaskContext__Group_10_3__0");
+					put(grammarAccess.getPeerGroupAccess().getGroup(), "rule__PeerGroup__Group__0");
+					put(grammarAccess.getPeerGroupAccess().getGroup_5(), "rule__PeerGroup__Group_5__0");
+					put(grammarAccess.getPeerGroupAccess().getGroup_5_3(), "rule__PeerGroup__Group_5_3__0");
 					put(grammarAccess.getConnectionPolicyAccess().getGroup(), "rule__ConnectionPolicy__Group__0");
 					put(grammarAccess.getConnectionPolicyAccess().getGroup_3(), "rule__ConnectionPolicy__Group_3__0");
 					put(grammarAccess.getConnectionPolicyAccess().getGroup_4(), "rule__ConnectionPolicy__Group_4__0");
@@ -94,7 +98,8 @@ public class RttStructureParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPackageAccess().getTaskContextsAssignment_4_3_1(), "rule__Package__TaskContextsAssignment_4_3_1");
 					put(grammarAccess.getPackageAccess().getConnectionPoliciesAssignment_5_2(), "rule__Package__ConnectionPoliciesAssignment_5_2");
 					put(grammarAccess.getPackageAccess().getConnectionPoliciesAssignment_5_3_1(), "rule__Package__ConnectionPoliciesAssignment_5_3_1");
-					put(grammarAccess.getPackageAccess().getActivitiesAssignment_6_1(), "rule__Package__ActivitiesAssignment_6_1");
+					put(grammarAccess.getPackageAccess().getPeerGroupsAssignment_6_2(), "rule__Package__PeerGroupsAssignment_6_2");
+					put(grammarAccess.getPackageAccess().getPeerGroupsAssignment_6_3_1(), "rule__Package__PeerGroupsAssignment_6_3_1");
 					put(grammarAccess.getTaskContextAccess().getNameAssignment_1(), "rule__TaskContext__NameAssignment_1");
 					put(grammarAccess.getTaskContextAccess().getNamespaceAssignment_4(), "rule__TaskContext__NamespaceAssignment_4");
 					put(grammarAccess.getTaskContextAccess().getTypeAssignment_6(), "rule__TaskContext__TypeAssignment_6");
@@ -106,6 +111,10 @@ public class RttStructureParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTaskContextAccess().getPropertiesAssignment_9_3_1(), "rule__TaskContext__PropertiesAssignment_9_3_1");
 					put(grammarAccess.getTaskContextAccess().getOperationsAssignment_10_2(), "rule__TaskContext__OperationsAssignment_10_2");
 					put(grammarAccess.getTaskContextAccess().getOperationsAssignment_10_3_1(), "rule__TaskContext__OperationsAssignment_10_3_1");
+					put(grammarAccess.getPeerGroupAccess().getNameAssignment_1(), "rule__PeerGroup__NameAssignment_1");
+					put(grammarAccess.getPeerGroupAccess().getCoordinatorAssignment_4(), "rule__PeerGroup__CoordinatorAssignment_4");
+					put(grammarAccess.getPeerGroupAccess().getMembersAssignment_5_2(), "rule__PeerGroup__MembersAssignment_5_2");
+					put(grammarAccess.getPeerGroupAccess().getMembersAssignment_5_3_1(), "rule__PeerGroup__MembersAssignment_5_3_1");
 					put(grammarAccess.getConnectionPolicyAccess().getNameAssignment_1(), "rule__ConnectionPolicy__NameAssignment_1");
 					put(grammarAccess.getConnectionPolicyAccess().getBufferSizeAssignment_3_1(), "rule__ConnectionPolicy__BufferSizeAssignment_3_1");
 					put(grammarAccess.getConnectionPolicyAccess().getLockPolicyAssignment_4_1(), "rule__ConnectionPolicy__LockPolicyAssignment_4_1");

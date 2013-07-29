@@ -3,8 +3,8 @@
 package be.kueleuven.rodinia.model.rtt.impl;
 
 import be.kueleuven.rodinia.model.rtt.ConnectionPolicy;
-import be.kueleuven.rodinia.model.rtt.IActivity;
 import be.kueleuven.rodinia.model.rtt.OrocosPackage;
+import be.kueleuven.rodinia.model.rtt.PeerGroup;
 import be.kueleuven.rodinia.model.rtt.RttPackage;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
 
@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.OrocosPackageImpl#getName <em>Name</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.OrocosPackageImpl#getTaskContexts <em>Task Contexts</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.OrocosPackageImpl#getConnectionPolicies <em>Connection Policies</em>}</li>
- *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.OrocosPackageImpl#getActivities <em>Activities</em>}</li>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.OrocosPackageImpl#getPeerGroups <em>Peer Groups</em>}</li>
  * </ul>
  * </p>
  *
@@ -83,14 +83,14 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
   protected EList<ConnectionPolicy> connectionPolicies;
 
   /**
-   * The cached value of the '{@link #getActivities() <em>Activities</em>}' containment reference.
+   * The cached value of the '{@link #getPeerGroups() <em>Peer Groups</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getActivities()
+   * @see #getPeerGroups()
    * @generated
    * @ordered
    */
-  protected IActivity activities;
+  protected EList<PeerGroup> peerGroups;
 
   /**
    * <!-- begin-user-doc -->
@@ -169,47 +169,13 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
    * <!-- end-user-doc -->
    * @generated
    */
-  public IActivity getActivities()
+  public EList<PeerGroup> getPeerGroups()
   {
-    return activities;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetActivities(IActivity newActivities, NotificationChain msgs)
-  {
-    IActivity oldActivities = activities;
-    activities = newActivities;
-    if (eNotificationRequired())
+    if (peerGroups == null)
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RttPackage.OROCOS_PACKAGE__ACTIVITIES, oldActivities, newActivities);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
+      peerGroups = new EObjectContainmentEList<PeerGroup>(PeerGroup.class, this, RttPackage.OROCOS_PACKAGE__PEER_GROUPS);
     }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setActivities(IActivity newActivities)
-  {
-    if (newActivities != activities)
-    {
-      NotificationChain msgs = null;
-      if (activities != null)
-        msgs = ((InternalEObject)activities).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RttPackage.OROCOS_PACKAGE__ACTIVITIES, null, msgs);
-      if (newActivities != null)
-        msgs = ((InternalEObject)newActivities).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RttPackage.OROCOS_PACKAGE__ACTIVITIES, null, msgs);
-      msgs = basicSetActivities(newActivities, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RttPackage.OROCOS_PACKAGE__ACTIVITIES, newActivities, newActivities));
+    return peerGroups;
   }
 
   /**
@@ -226,8 +192,8 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
         return ((InternalEList<?>)getTaskContexts()).basicRemove(otherEnd, msgs);
       case RttPackage.OROCOS_PACKAGE__CONNECTION_POLICIES:
         return ((InternalEList<?>)getConnectionPolicies()).basicRemove(otherEnd, msgs);
-      case RttPackage.OROCOS_PACKAGE__ACTIVITIES:
-        return basicSetActivities(null, msgs);
+      case RttPackage.OROCOS_PACKAGE__PEER_GROUPS:
+        return ((InternalEList<?>)getPeerGroups()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -248,8 +214,8 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
         return getTaskContexts();
       case RttPackage.OROCOS_PACKAGE__CONNECTION_POLICIES:
         return getConnectionPolicies();
-      case RttPackage.OROCOS_PACKAGE__ACTIVITIES:
-        return getActivities();
+      case RttPackage.OROCOS_PACKAGE__PEER_GROUPS:
+        return getPeerGroups();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -276,8 +242,9 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
         getConnectionPolicies().clear();
         getConnectionPolicies().addAll((Collection<? extends ConnectionPolicy>)newValue);
         return;
-      case RttPackage.OROCOS_PACKAGE__ACTIVITIES:
-        setActivities((IActivity)newValue);
+      case RttPackage.OROCOS_PACKAGE__PEER_GROUPS:
+        getPeerGroups().clear();
+        getPeerGroups().addAll((Collection<? extends PeerGroup>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -302,8 +269,8 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
       case RttPackage.OROCOS_PACKAGE__CONNECTION_POLICIES:
         getConnectionPolicies().clear();
         return;
-      case RttPackage.OROCOS_PACKAGE__ACTIVITIES:
-        setActivities((IActivity)null);
+      case RttPackage.OROCOS_PACKAGE__PEER_GROUPS:
+        getPeerGroups().clear();
         return;
     }
     super.eUnset(featureID);
@@ -325,8 +292,8 @@ public class OrocosPackageImpl extends MinimalEObjectImpl.Container implements O
         return taskContexts != null && !taskContexts.isEmpty();
       case RttPackage.OROCOS_PACKAGE__CONNECTION_POLICIES:
         return connectionPolicies != null && !connectionPolicies.isEmpty();
-      case RttPackage.OROCOS_PACKAGE__ACTIVITIES:
-        return activities != null;
+      case RttPackage.OROCOS_PACKAGE__PEER_GROUPS:
+        return peerGroups != null && !peerGroups.isEmpty();
     }
     return super.eIsSet(featureID);
   }

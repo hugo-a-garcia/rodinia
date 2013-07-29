@@ -47,20 +47,28 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cConnectionPoliciesConnectionPolicyParserRuleCall_5_3_1_0 = (RuleCall)cConnectionPoliciesAssignment_5_3_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5_4 = (Keyword)cGroup_5.eContents().get(4);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cActivitiesKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cActivitiesAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cActivitiesIActivityParserRuleCall_6_1_0 = (RuleCall)cActivitiesAssignment_6_1.eContents().get(0);
+		private final Keyword cPeerGroupsKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
+		private final Assignment cPeerGroupsAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
+		private final RuleCall cPeerGroupsPeerGroupParserRuleCall_6_2_0 = (RuleCall)cPeerGroupsAssignment_6_2.eContents().get(0);
+		private final Group cGroup_6_3 = (Group)cGroup_6.eContents().get(3);
+		private final Keyword cCommaKeyword_6_3_0 = (Keyword)cGroup_6_3.eContents().get(0);
+		private final Assignment cPeerGroupsAssignment_6_3_1 = (Assignment)cGroup_6_3.eContents().get(1);
+		private final RuleCall cPeerGroupsPeerGroupParserRuleCall_6_3_1_0 = (RuleCall)cPeerGroupsAssignment_6_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6_4 = (Keyword)cGroup_6.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//Package returns OrocosPackage:
 		//	{OrocosPackage} "OrocosPackage" name=EString "{" ("taskContexts" "{" taskContexts+=TaskContext (","
 		//	taskContexts+=TaskContext)* "}")? ("connectionPolicies" "{" connectionPolicies+=ConnectionPolicy (","
-		//	connectionPolicies+=ConnectionPolicy)* "}")? ("activities" activities=IActivity)? "}";
+		//	connectionPolicies+=ConnectionPolicy)* "}")? ("peerGroups" "{" peerGroups+=PeerGroup ("," peerGroups+=PeerGroup)*
+		//	"}")? "}";
 		public ParserRule getRule() { return rule; }
 
 		//{OrocosPackage} "OrocosPackage" name=EString "{" ("taskContexts" "{" taskContexts+=TaskContext (","
 		//taskContexts+=TaskContext)* "}")? ("connectionPolicies" "{" connectionPolicies+=ConnectionPolicy (","
-		//connectionPolicies+=ConnectionPolicy)* "}")? ("activities" activities=IActivity)? "}"
+		//connectionPolicies+=ConnectionPolicy)* "}")? ("peerGroups" "{" peerGroups+=PeerGroup ("," peerGroups+=PeerGroup)* "}")?
+		//"}"
 		public Group getGroup() { return cGroup; }
 
 		//{OrocosPackage}
@@ -138,17 +146,35 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_5_4() { return cRightCurlyBracketKeyword_5_4; }
 
-		//("activities" activities=IActivity)?
+		//("peerGroups" "{" peerGroups+=PeerGroup ("," peerGroups+=PeerGroup)* "}")?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"activities"
-		public Keyword getActivitiesKeyword_6_0() { return cActivitiesKeyword_6_0; }
+		//"peerGroups"
+		public Keyword getPeerGroupsKeyword_6_0() { return cPeerGroupsKeyword_6_0; }
 
-		//activities=IActivity
-		public Assignment getActivitiesAssignment_6_1() { return cActivitiesAssignment_6_1; }
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_6_1() { return cLeftCurlyBracketKeyword_6_1; }
 
-		//IActivity
-		public RuleCall getActivitiesIActivityParserRuleCall_6_1_0() { return cActivitiesIActivityParserRuleCall_6_1_0; }
+		//peerGroups+=PeerGroup
+		public Assignment getPeerGroupsAssignment_6_2() { return cPeerGroupsAssignment_6_2; }
+
+		//PeerGroup
+		public RuleCall getPeerGroupsPeerGroupParserRuleCall_6_2_0() { return cPeerGroupsPeerGroupParserRuleCall_6_2_0; }
+
+		//("," peerGroups+=PeerGroup)*
+		public Group getGroup_6_3() { return cGroup_6_3; }
+
+		//","
+		public Keyword getCommaKeyword_6_3_0() { return cCommaKeyword_6_3_0; }
+
+		//peerGroups+=PeerGroup
+		public Assignment getPeerGroupsAssignment_6_3_1() { return cPeerGroupsAssignment_6_3_1; }
+
+		//PeerGroup
+		public RuleCall getPeerGroupsPeerGroupParserRuleCall_6_3_1_0() { return cPeerGroupsPeerGroupParserRuleCall_6_3_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_6_4() { return cRightCurlyBracketKeyword_6_4; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
@@ -374,6 +400,104 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
+	}
+
+	public class PeerGroupElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "PeerGroup");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cPeerGroupKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cCoordinatorKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cCoordinatorAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cCoordinatorTaskContextCrossReference_4_0 = (CrossReference)cCoordinatorAssignment_4.eContents().get(0);
+		private final RuleCall cCoordinatorTaskContextEStringParserRuleCall_4_0_1 = (RuleCall)cCoordinatorTaskContextCrossReference_4_0.eContents().get(1);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cMembersKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
+		private final Assignment cMembersAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
+		private final CrossReference cMembersTaskContextCrossReference_5_2_0 = (CrossReference)cMembersAssignment_5_2.eContents().get(0);
+		private final RuleCall cMembersTaskContextEStringParserRuleCall_5_2_0_1 = (RuleCall)cMembersTaskContextCrossReference_5_2_0.eContents().get(1);
+		private final Group cGroup_5_3 = (Group)cGroup_5.eContents().get(3);
+		private final Keyword cCommaKeyword_5_3_0 = (Keyword)cGroup_5_3.eContents().get(0);
+		private final Assignment cMembersAssignment_5_3_1 = (Assignment)cGroup_5_3.eContents().get(1);
+		private final CrossReference cMembersTaskContextCrossReference_5_3_1_0 = (CrossReference)cMembersAssignment_5_3_1.eContents().get(0);
+		private final RuleCall cMembersTaskContextEStringParserRuleCall_5_3_1_0_1 = (RuleCall)cMembersTaskContextCrossReference_5_3_1_0.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_5_4 = (Keyword)cGroup_5.eContents().get(4);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		
+		//PeerGroup:
+		//	"PeerGroup" name=EString "{" "coordinator" coordinator=[TaskContext|EString] ("members" "("
+		//	members+=[TaskContext|EString] ("," members+=[TaskContext|EString])* ")")? "}";
+		public ParserRule getRule() { return rule; }
+
+		//"PeerGroup" name=EString "{" "coordinator" coordinator=[TaskContext|EString] ("members" "("
+		//members+=[TaskContext|EString] ("," members+=[TaskContext|EString])* ")")? "}"
+		public Group getGroup() { return cGroup; }
+
+		//"PeerGroup"
+		public Keyword getPeerGroupKeyword_0() { return cPeerGroupKeyword_0; }
+
+		//name=EString
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//EString
+		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
+		//"coordinator"
+		public Keyword getCoordinatorKeyword_3() { return cCoordinatorKeyword_3; }
+
+		//coordinator=[TaskContext|EString]
+		public Assignment getCoordinatorAssignment_4() { return cCoordinatorAssignment_4; }
+
+		//[TaskContext|EString]
+		public CrossReference getCoordinatorTaskContextCrossReference_4_0() { return cCoordinatorTaskContextCrossReference_4_0; }
+
+		//EString
+		public RuleCall getCoordinatorTaskContextEStringParserRuleCall_4_0_1() { return cCoordinatorTaskContextEStringParserRuleCall_4_0_1; }
+
+		//("members" "(" members+=[TaskContext|EString] ("," members+=[TaskContext|EString])* ")")?
+		public Group getGroup_5() { return cGroup_5; }
+
+		//"members"
+		public Keyword getMembersKeyword_5_0() { return cMembersKeyword_5_0; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_5_1() { return cLeftParenthesisKeyword_5_1; }
+
+		//members+=[TaskContext|EString]
+		public Assignment getMembersAssignment_5_2() { return cMembersAssignment_5_2; }
+
+		//[TaskContext|EString]
+		public CrossReference getMembersTaskContextCrossReference_5_2_0() { return cMembersTaskContextCrossReference_5_2_0; }
+
+		//EString
+		public RuleCall getMembersTaskContextEStringParserRuleCall_5_2_0_1() { return cMembersTaskContextEStringParserRuleCall_5_2_0_1; }
+
+		//("," members+=[TaskContext|EString])*
+		public Group getGroup_5_3() { return cGroup_5_3; }
+
+		//","
+		public Keyword getCommaKeyword_5_3_0() { return cCommaKeyword_5_3_0; }
+
+		//members+=[TaskContext|EString]
+		public Assignment getMembersAssignment_5_3_1() { return cMembersAssignment_5_3_1; }
+
+		//[TaskContext|EString]
+		public CrossReference getMembersTaskContextCrossReference_5_3_1_0() { return cMembersTaskContextCrossReference_5_3_1_0; }
+
+		//EString
+		public RuleCall getMembersTaskContextEStringParserRuleCall_5_3_1_0_1() { return cMembersTaskContextEStringParserRuleCall_5_3_1_0_1; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_5_4() { return cRightParenthesisKeyword_5_4; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class ConnectionPolicyElements extends AbstractParserRuleElementFinder {
@@ -1297,6 +1421,7 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 	
 	private PackageElements pPackage;
 	private TaskContextElements pTaskContext;
+	private PeerGroupElements pPeerGroup;
 	private ConnectionPolicyElements pConnectionPolicy;
 	private InputPortElements pInputPort;
 	private OutputPortElements pOutputPort;
@@ -1356,7 +1481,8 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 	//Package returns OrocosPackage:
 	//	{OrocosPackage} "OrocosPackage" name=EString "{" ("taskContexts" "{" taskContexts+=TaskContext (","
 	//	taskContexts+=TaskContext)* "}")? ("connectionPolicies" "{" connectionPolicies+=ConnectionPolicy (","
-	//	connectionPolicies+=ConnectionPolicy)* "}")? ("activities" activities=IActivity)? "}";
+	//	connectionPolicies+=ConnectionPolicy)* "}")? ("peerGroups" "{" peerGroups+=PeerGroup ("," peerGroups+=PeerGroup)*
+	//	"}")? "}";
 	public PackageElements getPackageAccess() {
 		return (pPackage != null) ? pPackage : (pPackage = new PackageElements());
 	}
@@ -1376,6 +1502,17 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getTaskContextRule() {
 		return getTaskContextAccess().getRule();
+	}
+
+	//PeerGroup:
+	//	"PeerGroup" name=EString "{" "coordinator" coordinator=[TaskContext|EString] ("members" "("
+	//	members+=[TaskContext|EString] ("," members+=[TaskContext|EString])* ")")? "}";
+	public PeerGroupElements getPeerGroupAccess() {
+		return (pPeerGroup != null) ? pPeerGroup : (pPeerGroup = new PeerGroupElements());
+	}
+	
+	public ParserRule getPeerGroupRule() {
+		return getPeerGroupAccess().getRule();
 	}
 
 	//ConnectionPolicy:

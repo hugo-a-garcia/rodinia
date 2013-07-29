@@ -6,6 +6,7 @@ import be.kueleuven.rodinia.model.rtt.InputPort;
 import be.kueleuven.rodinia.model.rtt.Operation;
 import be.kueleuven.rodinia.model.rtt.OrocosPackage;
 import be.kueleuven.rodinia.model.rtt.OutputPort;
+import be.kueleuven.rodinia.model.rtt.PeerGroup;
 import be.kueleuven.rodinia.model.rtt.Property;
 import be.kueleuven.rodinia.model.rtt.RttPackage;
 import be.kueleuven.rodinia.model.rtt.Slave;
@@ -64,6 +65,12 @@ public abstract class AbstractRttStructureSemanticSequencer extends AbstractDele
 			case RttPackage.OUTPUT_PORT:
 				if(context == grammarAccess.getOutputPortRule()) {
 					sequence_OutputPort(context, (OutputPort) semanticObject); 
+					return; 
+				}
+				else break;
+			case RttPackage.PEER_GROUP:
+				if(context == grammarAccess.getPeerGroupRule()) {
+					sequence_PeerGroup(context, (PeerGroup) semanticObject); 
 					return; 
 				}
 				else break;
@@ -156,10 +163,19 @@ public abstract class AbstractRttStructureSemanticSequencer extends AbstractDele
 	 *         name=EString 
 	 *         (taskContexts+=TaskContext taskContexts+=TaskContext*)? 
 	 *         (connectionPolicies+=ConnectionPolicy connectionPolicies+=ConnectionPolicy*)? 
-	 *         activities=IActivity?
+	 *         (peerGroups+=PeerGroup peerGroups+=PeerGroup*)?
 	 *     )
 	 */
 	protected void sequence_Package(EObject context, OrocosPackage semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=EString coordinator=[TaskContext|EString] (members+=[TaskContext|EString] members+=[TaskContext|EString]*)?)
+	 */
+	protected void sequence_PeerGroup(EObject context, PeerGroup semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

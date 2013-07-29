@@ -5,6 +5,7 @@ depl = tc
 --get import and loadComponent
 import = depl:getOperation("import")
 loadComponent = depl:getOperation("loadComponent")
+addPeer = depl:getOperation("addPeer")
 
 --import the packages (you don't need to do "depl:import" at this point)
 import("[%=package.name%]")
@@ -14,4 +15,11 @@ import("[%=package.name%]")
 loadComponent("[%=taskContext.name%]", "[%=taskContext.namespace%]::[%=taskContext.type%]")
  [%}%]
  
- 
+ [% if (package.peerGroups.isDefined()) {
+ 		for (peerGroup in package.peerGroups) {
+ 			for(peer in peerGroup.members) {%]
+ -- Add [%=peerGroup.name%] peerGroup memebers:
+ addPeer("[%=peerGroup.coordinator.name%]", "[%=peer.name%]")
+ 			[%}%]
+ 		[%}%]
+  [%}%]

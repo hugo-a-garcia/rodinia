@@ -54,7 +54,6 @@ public interface PeerGroup extends EObject
 
   /**
    * Returns the value of the '<em><b>Coordinator</b></em>' reference.
-   * It is bidirectional and its opposite is '{@link be.kueleuven.rodinia.model.rtt.TaskContext#getPeerGroupCoordinator <em>Peer Group Coordinator</em>}'.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Coordinator</em>' reference isn't clear,
@@ -64,8 +63,7 @@ public interface PeerGroup extends EObject
    * @return the value of the '<em>Coordinator</em>' reference.
    * @see #setCoordinator(TaskContext)
    * @see be.kueleuven.rodinia.model.rtt.RttPackage#getPeerGroup_Coordinator()
-   * @see be.kueleuven.rodinia.model.rtt.TaskContext#getPeerGroupCoordinator
-   * @model opposite="peerGroupCoordinator" required="true"
+   * @model required="true"
    * @generated
    */
   TaskContext getCoordinator();
@@ -83,7 +81,6 @@ public interface PeerGroup extends EObject
   /**
    * Returns the value of the '<em><b>Members</b></em>' reference list.
    * The list contents are of type {@link be.kueleuven.rodinia.model.rtt.TaskContext}.
-   * It is bidirectional and its opposite is '{@link be.kueleuven.rodinia.model.rtt.TaskContext#getPeerGroupMember <em>Peer Group Member</em>}'.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Members</em>' reference list isn't clear,
@@ -92,8 +89,7 @@ public interface PeerGroup extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Members</em>' reference list.
    * @see be.kueleuven.rodinia.model.rtt.RttPackage#getPeerGroup_Members()
-   * @see be.kueleuven.rodinia.model.rtt.TaskContext#getPeerGroupMember
-   * @model opposite="peerGroupMember"
+   * @model
    * @generated
    */
   EList<TaskContext> getMembers();

@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link be.kueleuven.rodinia.model.rtt.OrocosPackage#getName <em>Name</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.OrocosPackage#getTaskContexts <em>Task Contexts</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.OrocosPackage#getConnectionPolicies <em>Connection Policies</em>}</li>
- *   <li>{@link be.kueleuven.rodinia.model.rtt.OrocosPackage#getActivities <em>Activities</em>}</li>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.OrocosPackage#getPeerGroups <em>Peer Groups</em>}</li>
  * </ul>
  * </p>
  *
@@ -86,29 +86,19 @@ public interface OrocosPackage extends EObject
   EList<ConnectionPolicy> getConnectionPolicies();
 
   /**
-   * Returns the value of the '<em><b>Activities</b></em>' containment reference.
+   * Returns the value of the '<em><b>Peer Groups</b></em>' containment reference list.
+   * The list contents are of type {@link be.kueleuven.rodinia.model.rtt.PeerGroup}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Activities</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Peer Groups</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Activities</em>' containment reference.
-   * @see #setActivities(IActivity)
-   * @see be.kueleuven.rodinia.model.rtt.RttPackage#getOrocosPackage_Activities()
+   * @return the value of the '<em>Peer Groups</em>' containment reference list.
+   * @see be.kueleuven.rodinia.model.rtt.RttPackage#getOrocosPackage_PeerGroups()
    * @model containment="true"
    * @generated
    */
-  IActivity getActivities();
-
-  /**
-   * Sets the value of the '{@link be.kueleuven.rodinia.model.rtt.OrocosPackage#getActivities <em>Activities</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Activities</em>' containment reference.
-   * @see #getActivities()
-   * @generated
-   */
-  void setActivities(IActivity value);
+  EList<PeerGroup> getPeerGroups();
 
 } // OrocosPackage
