@@ -13,6 +13,7 @@ class TaskContext {
 	String [1] name
 	String [1] namespace
 	String [1] ^type = ""
+	contains Activity[1] activity
 	contains InputPort [] inputPorts
 	contains OutputPort [] outputPorts
 	contains Property[] properties

@@ -47,12 +47,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//TaskContext/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//TaskContext/namespace"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//TaskContext/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rtt.ecore#//TaskContext/activity"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rtt.ecore#//TaskContext/inputPorts"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rtt.ecore#//TaskContext/outputPorts"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rtt.ecore#//TaskContext/properties"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rtt.ecore#//TaskContext/operations"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rtt.ecore#//TaskContext/peerGroupCoordinator"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rtt.ecore#//TaskContext/peerGroupMember"/>
     </genClasses>
     <genClasses ecoreClass="rtt.ecore#//PeerGroup">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//PeerGroup/name"/>

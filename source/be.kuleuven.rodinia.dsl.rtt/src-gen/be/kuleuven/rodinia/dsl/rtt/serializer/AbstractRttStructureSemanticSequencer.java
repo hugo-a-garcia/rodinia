@@ -204,6 +204,7 @@ public abstract class AbstractRttStructureSemanticSequencer extends AbstractDele
 	 *         name=EString 
 	 *         namespace=QualifiedNameWithDot 
 	 *         type=QualifiedNameWithDot 
+	 *         activity=Activity 
 	 *         (inputPorts+=InputPort inputPorts+=InputPort*)? 
 	 *         (outputPorts+=OutputPort outputPorts+=OutputPort*)? 
 	 *         (properties+=Property properties+=Property*)? 

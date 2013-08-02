@@ -21,6 +21,7 @@ TaskContext returns TaskContext:
 	'{'
 		'namespace' namespace=QualifiedNameWithDot
 		'type' type=QualifiedNameWithDot
+		'activity' activity=Activity
 		('inputPorts' '{' inputPorts+=InputPort ( "," inputPorts+=InputPort)* '}' )?
 		('outputPorts' '{' outputPorts+=OutputPort ( "," outputPorts+=OutputPort)* '}' )?
 		('properties' '{' properties+=Property ( "," properties+=Property)* '}' )?
