@@ -23,6 +23,7 @@ TaskContext returns TaskContext:
 		'type' type=QualifiedNameWithDot
 		'activity' activity=Activity
 		('inputPorts' '{' inputPorts+=InputPort ( "," inputPorts+=InputPort)* '}' )?
+		('eventPorts' '{' eventPorts+=EventPort ( "," eventPorts+=EventPort)* '}' )?
 		('outputPorts' '{' outputPorts+=OutputPort ( "," outputPorts+=OutputPort)* '}' )?
 		('properties' '{' properties+=Property ( "," properties+=Property)* '}' )?
 		('operations' '{' operations+=Operation ( "," operations+=Operation)* '}' )?
@@ -48,11 +49,19 @@ ConnectionPolicy returns ConnectionPolicy:
 	'}';
 
 InputPort returns InputPort:
-	isEventPort?='isEventPort'
 	'InputPort'
 	name=EString
 	'{'
 		('dataType' dataType=[datatypes::DataType|QualifiedNameWithDot])?
+		('inputConnectionPolicy' inputConnectionPolicy=[ConnectionPolicy|EString])?
+	'}';
+	
+EventPort returns EventPort:
+	{EventPort}
+	'EventPort'
+	name=EString
+	'{'
+		('dataType' dataType=[datatypes::DataType|EString])?
 		('inputConnectionPolicy' inputConnectionPolicy=[ConnectionPolicy|EString])?
 	'}';
 

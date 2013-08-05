@@ -24,7 +24,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.InputPortImpl#getIsEventPort <em>Is Event Port</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.InputPortImpl#getName <em>Name</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.InputPortImpl#getDataType <em>Data Type</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.InputPortImpl#getInputConnectionPolicy <em>Input Connection Policy</em>}</li>
@@ -35,26 +34,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class InputPortImpl extends MinimalEObjectImpl.Container implements InputPort
 {
-  /**
-   * The default value of the '{@link #getIsEventPort() <em>Is Event Port</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getIsEventPort()
-   * @generated
-   * @ordered
-   */
-  protected static final Boolean IS_EVENT_PORT_EDEFAULT = Boolean.FALSE;
-
-  /**
-   * The cached value of the '{@link #getIsEventPort() <em>Is Event Port</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getIsEventPort()
-   * @generated
-   * @ordered
-   */
-  protected Boolean isEventPort = IS_EVENT_PORT_EDEFAULT;
-
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -114,29 +93,6 @@ public class InputPortImpl extends MinimalEObjectImpl.Container implements Input
   protected EClass eStaticClass()
   {
     return RttPackage.Literals.INPUT_PORT;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Boolean getIsEventPort()
-  {
-    return isEventPort;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setIsEventPort(Boolean newIsEventPort)
-  {
-    Boolean oldIsEventPort = isEventPort;
-    isEventPort = newIsEventPort;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RttPackage.INPUT_PORT__IS_EVENT_PORT, oldIsEventPort, isEventPort));
   }
 
   /**
@@ -317,8 +273,6 @@ public class InputPortImpl extends MinimalEObjectImpl.Container implements Input
   {
     switch (featureID)
     {
-      case RttPackage.INPUT_PORT__IS_EVENT_PORT:
-        return getIsEventPort();
       case RttPackage.INPUT_PORT__NAME:
         return getName();
       case RttPackage.INPUT_PORT__DATA_TYPE:
@@ -341,9 +295,6 @@ public class InputPortImpl extends MinimalEObjectImpl.Container implements Input
   {
     switch (featureID)
     {
-      case RttPackage.INPUT_PORT__IS_EVENT_PORT:
-        setIsEventPort((Boolean)newValue);
-        return;
       case RttPackage.INPUT_PORT__NAME:
         setName((String)newValue);
         return;
@@ -367,9 +318,6 @@ public class InputPortImpl extends MinimalEObjectImpl.Container implements Input
   {
     switch (featureID)
     {
-      case RttPackage.INPUT_PORT__IS_EVENT_PORT:
-        setIsEventPort(IS_EVENT_PORT_EDEFAULT);
-        return;
       case RttPackage.INPUT_PORT__NAME:
         setName(NAME_EDEFAULT);
         return;
@@ -393,8 +341,6 @@ public class InputPortImpl extends MinimalEObjectImpl.Container implements Input
   {
     switch (featureID)
     {
-      case RttPackage.INPUT_PORT__IS_EVENT_PORT:
-        return IS_EVENT_PORT_EDEFAULT == null ? isEventPort != null : !IS_EVENT_PORT_EDEFAULT.equals(isEventPort);
       case RttPackage.INPUT_PORT__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case RttPackage.INPUT_PORT__DATA_TYPE:
@@ -416,9 +362,7 @@ public class InputPortImpl extends MinimalEObjectImpl.Container implements Input
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (isEventPort: ");
-    result.append(isEventPort);
-    result.append(", name: ");
+    result.append(" (name: ");
     result.append(name);
     result.append(')');
     return result.toString();

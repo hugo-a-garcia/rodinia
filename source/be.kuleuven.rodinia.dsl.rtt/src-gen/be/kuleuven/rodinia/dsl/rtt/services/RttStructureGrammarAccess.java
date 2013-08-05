@@ -207,48 +207,60 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cInputPortsInputPortParserRuleCall_9_3_1_0 = (RuleCall)cInputPortsAssignment_9_3_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_9_4 = (Keyword)cGroup_9.eContents().get(4);
 		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
-		private final Keyword cOutputPortsKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
+		private final Keyword cEventPortsKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_10_1 = (Keyword)cGroup_10.eContents().get(1);
-		private final Assignment cOutputPortsAssignment_10_2 = (Assignment)cGroup_10.eContents().get(2);
-		private final RuleCall cOutputPortsOutputPortParserRuleCall_10_2_0 = (RuleCall)cOutputPortsAssignment_10_2.eContents().get(0);
+		private final Assignment cEventPortsAssignment_10_2 = (Assignment)cGroup_10.eContents().get(2);
+		private final RuleCall cEventPortsEventPortParserRuleCall_10_2_0 = (RuleCall)cEventPortsAssignment_10_2.eContents().get(0);
 		private final Group cGroup_10_3 = (Group)cGroup_10.eContents().get(3);
 		private final Keyword cCommaKeyword_10_3_0 = (Keyword)cGroup_10_3.eContents().get(0);
-		private final Assignment cOutputPortsAssignment_10_3_1 = (Assignment)cGroup_10_3.eContents().get(1);
-		private final RuleCall cOutputPortsOutputPortParserRuleCall_10_3_1_0 = (RuleCall)cOutputPortsAssignment_10_3_1.eContents().get(0);
+		private final Assignment cEventPortsAssignment_10_3_1 = (Assignment)cGroup_10_3.eContents().get(1);
+		private final RuleCall cEventPortsEventPortParserRuleCall_10_3_1_0 = (RuleCall)cEventPortsAssignment_10_3_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_10_4 = (Keyword)cGroup_10.eContents().get(4);
 		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
-		private final Keyword cPropertiesKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
+		private final Keyword cOutputPortsKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_11_1 = (Keyword)cGroup_11.eContents().get(1);
-		private final Assignment cPropertiesAssignment_11_2 = (Assignment)cGroup_11.eContents().get(2);
-		private final RuleCall cPropertiesPropertyParserRuleCall_11_2_0 = (RuleCall)cPropertiesAssignment_11_2.eContents().get(0);
+		private final Assignment cOutputPortsAssignment_11_2 = (Assignment)cGroup_11.eContents().get(2);
+		private final RuleCall cOutputPortsOutputPortParserRuleCall_11_2_0 = (RuleCall)cOutputPortsAssignment_11_2.eContents().get(0);
 		private final Group cGroup_11_3 = (Group)cGroup_11.eContents().get(3);
 		private final Keyword cCommaKeyword_11_3_0 = (Keyword)cGroup_11_3.eContents().get(0);
-		private final Assignment cPropertiesAssignment_11_3_1 = (Assignment)cGroup_11_3.eContents().get(1);
-		private final RuleCall cPropertiesPropertyParserRuleCall_11_3_1_0 = (RuleCall)cPropertiesAssignment_11_3_1.eContents().get(0);
+		private final Assignment cOutputPortsAssignment_11_3_1 = (Assignment)cGroup_11_3.eContents().get(1);
+		private final RuleCall cOutputPortsOutputPortParserRuleCall_11_3_1_0 = (RuleCall)cOutputPortsAssignment_11_3_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_11_4 = (Keyword)cGroup_11.eContents().get(4);
 		private final Group cGroup_12 = (Group)cGroup.eContents().get(12);
-		private final Keyword cOperationsKeyword_12_0 = (Keyword)cGroup_12.eContents().get(0);
+		private final Keyword cPropertiesKeyword_12_0 = (Keyword)cGroup_12.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_12_1 = (Keyword)cGroup_12.eContents().get(1);
-		private final Assignment cOperationsAssignment_12_2 = (Assignment)cGroup_12.eContents().get(2);
-		private final RuleCall cOperationsOperationParserRuleCall_12_2_0 = (RuleCall)cOperationsAssignment_12_2.eContents().get(0);
+		private final Assignment cPropertiesAssignment_12_2 = (Assignment)cGroup_12.eContents().get(2);
+		private final RuleCall cPropertiesPropertyParserRuleCall_12_2_0 = (RuleCall)cPropertiesAssignment_12_2.eContents().get(0);
 		private final Group cGroup_12_3 = (Group)cGroup_12.eContents().get(3);
 		private final Keyword cCommaKeyword_12_3_0 = (Keyword)cGroup_12_3.eContents().get(0);
-		private final Assignment cOperationsAssignment_12_3_1 = (Assignment)cGroup_12_3.eContents().get(1);
-		private final RuleCall cOperationsOperationParserRuleCall_12_3_1_0 = (RuleCall)cOperationsAssignment_12_3_1.eContents().get(0);
+		private final Assignment cPropertiesAssignment_12_3_1 = (Assignment)cGroup_12_3.eContents().get(1);
+		private final RuleCall cPropertiesPropertyParserRuleCall_12_3_1_0 = (RuleCall)cPropertiesAssignment_12_3_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_12_4 = (Keyword)cGroup_12.eContents().get(4);
-		private final Keyword cRightCurlyBracketKeyword_13 = (Keyword)cGroup.eContents().get(13);
+		private final Group cGroup_13 = (Group)cGroup.eContents().get(13);
+		private final Keyword cOperationsKeyword_13_0 = (Keyword)cGroup_13.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_13_1 = (Keyword)cGroup_13.eContents().get(1);
+		private final Assignment cOperationsAssignment_13_2 = (Assignment)cGroup_13.eContents().get(2);
+		private final RuleCall cOperationsOperationParserRuleCall_13_2_0 = (RuleCall)cOperationsAssignment_13_2.eContents().get(0);
+		private final Group cGroup_13_3 = (Group)cGroup_13.eContents().get(3);
+		private final Keyword cCommaKeyword_13_3_0 = (Keyword)cGroup_13_3.eContents().get(0);
+		private final Assignment cOperationsAssignment_13_3_1 = (Assignment)cGroup_13_3.eContents().get(1);
+		private final RuleCall cOperationsOperationParserRuleCall_13_3_1_0 = (RuleCall)cOperationsAssignment_13_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_13_4 = (Keyword)cGroup_13.eContents().get(4);
+		private final Keyword cRightCurlyBracketKeyword_14 = (Keyword)cGroup.eContents().get(14);
 		
 		//TaskContext:
 		//	"TaskContext" name=EString "{" "namespace" namespace=QualifiedNameWithDot "type" type=QualifiedNameWithDot "activity"
-		//	activity=Activity ("inputPorts" "{" inputPorts+=InputPort ("," inputPorts+=InputPort)* "}")? ("outputPorts" "{"
-		//	outputPorts+=OutputPort ("," outputPorts+=OutputPort)* "}")? ("properties" "{" properties+=Property (","
-		//	properties+=Property)* "}")? ("operations" "{" operations+=Operation ("," operations+=Operation)* "}")? "}";
+		//	activity=Activity ("inputPorts" "{" inputPorts+=InputPort ("," inputPorts+=InputPort)* "}")? ("eventPorts" "{"
+		//	eventPorts+=EventPort ("," eventPorts+=EventPort)* "}")? ("outputPorts" "{" outputPorts+=OutputPort (","
+		//	outputPorts+=OutputPort)* "}")? ("properties" "{" properties+=Property ("," properties+=Property)* "}")? ("operations"
+		//	"{" operations+=Operation ("," operations+=Operation)* "}")? "}";
 		public ParserRule getRule() { return rule; }
 
 		//"TaskContext" name=EString "{" "namespace" namespace=QualifiedNameWithDot "type" type=QualifiedNameWithDot "activity"
-		//activity=Activity ("inputPorts" "{" inputPorts+=InputPort ("," inputPorts+=InputPort)* "}")? ("outputPorts" "{"
-		//outputPorts+=OutputPort ("," outputPorts+=OutputPort)* "}")? ("properties" "{" properties+=Property (","
-		//properties+=Property)* "}")? ("operations" "{" operations+=Operation ("," operations+=Operation)* "}")? "}"
+		//activity=Activity ("inputPorts" "{" inputPorts+=InputPort ("," inputPorts+=InputPort)* "}")? ("eventPorts" "{"
+		//eventPorts+=EventPort ("," eventPorts+=EventPort)* "}")? ("outputPorts" "{" outputPorts+=OutputPort (","
+		//outputPorts+=OutputPort)* "}")? ("properties" "{" properties+=Property ("," properties+=Property)* "}")? ("operations"
+		//"{" operations+=Operation ("," operations+=Operation)* "}")? "}"
 		public Group getGroup() { return cGroup; }
 
 		//"TaskContext"
@@ -320,98 +332,128 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_9_4() { return cRightCurlyBracketKeyword_9_4; }
 
-		//("outputPorts" "{" outputPorts+=OutputPort ("," outputPorts+=OutputPort)* "}")?
+		//("eventPorts" "{" eventPorts+=EventPort ("," eventPorts+=EventPort)* "}")?
 		public Group getGroup_10() { return cGroup_10; }
 
-		//"outputPorts"
-		public Keyword getOutputPortsKeyword_10_0() { return cOutputPortsKeyword_10_0; }
+		//"eventPorts"
+		public Keyword getEventPortsKeyword_10_0() { return cEventPortsKeyword_10_0; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_10_1() { return cLeftCurlyBracketKeyword_10_1; }
 
-		//outputPorts+=OutputPort
-		public Assignment getOutputPortsAssignment_10_2() { return cOutputPortsAssignment_10_2; }
+		//eventPorts+=EventPort
+		public Assignment getEventPortsAssignment_10_2() { return cEventPortsAssignment_10_2; }
 
-		//OutputPort
-		public RuleCall getOutputPortsOutputPortParserRuleCall_10_2_0() { return cOutputPortsOutputPortParserRuleCall_10_2_0; }
+		//EventPort
+		public RuleCall getEventPortsEventPortParserRuleCall_10_2_0() { return cEventPortsEventPortParserRuleCall_10_2_0; }
 
-		//("," outputPorts+=OutputPort)*
+		//("," eventPorts+=EventPort)*
 		public Group getGroup_10_3() { return cGroup_10_3; }
 
 		//","
 		public Keyword getCommaKeyword_10_3_0() { return cCommaKeyword_10_3_0; }
 
-		//outputPorts+=OutputPort
-		public Assignment getOutputPortsAssignment_10_3_1() { return cOutputPortsAssignment_10_3_1; }
+		//eventPorts+=EventPort
+		public Assignment getEventPortsAssignment_10_3_1() { return cEventPortsAssignment_10_3_1; }
 
-		//OutputPort
-		public RuleCall getOutputPortsOutputPortParserRuleCall_10_3_1_0() { return cOutputPortsOutputPortParserRuleCall_10_3_1_0; }
+		//EventPort
+		public RuleCall getEventPortsEventPortParserRuleCall_10_3_1_0() { return cEventPortsEventPortParserRuleCall_10_3_1_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_10_4() { return cRightCurlyBracketKeyword_10_4; }
 
-		//("properties" "{" properties+=Property ("," properties+=Property)* "}")?
+		//("outputPorts" "{" outputPorts+=OutputPort ("," outputPorts+=OutputPort)* "}")?
 		public Group getGroup_11() { return cGroup_11; }
 
-		//"properties"
-		public Keyword getPropertiesKeyword_11_0() { return cPropertiesKeyword_11_0; }
+		//"outputPorts"
+		public Keyword getOutputPortsKeyword_11_0() { return cOutputPortsKeyword_11_0; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_11_1() { return cLeftCurlyBracketKeyword_11_1; }
 
-		//properties+=Property
-		public Assignment getPropertiesAssignment_11_2() { return cPropertiesAssignment_11_2; }
+		//outputPorts+=OutputPort
+		public Assignment getOutputPortsAssignment_11_2() { return cOutputPortsAssignment_11_2; }
 
-		//Property
-		public RuleCall getPropertiesPropertyParserRuleCall_11_2_0() { return cPropertiesPropertyParserRuleCall_11_2_0; }
+		//OutputPort
+		public RuleCall getOutputPortsOutputPortParserRuleCall_11_2_0() { return cOutputPortsOutputPortParserRuleCall_11_2_0; }
 
-		//("," properties+=Property)*
+		//("," outputPorts+=OutputPort)*
 		public Group getGroup_11_3() { return cGroup_11_3; }
 
 		//","
 		public Keyword getCommaKeyword_11_3_0() { return cCommaKeyword_11_3_0; }
 
-		//properties+=Property
-		public Assignment getPropertiesAssignment_11_3_1() { return cPropertiesAssignment_11_3_1; }
+		//outputPorts+=OutputPort
+		public Assignment getOutputPortsAssignment_11_3_1() { return cOutputPortsAssignment_11_3_1; }
 
-		//Property
-		public RuleCall getPropertiesPropertyParserRuleCall_11_3_1_0() { return cPropertiesPropertyParserRuleCall_11_3_1_0; }
+		//OutputPort
+		public RuleCall getOutputPortsOutputPortParserRuleCall_11_3_1_0() { return cOutputPortsOutputPortParserRuleCall_11_3_1_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_11_4() { return cRightCurlyBracketKeyword_11_4; }
 
-		//("operations" "{" operations+=Operation ("," operations+=Operation)* "}")?
+		//("properties" "{" properties+=Property ("," properties+=Property)* "}")?
 		public Group getGroup_12() { return cGroup_12; }
 
-		//"operations"
-		public Keyword getOperationsKeyword_12_0() { return cOperationsKeyword_12_0; }
+		//"properties"
+		public Keyword getPropertiesKeyword_12_0() { return cPropertiesKeyword_12_0; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_12_1() { return cLeftCurlyBracketKeyword_12_1; }
 
-		//operations+=Operation
-		public Assignment getOperationsAssignment_12_2() { return cOperationsAssignment_12_2; }
+		//properties+=Property
+		public Assignment getPropertiesAssignment_12_2() { return cPropertiesAssignment_12_2; }
 
-		//Operation
-		public RuleCall getOperationsOperationParserRuleCall_12_2_0() { return cOperationsOperationParserRuleCall_12_2_0; }
+		//Property
+		public RuleCall getPropertiesPropertyParserRuleCall_12_2_0() { return cPropertiesPropertyParserRuleCall_12_2_0; }
 
-		//("," operations+=Operation)*
+		//("," properties+=Property)*
 		public Group getGroup_12_3() { return cGroup_12_3; }
 
 		//","
 		public Keyword getCommaKeyword_12_3_0() { return cCommaKeyword_12_3_0; }
 
-		//operations+=Operation
-		public Assignment getOperationsAssignment_12_3_1() { return cOperationsAssignment_12_3_1; }
+		//properties+=Property
+		public Assignment getPropertiesAssignment_12_3_1() { return cPropertiesAssignment_12_3_1; }
 
-		//Operation
-		public RuleCall getOperationsOperationParserRuleCall_12_3_1_0() { return cOperationsOperationParserRuleCall_12_3_1_0; }
+		//Property
+		public RuleCall getPropertiesPropertyParserRuleCall_12_3_1_0() { return cPropertiesPropertyParserRuleCall_12_3_1_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_12_4() { return cRightCurlyBracketKeyword_12_4; }
 
+		//("operations" "{" operations+=Operation ("," operations+=Operation)* "}")?
+		public Group getGroup_13() { return cGroup_13; }
+
+		//"operations"
+		public Keyword getOperationsKeyword_13_0() { return cOperationsKeyword_13_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_13_1() { return cLeftCurlyBracketKeyword_13_1; }
+
+		//operations+=Operation
+		public Assignment getOperationsAssignment_13_2() { return cOperationsAssignment_13_2; }
+
+		//Operation
+		public RuleCall getOperationsOperationParserRuleCall_13_2_0() { return cOperationsOperationParserRuleCall_13_2_0; }
+
+		//("," operations+=Operation)*
+		public Group getGroup_13_3() { return cGroup_13_3; }
+
+		//","
+		public Keyword getCommaKeyword_13_3_0() { return cCommaKeyword_13_3_0; }
+
+		//operations+=Operation
+		public Assignment getOperationsAssignment_13_3_1() { return cOperationsAssignment_13_3_1; }
+
+		//Operation
+		public RuleCall getOperationsOperationParserRuleCall_13_3_1_0() { return cOperationsOperationParserRuleCall_13_3_1_0; }
+
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_13() { return cRightCurlyBracketKeyword_13; }
+		public Keyword getRightCurlyBracketKeyword_13_4() { return cRightCurlyBracketKeyword_13_4; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_14() { return cRightCurlyBracketKeyword_14; }
 	}
 
 	public class PeerGroupElements extends AbstractParserRuleElementFinder {
@@ -631,9 +673,82 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 	public class InputPortElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InputPort");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cIsEventPortAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cIsEventPortIsEventPortKeyword_0_0 = (Keyword)cIsEventPortAssignment_0.eContents().get(0);
-		private final Keyword cInputPortKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cInputPortKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cDataTypeKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cDataTypeAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final CrossReference cDataTypeDataTypeCrossReference_3_1_0 = (CrossReference)cDataTypeAssignment_3_1.eContents().get(0);
+		private final RuleCall cDataTypeDataTypeQualifiedNameWithDotParserRuleCall_3_1_0_1 = (RuleCall)cDataTypeDataTypeCrossReference_3_1_0.eContents().get(1);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cInputConnectionPolicyKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cInputConnectionPolicyAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final CrossReference cInputConnectionPolicyConnectionPolicyCrossReference_4_1_0 = (CrossReference)cInputConnectionPolicyAssignment_4_1.eContents().get(0);
+		private final RuleCall cInputConnectionPolicyConnectionPolicyEStringParserRuleCall_4_1_0_1 = (RuleCall)cInputConnectionPolicyConnectionPolicyCrossReference_4_1_0.eContents().get(1);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//InputPort:
+		//	"InputPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|QualifiedNameWithDot])?
+		//	("inputConnectionPolicy" inputConnectionPolicy=[ConnectionPolicy|EString])? "}";
+		public ParserRule getRule() { return rule; }
+
+		//"InputPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|QualifiedNameWithDot])? ("inputConnectionPolicy"
+		//inputConnectionPolicy=[ConnectionPolicy|EString])? "}"
+		public Group getGroup() { return cGroup; }
+
+		//"InputPort"
+		public Keyword getInputPortKeyword_0() { return cInputPortKeyword_0; }
+
+		//name=EString
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//EString
+		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
+		//("dataType" dataType=[datatypes::DataType|QualifiedNameWithDot])?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"dataType"
+		public Keyword getDataTypeKeyword_3_0() { return cDataTypeKeyword_3_0; }
+
+		//dataType=[datatypes::DataType|QualifiedNameWithDot]
+		public Assignment getDataTypeAssignment_3_1() { return cDataTypeAssignment_3_1; }
+
+		//[datatypes::DataType|QualifiedNameWithDot]
+		public CrossReference getDataTypeDataTypeCrossReference_3_1_0() { return cDataTypeDataTypeCrossReference_3_1_0; }
+
+		//QualifiedNameWithDot
+		public RuleCall getDataTypeDataTypeQualifiedNameWithDotParserRuleCall_3_1_0_1() { return cDataTypeDataTypeQualifiedNameWithDotParserRuleCall_3_1_0_1; }
+
+		//("inputConnectionPolicy" inputConnectionPolicy=[ConnectionPolicy|EString])?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//"inputConnectionPolicy"
+		public Keyword getInputConnectionPolicyKeyword_4_0() { return cInputConnectionPolicyKeyword_4_0; }
+
+		//inputConnectionPolicy=[ConnectionPolicy|EString]
+		public Assignment getInputConnectionPolicyAssignment_4_1() { return cInputConnectionPolicyAssignment_4_1; }
+
+		//[ConnectionPolicy|EString]
+		public CrossReference getInputConnectionPolicyConnectionPolicyCrossReference_4_1_0() { return cInputConnectionPolicyConnectionPolicyCrossReference_4_1_0; }
+
+		//EString
+		public RuleCall getInputConnectionPolicyConnectionPolicyEStringParserRuleCall_4_1_0_1() { return cInputConnectionPolicyConnectionPolicyEStringParserRuleCall_4_1_0_1; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+	}
+
+	public class EventPortElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EventPort");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cEventPortAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cEventPortKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
@@ -641,7 +756,7 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cDataTypeKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Assignment cDataTypeAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final CrossReference cDataTypeDataTypeCrossReference_4_1_0 = (CrossReference)cDataTypeAssignment_4_1.eContents().get(0);
-		private final RuleCall cDataTypeDataTypeQualifiedNameWithDotParserRuleCall_4_1_0_1 = (RuleCall)cDataTypeDataTypeCrossReference_4_1_0.eContents().get(1);
+		private final RuleCall cDataTypeDataTypeEStringParserRuleCall_4_1_0_1 = (RuleCall)cDataTypeDataTypeCrossReference_4_1_0.eContents().get(1);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
 		private final Keyword cInputConnectionPolicyKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
 		private final Assignment cInputConnectionPolicyAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
@@ -649,25 +764,20 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cInputConnectionPolicyConnectionPolicyEStringParserRuleCall_5_1_0_1 = (RuleCall)cInputConnectionPolicyConnectionPolicyCrossReference_5_1_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		//InputPort:
-		//	isEventPort?="isEventPort" "InputPort" name=EString "{" ("dataType"
-		//	dataType=[datatypes::DataType|QualifiedNameWithDot])? ("inputConnectionPolicy"
+		//EventPort:
+		//	{EventPort} "EventPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|EString])? ("inputConnectionPolicy"
 		//	inputConnectionPolicy=[ConnectionPolicy|EString])? "}";
 		public ParserRule getRule() { return rule; }
 
-		//isEventPort?="isEventPort" "InputPort" name=EString "{" ("dataType"
-		//dataType=[datatypes::DataType|QualifiedNameWithDot])? ("inputConnectionPolicy"
+		//{EventPort} "EventPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|EString])? ("inputConnectionPolicy"
 		//inputConnectionPolicy=[ConnectionPolicy|EString])? "}"
 		public Group getGroup() { return cGroup; }
 
-		//isEventPort?="isEventPort"
-		public Assignment getIsEventPortAssignment_0() { return cIsEventPortAssignment_0; }
+		//{EventPort}
+		public Action getEventPortAction_0() { return cEventPortAction_0; }
 
-		//"isEventPort"
-		public Keyword getIsEventPortIsEventPortKeyword_0_0() { return cIsEventPortIsEventPortKeyword_0_0; }
-
-		//"InputPort"
-		public Keyword getInputPortKeyword_1() { return cInputPortKeyword_1; }
+		//"EventPort"
+		public Keyword getEventPortKeyword_1() { return cEventPortKeyword_1; }
 
 		//name=EString
 		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
@@ -678,20 +788,20 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
-		//("dataType" dataType=[datatypes::DataType|QualifiedNameWithDot])?
+		//("dataType" dataType=[datatypes::DataType|EString])?
 		public Group getGroup_4() { return cGroup_4; }
 
 		//"dataType"
 		public Keyword getDataTypeKeyword_4_0() { return cDataTypeKeyword_4_0; }
 
-		//dataType=[datatypes::DataType|QualifiedNameWithDot]
+		//dataType=[datatypes::DataType|EString]
 		public Assignment getDataTypeAssignment_4_1() { return cDataTypeAssignment_4_1; }
 
-		//[datatypes::DataType|QualifiedNameWithDot]
+		//[datatypes::DataType|EString]
 		public CrossReference getDataTypeDataTypeCrossReference_4_1_0() { return cDataTypeDataTypeCrossReference_4_1_0; }
 
-		//QualifiedNameWithDot
-		public RuleCall getDataTypeDataTypeQualifiedNameWithDotParserRuleCall_4_1_0_1() { return cDataTypeDataTypeQualifiedNameWithDotParserRuleCall_4_1_0_1; }
+		//EString
+		public RuleCall getDataTypeDataTypeEStringParserRuleCall_4_1_0_1() { return cDataTypeDataTypeEStringParserRuleCall_4_1_0_1; }
 
 		//("inputConnectionPolicy" inputConnectionPolicy=[ConnectionPolicy|EString])?
 		public Group getGroup_5() { return cGroup_5; }
@@ -1436,6 +1546,7 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 	private PeerGroupElements pPeerGroup;
 	private ConnectionPolicyElements pConnectionPolicy;
 	private InputPortElements pInputPort;
+	private EventPortElements pEventPort;
 	private OutputPortElements pOutputPort;
 	private PropertyElements pProperty;
 	private OperationElements pOperation;
@@ -1505,9 +1616,10 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 
 	//TaskContext:
 	//	"TaskContext" name=EString "{" "namespace" namespace=QualifiedNameWithDot "type" type=QualifiedNameWithDot "activity"
-	//	activity=Activity ("inputPorts" "{" inputPorts+=InputPort ("," inputPorts+=InputPort)* "}")? ("outputPorts" "{"
-	//	outputPorts+=OutputPort ("," outputPorts+=OutputPort)* "}")? ("properties" "{" properties+=Property (","
-	//	properties+=Property)* "}")? ("operations" "{" operations+=Operation ("," operations+=Operation)* "}")? "}";
+	//	activity=Activity ("inputPorts" "{" inputPorts+=InputPort ("," inputPorts+=InputPort)* "}")? ("eventPorts" "{"
+	//	eventPorts+=EventPort ("," eventPorts+=EventPort)* "}")? ("outputPorts" "{" outputPorts+=OutputPort (","
+	//	outputPorts+=OutputPort)* "}")? ("properties" "{" properties+=Property ("," properties+=Property)* "}")? ("operations"
+	//	"{" operations+=Operation ("," operations+=Operation)* "}")? "}";
 	public TaskContextElements getTaskContextAccess() {
 		return (pTaskContext != null) ? pTaskContext : (pTaskContext = new TaskContextElements());
 	}
@@ -1540,15 +1652,25 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//InputPort:
-	//	isEventPort?="isEventPort" "InputPort" name=EString "{" ("dataType"
-	//	dataType=[datatypes::DataType|QualifiedNameWithDot])? ("inputConnectionPolicy"
-	//	inputConnectionPolicy=[ConnectionPolicy|EString])? "}";
+	//	"InputPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|QualifiedNameWithDot])?
+	//	("inputConnectionPolicy" inputConnectionPolicy=[ConnectionPolicy|EString])? "}";
 	public InputPortElements getInputPortAccess() {
 		return (pInputPort != null) ? pInputPort : (pInputPort = new InputPortElements());
 	}
 	
 	public ParserRule getInputPortRule() {
 		return getInputPortAccess().getRule();
+	}
+
+	//EventPort:
+	//	{EventPort} "EventPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|EString])? ("inputConnectionPolicy"
+	//	inputConnectionPolicy=[ConnectionPolicy|EString])? "}";
+	public EventPortElements getEventPortAccess() {
+		return (pEventPort != null) ? pEventPort : (pEventPort = new EventPortElements());
+	}
+	
+	public ParserRule getEventPortRule() {
+		return getEventPortAccess().getRule();
 	}
 
 	//OutputPort:

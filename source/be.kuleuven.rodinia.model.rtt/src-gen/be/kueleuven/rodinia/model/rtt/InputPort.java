@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link be.kueleuven.rodinia.model.rtt.InputPort#getIsEventPort <em>Is Event Port</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.InputPort#getName <em>Name</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.InputPort#getDataType <em>Data Type</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.InputPort#getInputConnectionPolicy <em>Input Connection Policy</em>}</li>
@@ -27,33 +26,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface InputPort extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Is Event Port</b></em>' attribute.
-   * The default value is <code>"false"</code>.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Is Event Port</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Is Event Port</em>' attribute.
-   * @see #setIsEventPort(Boolean)
-   * @see be.kueleuven.rodinia.model.rtt.RttPackage#getInputPort_IsEventPort()
-   * @model default="false" unique="false" required="true"
-   * @generated
-   */
-  Boolean getIsEventPort();
-
-  /**
-   * Sets the value of the '{@link be.kueleuven.rodinia.model.rtt.InputPort#getIsEventPort <em>Is Event Port</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Is Event Port</em>' attribute.
-   * @see #getIsEventPort()
-   * @generated
-   */
-  void setIsEventPort(Boolean value);
-
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->

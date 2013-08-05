@@ -25,6 +25,8 @@
         eType="#//Activity" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputPorts" upperBound="-1"
         eType="#//InputPort" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventPorts" upperBound="-1"
+        eType="#//EventPort" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputPorts" upperBound="-1"
         eType="#//OutputPort" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
@@ -91,15 +93,13 @@
     <eLiterals name="ORO_SCHED_RT" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InputPort">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isEventPort" unique="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBooleanObject"
-        defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" lowerBound="1"
         eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataType" eType="ecore:EClass ../../be.kuleuven.rodinia.dsl.datatypes/src-gen/be/kuleuven/rodinia/dsl/datatypes/Datatypes.ecore#//DataType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputConnectionPolicy"
         eType="#//ConnectionPolicy" eOpposite="#//ConnectionPolicy/inputPort"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventPort" eSuperTypes="#//InputPort"/>
   <eClassifiers xsi:type="ecore:EClass" name="OutputPort">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" lowerBound="1"
         eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>

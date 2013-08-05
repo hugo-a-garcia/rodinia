@@ -15,6 +15,7 @@ class TaskContext {
 	String [1] ^type = ""
 	contains Activity[1] activity
 	contains InputPort [] inputPorts
+	contains EventPort[] eventPorts
 	contains OutputPort [] outputPorts
 	contains Property[] properties
 	contains Operation[] operations
@@ -73,10 +74,13 @@ enum Scheduler {
 
 class InputPort
 {
-	Boolean [1] isEventPort = "false"
 	String [1] name
 	refers DataType dataType
 	refers ConnectionPolicy inputConnectionPolicy opposite inputPort
+}
+
+class EventPort extends InputPort {
+	
 }
 
 class OutputPort

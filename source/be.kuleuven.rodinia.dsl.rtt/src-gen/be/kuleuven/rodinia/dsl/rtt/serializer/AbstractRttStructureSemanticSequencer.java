@@ -2,6 +2,7 @@ package be.kuleuven.rodinia.dsl.rtt.serializer;
 
 import be.kueleuven.rodinia.model.rtt.Activity;
 import be.kueleuven.rodinia.model.rtt.ConnectionPolicy;
+import be.kueleuven.rodinia.model.rtt.EventPort;
 import be.kueleuven.rodinia.model.rtt.InputPort;
 import be.kueleuven.rodinia.model.rtt.Operation;
 import be.kueleuven.rodinia.model.rtt.OrocosPackage;
@@ -41,6 +42,12 @@ public abstract class AbstractRttStructureSemanticSequencer extends AbstractDele
 			case RttPackage.CONNECTION_POLICY:
 				if(context == grammarAccess.getConnectionPolicyRule()) {
 					sequence_ConnectionPolicy(context, (ConnectionPolicy) semanticObject); 
+					return; 
+				}
+				else break;
+			case RttPackage.EVENT_PORT:
+				if(context == grammarAccess.getEventPortRule()) {
+					sequence_EventPort(context, (EventPort) semanticObject); 
 					return; 
 				}
 				else break;
@@ -132,7 +139,16 @@ public abstract class AbstractRttStructureSemanticSequencer extends AbstractDele
 	
 	/**
 	 * Constraint:
-	 *     (isEventPort?='isEventPort' name=EString dataType=[DataType|QualifiedNameWithDot]? inputConnectionPolicy=[ConnectionPolicy|EString]?)
+	 *     (name=EString dataType=[DataType|EString]? inputConnectionPolicy=[ConnectionPolicy|EString]?)
+	 */
+	protected void sequence_EventPort(EObject context, EventPort semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=EString dataType=[DataType|QualifiedNameWithDot]? inputConnectionPolicy=[ConnectionPolicy|EString]?)
 	 */
 	protected void sequence_InputPort(EObject context, InputPort semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -206,6 +222,7 @@ public abstract class AbstractRttStructureSemanticSequencer extends AbstractDele
 	 *         type=QualifiedNameWithDot 
 	 *         activity=Activity 
 	 *         (inputPorts+=InputPort inputPorts+=InputPort*)? 
+	 *         (eventPorts+=EventPort eventPorts+=EventPort*)? 
 	 *         (outputPorts+=OutputPort outputPorts+=OutputPort*)? 
 	 *         (properties+=Property properties+=Property*)? 
 	 *         (operations+=Operation operations+=Operation*)?
