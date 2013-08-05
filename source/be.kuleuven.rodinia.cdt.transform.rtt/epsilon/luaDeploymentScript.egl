@@ -16,7 +16,7 @@ import("[%=package.name%]")
 -- create components
 [%for(taskContext in package.taskContexts) {%]
 loadComponent("[%=taskContext.name%]", "[%=taskContext.namespace%]::[%=taskContext.type%]")
-setActivity("[%=taskContext.name%]", [%=taskContext.activity.period%], [%=taskContext.activity.priority%], rtt.globals.[%=taskContext.activity.scheduler%]")
+setActivity("[%=taskContext.name%]", [%=taskContext.activity.period%], [%=taskContext.activity.priority%], rtt.globals.[%=taskContext.activity.scheduler%])
  [%}%]
  
  [% if (package.peerGroups.isDefined()) {

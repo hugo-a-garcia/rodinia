@@ -21,12 +21,18 @@ using namespace [%=taskContext.namespace%];
     this->addOperation("[%=anOperation.name%]", &[%=taskContext.type%]::[%=anOperation.name%], this);
     [%}%]
 *]	
-	[%for(anInputPort in taskContext.inputPorts)
+	[%for(anInputPort in taskContext.inputPorts) {%]
+	
+[* 	Have to add a for loop for Event Ports
 		if (anInputPort.isEventPort == true) {%]
 	this->ports()->addEventPort( "[%=anInputPort.name%]", [%=anInputPort.name%] ).doc(
 	"Input Port that raises an event." );
 	[%} else {%]
+*]
 	this->ports()->addPort( "[%=anInputPort.name%]", [%=anInputPort.name%] ).doc( "Input Port that does *not* raise an event." );
+	[%}%]
+	[%for(eventPort in taskContext.eventPorts) {%]
+	this->ports()->addEventPort( "[%=eventPort.name%]", [%=eventPort.name%] ).doc("Input Port that raises an event." );
 	[%}%]
 	[%for(anOutputPort in taskContext.outputPorts) {%]
 	this->ports()->addPort( "[%=anOutputPort.name%]", [%=anOutputPort.name%] ).doc( "Output Port, here write our data to." );
