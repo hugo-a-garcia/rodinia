@@ -561,37 +561,51 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cBufferSizeKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cBufferSizeAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cBufferSizeEShortParserRuleCall_3_1_0 = (RuleCall)cBufferSizeAssignment_3_1.eContents().get(0);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cLockPolicyKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cLockPolicyAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cLockPolicyConnectionPolicyLockPolicyEnumRuleCall_4_1_0 = (RuleCall)cLockPolicyAssignment_4_1.eContents().get(0);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cTypeKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cTypeAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cTypeConnectionPolicyTypeEnumRuleCall_5_1_0 = (RuleCall)cTypeAssignment_5_1.eContents().get(0);
-		private final Keyword cInputPortKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Assignment cInputPortAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final CrossReference cInputPortInputPortCrossReference_7_0 = (CrossReference)cInputPortAssignment_7.eContents().get(0);
-		private final RuleCall cInputPortInputPortEStringParserRuleCall_7_0_1 = (RuleCall)cInputPortInputPortCrossReference_7_0.eContents().get(1);
-		private final Keyword cOutputPortKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Assignment cOutputPortAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final CrossReference cOutputPortOutputPortCrossReference_9_0 = (CrossReference)cOutputPortAssignment_9.eContents().get(0);
-		private final RuleCall cOutputPortOutputPortEStringParserRuleCall_9_0_1 = (RuleCall)cOutputPortOutputPortCrossReference_9_0.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cInputPortKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cInputPortAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cInputPortInputPortCrossReference_4_0 = (CrossReference)cInputPortAssignment_4.eContents().get(0);
+		private final RuleCall cInputPortInputPortEStringParserRuleCall_4_0_1 = (RuleCall)cInputPortInputPortCrossReference_4_0.eContents().get(1);
+		private final Keyword cOutputPortKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cOutputPortAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final CrossReference cOutputPortOutputPortCrossReference_6_0 = (CrossReference)cOutputPortAssignment_6.eContents().get(0);
+		private final RuleCall cOutputPortOutputPortEStringParserRuleCall_6_0_1 = (RuleCall)cOutputPortOutputPortCrossReference_6_0.eContents().get(1);
+		private final Assignment cInitAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final Keyword cInitInitKeyword_7_0 = (Keyword)cInitAssignment_7.eContents().get(0);
+		private final Assignment cPullAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final Keyword cPullPullKeyword_8_0 = (Keyword)cPullAssignment_8.eContents().get(0);
+		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
+		private final Keyword cBufferSizeKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Assignment cBufferSizeAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
+		private final RuleCall cBufferSizeEShortParserRuleCall_9_1_0 = (RuleCall)cBufferSizeAssignment_9_1.eContents().get(0);
+		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
+		private final Keyword cDataSizeKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
+		private final Assignment cDataSizeAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
+		private final RuleCall cDataSizeEShortParserRuleCall_10_1_0 = (RuleCall)cDataSizeAssignment_10_1.eContents().get(0);
+		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
+		private final Keyword cLockPolicyKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
+		private final Assignment cLockPolicyAssignment_11_1 = (Assignment)cGroup_11.eContents().get(1);
+		private final RuleCall cLockPolicyConnectionPolicyLockPolicyEnumRuleCall_11_1_0 = (RuleCall)cLockPolicyAssignment_11_1.eContents().get(0);
+		private final Group cGroup_12 = (Group)cGroup.eContents().get(12);
+		private final Keyword cTransportKeyword_12_0 = (Keyword)cGroup_12.eContents().get(0);
+		private final Assignment cTransportAssignment_12_1 = (Assignment)cGroup_12.eContents().get(1);
+		private final RuleCall cTransportConnectionPolicyTransportEnumRuleCall_12_1_0 = (RuleCall)cTransportAssignment_12_1.eContents().get(0);
+		private final Group cGroup_13 = (Group)cGroup.eContents().get(13);
+		private final Keyword cTypeKeyword_13_0 = (Keyword)cGroup_13.eContents().get(0);
+		private final Assignment cTypeAssignment_13_1 = (Assignment)cGroup_13.eContents().get(1);
+		private final RuleCall cTypeConnectionPolicyTypeEnumRuleCall_13_1_0 = (RuleCall)cTypeAssignment_13_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_14 = (Keyword)cGroup.eContents().get(14);
 		
 		//ConnectionPolicy:
-		//	"ConnectionPolicy" name=EString "{" ("bufferSize" bufferSize=EShort)? ("lockPolicy"
-		//	lockPolicy=ConnectionPolicyLockPolicy)? ("type" type=ConnectionPolicyType)? "inputPort" inputPort=[InputPort|EString]
-		//	"outputPort" outputPort=[OutputPort|EString] "}";
+		//	"ConnectionPolicy" name=EString "{" "inputPort" inputPort=[InputPort|EString] "outputPort"
+		//	outputPort=[OutputPort|EString] init?="init"? pull?="pull"? ("bufferSize" bufferSize=EShort)? ("dataSize"
+		//	dataSize=EShort)? ("lockPolicy" lockPolicy=ConnectionPolicyLockPolicy)? ("transport"
+		//	transport=ConnectionPolicyTransport)? ("type" type=ConnectionPolicyType)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//"ConnectionPolicy" name=EString "{" ("bufferSize" bufferSize=EShort)? ("lockPolicy"
-		//lockPolicy=ConnectionPolicyLockPolicy)? ("type" type=ConnectionPolicyType)? "inputPort" inputPort=[InputPort|EString]
-		//"outputPort" outputPort=[OutputPort|EString] "}"
+		//"ConnectionPolicy" name=EString "{" "inputPort" inputPort=[InputPort|EString] "outputPort"
+		//outputPort=[OutputPort|EString] init?="init"? pull?="pull"? ("bufferSize" bufferSize=EShort)? ("dataSize"
+		//dataSize=EShort)? ("lockPolicy" lockPolicy=ConnectionPolicyLockPolicy)? ("transport"
+		//transport=ConnectionPolicyTransport)? ("type" type=ConnectionPolicyType)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//"ConnectionPolicy"
@@ -606,68 +620,104 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("bufferSize" bufferSize=EShort)?
-		public Group getGroup_3() { return cGroup_3; }
-
-		//"bufferSize"
-		public Keyword getBufferSizeKeyword_3_0() { return cBufferSizeKeyword_3_0; }
-
-		//bufferSize=EShort
-		public Assignment getBufferSizeAssignment_3_1() { return cBufferSizeAssignment_3_1; }
-
-		//EShort
-		public RuleCall getBufferSizeEShortParserRuleCall_3_1_0() { return cBufferSizeEShortParserRuleCall_3_1_0; }
-
-		//("lockPolicy" lockPolicy=ConnectionPolicyLockPolicy)?
-		public Group getGroup_4() { return cGroup_4; }
-
-		//"lockPolicy"
-		public Keyword getLockPolicyKeyword_4_0() { return cLockPolicyKeyword_4_0; }
-
-		//lockPolicy=ConnectionPolicyLockPolicy
-		public Assignment getLockPolicyAssignment_4_1() { return cLockPolicyAssignment_4_1; }
-
-		//ConnectionPolicyLockPolicy
-		public RuleCall getLockPolicyConnectionPolicyLockPolicyEnumRuleCall_4_1_0() { return cLockPolicyConnectionPolicyLockPolicyEnumRuleCall_4_1_0; }
-
-		//("type" type=ConnectionPolicyType)?
-		public Group getGroup_5() { return cGroup_5; }
-
-		//"type"
-		public Keyword getTypeKeyword_5_0() { return cTypeKeyword_5_0; }
-
-		//type=ConnectionPolicyType
-		public Assignment getTypeAssignment_5_1() { return cTypeAssignment_5_1; }
-
-		//ConnectionPolicyType
-		public RuleCall getTypeConnectionPolicyTypeEnumRuleCall_5_1_0() { return cTypeConnectionPolicyTypeEnumRuleCall_5_1_0; }
-
 		//"inputPort"
-		public Keyword getInputPortKeyword_6() { return cInputPortKeyword_6; }
+		public Keyword getInputPortKeyword_3() { return cInputPortKeyword_3; }
 
 		//inputPort=[InputPort|EString]
-		public Assignment getInputPortAssignment_7() { return cInputPortAssignment_7; }
+		public Assignment getInputPortAssignment_4() { return cInputPortAssignment_4; }
 
 		//[InputPort|EString]
-		public CrossReference getInputPortInputPortCrossReference_7_0() { return cInputPortInputPortCrossReference_7_0; }
+		public CrossReference getInputPortInputPortCrossReference_4_0() { return cInputPortInputPortCrossReference_4_0; }
 
 		//EString
-		public RuleCall getInputPortInputPortEStringParserRuleCall_7_0_1() { return cInputPortInputPortEStringParserRuleCall_7_0_1; }
+		public RuleCall getInputPortInputPortEStringParserRuleCall_4_0_1() { return cInputPortInputPortEStringParserRuleCall_4_0_1; }
 
 		//"outputPort"
-		public Keyword getOutputPortKeyword_8() { return cOutputPortKeyword_8; }
+		public Keyword getOutputPortKeyword_5() { return cOutputPortKeyword_5; }
 
 		//outputPort=[OutputPort|EString]
-		public Assignment getOutputPortAssignment_9() { return cOutputPortAssignment_9; }
+		public Assignment getOutputPortAssignment_6() { return cOutputPortAssignment_6; }
 
 		//[OutputPort|EString]
-		public CrossReference getOutputPortOutputPortCrossReference_9_0() { return cOutputPortOutputPortCrossReference_9_0; }
+		public CrossReference getOutputPortOutputPortCrossReference_6_0() { return cOutputPortOutputPortCrossReference_6_0; }
 
 		//EString
-		public RuleCall getOutputPortOutputPortEStringParserRuleCall_9_0_1() { return cOutputPortOutputPortEStringParserRuleCall_9_0_1; }
+		public RuleCall getOutputPortOutputPortEStringParserRuleCall_6_0_1() { return cOutputPortOutputPortEStringParserRuleCall_6_0_1; }
+
+		//init?="init"?
+		public Assignment getInitAssignment_7() { return cInitAssignment_7; }
+
+		//"init"
+		public Keyword getInitInitKeyword_7_0() { return cInitInitKeyword_7_0; }
+
+		//pull?="pull"?
+		public Assignment getPullAssignment_8() { return cPullAssignment_8; }
+
+		//"pull"
+		public Keyword getPullPullKeyword_8_0() { return cPullPullKeyword_8_0; }
+
+		//("bufferSize" bufferSize=EShort)?
+		public Group getGroup_9() { return cGroup_9; }
+
+		//"bufferSize"
+		public Keyword getBufferSizeKeyword_9_0() { return cBufferSizeKeyword_9_0; }
+
+		//bufferSize=EShort
+		public Assignment getBufferSizeAssignment_9_1() { return cBufferSizeAssignment_9_1; }
+
+		//EShort
+		public RuleCall getBufferSizeEShortParserRuleCall_9_1_0() { return cBufferSizeEShortParserRuleCall_9_1_0; }
+
+		//("dataSize" dataSize=EShort)?
+		public Group getGroup_10() { return cGroup_10; }
+
+		//"dataSize"
+		public Keyword getDataSizeKeyword_10_0() { return cDataSizeKeyword_10_0; }
+
+		//dataSize=EShort
+		public Assignment getDataSizeAssignment_10_1() { return cDataSizeAssignment_10_1; }
+
+		//EShort
+		public RuleCall getDataSizeEShortParserRuleCall_10_1_0() { return cDataSizeEShortParserRuleCall_10_1_0; }
+
+		//("lockPolicy" lockPolicy=ConnectionPolicyLockPolicy)?
+		public Group getGroup_11() { return cGroup_11; }
+
+		//"lockPolicy"
+		public Keyword getLockPolicyKeyword_11_0() { return cLockPolicyKeyword_11_0; }
+
+		//lockPolicy=ConnectionPolicyLockPolicy
+		public Assignment getLockPolicyAssignment_11_1() { return cLockPolicyAssignment_11_1; }
+
+		//ConnectionPolicyLockPolicy
+		public RuleCall getLockPolicyConnectionPolicyLockPolicyEnumRuleCall_11_1_0() { return cLockPolicyConnectionPolicyLockPolicyEnumRuleCall_11_1_0; }
+
+		//("transport" transport=ConnectionPolicyTransport)?
+		public Group getGroup_12() { return cGroup_12; }
+
+		//"transport"
+		public Keyword getTransportKeyword_12_0() { return cTransportKeyword_12_0; }
+
+		//transport=ConnectionPolicyTransport
+		public Assignment getTransportAssignment_12_1() { return cTransportAssignment_12_1; }
+
+		//ConnectionPolicyTransport
+		public RuleCall getTransportConnectionPolicyTransportEnumRuleCall_12_1_0() { return cTransportConnectionPolicyTransportEnumRuleCall_12_1_0; }
+
+		//("type" type=ConnectionPolicyType)?
+		public Group getGroup_13() { return cGroup_13; }
+
+		//"type"
+		public Keyword getTypeKeyword_13_0() { return cTypeKeyword_13_0; }
+
+		//type=ConnectionPolicyType
+		public Assignment getTypeAssignment_13_1() { return cTypeAssignment_13_1; }
+
+		//ConnectionPolicyType
+		public RuleCall getTypeConnectionPolicyTypeEnumRuleCall_13_1_0() { return cTypeConnectionPolicyTypeEnumRuleCall_13_1_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
+		public Keyword getRightCurlyBracketKeyword_14() { return cRightCurlyBracketKeyword_14; }
 	}
 
 	public class InputPortElements extends AbstractParserRuleElementFinder {
@@ -1492,12 +1542,14 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cDATADATAKeyword_0_0 = (Keyword)cDATAEnumLiteralDeclaration_0.eContents().get(0);
 		private final EnumLiteralDeclaration cBUFFEREnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
 		private final Keyword cBUFFERBUFFERKeyword_1_0 = (Keyword)cBUFFEREnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cCIRCULAR_BUFFEREnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cCIRCULAR_BUFFERCIRCULAR_BUFFERKeyword_2_0 = (Keyword)cCIRCULAR_BUFFEREnumLiteralDeclaration_2.eContents().get(0);
 		
 		//enum ConnectionPolicyType:
-		//	DATA | BUFFER;
+		//	DATA | BUFFER | CIRCULAR_BUFFER;
 		public EnumRule getRule() { return rule; }
 
-		//DATA | BUFFER
+		//DATA | BUFFER | CIRCULAR_BUFFER
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//DATA
@@ -1511,6 +1563,56 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"BUFFER"
 		public Keyword getBUFFERBUFFERKeyword_1_0() { return cBUFFERBUFFERKeyword_1_0; }
+
+		//CIRCULAR_BUFFER
+		public EnumLiteralDeclaration getCIRCULAR_BUFFEREnumLiteralDeclaration_2() { return cCIRCULAR_BUFFEREnumLiteralDeclaration_2; }
+
+		//"CIRCULAR_BUFFER"
+		public Keyword getCIRCULAR_BUFFERCIRCULAR_BUFFERKeyword_2_0() { return cCIRCULAR_BUFFERCIRCULAR_BUFFERKeyword_2_0; }
+	}
+
+	public class ConnectionPolicyTransportElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "ConnectionPolicyTransport");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cDefaultEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cDefaultDefaultKeyword_0_0 = (Keyword)cDefaultEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cCORBAEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cCORBACORBAKeyword_1_0 = (Keyword)cCORBAEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cMQUEUEEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cMQUEUEMQUEUEKeyword_2_0 = (Keyword)cMQUEUEEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cROSEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cROSROSKeyword_3_0 = (Keyword)cROSEnumLiteralDeclaration_3.eContents().get(0);
+		
+		//enum ConnectionPolicyTransport:
+		//	default | CORBA | MQUEUE | ROS;
+		public EnumRule getRule() { return rule; }
+
+		//default | CORBA | MQUEUE | ROS
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//default
+		public EnumLiteralDeclaration getDefaultEnumLiteralDeclaration_0() { return cDefaultEnumLiteralDeclaration_0; }
+
+		//"default"
+		public Keyword getDefaultDefaultKeyword_0_0() { return cDefaultDefaultKeyword_0_0; }
+
+		//CORBA
+		public EnumLiteralDeclaration getCORBAEnumLiteralDeclaration_1() { return cCORBAEnumLiteralDeclaration_1; }
+
+		//"CORBA"
+		public Keyword getCORBACORBAKeyword_1_0() { return cCORBACORBAKeyword_1_0; }
+
+		//MQUEUE
+		public EnumLiteralDeclaration getMQUEUEEnumLiteralDeclaration_2() { return cMQUEUEEnumLiteralDeclaration_2; }
+
+		//"MQUEUE"
+		public Keyword getMQUEUEMQUEUEKeyword_2_0() { return cMQUEUEMQUEUEKeyword_2_0; }
+
+		//ROS
+		public EnumLiteralDeclaration getROSEnumLiteralDeclaration_3() { return cROSEnumLiteralDeclaration_3; }
+
+		//"ROS"
+		public Keyword getROSROSKeyword_3_0() { return cROSROSKeyword_3_0; }
 	}
 
 	public class SchedulerElements extends AbstractEnumRuleElementFinder {
@@ -1545,14 +1647,15 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 	private TaskContextElements pTaskContext;
 	private PeerGroupElements pPeerGroup;
 	private ConnectionPolicyElements pConnectionPolicy;
+	private ConnectionPolicyLockPolicyElements unknownRuleConnectionPolicyLockPolicy;
+	private ConnectionPolicyTypeElements unknownRuleConnectionPolicyType;
+	private ConnectionPolicyTransportElements unknownRuleConnectionPolicyTransport;
 	private InputPortElements pInputPort;
 	private EventPortElements pEventPort;
 	private OutputPortElements pOutputPort;
 	private PropertyElements pProperty;
 	private OperationElements pOperation;
 	private EShortElements pEShort;
-	private ConnectionPolicyLockPolicyElements unknownRuleConnectionPolicyLockPolicy;
-	private ConnectionPolicyTypeElements unknownRuleConnectionPolicyType;
 	private IActivityElements pIActivity;
 	private ActivityElements pActivity;
 	private SlaveElements pSlave;
@@ -1640,15 +1743,46 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ConnectionPolicy:
-	//	"ConnectionPolicy" name=EString "{" ("bufferSize" bufferSize=EShort)? ("lockPolicy"
-	//	lockPolicy=ConnectionPolicyLockPolicy)? ("type" type=ConnectionPolicyType)? "inputPort" inputPort=[InputPort|EString]
-	//	"outputPort" outputPort=[OutputPort|EString] "}";
+	//	"ConnectionPolicy" name=EString "{" "inputPort" inputPort=[InputPort|EString] "outputPort"
+	//	outputPort=[OutputPort|EString] init?="init"? pull?="pull"? ("bufferSize" bufferSize=EShort)? ("dataSize"
+	//	dataSize=EShort)? ("lockPolicy" lockPolicy=ConnectionPolicyLockPolicy)? ("transport"
+	//	transport=ConnectionPolicyTransport)? ("type" type=ConnectionPolicyType)? "}";
 	public ConnectionPolicyElements getConnectionPolicyAccess() {
 		return (pConnectionPolicy != null) ? pConnectionPolicy : (pConnectionPolicy = new ConnectionPolicyElements());
 	}
 	
 	public ParserRule getConnectionPolicyRule() {
 		return getConnectionPolicyAccess().getRule();
+	}
+
+	//enum ConnectionPolicyLockPolicy:
+	//	UNSYNC | LOCKED | LOCK_FREE;
+	public ConnectionPolicyLockPolicyElements getConnectionPolicyLockPolicyAccess() {
+		return (unknownRuleConnectionPolicyLockPolicy != null) ? unknownRuleConnectionPolicyLockPolicy : (unknownRuleConnectionPolicyLockPolicy = new ConnectionPolicyLockPolicyElements());
+	}
+	
+	public EnumRule getConnectionPolicyLockPolicyRule() {
+		return getConnectionPolicyLockPolicyAccess().getRule();
+	}
+
+	//enum ConnectionPolicyType:
+	//	DATA | BUFFER | CIRCULAR_BUFFER;
+	public ConnectionPolicyTypeElements getConnectionPolicyTypeAccess() {
+		return (unknownRuleConnectionPolicyType != null) ? unknownRuleConnectionPolicyType : (unknownRuleConnectionPolicyType = new ConnectionPolicyTypeElements());
+	}
+	
+	public EnumRule getConnectionPolicyTypeRule() {
+		return getConnectionPolicyTypeAccess().getRule();
+	}
+
+	//enum ConnectionPolicyTransport:
+	//	default | CORBA | MQUEUE | ROS;
+	public ConnectionPolicyTransportElements getConnectionPolicyTransportAccess() {
+		return (unknownRuleConnectionPolicyTransport != null) ? unknownRuleConnectionPolicyTransport : (unknownRuleConnectionPolicyTransport = new ConnectionPolicyTransportElements());
+	}
+	
+	public EnumRule getConnectionPolicyTransportRule() {
+		return getConnectionPolicyTransportAccess().getRule();
 	}
 
 	//InputPort:
@@ -1714,26 +1848,6 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getEShortRule() {
 		return getEShortAccess().getRule();
-	}
-
-	//enum ConnectionPolicyLockPolicy:
-	//	UNSYNC | LOCKED | LOCK_FREE;
-	public ConnectionPolicyLockPolicyElements getConnectionPolicyLockPolicyAccess() {
-		return (unknownRuleConnectionPolicyLockPolicy != null) ? unknownRuleConnectionPolicyLockPolicy : (unknownRuleConnectionPolicyLockPolicy = new ConnectionPolicyLockPolicyElements());
-	}
-	
-	public EnumRule getConnectionPolicyLockPolicyRule() {
-		return getConnectionPolicyLockPolicyAccess().getRule();
-	}
-
-	//enum ConnectionPolicyType:
-	//	DATA | BUFFER;
-	public ConnectionPolicyTypeElements getConnectionPolicyTypeAccess() {
-		return (unknownRuleConnectionPolicyType != null) ? unknownRuleConnectionPolicyType : (unknownRuleConnectionPolicyType = new ConnectionPolicyTypeElements());
-	}
-	
-	public EnumRule getConnectionPolicyTypeRule() {
-		return getConnectionPolicyTypeAccess().getRule();
 	}
 
 	//IActivity:

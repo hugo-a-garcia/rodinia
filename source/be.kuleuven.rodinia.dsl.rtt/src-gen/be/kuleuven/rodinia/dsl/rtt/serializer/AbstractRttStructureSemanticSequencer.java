@@ -125,11 +125,15 @@ public abstract class AbstractRttStructureSemanticSequencer extends AbstractDele
 	 * Constraint:
 	 *     (
 	 *         name=EString 
-	 *         bufferSize=EShort? 
-	 *         lockPolicy=ConnectionPolicyLockPolicy? 
-	 *         type=ConnectionPolicyType? 
 	 *         inputPort=[InputPort|EString] 
-	 *         outputPort=[OutputPort|EString]
+	 *         outputPort=[OutputPort|EString] 
+	 *         init?='init'? 
+	 *         pull?='pull'? 
+	 *         bufferSize=EShort? 
+	 *         dataSize=EShort? 
+	 *         lockPolicy=ConnectionPolicyLockPolicy? 
+	 *         transport=ConnectionPolicyTransport? 
+	 *         type=ConnectionPolicyType?
 	 *     )
 	 */
 	protected void sequence_ConnectionPolicy(EObject context, ConnectionPolicy semanticObject) {

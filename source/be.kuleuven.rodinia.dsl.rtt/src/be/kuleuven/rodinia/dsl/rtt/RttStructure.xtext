@@ -41,12 +41,27 @@ ConnectionPolicy returns ConnectionPolicy:
 	'ConnectionPolicy'
 	name=EString
 	'{'
-		('bufferSize' bufferSize=EShort)?
-		('lockPolicy' lockPolicy=ConnectionPolicyLockPolicy)?
-		('type' type=ConnectionPolicyType)?
 		'inputPort' inputPort=[InputPort|EString]
 		'outputPort' outputPort=[OutputPort|EString]
+		(init?='init')?
+		(pull?='pull')?
+		('bufferSize' bufferSize=EShort)?
+		('dataSize' dataSize=EShort)?
+		('lockPolicy' lockPolicy=ConnectionPolicyLockPolicy)?
+		('transport' transport=ConnectionPolicyTransport)?
+		('type' type=ConnectionPolicyType)?
+		
 	'}';
+
+enum ConnectionPolicyLockPolicy returns ConnectionPolicyLockPolicy:
+	UNSYNC | LOCKED | LOCK_FREE;
+
+enum ConnectionPolicyType returns ConnectionPolicyType:
+	DATA | BUFFER | CIRCULAR_BUFFER;
+	
+enum ConnectionPolicyTransport returns ConnectionPolicyTransport:
+	default | CORBA | MQUEUE | ROS
+;
 
 InputPort returns InputPort:
 	'InputPort'
@@ -94,12 +109,6 @@ Operation returns Operation:
 
 EShort returns ecore::EShort:
 	'-'? INT;
-
-enum ConnectionPolicyLockPolicy returns ConnectionPolicyLockPolicy:
-	UNSYNC | LOCKED | LOCK_FREE;
-
-enum ConnectionPolicyType returns ConnectionPolicyType:
-	DATA | BUFFER;
 	
 IActivity returns IActivity:
 	Activity | Slave;
