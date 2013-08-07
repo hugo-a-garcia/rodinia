@@ -12,11 +12,15 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.ConnectionPolicy#getName <em>Name</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.ConnectionPolicy#getInputPort <em>Input Port</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.ConnectionPolicy#getOutputPort <em>Output Port</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.ConnectionPolicy#getBufferSize <em>Buffer Size</em>}</li>
- *   <li>{@link be.kueleuven.rodinia.model.rtt.ConnectionPolicy#getName <em>Name</em>}</li>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.ConnectionPolicy#getDataSize <em>Data Size</em>}</li>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.ConnectionPolicy#isInit <em>Init</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.ConnectionPolicy#getLockPolicy <em>Lock Policy</em>}</li>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.ConnectionPolicy#isPull <em>Pull</em>}</li>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.ConnectionPolicy#getTransport <em>Transport</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.ConnectionPolicy#getType <em>Type</em>}</li>
  * </ul>
  * </p>
@@ -27,6 +31,32 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ConnectionPolicy extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see be.kueleuven.rodinia.model.rtt.RttPackage#getConnectionPolicy_Name()
+   * @model unique="false"
+   * @generated
+   */
+  String getName();
+
+  /**
+   * Sets the value of the '{@link be.kueleuven.rodinia.model.rtt.ConnectionPolicy#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
+  void setName(String value);
+
   /**
    * Returns the value of the '<em><b>Input Port</b></em>' reference.
    * It is bidirectional and its opposite is '{@link be.kueleuven.rodinia.model.rtt.InputPort#getInputConnectionPolicy <em>Input Connection Policy</em>}'.
@@ -110,30 +140,56 @@ public interface ConnectionPolicy extends EObject
   void setBufferSize(short value);
 
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Data Size</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * If the meaning of the '<em>Data Size</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see be.kueleuven.rodinia.model.rtt.RttPackage#getConnectionPolicy_Name()
+   * @return the value of the '<em>Data Size</em>' attribute.
+   * @see #setDataSize(short)
+   * @see be.kueleuven.rodinia.model.rtt.RttPackage#getConnectionPolicy_DataSize()
    * @model unique="false"
    * @generated
    */
-  String getName();
+  short getDataSize();
 
   /**
-   * Sets the value of the '{@link be.kueleuven.rodinia.model.rtt.ConnectionPolicy#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link be.kueleuven.rodinia.model.rtt.ConnectionPolicy#getDataSize <em>Data Size</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
+   * @param value the new value of the '<em>Data Size</em>' attribute.
+   * @see #getDataSize()
    * @generated
    */
-  void setName(String value);
+  void setDataSize(short value);
+
+  /**
+   * Returns the value of the '<em><b>Init</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Init</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Init</em>' attribute.
+   * @see #setInit(boolean)
+   * @see be.kueleuven.rodinia.model.rtt.RttPackage#getConnectionPolicy_Init()
+   * @model unique="false"
+   * @generated
+   */
+  boolean isInit();
+
+  /**
+   * Sets the value of the '{@link be.kueleuven.rodinia.model.rtt.ConnectionPolicy#isInit <em>Init</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Init</em>' attribute.
+   * @see #isInit()
+   * @generated
+   */
+  void setInit(boolean value);
 
   /**
    * Returns the value of the '<em><b>Lock Policy</b></em>' attribute.
@@ -164,6 +220,61 @@ public interface ConnectionPolicy extends EObject
    * @generated
    */
   void setLockPolicy(ConnectionPolicyLockPolicy value);
+
+  /**
+   * Returns the value of the '<em><b>Pull</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Pull</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Pull</em>' attribute.
+   * @see #setPull(boolean)
+   * @see be.kueleuven.rodinia.model.rtt.RttPackage#getConnectionPolicy_Pull()
+   * @model unique="false"
+   * @generated
+   */
+  boolean isPull();
+
+  /**
+   * Sets the value of the '{@link be.kueleuven.rodinia.model.rtt.ConnectionPolicy#isPull <em>Pull</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Pull</em>' attribute.
+   * @see #isPull()
+   * @generated
+   */
+  void setPull(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Transport</b></em>' attribute.
+   * The literals are from the enumeration {@link be.kueleuven.rodinia.model.rtt.ConnectionPolicyTransport}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Transport</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Transport</em>' attribute.
+   * @see be.kueleuven.rodinia.model.rtt.ConnectionPolicyTransport
+   * @see #setTransport(ConnectionPolicyTransport)
+   * @see be.kueleuven.rodinia.model.rtt.RttPackage#getConnectionPolicy_Transport()
+   * @model unique="false"
+   * @generated
+   */
+  ConnectionPolicyTransport getTransport();
+
+  /**
+   * Sets the value of the '{@link be.kueleuven.rodinia.model.rtt.ConnectionPolicy#getTransport <em>Transport</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Transport</em>' attribute.
+   * @see be.kueleuven.rodinia.model.rtt.ConnectionPolicyTransport
+   * @see #getTransport()
+   * @generated
+   */
+  void setTransport(ConnectionPolicyTransport value);
 
   /**
    * Returns the value of the '<em><b>Type</b></em>' attribute.

@@ -5,7 +5,7 @@
     forceOverwrite="true" modelName="Rtt" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.ecore.xcore.importer" complianceLevel="7.0" copyrightFields="false"
     editPluginID="be.kuleuven.rodinia.dsl.datatypes.edit" editorPluginID="be.kuleuven.rodinia.dsl.datatypes.editor"
-    runtimeVersion="2.9" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../be.kuleuven.rodinia.dsl.datatypes/src-gen/be/kuleuven/rodinia/dsl/datatypes/Datatypes.genmodel#//datatypes"
+    runtimeVersion="2.9" usedGenPackages="../../be.kuleuven.rodinia.dsl.datatypes/src-gen/be/kuleuven/rodinia/dsl/datatypes/Datatypes.genmodel#//datatypes ../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
     operationReflection="true" importOrganizing="true">
   <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/exporter/org.eclipse.xsd.ecore.exporter">
     <genAnnotations source="selectedPackages">
@@ -27,11 +27,18 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rtt.ecore#//ConnectionPolicyType">
       <genEnumLiterals ecoreEnumLiteral="rtt.ecore#//ConnectionPolicyType/DATA"/>
       <genEnumLiterals ecoreEnumLiteral="rtt.ecore#//ConnectionPolicyType/BUFFER"/>
+      <genEnumLiterals ecoreEnumLiteral="rtt.ecore#//ConnectionPolicyType/CIRCULAR_BUFFER"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rtt.ecore#//ConnectionPolicyLockPolicy">
       <genEnumLiterals ecoreEnumLiteral="rtt.ecore#//ConnectionPolicyLockPolicy/UNSYNC"/>
       <genEnumLiterals ecoreEnumLiteral="rtt.ecore#//ConnectionPolicyLockPolicy/LOCKED"/>
       <genEnumLiterals ecoreEnumLiteral="rtt.ecore#//ConnectionPolicyLockPolicy/LOCK_FREE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="rtt.ecore#//ConnectionPolicyTransport">
+      <genEnumLiterals ecoreEnumLiteral="rtt.ecore#//ConnectionPolicyTransport/default"/>
+      <genEnumLiterals ecoreEnumLiteral="rtt.ecore#//ConnectionPolicyTransport/CORBA"/>
+      <genEnumLiterals ecoreEnumLiteral="rtt.ecore#//ConnectionPolicyTransport/MQUEUE"/>
+      <genEnumLiterals ecoreEnumLiteral="rtt.ecore#//ConnectionPolicyTransport/ROS"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rtt.ecore#//Scheduler">
       <genEnumLiterals ecoreEnumLiteral="rtt.ecore#//Scheduler/ORO_SCHED_OTHER"/>
@@ -60,11 +67,15 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rtt.ecore#//PeerGroup/members"/>
     </genClasses>
     <genClasses ecoreClass="rtt.ecore#//ConnectionPolicy">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//ConnectionPolicy/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rtt.ecore#//ConnectionPolicy/inputPort"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rtt.ecore#//ConnectionPolicy/outputPort"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//ConnectionPolicy/bufferSize"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//ConnectionPolicy/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//ConnectionPolicy/dataSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//ConnectionPolicy/init"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//ConnectionPolicy/lockPolicy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//ConnectionPolicy/pull"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//ConnectionPolicy/transport"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//ConnectionPolicy/type"/>
     </genClasses>
     <genClasses image="false" ecoreClass="rtt.ecore#//IActivity">

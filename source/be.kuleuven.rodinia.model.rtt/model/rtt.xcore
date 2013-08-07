@@ -29,11 +29,15 @@ class PeerGroup {
 
 class ConnectionPolicy
 {
+	String name
 	refers InputPort [1] inputPort opposite inputConnectionPolicy
 	refers OutputPort [1] outputPort opposite outputConnectionPolicy
 	short bufferSize
-	String name
+	short dataSize
+	boolean init
 	ConnectionPolicyLockPolicy lockPolicy = "LOCK_FREE"
+	boolean pull
+	ConnectionPolicyTransport transport
 	ConnectionPolicyType ^type = "DATA"
 }
 
@@ -41,6 +45,7 @@ enum ConnectionPolicyType
 {
 	DATA
 	BUFFER = 1
+	CIRCULAR_BUFFER = 2
 }
 
 enum ConnectionPolicyLockPolicy
@@ -48,6 +53,14 @@ enum ConnectionPolicyLockPolicy
 	UNSYNC
 	LOCKED = 1
 	LOCK_FREE = 2
+}
+
+enum ConnectionPolicyTransport
+{	
+	^default
+   CORBA = 1
+   MQUEUE = 2
+   ROS = 3
 }
 
 interface IActivity {

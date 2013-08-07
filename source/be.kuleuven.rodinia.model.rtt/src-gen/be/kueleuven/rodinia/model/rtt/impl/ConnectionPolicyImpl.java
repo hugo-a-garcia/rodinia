@@ -4,6 +4,7 @@ package be.kueleuven.rodinia.model.rtt.impl;
 
 import be.kueleuven.rodinia.model.rtt.ConnectionPolicy;
 import be.kueleuven.rodinia.model.rtt.ConnectionPolicyLockPolicy;
+import be.kueleuven.rodinia.model.rtt.ConnectionPolicyTransport;
 import be.kueleuven.rodinia.model.rtt.ConnectionPolicyType;
 import be.kueleuven.rodinia.model.rtt.InputPort;
 import be.kueleuven.rodinia.model.rtt.OutputPort;
@@ -25,11 +26,15 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.ConnectionPolicyImpl#getName <em>Name</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.ConnectionPolicyImpl#getInputPort <em>Input Port</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.ConnectionPolicyImpl#getOutputPort <em>Output Port</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.ConnectionPolicyImpl#getBufferSize <em>Buffer Size</em>}</li>
- *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.ConnectionPolicyImpl#getName <em>Name</em>}</li>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.ConnectionPolicyImpl#getDataSize <em>Data Size</em>}</li>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.ConnectionPolicyImpl#isInit <em>Init</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.ConnectionPolicyImpl#getLockPolicy <em>Lock Policy</em>}</li>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.ConnectionPolicyImpl#isPull <em>Pull</em>}</li>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.ConnectionPolicyImpl#getTransport <em>Transport</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.ConnectionPolicyImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
@@ -38,6 +43,26 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implements ConnectionPolicy
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getInputPort() <em>Input Port</em>}' reference.
    * <!-- begin-user-doc -->
@@ -79,24 +104,44 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
   protected short bufferSize = BUFFER_SIZE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getDataSize() <em>Data Size</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getDataSize()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final short DATA_SIZE_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getDataSize() <em>Data Size</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getDataSize()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected short dataSize = DATA_SIZE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isInit() <em>Init</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isInit()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean INIT_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isInit() <em>Init</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isInit()
+   * @generated
+   * @ordered
+   */
+  protected boolean init = INIT_EDEFAULT;
 
   /**
    * The default value of the '{@link #getLockPolicy() <em>Lock Policy</em>}' attribute.
@@ -117,6 +162,46 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
    * @ordered
    */
   protected ConnectionPolicyLockPolicy lockPolicy = LOCK_POLICY_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isPull() <em>Pull</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isPull()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean PULL_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isPull() <em>Pull</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isPull()
+   * @generated
+   * @ordered
+   */
+  protected boolean pull = PULL_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getTransport() <em>Transport</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTransport()
+   * @generated
+   * @ordered
+   */
+  protected static final ConnectionPolicyTransport TRANSPORT_EDEFAULT = ConnectionPolicyTransport.DEFAULT;
+
+  /**
+   * The cached value of the '{@link #getTransport() <em>Transport</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTransport()
+   * @generated
+   * @ordered
+   */
+  protected ConnectionPolicyTransport transport = TRANSPORT_EDEFAULT;
 
   /**
    * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -157,6 +242,29 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
   protected EClass eStaticClass()
   {
     return RttPackage.Literals.CONNECTION_POLICY;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RttPackage.CONNECTION_POLICY__NAME, oldName, name));
   }
 
   /**
@@ -323,9 +431,9 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public short getDataSize()
   {
-    return name;
+    return dataSize;
   }
 
   /**
@@ -333,12 +441,35 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public void setDataSize(short newDataSize)
   {
-    String oldName = name;
-    name = newName;
+    short oldDataSize = dataSize;
+    dataSize = newDataSize;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RttPackage.CONNECTION_POLICY__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, RttPackage.CONNECTION_POLICY__DATA_SIZE, oldDataSize, dataSize));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isInit()
+  {
+    return init;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setInit(boolean newInit)
+  {
+    boolean oldInit = init;
+    init = newInit;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RttPackage.CONNECTION_POLICY__INIT, oldInit, init));
   }
 
   /**
@@ -362,6 +493,52 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
     lockPolicy = newLockPolicy == null ? LOCK_POLICY_EDEFAULT : newLockPolicy;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, RttPackage.CONNECTION_POLICY__LOCK_POLICY, oldLockPolicy, lockPolicy));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isPull()
+  {
+    return pull;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setPull(boolean newPull)
+  {
+    boolean oldPull = pull;
+    pull = newPull;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RttPackage.CONNECTION_POLICY__PULL, oldPull, pull));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ConnectionPolicyTransport getTransport()
+  {
+    return transport;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setTransport(ConnectionPolicyTransport newTransport)
+  {
+    ConnectionPolicyTransport oldTransport = transport;
+    transport = newTransport == null ? TRANSPORT_EDEFAULT : newTransport;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RttPackage.CONNECTION_POLICY__TRANSPORT, oldTransport, transport));
   }
 
   /**
@@ -437,6 +614,8 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
+      case RttPackage.CONNECTION_POLICY__NAME:
+        return getName();
       case RttPackage.CONNECTION_POLICY__INPUT_PORT:
         if (resolve) return getInputPort();
         return basicGetInputPort();
@@ -445,10 +624,16 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
         return basicGetOutputPort();
       case RttPackage.CONNECTION_POLICY__BUFFER_SIZE:
         return getBufferSize();
-      case RttPackage.CONNECTION_POLICY__NAME:
-        return getName();
+      case RttPackage.CONNECTION_POLICY__DATA_SIZE:
+        return getDataSize();
+      case RttPackage.CONNECTION_POLICY__INIT:
+        return isInit();
       case RttPackage.CONNECTION_POLICY__LOCK_POLICY:
         return getLockPolicy();
+      case RttPackage.CONNECTION_POLICY__PULL:
+        return isPull();
+      case RttPackage.CONNECTION_POLICY__TRANSPORT:
+        return getTransport();
       case RttPackage.CONNECTION_POLICY__TYPE:
         return getType();
     }
@@ -465,6 +650,9 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
+      case RttPackage.CONNECTION_POLICY__NAME:
+        setName((String)newValue);
+        return;
       case RttPackage.CONNECTION_POLICY__INPUT_PORT:
         setInputPort((InputPort)newValue);
         return;
@@ -474,11 +662,20 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
       case RttPackage.CONNECTION_POLICY__BUFFER_SIZE:
         setBufferSize((Short)newValue);
         return;
-      case RttPackage.CONNECTION_POLICY__NAME:
-        setName((String)newValue);
+      case RttPackage.CONNECTION_POLICY__DATA_SIZE:
+        setDataSize((Short)newValue);
+        return;
+      case RttPackage.CONNECTION_POLICY__INIT:
+        setInit((Boolean)newValue);
         return;
       case RttPackage.CONNECTION_POLICY__LOCK_POLICY:
         setLockPolicy((ConnectionPolicyLockPolicy)newValue);
+        return;
+      case RttPackage.CONNECTION_POLICY__PULL:
+        setPull((Boolean)newValue);
+        return;
+      case RttPackage.CONNECTION_POLICY__TRANSPORT:
+        setTransport((ConnectionPolicyTransport)newValue);
         return;
       case RttPackage.CONNECTION_POLICY__TYPE:
         setType((ConnectionPolicyType)newValue);
@@ -497,6 +694,9 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
+      case RttPackage.CONNECTION_POLICY__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case RttPackage.CONNECTION_POLICY__INPUT_PORT:
         setInputPort((InputPort)null);
         return;
@@ -506,11 +706,20 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
       case RttPackage.CONNECTION_POLICY__BUFFER_SIZE:
         setBufferSize(BUFFER_SIZE_EDEFAULT);
         return;
-      case RttPackage.CONNECTION_POLICY__NAME:
-        setName(NAME_EDEFAULT);
+      case RttPackage.CONNECTION_POLICY__DATA_SIZE:
+        setDataSize(DATA_SIZE_EDEFAULT);
+        return;
+      case RttPackage.CONNECTION_POLICY__INIT:
+        setInit(INIT_EDEFAULT);
         return;
       case RttPackage.CONNECTION_POLICY__LOCK_POLICY:
         setLockPolicy(LOCK_POLICY_EDEFAULT);
+        return;
+      case RttPackage.CONNECTION_POLICY__PULL:
+        setPull(PULL_EDEFAULT);
+        return;
+      case RttPackage.CONNECTION_POLICY__TRANSPORT:
+        setTransport(TRANSPORT_EDEFAULT);
         return;
       case RttPackage.CONNECTION_POLICY__TYPE:
         setType(TYPE_EDEFAULT);
@@ -529,16 +738,24 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
+      case RttPackage.CONNECTION_POLICY__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case RttPackage.CONNECTION_POLICY__INPUT_PORT:
         return inputPort != null;
       case RttPackage.CONNECTION_POLICY__OUTPUT_PORT:
         return outputPort != null;
       case RttPackage.CONNECTION_POLICY__BUFFER_SIZE:
         return bufferSize != BUFFER_SIZE_EDEFAULT;
-      case RttPackage.CONNECTION_POLICY__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case RttPackage.CONNECTION_POLICY__DATA_SIZE:
+        return dataSize != DATA_SIZE_EDEFAULT;
+      case RttPackage.CONNECTION_POLICY__INIT:
+        return init != INIT_EDEFAULT;
       case RttPackage.CONNECTION_POLICY__LOCK_POLICY:
         return lockPolicy != LOCK_POLICY_EDEFAULT;
+      case RttPackage.CONNECTION_POLICY__PULL:
+        return pull != PULL_EDEFAULT;
+      case RttPackage.CONNECTION_POLICY__TRANSPORT:
+        return transport != TRANSPORT_EDEFAULT;
       case RttPackage.CONNECTION_POLICY__TYPE:
         return type != TYPE_EDEFAULT;
     }
@@ -556,12 +773,20 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (bufferSize: ");
-    result.append(bufferSize);
-    result.append(", name: ");
+    result.append(" (name: ");
     result.append(name);
+    result.append(", bufferSize: ");
+    result.append(bufferSize);
+    result.append(", dataSize: ");
+    result.append(dataSize);
+    result.append(", init: ");
+    result.append(init);
     result.append(", lockPolicy: ");
     result.append(lockPolicy);
+    result.append(", pull: ");
+    result.append(pull);
+    result.append(", transport: ");
+    result.append(transport);
     result.append(", type: ");
     result.append(type);
     result.append(')');

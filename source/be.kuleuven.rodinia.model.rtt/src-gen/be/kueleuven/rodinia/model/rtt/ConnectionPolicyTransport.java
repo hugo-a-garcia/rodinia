@@ -10,123 +10,149 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Connection Policy Type</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Connection Policy Transport</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see be.kueleuven.rodinia.model.rtt.RttPackage#getConnectionPolicyType()
+ * @see be.kueleuven.rodinia.model.rtt.RttPackage#getConnectionPolicyTransport()
  * @model
  * @generated
  */
-public enum ConnectionPolicyType implements Enumerator
+public enum ConnectionPolicyTransport implements Enumerator
 {
   /**
-   * The '<em><b>DATA</b></em>' literal object.
+   * The '<em><b>Default</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #DATA_VALUE
+   * @see #DEFAULT_VALUE
    * @generated
    * @ordered
    */
-  DATA(0, "DATA", "DATA"),
+  DEFAULT(0, "default", "default"),
 
   /**
-   * The '<em><b>BUFFER</b></em>' literal object.
+   * The '<em><b>CORBA</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #BUFFER_VALUE
+   * @see #CORBA_VALUE
    * @generated
    * @ordered
    */
-  BUFFER(1, "BUFFER", "BUFFER"),
+  CORBA(1, "CORBA", "CORBA"),
 
   /**
-   * The '<em><b>CIRCULAR BUFFER</b></em>' literal object.
+   * The '<em><b>MQUEUE</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #CIRCULAR_BUFFER_VALUE
+   * @see #MQUEUE_VALUE
    * @generated
    * @ordered
    */
-  CIRCULAR_BUFFER(2, "CIRCULAR_BUFFER", "CIRCULAR_BUFFER");
+  MQUEUE(2, "MQUEUE", "MQUEUE"),
 
   /**
-   * The '<em><b>DATA</b></em>' literal value.
+   * The '<em><b>ROS</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #ROS_VALUE
+   * @generated
+   * @ordered
+   */
+  ROS(3, "ROS", "ROS");
+
+  /**
+   * The '<em><b>Default</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>DATA</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>Default</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #DATA
+   * @see #DEFAULT
+   * @model name="default"
+   * @generated
+   * @ordered
+   */
+  public static final int DEFAULT_VALUE = 0;
+
+  /**
+   * The '<em><b>CORBA</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>CORBA</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #CORBA
    * @model
    * @generated
    * @ordered
    */
-  public static final int DATA_VALUE = 0;
+  public static final int CORBA_VALUE = 1;
 
   /**
-   * The '<em><b>BUFFER</b></em>' literal value.
+   * The '<em><b>MQUEUE</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>BUFFER</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>MQUEUE</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #BUFFER
+   * @see #MQUEUE
    * @model
    * @generated
    * @ordered
    */
-  public static final int BUFFER_VALUE = 1;
+  public static final int MQUEUE_VALUE = 2;
 
   /**
-   * The '<em><b>CIRCULAR BUFFER</b></em>' literal value.
+   * The '<em><b>ROS</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>CIRCULAR BUFFER</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>ROS</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #CIRCULAR_BUFFER
+   * @see #ROS
    * @model
    * @generated
    * @ordered
    */
-  public static final int CIRCULAR_BUFFER_VALUE = 2;
+  public static final int ROS_VALUE = 3;
 
   /**
-   * An array of all the '<em><b>Connection Policy Type</b></em>' enumerators.
+   * An array of all the '<em><b>Connection Policy Transport</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private static final ConnectionPolicyType[] VALUES_ARRAY =
-    new ConnectionPolicyType[]
+  private static final ConnectionPolicyTransport[] VALUES_ARRAY =
+    new ConnectionPolicyTransport[]
     {
-      DATA,
-      BUFFER,
-      CIRCULAR_BUFFER,
+      DEFAULT,
+      CORBA,
+      MQUEUE,
+      ROS,
     };
 
   /**
-   * A public read-only list of all the '<em><b>Connection Policy Type</b></em>' enumerators.
+   * A public read-only list of all the '<em><b>Connection Policy Transport</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static final List<ConnectionPolicyType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+  public static final List<ConnectionPolicyTransport> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>Connection Policy Type</b></em>' literal with the specified literal value.
+   * Returns the '<em><b>Connection Policy Transport</b></em>' literal with the specified literal value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static ConnectionPolicyType get(String literal)
+  public static ConnectionPolicyTransport get(String literal)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      ConnectionPolicyType result = VALUES_ARRAY[i];
+      ConnectionPolicyTransport result = VALUES_ARRAY[i];
       if (result.toString().equals(literal))
       {
         return result;
@@ -136,16 +162,16 @@ public enum ConnectionPolicyType implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>Connection Policy Type</b></em>' literal with the specified name.
+   * Returns the '<em><b>Connection Policy Transport</b></em>' literal with the specified name.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static ConnectionPolicyType getByName(String name)
+  public static ConnectionPolicyTransport getByName(String name)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      ConnectionPolicyType result = VALUES_ARRAY[i];
+      ConnectionPolicyTransport result = VALUES_ARRAY[i];
       if (result.getName().equals(name))
       {
         return result;
@@ -155,18 +181,19 @@ public enum ConnectionPolicyType implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>Connection Policy Type</b></em>' literal with the specified integer value.
+   * Returns the '<em><b>Connection Policy Transport</b></em>' literal with the specified integer value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static ConnectionPolicyType get(int value)
+  public static ConnectionPolicyTransport get(int value)
   {
     switch (value)
     {
-      case DATA_VALUE: return DATA;
-      case BUFFER_VALUE: return BUFFER;
-      case CIRCULAR_BUFFER_VALUE: return CIRCULAR_BUFFER;
+      case DEFAULT_VALUE: return DEFAULT;
+      case CORBA_VALUE: return CORBA;
+      case MQUEUE_VALUE: return MQUEUE;
+      case ROS_VALUE: return ROS;
     }
     return null;
   }
@@ -198,7 +225,7 @@ public enum ConnectionPolicyType implements Enumerator
    * <!-- end-user-doc -->
    * @generated
    */
-  private ConnectionPolicyType(int value, String name, String literal)
+  private ConnectionPolicyTransport(int value, String name, String literal)
   {
     this.value = value;
     this.name = name;
@@ -247,4 +274,4 @@ public enum ConnectionPolicyType implements Enumerator
     return literal;
   }
   
-} //ConnectionPolicyType
+} //ConnectionPolicyTransport

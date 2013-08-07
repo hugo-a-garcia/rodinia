@@ -42,26 +42,39 @@
         eType="#//TaskContext"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConnectionPolicy">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputPort" lowerBound="1"
         eType="#//InputPort" eOpposite="#//InputPort/inputConnectionPolicy"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputPort" lowerBound="1"
         eType="#//OutputPort" eOpposite="#//OutputPort/outputConnectionPolicy"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bufferSize" unique="false"
         eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EShort"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataSize" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="init" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lockPolicy" unique="false"
         eType="#//ConnectionPolicyLockPolicy" defaultValueLiteral="LOCK_FREE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pull" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transport" unique="false"
+        eType="#//ConnectionPolicyTransport"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" unique="false" eType="#//ConnectionPolicyType"
         defaultValueLiteral="DATA"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ConnectionPolicyType">
     <eLiterals name="DATA"/>
     <eLiterals name="BUFFER" value="1"/>
+    <eLiterals name="CIRCULAR_BUFFER" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ConnectionPolicyLockPolicy">
     <eLiterals name="UNSYNC"/>
     <eLiterals name="LOCKED" value="1"/>
     <eLiterals name="LOCK_FREE" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ConnectionPolicyTransport">
+    <eLiterals name="default"/>
+    <eLiterals name="CORBA" value="1"/>
+    <eLiterals name="MQUEUE" value="2"/>
+    <eLiterals name="ROS" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IActivity" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" lowerBound="1"
