@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.InputPort#getName <em>Name</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.InputPort#getDataType <em>Data Type</em>}</li>
- *   <li>{@link be.kueleuven.rodinia.model.rtt.InputPort#getInputConnectionPolicy <em>Input Connection Policy</em>}</li>
  * </ul>
  * </p>
  *
@@ -77,33 +76,5 @@ public interface InputPort extends EObject
    * @generated
    */
   void setDataType(DataType value);
-
-  /**
-   * Returns the value of the '<em><b>Input Connection Policy</b></em>' reference.
-   * It is bidirectional and its opposite is '{@link be.kueleuven.rodinia.model.rtt.ConnectionPolicy#getInputPort <em>Input Port</em>}'.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Input Connection Policy</em>' reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Input Connection Policy</em>' reference.
-   * @see #setInputConnectionPolicy(ConnectionPolicy)
-   * @see be.kueleuven.rodinia.model.rtt.RttPackage#getInputPort_InputConnectionPolicy()
-   * @see be.kueleuven.rodinia.model.rtt.ConnectionPolicy#getInputPort
-   * @model opposite="inputPort"
-   * @generated
-   */
-  ConnectionPolicy getInputConnectionPolicy();
-
-  /**
-   * Sets the value of the '{@link be.kueleuven.rodinia.model.rtt.InputPort#getInputConnectionPolicy <em>Input Connection Policy</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Input Connection Policy</em>' reference.
-   * @see #getInputConnectionPolicy()
-   * @generated
-   */
-  void setInputConnectionPolicy(ConnectionPolicy value);
 
 } // InputPort

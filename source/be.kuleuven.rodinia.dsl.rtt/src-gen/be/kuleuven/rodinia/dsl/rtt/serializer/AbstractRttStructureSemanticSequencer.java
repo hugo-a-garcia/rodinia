@@ -143,7 +143,7 @@ public abstract class AbstractRttStructureSemanticSequencer extends AbstractDele
 	
 	/**
 	 * Constraint:
-	 *     (name=EString dataType=[DataType|EString]? inputConnectionPolicy=[ConnectionPolicy|EString]?)
+	 *     (name=EString dataType=[DataType|EString]?)
 	 */
 	protected void sequence_EventPort(EObject context, EventPort semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -152,7 +152,7 @@ public abstract class AbstractRttStructureSemanticSequencer extends AbstractDele
 	
 	/**
 	 * Constraint:
-	 *     (name=EString dataType=[DataType|QualifiedNameWithDot]? inputConnectionPolicy=[ConnectionPolicy|EString]?)
+	 *     (name=EString dataType=[DataType|QualifiedNameWithDot]?)
 	 */
 	protected void sequence_InputPort(EObject context, InputPort semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -170,7 +170,7 @@ public abstract class AbstractRttStructureSemanticSequencer extends AbstractDele
 	
 	/**
 	 * Constraint:
-	 *     (name=EString dataType=[DataType|QualifiedNameWithDot]? outputConnectionPolicy=[ConnectionPolicy|EString]?)
+	 *     (name=EString dataType=[DataType|QualifiedNameWithDot]?)
 	 */
 	protected void sequence_OutputPort(EObject context, OutputPort semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.OutputPort#getName <em>Name</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.OutputPort#getDataType <em>Data Type</em>}</li>
- *   <li>{@link be.kueleuven.rodinia.model.rtt.OutputPort#getOutputConnectionPolicy <em>Output Connection Policy</em>}</li>
  * </ul>
  * </p>
  *
@@ -77,33 +76,5 @@ public interface OutputPort extends EObject
    * @generated
    */
   void setDataType(DataType value);
-
-  /**
-   * Returns the value of the '<em><b>Output Connection Policy</b></em>' reference.
-   * It is bidirectional and its opposite is '{@link be.kueleuven.rodinia.model.rtt.ConnectionPolicy#getOutputPort <em>Output Port</em>}'.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Output Connection Policy</em>' reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Output Connection Policy</em>' reference.
-   * @see #setOutputConnectionPolicy(ConnectionPolicy)
-   * @see be.kueleuven.rodinia.model.rtt.RttPackage#getOutputPort_OutputConnectionPolicy()
-   * @see be.kueleuven.rodinia.model.rtt.ConnectionPolicy#getOutputPort
-   * @model opposite="outputPort"
-   * @generated
-   */
-  ConnectionPolicy getOutputConnectionPolicy();
-
-  /**
-   * Sets the value of the '{@link be.kueleuven.rodinia.model.rtt.OutputPort#getOutputConnectionPolicy <em>Output Connection Policy</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Output Connection Policy</em>' reference.
-   * @see #getOutputConnectionPolicy()
-   * @generated
-   */
-  void setOutputConnectionPolicy(ConnectionPolicy value);
 
 } // OutputPort

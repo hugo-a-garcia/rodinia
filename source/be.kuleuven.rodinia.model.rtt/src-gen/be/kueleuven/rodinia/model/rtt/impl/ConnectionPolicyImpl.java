@@ -11,7 +11,6 @@ import be.kueleuven.rodinia.model.rtt.OutputPort;
 import be.kueleuven.rodinia.model.rtt.RttPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -302,37 +301,12 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetInputPort(InputPort newInputPort, NotificationChain msgs)
+  public void setInputPort(InputPort newInputPort)
   {
     InputPort oldInputPort = inputPort;
     inputPort = newInputPort;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RttPackage.CONNECTION_POLICY__INPUT_PORT, oldInputPort, newInputPort);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setInputPort(InputPort newInputPort)
-  {
-    if (newInputPort != inputPort)
-    {
-      NotificationChain msgs = null;
-      if (inputPort != null)
-        msgs = ((InternalEObject)inputPort).eInverseRemove(this, RttPackage.INPUT_PORT__INPUT_CONNECTION_POLICY, InputPort.class, msgs);
-      if (newInputPort != null)
-        msgs = ((InternalEObject)newInputPort).eInverseAdd(this, RttPackage.INPUT_PORT__INPUT_CONNECTION_POLICY, InputPort.class, msgs);
-      msgs = basicSetInputPort(newInputPort, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RttPackage.CONNECTION_POLICY__INPUT_PORT, newInputPort, newInputPort));
+      eNotify(new ENotificationImpl(this, Notification.SET, RttPackage.CONNECTION_POLICY__INPUT_PORT, oldInputPort, inputPort));
   }
 
   /**
@@ -370,37 +344,12 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetOutputPort(OutputPort newOutputPort, NotificationChain msgs)
+  public void setOutputPort(OutputPort newOutputPort)
   {
     OutputPort oldOutputPort = outputPort;
     outputPort = newOutputPort;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RttPackage.CONNECTION_POLICY__OUTPUT_PORT, oldOutputPort, newOutputPort);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setOutputPort(OutputPort newOutputPort)
-  {
-    if (newOutputPort != outputPort)
-    {
-      NotificationChain msgs = null;
-      if (outputPort != null)
-        msgs = ((InternalEObject)outputPort).eInverseRemove(this, RttPackage.OUTPUT_PORT__OUTPUT_CONNECTION_POLICY, OutputPort.class, msgs);
-      if (newOutputPort != null)
-        msgs = ((InternalEObject)newOutputPort).eInverseAdd(this, RttPackage.OUTPUT_PORT__OUTPUT_CONNECTION_POLICY, OutputPort.class, msgs);
-      msgs = basicSetOutputPort(newOutputPort, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RttPackage.CONNECTION_POLICY__OUTPUT_PORT, newOutputPort, newOutputPort));
+      eNotify(new ENotificationImpl(this, Notification.SET, RttPackage.CONNECTION_POLICY__OUTPUT_PORT, oldOutputPort, outputPort));
   }
 
   /**
@@ -562,46 +511,6 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
     type = newType == null ? TYPE_EDEFAULT : newType;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, RttPackage.CONNECTION_POLICY__TYPE, oldType, type));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case RttPackage.CONNECTION_POLICY__INPUT_PORT:
-        if (inputPort != null)
-          msgs = ((InternalEObject)inputPort).eInverseRemove(this, RttPackage.INPUT_PORT__INPUT_CONNECTION_POLICY, InputPort.class, msgs);
-        return basicSetInputPort((InputPort)otherEnd, msgs);
-      case RttPackage.CONNECTION_POLICY__OUTPUT_PORT:
-        if (outputPort != null)
-          msgs = ((InternalEObject)outputPort).eInverseRemove(this, RttPackage.OUTPUT_PORT__OUTPUT_CONNECTION_POLICY, OutputPort.class, msgs);
-        return basicSetOutputPort((OutputPort)otherEnd, msgs);
-    }
-    return super.eInverseAdd(otherEnd, featureID, msgs);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case RttPackage.CONNECTION_POLICY__INPUT_PORT:
-        return basicSetInputPort(null, msgs);
-      case RttPackage.CONNECTION_POLICY__OUTPUT_PORT:
-        return basicSetOutputPort(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**

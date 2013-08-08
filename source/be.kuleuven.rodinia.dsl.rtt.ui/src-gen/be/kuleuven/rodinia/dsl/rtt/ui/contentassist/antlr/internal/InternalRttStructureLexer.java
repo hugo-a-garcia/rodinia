@@ -81,12 +81,10 @@ public class InternalRttStructureLexer extends Lexer {
     public static final int T__37=37;
     public static final int T__38=38;
     public static final int T__39=39;
-    public static final int T__76=76;
     public static final int RULE_WS=9;
     public static final int T__75=75;
     public static final int T__74=74;
     public static final int T__73=73;
-    public static final int T__77=77;
 
     // delegates
     // delegators
@@ -1023,10 +1021,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:55:7: ( 'inputConnectionPolicy' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:55:9: 'inputConnectionPolicy'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:55:7: ( 'EventPort' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:55:9: 'EventPort'
             {
-            match("inputConnectionPolicy"); 
+            match("EventPort"); 
 
 
             }
@@ -1044,10 +1042,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:56:7: ( 'EventPort' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:56:9: 'EventPort'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:56:7: ( 'OutputPort' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:56:9: 'OutputPort'
             {
-            match("EventPort"); 
+            match("OutputPort"); 
 
 
             }
@@ -1065,10 +1063,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:57:7: ( 'OutputPort' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:57:9: 'OutputPort'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:57:7: ( 'Property' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:57:9: 'Property'
             {
-            match("OutputPort"); 
+            match("Property"); 
 
 
             }
@@ -1086,10 +1084,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:58:7: ( 'outputConnectionPolicy' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:58:9: 'outputConnectionPolicy'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:58:7: ( 'description' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:58:9: 'description'
             {
-            match("outputConnectionPolicy"); 
+            match("description"); 
 
 
             }
@@ -1107,10 +1105,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__59;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:59:7: ( 'Property' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:59:9: 'Property'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:59:7: ( 'value' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:59:9: 'value'
             {
-            match("Property"); 
+            match("value"); 
 
 
             }
@@ -1128,10 +1126,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__60;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:60:7: ( 'description' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:60:9: 'description'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:60:7: ( 'Operation' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:60:9: 'Operation'
             {
-            match("description"); 
+            match("Operation"); 
 
 
             }
@@ -1149,10 +1147,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:61:7: ( 'value' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:61:9: 'value'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:61:7: ( 'documentation' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:61:9: 'documentation'
             {
-            match("value"); 
+            match("documentation"); 
 
 
             }
@@ -1170,10 +1168,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__62;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:62:7: ( 'Operation' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:62:9: 'Operation'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:62:7: ( 'returnType' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:62:9: 'returnType'
             {
-            match("Operation"); 
+            match("returnType"); 
 
 
             }
@@ -1191,11 +1189,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__63;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:63:7: ( 'documentation' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:63:9: 'documentation'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:63:7: ( '-' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:63:9: '-'
             {
-            match("documentation"); 
-
+            match('-'); 
 
             }
 
@@ -1212,10 +1209,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__64;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:64:7: ( 'returnType' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:64:9: 'returnType'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:64:7: ( 'Activity' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:64:9: 'Activity'
             {
-            match("returnType"); 
+            match("Activity"); 
 
 
             }
@@ -1233,10 +1230,11 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__65;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:65:7: ( '-' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:65:9: '-'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:65:7: ( 'scheduler' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:65:9: 'scheduler'
             {
-            match('-'); 
+            match("scheduler"); 
+
 
             }
 
@@ -1253,10 +1251,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__66;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:66:7: ( 'Activity' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:66:9: 'Activity'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:66:7: ( 'cpuAffinity' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:66:9: 'cpuAffinity'
             {
-            match("Activity"); 
+            match("cpuAffinity"); 
 
 
             }
@@ -1274,10 +1272,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__67;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:67:7: ( 'scheduler' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:67:9: 'scheduler'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:67:7: ( 'period' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:67:9: 'period'
             {
-            match("scheduler"); 
+            match("period"); 
 
 
             }
@@ -1295,10 +1293,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__68;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:68:7: ( 'cpuAffinity' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:68:9: 'cpuAffinity'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:68:7: ( 'priority' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:68:9: 'priority'
             {
-            match("cpuAffinity"); 
+            match("priority"); 
 
 
             }
@@ -1316,10 +1314,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__69;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:69:7: ( 'period' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:69:9: 'period'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:69:7: ( 'taskContext' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:69:9: 'taskContext'
             {
-            match("period"); 
+            match("taskContext"); 
 
 
             }
@@ -1337,10 +1335,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__70;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:70:7: ( 'priority' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:70:9: 'priority'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:70:7: ( 'slave' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:70:9: 'slave'
             {
-            match("priority"); 
+            match("slave"); 
 
 
             }
@@ -1358,10 +1356,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__71;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:71:7: ( 'taskContext' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:71:9: 'taskContext'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:71:7: ( 'Slave' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:71:9: 'Slave'
             {
-            match("taskContext"); 
+            match("Slave"); 
 
 
             }
@@ -1379,11 +1377,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__72;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:72:7: ( 'slave' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:72:9: 'slave'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:72:7: ( '.' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:72:9: '.'
             {
-            match("slave"); 
-
+            match('.'); 
 
             }
 
@@ -1400,10 +1397,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__73;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:73:7: ( 'Slave' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:73:9: 'Slave'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:73:7: ( '::' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:73:9: '::'
             {
-            match("Slave"); 
+            match("::"); 
 
 
             }
@@ -1421,10 +1418,11 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__74;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:74:7: ( '.' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:74:9: '.'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:74:7: ( 'init' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:74:9: 'init'
             {
-            match('.'); 
+            match("init"); 
+
 
             }
 
@@ -1441,50 +1439,8 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = T__75;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:75:7: ( '::' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:75:9: '::'
-            {
-            match("::"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__75"
-
-    // $ANTLR start "T__76"
-    public final void mT__76() throws RecognitionException {
-        try {
-            int _type = T__76;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:76:7: ( 'init' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:76:9: 'init'
-            {
-            match("init"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__76"
-
-    // $ANTLR start "T__77"
-    public final void mT__77() throws RecognitionException {
-        try {
-            int _type = T__77;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:77:7: ( 'pull' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:77:9: 'pull'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:75:7: ( 'pull' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:75:9: 'pull'
             {
             match("pull"); 
 
@@ -1497,17 +1453,17 @@ public class InternalRttStructureLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__77"
+    // $ANTLR end "T__75"
 
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8926:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8926:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8587:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8587:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8926:11: ( '^' )?
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8587:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -1516,7 +1472,7 @@ public class InternalRttStructureLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8926:11: '^'
+                    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8587:11: '^'
                     {
                     match('^'); 
 
@@ -1534,7 +1490,7 @@ public class InternalRttStructureLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8926:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8587:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -1583,10 +1539,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8928:10: ( ( '0' .. '9' )+ )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8928:12: ( '0' .. '9' )+
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8589:10: ( ( '0' .. '9' )+ )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8589:12: ( '0' .. '9' )+
             {
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8928:12: ( '0' .. '9' )+
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8589:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -1600,7 +1556,7 @@ public class InternalRttStructureLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8928:13: '0' .. '9'
+            	    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8589:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1632,10 +1588,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8930:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8930:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8591:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8591:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8930:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8591:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1653,10 +1609,10 @@ public class InternalRttStructureLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8930:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8591:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8930:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8591:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -1672,7 +1628,7 @@ public class InternalRttStructureLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8930:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8591:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1688,7 +1644,7 @@ public class InternalRttStructureLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8930:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8591:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1713,10 +1669,10 @@ public class InternalRttStructureLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8930:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8591:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8930:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8591:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1732,7 +1688,7 @@ public class InternalRttStructureLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8930:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8591:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1748,7 +1704,7 @@ public class InternalRttStructureLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8930:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8591:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1791,12 +1747,12 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8932:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8932:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8593:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8593:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8932:24: ( options {greedy=false; } : . )*
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8593:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -1821,7 +1777,7 @@ public class InternalRttStructureLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8932:52: .
+            	    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8593:52: .
             	    {
             	    matchAny(); 
 
@@ -1851,12 +1807,12 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8934:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8934:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8595:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8595:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8934:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8595:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1869,7 +1825,7 @@ public class InternalRttStructureLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8934:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8595:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1889,7 +1845,7 @@ public class InternalRttStructureLexer extends Lexer {
                 }
             } while (true);
 
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8934:40: ( ( '\\r' )? '\\n' )?
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8595:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1898,9 +1854,9 @@ public class InternalRttStructureLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8934:41: ( '\\r' )? '\\n'
+                    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8595:41: ( '\\r' )? '\\n'
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8934:41: ( '\\r' )?
+                    // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8595:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1909,7 +1865,7 @@ public class InternalRttStructureLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8934:41: '\\r'
+                            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8595:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1941,10 +1897,10 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8936:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8936:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8597:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8597:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8936:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8597:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1998,8 +1954,8 @@ public class InternalRttStructureLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8938:16: ( . )
-            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8938:18: .
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8599:16: ( . )
+            // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:8599:18: .
             {
             matchAny(); 
 
@@ -2014,8 +1970,8 @@ public class InternalRttStructureLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=74;
+        // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=72;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -2474,63 +2430,49 @@ public class InternalRttStructureLexer extends Lexer {
                 }
                 break;
             case 66 :
-                // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:1:400: T__76
-                {
-                mT__76(); 
-
-                }
-                break;
-            case 67 :
-                // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:1:406: T__77
-                {
-                mT__77(); 
-
-                }
-                break;
-            case 68 :
-                // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:1:412: RULE_ID
+                // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:1:400: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 69 :
-                // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:1:420: RULE_INT
+            case 67 :
+                // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:1:408: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 70 :
-                // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:1:429: RULE_STRING
+            case 68 :
+                // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:1:417: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 71 :
-                // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:1:441: RULE_ML_COMMENT
+            case 69 :
+                // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:1:429: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 72 :
-                // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:1:457: RULE_SL_COMMENT
+            case 70 :
+                // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:1:445: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 73 :
-                // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:1:473: RULE_WS
+            case 71 :
+                // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:1:461: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 74 :
-                // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:1:481: RULE_ANY_OTHER
+            case 72 :
+                // ../be.kuleuven.rodinia.dsl.rtt.ui/src-gen/be/kuleuven/rodinia/dsl/rtt/ui/contentassist/antlr/internal/InternalRttStructure.g:1:469: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -2544,30 +2486,29 @@ public class InternalRttStructureLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\1\57\1\62\11\60\2\uffff\1\60\1\uffff\11\60\2\uffff\5\60"+
-        "\1\uffff\3\60\1\uffff\2\55\2\uffff\3\55\2\uffff\1\60\2\uffff\1\60"+
-        "\1\uffff\20\60\2\uffff\3\60\1\uffff\16\60\2\uffff\5\60\1\uffff\4"+
-        "\60\7\uffff\16\60\1\u00a9\46\60\1\u00d1\11\60\1\uffff\5\60\1\u00e1"+
-        "\10\60\1\u00ea\4\60\1\u00ef\23\60\1\uffff\2\60\1\u0105\14\60\1\uffff"+
-        "\10\60\1\uffff\4\60\1\uffff\10\60\1\u0127\3\60\1\u012b\1\u012c\2"+
-        "\60\1\u012f\1\u0130\1\60\1\u0132\1\60\1\uffff\6\60\1\u013a\12\60"+
-        "\1\u0145\17\60\1\uffff\3\60\2\uffff\2\60\2\uffff\1\60\1\uffff\2"+
-        "\60\1\u015e\4\60\1\uffff\12\60\1\uffff\14\60\1\u0179\13\60\1\uffff"+
-        "\1\60\1\u0186\1\u0187\14\60\1\u0194\2\60\1\u0197\6\60\1\u019e\1"+
-        "\uffff\4\60\1\u01a3\1\60\1\u01a5\1\60\1\u01a7\3\60\2\uffff\4\60"+
-        "\1\u01af\1\60\1\u01b1\5\60\1\uffff\1\60\1\u01b8\1\uffff\1\u01ba"+
-        "\4\60\1\u01bf\1\uffff\2\60\1\u01c2\1\60\1\uffff\1\u01c4\1\uffff"+
-        "\1\u01c5\1\uffff\6\60\1\u01cd\1\uffff\1\60\1\uffff\3\60\1\u01d2"+
-        "\1\u01d3\1\60\1\uffff\1\u01d5\1\uffff\1\60\1\u01d8\1\60\1\u01da"+
-        "\1\uffff\1\u01db\1\u01dc\1\uffff\1\u01dd\2\uffff\2\60\1\u01e0\4"+
-        "\60\1\uffff\1\u01e6\1\60\1\u01e8\1\u01e9\2\uffff\1\u01ea\1\uffff"+
-        "\1\60\1\u01ec\1\uffff\1\60\4\uffff\2\60\1\uffff\2\60\1\u01f2\1\60"+
-        "\1\u01f4\1\uffff\1\60\3\uffff\1\60\1\uffff\3\60\1\u01fa\1\60\1\uffff"+
-        "\1\u01fc\1\uffff\5\60\1\uffff\1\60\1\uffff\3\60\1\u0206\1\60\1\u0208"+
-        "\3\60\1\uffff\1\u020c\1\uffff\3\60\1\uffff\3\60\1\u0213\2\60\1\uffff"+
-        "\4\60\1\u021a\1\60\1\uffff\1\u021c\1\uffff";
+        "\1\uffff\1\60\1\62\11\57\2\uffff\1\57\1\uffff\11\57\2\uffff\5\57"+
+        "\1\uffff\3\57\1\uffff\2\55\2\uffff\3\55\2\uffff\1\57\2\uffff\1\57"+
+        "\1\uffff\20\57\2\uffff\3\57\1\uffff\16\57\2\uffff\5\57\1\uffff\4"+
+        "\57\7\uffff\16\57\1\u00a9\46\57\1\u00d1\11\57\1\uffff\5\57\1\u00e1"+
+        "\10\57\1\u00ea\4\57\1\u00ef\23\57\1\uffff\2\57\1\u0105\14\57\1\uffff"+
+        "\10\57\1\uffff\4\57\1\uffff\10\57\1\u0126\3\57\1\u012a\1\u012b\2"+
+        "\57\1\u012e\1\u012f\1\57\1\u0131\1\57\1\uffff\6\57\1\u0139\12\57"+
+        "\1\u0144\16\57\1\uffff\3\57\2\uffff\2\57\2\uffff\1\57\1\uffff\2"+
+        "\57\1\u015b\4\57\1\uffff\12\57\1\uffff\12\57\1\u0174\13\57\1\uffff"+
+        "\1\57\1\u0181\1\u0182\14\57\1\u018f\2\57\1\u0192\4\57\1\u0197\1"+
+        "\uffff\4\57\1\u019c\1\57\1\u019e\1\57\1\u01a0\3\57\2\uffff\4\57"+
+        "\1\u01a8\1\57\1\u01aa\5\57\1\uffff\1\57\1\u01b1\1\uffff\1\u01b3"+
+        "\2\57\1\u01b6\1\uffff\2\57\1\u01b9\1\57\1\uffff\1\u01bb\1\uffff"+
+        "\1\u01bc\1\uffff\6\57\1\u01c4\1\uffff\1\57\1\uffff\3\57\1\u01c9"+
+        "\1\u01ca\1\57\1\uffff\1\u01cc\1\uffff\1\u01ce\1\u01cf\1\uffff\1"+
+        "\u01d0\1\u01d1\1\uffff\1\u01d2\2\uffff\2\57\1\u01d5\4\57\1\uffff"+
+        "\1\u01db\1\57\1\u01dd\1\u01de\2\uffff\1\u01df\1\uffff\1\u01e0\5"+
+        "\uffff\2\57\1\uffff\2\57\1\u01e5\1\57\1\u01e7\1\uffff\1\57\4\uffff"+
+        "\2\57\1\u01eb\1\57\1\uffff\1\u01ed\1\uffff\3\57\1\uffff\1\57\1\uffff"+
+        "\1\57\1\u01f3\1\57\1\u01f5\1\57\1\uffff\1\u01f7\1\uffff\1\57\1\uffff"+
+        "\1\57\1\u01fa\1\uffff";
     static final String DFA12_eofS =
-        "\u021d\uffff";
+        "\u01fb\uffff";
     static final String DFA12_minS =
         "\1\0\2\60\1\116\1\117\1\101\1\125\1\111\1\141\1\121\1\117\1\122"+
         "\2\uffff\1\141\1\uffff\1\157\1\145\2\141\1\143\1\156\1\160\2\145"+
@@ -2588,32 +2529,29 @@ public class InternalRttStructureLexer extends Lexer {
         "\1\162\1\166\1\144\2\145\2\120\1\103\1\104\1\106\1\uffff\1\122\1"+
         "\114\1\60\1\143\1\154\2\151\1\171\1\145\1\105\1\103\1\163\2\164"+
         "\1\157\1\uffff\1\160\1\143\1\151\1\146\1\162\1\144\1\162\1\151\1"+
-        "\uffff\1\157\1\160\1\151\1\103\1\uffff\2\164\4\162\1\157\1\120\1"+
+        "\uffff\1\157\1\160\1\151\1\120\1\uffff\2\164\4\162\1\157\1\120\1"+
         "\60\1\156\1\151\1\165\2\60\2\157\2\60\1\122\1\60\1\101\1\uffff\2"+
         "\164\1\160\1\172\1\160\1\156\1\60\1\110\2\120\1\151\1\156\1\157"+
-        "\1\164\1\156\1\151\1\157\1\60\2\164\1\156\1\141\1\164\2\157\1\103"+
+        "\1\164\1\156\1\151\1\157\1\60\2\164\1\156\1\141\1\164\1\157\1\120"+
         "\1\151\1\157\1\164\1\163\1\123\1\154\1\157\1\uffff\1\124\1\164\1"+
         "\154\2\uffff\2\162\2\uffff\1\105\1\uffff\1\122\1\151\1\60\1\164"+
         "\2\145\1\164\1\uffff\1\105\1\141\2\157\1\164\1\162\1\151\1\141\1"+
-        "\156\1\165\1\uffff\1\151\1\171\1\164\1\143\1\171\1\162\1\156\3\157"+
-        "\1\165\1\171\1\60\2\151\1\162\2\171\1\145\2\164\1\105\1\137\1\157"+
-        "\1\uffff\1\151\2\60\1\141\1\104\1\143\1\162\1\156\1\145\1\164\1"+
-        "\157\1\164\1\151\1\160\1\145\1\60\2\145\1\60\1\164\1\156\1\162\2"+
-        "\156\1\160\1\60\1\uffff\1\172\1\143\1\164\1\160\1\60\1\162\1\60"+
-        "\1\163\1\60\1\102\1\156\1\157\2\uffff\1\164\1\137\1\153\1\164\1"+
-        "\60\1\170\1\60\1\156\1\157\1\164\2\163\1\uffff\1\170\1\60\1\uffff"+
-        "\1\60\1\145\1\164\1\156\1\163\1\60\1\uffff\1\145\1\171\1\60\1\145"+
-        "\1\uffff\1\60\1\uffff\1\60\1\uffff\1\125\1\120\1\156\1\151\1\117"+
-        "\1\141\1\60\1\uffff\1\164\1\uffff\1\120\1\162\1\171\2\60\1\164\1"+
-        "\uffff\1\60\1\uffff\1\143\1\60\1\145\1\60\1\uffff\2\60\1\uffff\1"+
-        "\60\2\uffff\1\106\1\157\1\60\1\157\2\124\1\147\1\uffff\1\60\1\157"+
-        "\2\60\2\uffff\1\60\1\uffff\1\164\1\60\1\uffff\1\143\4\uffff\1\106"+
-        "\1\154\1\uffff\1\156\1\110\1\60\1\145\1\60\1\uffff\1\154\3\uffff"+
-        "\1\151\1\uffff\1\164\1\105\1\151\1\60\1\105\1\uffff\1\60\1\uffff"+
-        "\1\151\1\157\1\151\1\122\1\143\1\uffff\1\122\1\uffff\1\143\1\156"+
-        "\1\157\1\60\1\171\1\60\1\151\1\120\1\156\1\uffff\1\60\1\uffff\1"+
-        "\145\1\157\1\120\1\uffff\1\163\1\154\1\157\1\60\1\151\1\154\1\uffff"+
-        "\1\143\1\151\1\171\1\143\1\60\1\171\1\uffff\1\60\1\uffff";
+        "\156\1\165\1\uffff\1\151\1\171\1\164\1\143\1\171\1\162\2\157\1\165"+
+        "\1\171\1\60\2\151\1\162\2\171\1\145\2\164\1\105\1\137\1\157\1\uffff"+
+        "\1\151\2\60\1\141\1\104\1\143\1\162\1\156\1\145\1\164\1\157\1\164"+
+        "\1\151\1\160\1\145\1\60\2\145\1\60\1\164\1\162\1\156\1\160\1\60"+
+        "\1\uffff\1\172\1\143\1\164\1\160\1\60\1\162\1\60\1\163\1\60\1\102"+
+        "\1\156\1\157\2\uffff\1\164\1\137\1\153\1\164\1\60\1\170\1\60\1\156"+
+        "\1\157\1\164\2\163\1\uffff\1\170\1\60\1\uffff\1\60\1\164\1\163\1"+
+        "\60\1\uffff\1\145\1\171\1\60\1\145\1\uffff\1\60\1\uffff\1\60\1\uffff"+
+        "\1\125\1\120\1\156\1\151\1\117\1\141\1\60\1\uffff\1\164\1\uffff"+
+        "\1\120\1\162\1\171\2\60\1\164\1\uffff\1\60\1\uffff\2\60\1\uffff"+
+        "\2\60\1\uffff\1\60\2\uffff\1\106\1\157\1\60\1\157\2\124\1\147\1"+
+        "\uffff\1\60\1\157\2\60\2\uffff\1\60\1\uffff\1\60\5\uffff\1\106\1"+
+        "\154\1\uffff\1\156\1\110\1\60\1\145\1\60\1\uffff\1\154\4\uffff\1"+
+        "\105\1\151\1\60\1\105\1\uffff\1\60\1\uffff\1\151\1\122\1\143\1\uffff"+
+        "\1\122\1\uffff\1\143\1\60\1\171\1\60\1\151\1\uffff\1\60\1\uffff"+
+        "\1\145\1\uffff\1\163\1\60\1\uffff";
     static final String DFA12_maxS =
         "\1\uffff\2\172\1\116\1\117\1\101\1\125\2\157\1\121\1\117\1\165\2"+
         "\uffff\1\171\1\uffff\1\160\1\165\2\141\1\143\1\156\1\165\1\162\1"+
@@ -2638,47 +2576,43 @@ public class InternalRttStructureLexer extends Lexer {
         "\120\1\172\1\156\1\151\1\165\2\172\2\157\2\172\1\122\1\172\1\101"+
         "\1\uffff\2\164\1\160\1\172\1\160\1\156\1\172\1\110\2\120\1\151\1"+
         "\156\1\157\1\164\1\156\1\151\1\157\1\172\2\164\1\156\1\141\1\164"+
-        "\2\157\1\120\1\151\1\157\1\164\1\163\1\123\1\154\1\157\1\uffff\1"+
+        "\1\157\1\120\1\151\1\157\1\164\1\163\1\123\1\154\1\157\1\uffff\1"+
         "\124\1\164\1\154\2\uffff\2\162\2\uffff\1\105\1\uffff\1\122\1\151"+
         "\1\172\1\164\2\145\1\164\1\uffff\1\105\1\141\2\157\1\164\1\162\1"+
         "\151\1\141\1\156\1\165\1\uffff\1\151\1\171\1\164\1\143\1\171\1\162"+
-        "\1\156\3\157\1\165\1\171\1\172\2\151\1\162\2\171\1\145\2\164\1\105"+
-        "\1\137\1\157\1\uffff\1\151\2\172\1\141\1\104\1\143\1\162\1\156\1"+
-        "\145\1\164\1\157\1\164\1\151\1\160\1\145\1\172\2\145\1\172\1\164"+
-        "\1\156\1\162\2\156\1\160\1\172\1\uffff\1\172\1\143\1\164\1\160\1"+
-        "\172\1\162\1\172\1\163\1\172\1\102\1\156\1\157\2\uffff\1\164\1\137"+
-        "\1\153\1\164\1\172\1\170\1\172\1\156\1\157\1\164\2\163\1\uffff\1"+
-        "\170\1\172\1\uffff\1\172\1\145\1\164\1\156\1\163\1\172\1\uffff\1"+
-        "\145\1\171\1\172\1\145\1\uffff\1\172\1\uffff\1\172\1\uffff\1\125"+
-        "\1\120\1\156\1\151\1\122\1\141\1\172\1\uffff\1\164\1\uffff\1\120"+
-        "\1\162\1\171\2\172\1\164\1\uffff\1\172\1\uffff\1\143\1\172\1\145"+
-        "\1\172\1\uffff\2\172\1\uffff\1\172\2\uffff\1\106\1\157\1\172\1\157"+
-        "\2\124\1\147\1\uffff\1\172\1\157\2\172\2\uffff\1\172\1\uffff\1\164"+
-        "\1\172\1\uffff\1\143\4\uffff\1\106\1\154\1\uffff\1\156\1\110\1\172"+
-        "\1\145\1\172\1\uffff\1\154\3\uffff\1\151\1\uffff\1\164\1\105\1\151"+
-        "\1\172\1\105\1\uffff\1\172\1\uffff\1\151\1\157\1\151\1\122\1\143"+
-        "\1\uffff\1\122\1\uffff\1\143\1\156\1\157\1\172\1\171\1\172\1\151"+
-        "\1\120\1\156\1\uffff\1\172\1\uffff\1\145\1\157\1\120\1\uffff\1\163"+
-        "\1\154\1\157\1\172\1\151\1\154\1\uffff\1\143\1\151\1\171\1\143\1"+
-        "\172\1\171\1\uffff\1\172\1\uffff";
+        "\2\157\1\165\1\171\1\172\2\151\1\162\2\171\1\145\2\164\1\105\1\137"+
+        "\1\157\1\uffff\1\151\2\172\1\141\1\104\1\143\1\162\1\156\1\145\1"+
+        "\164\1\157\1\164\1\151\1\160\1\145\1\172\2\145\1\172\1\164\1\162"+
+        "\1\156\1\160\1\172\1\uffff\1\172\1\143\1\164\1\160\1\172\1\162\1"+
+        "\172\1\163\1\172\1\102\1\156\1\157\2\uffff\1\164\1\137\1\153\1\164"+
+        "\1\172\1\170\1\172\1\156\1\157\1\164\2\163\1\uffff\1\170\1\172\1"+
+        "\uffff\1\172\1\164\1\163\1\172\1\uffff\1\145\1\171\1\172\1\145\1"+
+        "\uffff\1\172\1\uffff\1\172\1\uffff\1\125\1\120\1\156\1\151\1\122"+
+        "\1\141\1\172\1\uffff\1\164\1\uffff\1\120\1\162\1\171\2\172\1\164"+
+        "\1\uffff\1\172\1\uffff\2\172\1\uffff\2\172\1\uffff\1\172\2\uffff"+
+        "\1\106\1\157\1\172\1\157\2\124\1\147\1\uffff\1\172\1\157\2\172\2"+
+        "\uffff\1\172\1\uffff\1\172\5\uffff\1\106\1\154\1\uffff\1\156\1\110"+
+        "\1\172\1\145\1\172\1\uffff\1\154\4\uffff\1\105\1\151\1\172\1\105"+
+        "\1\uffff\1\172\1\uffff\1\151\1\122\1\143\1\uffff\1\122\1\uffff\1"+
+        "\143\1\172\1\171\1\172\1\151\1\uffff\1\172\1\uffff\1\145\1\uffff"+
+        "\1\163\1\172\1\uffff";
     static final String DFA12_acceptS =
-        "\14\uffff\1\20\1\21\1\uffff\1\23\11\uffff\1\42\1\43\5\uffff\1\67"+
-        "\3\uffff\1\100\2\uffff\1\104\1\105\3\uffff\1\111\1\112\1\uffff\1"+
-        "\1\1\104\1\uffff\1\2\20\uffff\1\20\1\21\3\uffff\1\23\16\uffff\1"+
-        "\42\1\43\5\uffff\1\67\4\uffff\1\100\1\101\1\105\1\106\1\107\1\110"+
-        "\1\111\77\uffff\1\14\47\uffff\1\6\17\uffff\1\30\10\uffff\1\103\4"+
-        "\uffff\1\102\25\uffff\1\12\41\uffff\1\63\3\uffff\1\76\1\77\2\uffff"+
-        "\1\3\1\4\1\uffff\1\7\7\uffff\1\13\12\uffff\1\73\30\uffff\1\11\32"+
-        "\uffff\1\41\14\uffff\1\50\1\54\14\uffff\1\74\2\uffff\1\31\6\uffff"+
-        "\1\61\4\uffff\1\70\1\uffff\1\56\1\uffff\1\5\7\uffff\1\64\1\uffff"+
-        "\1\52\6\uffff\1\27\1\uffff\1\45\4\uffff\1\37\2\uffff\1\53\1\uffff"+
-        "\1\71\1\33\7\uffff\1\57\4\uffff\1\25\1\35\1\uffff\1\32\2\uffff\1"+
-        "\46\1\uffff\1\36\1\47\1\51\1\66\2\uffff\1\62\5\uffff\1\75\1\uffff"+
-        "\1\40\1\72\1\26\1\uffff\1\34\5\uffff\1\16\1\uffff\1\22\5\uffff\1"+
-        "\65\1\uffff\1\17\11\uffff\1\10\1\uffff\1\15\3\uffff\1\44\6\uffff"+
-        "\1\24\6\uffff\1\55\1\uffff\1\60";
+        "\14\uffff\1\20\1\21\1\uffff\1\23\11\uffff\1\42\1\43\5\uffff\1\65"+
+        "\3\uffff\1\76\2\uffff\1\102\1\103\3\uffff\1\107\1\110\1\uffff\1"+
+        "\102\1\1\1\uffff\1\2\20\uffff\1\20\1\21\3\uffff\1\23\16\uffff\1"+
+        "\42\1\43\5\uffff\1\65\4\uffff\1\76\1\77\1\103\1\104\1\105\1\106"+
+        "\1\107\77\uffff\1\14\47\uffff\1\6\17\uffff\1\30\10\uffff\1\101\4"+
+        "\uffff\1\100\25\uffff\1\12\40\uffff\1\61\3\uffff\1\74\1\75\2\uffff"+
+        "\1\3\1\4\1\uffff\1\7\7\uffff\1\13\12\uffff\1\71\26\uffff\1\11\30"+
+        "\uffff\1\41\14\uffff\1\50\1\54\14\uffff\1\72\2\uffff\1\31\4\uffff"+
+        "\1\57\4\uffff\1\66\1\uffff\1\55\1\uffff\1\5\7\uffff\1\62\1\uffff"+
+        "\1\52\6\uffff\1\27\1\uffff\1\45\2\uffff\1\37\2\uffff\1\53\1\uffff"+
+        "\1\67\1\33\7\uffff\1\56\4\uffff\1\25\1\35\1\uffff\1\32\1\uffff\1"+
+        "\46\1\36\1\47\1\51\1\64\2\uffff\1\60\5\uffff\1\73\1\uffff\1\40\1"+
+        "\70\1\26\1\34\4\uffff\1\16\1\uffff\1\22\3\uffff\1\63\1\uffff\1\17"+
+        "\5\uffff\1\10\1\uffff\1\15\1\uffff\1\44\2\uffff\1\24";
     static final String DFA12_specialS =
-        "\1\2\50\uffff\1\0\1\1\u01f2\uffff}>";
+        "\1\2\50\uffff\1\1\1\0\u01d0\uffff}>";
     static final String[] DFA12_transitionS = {
             "\11\55\2\54\2\55\1\54\22\55\1\54\1\55\1\51\4\55\1\52\1\31\1"+
             "\32\2\55\1\17\1\40\1\44\1\53\12\50\1\45\6\55\1\41\1\6\1\7\1"+
@@ -2686,8 +2620,8 @@ public class InternalRttStructureLexer extends Lexer {
             "\1\22\1\3\5\47\3\55\1\46\1\47\1\55\1\24\1\33\1\20\1\10\1\2\3"+
             "\47\1\25\2\47\1\34\1\30\1\23\1\26\1\21\1\47\1\37\1\42\1\16\1"+
             "\47\1\36\4\47\1\14\1\55\1\15\uff82\55",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\25\60\1\56\4\60",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\25\60\1\61\4\60",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\25\57\1\56\4\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\25\57\1\61\4\57",
             "\1\63",
             "\1\64",
             "\1\65",
@@ -2723,7 +2657,7 @@ public class InternalRttStructureLexer extends Lexer {
             "\1\142",
             "",
             "\1\144",
-            "\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
             "",
             "\0\146",
@@ -2805,7 +2739,7 @@ public class InternalRttStructureLexer extends Lexer {
             "\1\u00a6",
             "\1\u00a7",
             "\1\u00a8",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u00aa",
             "\1\u00ab",
             "\1\u00ac",
@@ -2844,7 +2778,7 @@ public class InternalRttStructureLexer extends Lexer {
             "\1\u00cd",
             "\1\u00ce",
             "\1\u00cf\31\uffff\1\u00d0",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u00d2",
             "\1\u00d3",
             "\1\u00d4",
@@ -2860,7 +2794,7 @@ public class InternalRttStructureLexer extends Lexer {
             "\1\u00de",
             "\1\u00df",
             "\1\u00e0",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u00e2",
             "\1\u00e3",
             "\1\u00e4",
@@ -2869,12 +2803,12 @@ public class InternalRttStructureLexer extends Lexer {
             "\1\u00e7",
             "\1\u00e8",
             "\1\u00e9",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u00eb",
             "\1\u00ec",
             "\1\u00ed",
             "\1\u00ee",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u00f0",
             "\1\u00f1",
             "\1\u00f2",
@@ -2897,7 +2831,7 @@ public class InternalRttStructureLexer extends Lexer {
             "",
             "\1\u0103",
             "\1\u0104",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u0106",
             "\1\u0107",
             "\1\u0108",
@@ -2923,8 +2857,9 @@ public class InternalRttStructureLexer extends Lexer {
             "\1\u011a",
             "\1\u011b",
             "\1\u011c",
-            "\1\u011e\14\uffff\1\u011d",
+            "\1\u011d",
             "",
+            "\1\u011e",
             "\1\u011f",
             "\1\u0120",
             "\1\u0121",
@@ -2932,28 +2867,28 @@ public class InternalRttStructureLexer extends Lexer {
             "\1\u0123",
             "\1\u0124",
             "\1\u0125",
-            "\1\u0126",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u0127",
             "\1\u0128",
             "\1\u0129",
-            "\1\u012a",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u012c",
             "\1\u012d",
-            "\1\u012e",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "\1\u0131",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "\1\u0133",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u0130",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u0132",
             "",
+            "\1\u0133",
             "\1\u0134",
             "\1\u0135",
             "\1\u0136",
             "\1\u0137",
             "\1\u0138",
-            "\1\u0139",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u013a",
             "\1\u013b",
             "\1\u013c",
             "\1\u013d",
@@ -2963,8 +2898,8 @@ public class InternalRttStructureLexer extends Lexer {
             "\1\u0141",
             "\1\u0142",
             "\1\u0143",
-            "\1\u0144",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u0145",
             "\1\u0146",
             "\1\u0147",
             "\1\u0148",
@@ -2972,34 +2907,35 @@ public class InternalRttStructureLexer extends Lexer {
             "\1\u014a",
             "\1\u014b",
             "\1\u014c",
-            "\1\u014e\14\uffff\1\u014d",
+            "\1\u014d",
+            "\1\u014e",
             "\1\u014f",
             "\1\u0150",
             "\1\u0151",
             "\1\u0152",
+            "",
             "\1\u0153",
             "\1\u0154",
             "\1\u0155",
             "",
+            "",
             "\1\u0156",
             "\1\u0157",
-            "\1\u0158",
             "",
+            "",
+            "\1\u0158",
             "",
             "\1\u0159",
             "\1\u015a",
-            "",
-            "",
-            "\1\u015b",
-            "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u015c",
             "\1\u015d",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\1\u015e",
             "\1\u015f",
+            "",
             "\1\u0160",
             "\1\u0161",
             "\1\u0162",
-            "",
             "\1\u0163",
             "\1\u0164",
             "\1\u0165",
@@ -3007,10 +2943,10 @@ public class InternalRttStructureLexer extends Lexer {
             "\1\u0167",
             "\1\u0168",
             "\1\u0169",
+            "",
             "\1\u016a",
             "\1\u016b",
             "\1\u016c",
-            "",
             "\1\u016d",
             "\1\u016e",
             "\1\u016f",
@@ -3018,27 +2954,27 @@ public class InternalRttStructureLexer extends Lexer {
             "\1\u0171",
             "\1\u0172",
             "\1\u0173",
-            "\1\u0174",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u0175",
             "\1\u0176",
             "\1\u0177",
             "\1\u0178",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\1\u0179",
             "\1\u017a",
             "\1\u017b",
             "\1\u017c",
             "\1\u017d",
             "\1\u017e",
             "\1\u017f",
+            "",
             "\1\u0180",
-            "\1\u0181",
-            "\1\u0182",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u0183",
             "\1\u0184",
-            "",
             "\1\u0185",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\1\u0186",
+            "\1\u0187",
             "\1\u0188",
             "\1\u0189",
             "\1\u018a",
@@ -3046,185 +2982,149 @@ public class InternalRttStructureLexer extends Lexer {
             "\1\u018c",
             "\1\u018d",
             "\1\u018e",
-            "\1\u018f",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u0190",
             "\1\u0191",
-            "\1\u0192",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u0193",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\1\u0194",
             "\1\u0195",
             "\1\u0196",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "",
             "\1\u0198",
             "\1\u0199",
             "\1\u019a",
             "\1\u019b",
-            "\1\u019c",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u019d",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u019f",
-            "\1\u01a0",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u01a1",
             "\1\u01a2",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\1\u01a3",
+            "",
+            "",
             "\1\u01a4",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\1\u01a5",
             "\1\u01a6",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "\1\u01a8",
+            "\1\u01a7",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u01a9",
-            "\1\u01aa",
-            "",
-            "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u01ab",
             "\1\u01ac",
             "\1\u01ad",
             "\1\u01ae",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\1\u01af",
+            "",
             "\1\u01b0",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "\1\u01b2",
-            "\1\u01b3",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\22\57\1\u01b2\7\57",
             "\1\u01b4",
             "\1\u01b5",
-            "\1\u01b6",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
             "\1\u01b7",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\1\u01b8",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u01ba",
             "",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\22\60\1\u01b9\7\60",
-            "\1\u01bb",
-            "\1\u01bc",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "",
             "\1\u01bd",
             "\1\u01be",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "",
+            "\1\u01bf",
             "\1\u01c0",
-            "\1\u01c1",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\1\u01c1\2\uffff\1\u01c2",
             "\1\u01c3",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\1\u01c5",
             "",
             "\1\u01c6",
             "\1\u01c7",
             "\1\u01c8",
-            "\1\u01c9",
-            "\1\u01ca\2\uffff\1\u01cb",
-            "\1\u01cc",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u01cb",
             "",
-            "\1\u01ce",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
-            "\1\u01cf",
-            "\1\u01d0",
-            "\1\u01d1",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\22\57\1\u01cd\7\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "",
+            "",
+            "\1\u01d3",
             "\1\u01d4",
-            "",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u01d6",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\22\60\1\u01d7\7\60",
+            "\1\u01d7",
+            "\1\u01d8",
             "\1\u01d9",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
             "",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\22\57\1\u01da\7\57",
+            "\1\u01dc",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
             "",
-            "\1\u01de",
-            "\1\u01df",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "",
+            "",
+            "",
             "\1\u01e1",
             "\1\u01e2",
+            "",
             "\1\u01e3",
             "\1\u01e4",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u01e6",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\22\60\1\u01e5\7\60",
-            "\1\u01e7",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "",
-            "",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "",
-            "\1\u01eb",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "",
-            "\1\u01ed",
+            "\1\u01e8",
             "",
             "",
             "",
+            "",
+            "\1\u01e9",
+            "\1\u01ea",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u01ec",
+            "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
             "\1\u01ee",
             "\1\u01ef",
-            "",
             "\1\u01f0",
+            "",
             "\1\u01f1",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "\1\u01f3",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
             "",
-            "\1\u01f5",
-            "",
-            "",
-            "",
+            "\1\u01f2",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u01f4",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u01f6",
             "",
-            "\1\u01f7",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "",
             "\1\u01f8",
+            "",
             "\1\u01f9",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "\1\u01fb",
-            "",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "",
-            "\1\u01fd",
-            "\1\u01fe",
-            "\1\u01ff",
-            "\1\u0200",
-            "\1\u0201",
-            "",
-            "\1\u0202",
-            "",
-            "\1\u0203",
-            "\1\u0204",
-            "\1\u0205",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "\1\u0207",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "\1\u0209",
-            "\1\u020a",
-            "\1\u020b",
-            "",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "",
-            "\1\u020d",
-            "\1\u020e",
-            "\1\u020f",
-            "",
-            "\1\u0210",
-            "\1\u0211",
-            "\1\u0212",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "\1\u0214",
-            "\1\u0215",
-            "",
-            "\1\u0216",
-            "\1\u0217",
-            "\1\u0218",
-            "\1\u0219",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-            "\1\u021b",
-            "",
-            "\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             ""
     };
 
@@ -3258,27 +3158,27 @@ public class InternalRttStructureLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA12_41 = input.LA(1);
+                        int LA12_42 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_41>='\u0000' && LA12_41<='\uFFFF')) ) {s = 102;}
+                        if ( ((LA12_42>='\u0000' && LA12_42<='\uFFFF')) ) {s = 102;}
 
                         else s = 45;
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA12_42 = input.LA(1);
+                        int LA12_41 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_42>='\u0000' && LA12_42<='\uFFFF')) ) {s = 102;}
+                        if ( ((LA12_41>='\u0000' && LA12_41<='\uFFFF')) ) {s = 102;}
 
                         else s = 45;
 

@@ -30,8 +30,8 @@ class PeerGroup {
 class ConnectionPolicy
 {
 	String name
-	refers InputPort [1] inputPort opposite inputConnectionPolicy
-	refers OutputPort [1] outputPort opposite outputConnectionPolicy
+	refers InputPort [1] inputPort
+	refers OutputPort [1] outputPort
 	short bufferSize
 	short dataSize
 	boolean init
@@ -89,7 +89,6 @@ class InputPort
 {
 	String [1] name
 	refers DataType dataType
-	refers ConnectionPolicy inputConnectionPolicy opposite inputPort
 }
 
 class EventPort extends InputPort {
@@ -100,7 +99,6 @@ class OutputPort
 {
 	String [1] name
 	refers DataType dataType
-	refers ConnectionPolicy outputConnectionPolicy opposite outputPort
 }
 
 class Property {

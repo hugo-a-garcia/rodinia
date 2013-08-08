@@ -9,6 +9,7 @@ import = depl:getOperation("import")
 loadComponent = depl:getOperation("loadComponent")
 setActivity = depl:getOperation("setActivity")
 addPeer = depl:getOperation("addPeer")
+connect = depl:getOperation("connect")
 
 --import the packages (you don't need to do "depl:import" at this point)
 import("[%=package.name%]")
@@ -17,6 +18,7 @@ import("[%=package.name%]")
 [%for(taskContext in package.taskContexts) {%]
 loadComponent("[%=taskContext.name%]", "[%=taskContext.namespace%]::[%=taskContext.type%]")
 setActivity("[%=taskContext.name%]", [%=taskContext.activity.period%], [%=taskContext.activity.priority%], rtt.globals.[%=taskContext.activity.scheduler%])
+container = [%=taskContext.eContainer.name%]
  [%}%]
  
  [% if (package.peerGroups.isDefined()) {
@@ -27,3 +29,8 @@ setActivity("[%=taskContext.name%]", [%=taskContext.activity.period%], [%=taskCo
  			[%}%]
  		[%}%]
   [%}%]
+  
+[%for(connection in package.connectionPolicies) {%]
+cp = rtt.Variable('ConnPolicy')
+connect("[%=connection.outputPort.eContainer.name%].[%=connection.outputPort.name%]", "[%=connection.inputPort.eContainer.name%].[%=connection.inputPort.name%]", cp)
+[%}%]

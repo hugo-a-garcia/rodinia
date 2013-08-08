@@ -56,16 +56,16 @@ rule TaskContextToComponent
 					port = new Target!Simple;
 					port.name = aPort.name;
 					var simpleType = Target!SimpleType#string;
-					port.type = simpleType;
+					port.type = simpleType;//
 					ports.simple.add(port);
 					
 					//ConnectionPolicy for port
-					if (aPort.outputConnectionPolicy.isDefined()) {
-						var value = new Target!Value;
-						var mixed = value.mixed;
-						featureMapUtilTool.addText(mixed, aPort.outputConnectionPolicy.name);
-						port.value = value;
-					}
+					//if (aPort.outputConnectionPolicy.isDefined()) {
+					//	var value = new Target!Value;
+					//	var mixed = value.mixed;
+					//	featureMapUtilTool.addText(mixed, aPort.outputConnectionPolicy.name);
+					//	port.value = value;
+					//}
 				}
 				
 				//InputPorts
@@ -77,12 +77,12 @@ rule TaskContextToComponent
 					ports.simple.add(port);
 					
 					//ConnectionPolicy for port
-					if (aPort.inputConnectionPolicy.isDefined()) {
-						var value = new Target!Value;
-						var mixed = value.mixed;
-						featureMapUtilTool.addText(mixed, aPort.inputConnectionPolicy.name);
-						port.value = value;
-					}
+					//if (aPort.inputConnectionPolicy.isDefined()) {
+					//	var value = new Target!Value;
+					//	var mixed = value.mixed;
+					//	featureMapUtilTool.addText(mixed, aPort.inputConnectionPolicy.name);
+					//	port.value = value;
+					//}
 				}
 				component.struct.add(ports);
 			}

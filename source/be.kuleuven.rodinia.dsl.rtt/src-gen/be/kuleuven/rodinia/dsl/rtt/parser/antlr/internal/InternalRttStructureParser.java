@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalRttStructureParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_STRING", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'OrocosPackage'", "'{'", "'taskContexts'", "','", "'}'", "'connectionPolicies'", "'peerGroups'", "'TaskContext'", "'namespace'", "'type'", "'activity'", "'inputPorts'", "'eventPorts'", "'outputPorts'", "'properties'", "'operations'", "'PeerGroup'", "'coordinator'", "'members'", "'('", "')'", "'ConnectionPolicy'", "'inputPort'", "'outputPort'", "'init'", "'pull'", "'bufferSize'", "'dataSize'", "'lockPolicy'", "'transport'", "'InputPort'", "'dataType'", "'inputConnectionPolicy'", "'EventPort'", "'OutputPort'", "'outputConnectionPolicy'", "'Property'", "'description'", "'value'", "'Operation'", "'documentation'", "'returnType'", "'-'", "'Activity'", "'scheduler'", "'cpuAffinity'", "'period'", "'priority'", "'taskContext'", "'slave'", "'Slave'", "'.'", "'E'", "'e'", "'::'", "'UNSYNC'", "'LOCKED'", "'LOCK_FREE'", "'DATA'", "'BUFFER'", "'CIRCULAR_BUFFER'", "'default'", "'CORBA'", "'MQUEUE'", "'ROS'", "'ORO_SCHED_OTHER'", "'ORO_SCHED_RT'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_STRING", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'OrocosPackage'", "'{'", "'taskContexts'", "','", "'}'", "'connectionPolicies'", "'peerGroups'", "'TaskContext'", "'namespace'", "'type'", "'activity'", "'inputPorts'", "'eventPorts'", "'outputPorts'", "'properties'", "'operations'", "'PeerGroup'", "'coordinator'", "'members'", "'('", "')'", "'ConnectionPolicy'", "'inputPort'", "'outputPort'", "'init'", "'pull'", "'bufferSize'", "'dataSize'", "'lockPolicy'", "'transport'", "'InputPort'", "'dataType'", "'EventPort'", "'OutputPort'", "'Property'", "'description'", "'value'", "'Operation'", "'documentation'", "'returnType'", "'-'", "'Activity'", "'scheduler'", "'cpuAffinity'", "'period'", "'priority'", "'taskContext'", "'slave'", "'Slave'", "'.'", "'E'", "'e'", "'::'", "'UNSYNC'", "'LOCKED'", "'LOCK_FREE'", "'DATA'", "'BUFFER'", "'CIRCULAR_BUFFER'", "'default'", "'CORBA'", "'MQUEUE'", "'ROS'", "'ORO_SCHED_OTHER'", "'ORO_SCHED_RT'"
     };
     public static final int T__68=68;
     public static final int T__69=69;
@@ -94,11 +94,9 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
     public static final int T__38=38;
     public static final int T__39=39;
     public static final int RULE_WS=9;
-    public static final int T__76=76;
     public static final int T__75=75;
     public static final int T__74=74;
     public static final int T__73=73;
-    public static final int T__77=77;
 
     // delegates
     // delegators
@@ -2351,7 +2349,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInputPort"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1012:1: ruleInputPort returns [EObject current=null] : (otherlv_0= 'InputPort' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )? (otherlv_5= 'inputConnectionPolicy' ( ( ruleEString ) ) )? otherlv_7= '}' ) ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1012:1: ruleInputPort returns [EObject current=null] : (otherlv_0= 'InputPort' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_5= '}' ) ;
     public final EObject ruleInputPort() throws RecognitionException {
         EObject current = null;
 
@@ -2359,18 +2357,17 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
         Token otherlv_2=null;
         Token otherlv_3=null;
         Token otherlv_5=null;
-        Token otherlv_7=null;
         AntlrDatatypeRuleToken lv_name_1_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1015:28: ( (otherlv_0= 'InputPort' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )? (otherlv_5= 'inputConnectionPolicy' ( ( ruleEString ) ) )? otherlv_7= '}' ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1016:1: (otherlv_0= 'InputPort' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )? (otherlv_5= 'inputConnectionPolicy' ( ( ruleEString ) ) )? otherlv_7= '}' )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1015:28: ( (otherlv_0= 'InputPort' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_5= '}' ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1016:1: (otherlv_0= 'InputPort' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_5= '}' )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1016:1: (otherlv_0= 'InputPort' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )? (otherlv_5= 'inputConnectionPolicy' ( ( ruleEString ) ) )? otherlv_7= '}' )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1016:3: otherlv_0= 'InputPort' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )? (otherlv_5= 'inputConnectionPolicy' ( ( ruleEString ) ) )? otherlv_7= '}'
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1016:1: (otherlv_0= 'InputPort' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_5= '}' )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1016:3: otherlv_0= 'InputPort' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_5= '}'
             {
             otherlv_0=(Token)match(input,41,FollowSets000.FOLLOW_41_in_ruleInputPort1959); 
 
@@ -2460,58 +2457,9 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1061:4: (otherlv_5= 'inputConnectionPolicy' ( ( ruleEString ) ) )?
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            otherlv_5=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleInputPort2042); 
 
-            if ( (LA27_0==43) ) {
-                alt27=1;
-            }
-            switch (alt27) {
-                case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1061:6: otherlv_5= 'inputConnectionPolicy' ( ( ruleEString ) )
-                    {
-                    otherlv_5=(Token)match(input,43,FollowSets000.FOLLOW_43_in_ruleInputPort2043); 
-
-                        	newLeafNode(otherlv_5, grammarAccess.getInputPortAccess().getInputConnectionPolicyKeyword_4_0());
-                        
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1065:1: ( ( ruleEString ) )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1066:1: ( ruleEString )
-                    {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1066:1: ( ruleEString )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1067:3: ruleEString
-                    {
-
-                    			if (current==null) {
-                    	            current = createModelElement(grammarAccess.getInputPortRule());
-                    	        }
-                            
-                     
-                    	        newCompositeNode(grammarAccess.getInputPortAccess().getInputConnectionPolicyConnectionPolicyCrossReference_4_1_0()); 
-                    	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleInputPort2066);
-                    ruleEString();
-
-                    state._fsp--;
-
-                     
-                    	        afterParserOrEnumRuleCall();
-                    	    
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-            otherlv_7=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleInputPort2080); 
-
-                	newLeafNode(otherlv_7, grammarAccess.getInputPortAccess().getRightCurlyBracketKeyword_5());
+                	newLeafNode(otherlv_5, grammarAccess.getInputPortAccess().getRightCurlyBracketKeyword_4());
                 
 
             }
@@ -2534,7 +2482,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEventPort"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1092:1: entryRuleEventPort returns [EObject current=null] : iv_ruleEventPort= ruleEventPort EOF ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1073:1: entryRuleEventPort returns [EObject current=null] : iv_ruleEventPort= ruleEventPort EOF ;
     public final EObject entryRuleEventPort() throws RecognitionException {
         EObject current = null;
 
@@ -2542,17 +2490,17 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1093:2: (iv_ruleEventPort= ruleEventPort EOF )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1094:2: iv_ruleEventPort= ruleEventPort EOF
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1074:2: (iv_ruleEventPort= ruleEventPort EOF )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1075:2: iv_ruleEventPort= ruleEventPort EOF
             {
              newCompositeNode(grammarAccess.getEventPortRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEventPort_in_entryRuleEventPort2116);
+            pushFollow(FollowSets000.FOLLOW_ruleEventPort_in_entryRuleEventPort2078);
             iv_ruleEventPort=ruleEventPort();
 
             state._fsp--;
 
              current =iv_ruleEventPort; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEventPort2126); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEventPort2088); 
 
             }
 
@@ -2570,7 +2518,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEventPort"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1101:1: ruleEventPort returns [EObject current=null] : ( () otherlv_1= 'EventPort' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'dataType' ( ( ruleEString ) ) )? (otherlv_6= 'inputConnectionPolicy' ( ( ruleEString ) ) )? otherlv_8= '}' ) ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1082:1: ruleEventPort returns [EObject current=null] : ( () otherlv_1= 'EventPort' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'dataType' ( ( ruleEString ) ) )? otherlv_6= '}' ) ;
     public final EObject ruleEventPort() throws RecognitionException {
         EObject current = null;
 
@@ -2578,21 +2526,20 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
         Token otherlv_3=null;
         Token otherlv_4=null;
         Token otherlv_6=null;
-        Token otherlv_8=null;
         AntlrDatatypeRuleToken lv_name_2_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1104:28: ( ( () otherlv_1= 'EventPort' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'dataType' ( ( ruleEString ) ) )? (otherlv_6= 'inputConnectionPolicy' ( ( ruleEString ) ) )? otherlv_8= '}' ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1105:1: ( () otherlv_1= 'EventPort' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'dataType' ( ( ruleEString ) ) )? (otherlv_6= 'inputConnectionPolicy' ( ( ruleEString ) ) )? otherlv_8= '}' )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1085:28: ( ( () otherlv_1= 'EventPort' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'dataType' ( ( ruleEString ) ) )? otherlv_6= '}' ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1086:1: ( () otherlv_1= 'EventPort' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'dataType' ( ( ruleEString ) ) )? otherlv_6= '}' )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1105:1: ( () otherlv_1= 'EventPort' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'dataType' ( ( ruleEString ) ) )? (otherlv_6= 'inputConnectionPolicy' ( ( ruleEString ) ) )? otherlv_8= '}' )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1105:2: () otherlv_1= 'EventPort' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'dataType' ( ( ruleEString ) ) )? (otherlv_6= 'inputConnectionPolicy' ( ( ruleEString ) ) )? otherlv_8= '}'
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1086:1: ( () otherlv_1= 'EventPort' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'dataType' ( ( ruleEString ) ) )? otherlv_6= '}' )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1086:2: () otherlv_1= 'EventPort' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'dataType' ( ( ruleEString ) ) )? otherlv_6= '}'
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1105:2: ()
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1106:5: 
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1086:2: ()
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1087:5: 
             {
 
                     current = forceCreateModelElement(
@@ -2602,20 +2549,20 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,44,FollowSets000.FOLLOW_44_in_ruleEventPort2172); 
+            otherlv_1=(Token)match(input,43,FollowSets000.FOLLOW_43_in_ruleEventPort2134); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getEventPortAccess().getEventPortKeyword_1());
                 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1115:1: ( (lv_name_2_0= ruleEString ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1116:1: (lv_name_2_0= ruleEString )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1096:1: ( (lv_name_2_0= ruleEString ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1097:1: (lv_name_2_0= ruleEString )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1116:1: (lv_name_2_0= ruleEString )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1117:3: lv_name_2_0= ruleEString
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1097:1: (lv_name_2_0= ruleEString )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1098:3: lv_name_2_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getEventPortAccess().getNameEStringParserRuleCall_2_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleEventPort2193);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleEventPort2155);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
@@ -2637,30 +2584,30 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleEventPort2205); 
+            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleEventPort2167); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getEventPortAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1137:1: (otherlv_4= 'dataType' ( ( ruleEString ) ) )?
-            int alt28=2;
-            int LA28_0 = input.LA(1);
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1118:1: (otherlv_4= 'dataType' ( ( ruleEString ) ) )?
+            int alt27=2;
+            int LA27_0 = input.LA(1);
 
-            if ( (LA28_0==42) ) {
-                alt28=1;
+            if ( (LA27_0==42) ) {
+                alt27=1;
             }
-            switch (alt28) {
+            switch (alt27) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1137:3: otherlv_4= 'dataType' ( ( ruleEString ) )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1118:3: otherlv_4= 'dataType' ( ( ruleEString ) )
                     {
-                    otherlv_4=(Token)match(input,42,FollowSets000.FOLLOW_42_in_ruleEventPort2218); 
+                    otherlv_4=(Token)match(input,42,FollowSets000.FOLLOW_42_in_ruleEventPort2180); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getEventPortAccess().getDataTypeKeyword_4_0());
                         
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1141:1: ( ( ruleEString ) )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1142:1: ( ruleEString )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1122:1: ( ( ruleEString ) )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1123:1: ( ruleEString )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1142:1: ( ruleEString )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1143:3: ruleEString
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1123:1: ( ruleEString )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1124:3: ruleEString
                     {
 
                     			if (current==null) {
@@ -2670,7 +2617,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getEventPortAccess().getDataTypeDataTypeCrossReference_4_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleEventPort2241);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleEventPort2203);
                     ruleEString();
 
                     state._fsp--;
@@ -2690,58 +2637,9 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1156:4: (otherlv_6= 'inputConnectionPolicy' ( ( ruleEString ) ) )?
-            int alt29=2;
-            int LA29_0 = input.LA(1);
+            otherlv_6=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleEventPort2217); 
 
-            if ( (LA29_0==43) ) {
-                alt29=1;
-            }
-            switch (alt29) {
-                case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1156:6: otherlv_6= 'inputConnectionPolicy' ( ( ruleEString ) )
-                    {
-                    otherlv_6=(Token)match(input,43,FollowSets000.FOLLOW_43_in_ruleEventPort2256); 
-
-                        	newLeafNode(otherlv_6, grammarAccess.getEventPortAccess().getInputConnectionPolicyKeyword_5_0());
-                        
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1160:1: ( ( ruleEString ) )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1161:1: ( ruleEString )
-                    {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1161:1: ( ruleEString )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1162:3: ruleEString
-                    {
-
-                    			if (current==null) {
-                    	            current = createModelElement(grammarAccess.getEventPortRule());
-                    	        }
-                            
-                     
-                    	        newCompositeNode(grammarAccess.getEventPortAccess().getInputConnectionPolicyConnectionPolicyCrossReference_5_1_0()); 
-                    	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleEventPort2279);
-                    ruleEString();
-
-                    state._fsp--;
-
-                     
-                    	        afterParserOrEnumRuleCall();
-                    	    
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-            otherlv_8=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleEventPort2293); 
-
-                	newLeafNode(otherlv_8, grammarAccess.getEventPortAccess().getRightCurlyBracketKeyword_6());
+                	newLeafNode(otherlv_6, grammarAccess.getEventPortAccess().getRightCurlyBracketKeyword_5());
                 
 
             }
@@ -2764,7 +2662,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOutputPort"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1187:1: entryRuleOutputPort returns [EObject current=null] : iv_ruleOutputPort= ruleOutputPort EOF ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1149:1: entryRuleOutputPort returns [EObject current=null] : iv_ruleOutputPort= ruleOutputPort EOF ;
     public final EObject entryRuleOutputPort() throws RecognitionException {
         EObject current = null;
 
@@ -2772,17 +2670,17 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1188:2: (iv_ruleOutputPort= ruleOutputPort EOF )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1189:2: iv_ruleOutputPort= ruleOutputPort EOF
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1150:2: (iv_ruleOutputPort= ruleOutputPort EOF )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1151:2: iv_ruleOutputPort= ruleOutputPort EOF
             {
              newCompositeNode(grammarAccess.getOutputPortRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleOutputPort_in_entryRuleOutputPort2329);
+            pushFollow(FollowSets000.FOLLOW_ruleOutputPort_in_entryRuleOutputPort2253);
             iv_ruleOutputPort=ruleOutputPort();
 
             state._fsp--;
 
              current =iv_ruleOutputPort; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleOutputPort2339); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleOutputPort2263); 
 
             }
 
@@ -2800,7 +2698,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOutputPort"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1196:1: ruleOutputPort returns [EObject current=null] : (otherlv_0= 'OutputPort' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )? (otherlv_5= 'outputConnectionPolicy' ( ( ruleEString ) ) )? otherlv_7= '}' ) ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1158:1: ruleOutputPort returns [EObject current=null] : (otherlv_0= 'OutputPort' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_5= '}' ) ;
     public final EObject ruleOutputPort() throws RecognitionException {
         EObject current = null;
 
@@ -2808,33 +2706,32 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
         Token otherlv_2=null;
         Token otherlv_3=null;
         Token otherlv_5=null;
-        Token otherlv_7=null;
         AntlrDatatypeRuleToken lv_name_1_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1199:28: ( (otherlv_0= 'OutputPort' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )? (otherlv_5= 'outputConnectionPolicy' ( ( ruleEString ) ) )? otherlv_7= '}' ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1200:1: (otherlv_0= 'OutputPort' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )? (otherlv_5= 'outputConnectionPolicy' ( ( ruleEString ) ) )? otherlv_7= '}' )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1161:28: ( (otherlv_0= 'OutputPort' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_5= '}' ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1162:1: (otherlv_0= 'OutputPort' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_5= '}' )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1200:1: (otherlv_0= 'OutputPort' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )? (otherlv_5= 'outputConnectionPolicy' ( ( ruleEString ) ) )? otherlv_7= '}' )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1200:3: otherlv_0= 'OutputPort' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )? (otherlv_5= 'outputConnectionPolicy' ( ( ruleEString ) ) )? otherlv_7= '}'
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1162:1: (otherlv_0= 'OutputPort' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_5= '}' )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1162:3: otherlv_0= 'OutputPort' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_5= '}'
             {
-            otherlv_0=(Token)match(input,45,FollowSets000.FOLLOW_45_in_ruleOutputPort2376); 
+            otherlv_0=(Token)match(input,44,FollowSets000.FOLLOW_44_in_ruleOutputPort2300); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getOutputPortAccess().getOutputPortKeyword_0());
                 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1204:1: ( (lv_name_1_0= ruleEString ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1205:1: (lv_name_1_0= ruleEString )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1166:1: ( (lv_name_1_0= ruleEString ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1167:1: (lv_name_1_0= ruleEString )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1205:1: (lv_name_1_0= ruleEString )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1206:3: lv_name_1_0= ruleEString
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1167:1: (lv_name_1_0= ruleEString )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1168:3: lv_name_1_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getOutputPortAccess().getNameEStringParserRuleCall_1_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleOutputPort2397);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleOutputPort2321);
             lv_name_1_0=ruleEString();
 
             state._fsp--;
@@ -2856,30 +2753,30 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleOutputPort2409); 
+            otherlv_2=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleOutputPort2333); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getOutputPortAccess().getLeftCurlyBracketKeyword_2());
                 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1226:1: (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )?
-            int alt30=2;
-            int LA30_0 = input.LA(1);
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1188:1: (otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) ) )?
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA30_0==42) ) {
-                alt30=1;
+            if ( (LA28_0==42) ) {
+                alt28=1;
             }
-            switch (alt30) {
+            switch (alt28) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1226:3: otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1188:3: otherlv_3= 'dataType' ( ( ruleQualifiedNameWithDot ) )
                     {
-                    otherlv_3=(Token)match(input,42,FollowSets000.FOLLOW_42_in_ruleOutputPort2422); 
+                    otherlv_3=(Token)match(input,42,FollowSets000.FOLLOW_42_in_ruleOutputPort2346); 
 
                         	newLeafNode(otherlv_3, grammarAccess.getOutputPortAccess().getDataTypeKeyword_3_0());
                         
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1230:1: ( ( ruleQualifiedNameWithDot ) )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1231:1: ( ruleQualifiedNameWithDot )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1192:1: ( ( ruleQualifiedNameWithDot ) )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1193:1: ( ruleQualifiedNameWithDot )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1231:1: ( ruleQualifiedNameWithDot )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1232:3: ruleQualifiedNameWithDot
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1193:1: ( ruleQualifiedNameWithDot )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1194:3: ruleQualifiedNameWithDot
                     {
 
                     			if (current==null) {
@@ -2889,7 +2786,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getOutputPortAccess().getDataTypeDataTypeCrossReference_3_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleQualifiedNameWithDot_in_ruleOutputPort2445);
+                    pushFollow(FollowSets000.FOLLOW_ruleQualifiedNameWithDot_in_ruleOutputPort2369);
                     ruleQualifiedNameWithDot();
 
                     state._fsp--;
@@ -2909,58 +2806,9 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1245:4: (otherlv_5= 'outputConnectionPolicy' ( ( ruleEString ) ) )?
-            int alt31=2;
-            int LA31_0 = input.LA(1);
+            otherlv_5=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleOutputPort2383); 
 
-            if ( (LA31_0==46) ) {
-                alt31=1;
-            }
-            switch (alt31) {
-                case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1245:6: otherlv_5= 'outputConnectionPolicy' ( ( ruleEString ) )
-                    {
-                    otherlv_5=(Token)match(input,46,FollowSets000.FOLLOW_46_in_ruleOutputPort2460); 
-
-                        	newLeafNode(otherlv_5, grammarAccess.getOutputPortAccess().getOutputConnectionPolicyKeyword_4_0());
-                        
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1249:1: ( ( ruleEString ) )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1250:1: ( ruleEString )
-                    {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1250:1: ( ruleEString )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1251:3: ruleEString
-                    {
-
-                    			if (current==null) {
-                    	            current = createModelElement(grammarAccess.getOutputPortRule());
-                    	        }
-                            
-                     
-                    	        newCompositeNode(grammarAccess.getOutputPortAccess().getOutputConnectionPolicyConnectionPolicyCrossReference_4_1_0()); 
-                    	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleOutputPort2483);
-                    ruleEString();
-
-                    state._fsp--;
-
-                     
-                    	        afterParserOrEnumRuleCall();
-                    	    
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-            otherlv_7=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleOutputPort2497); 
-
-                	newLeafNode(otherlv_7, grammarAccess.getOutputPortAccess().getRightCurlyBracketKeyword_5());
+                	newLeafNode(otherlv_5, grammarAccess.getOutputPortAccess().getRightCurlyBracketKeyword_4());
                 
 
             }
@@ -2983,7 +2831,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleProperty"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1276:1: entryRuleProperty returns [EObject current=null] : iv_ruleProperty= ruleProperty EOF ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1219:1: entryRuleProperty returns [EObject current=null] : iv_ruleProperty= ruleProperty EOF ;
     public final EObject entryRuleProperty() throws RecognitionException {
         EObject current = null;
 
@@ -2991,17 +2839,17 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1277:2: (iv_ruleProperty= ruleProperty EOF )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1278:2: iv_ruleProperty= ruleProperty EOF
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1220:2: (iv_ruleProperty= ruleProperty EOF )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1221:2: iv_ruleProperty= ruleProperty EOF
             {
              newCompositeNode(grammarAccess.getPropertyRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleProperty_in_entryRuleProperty2533);
+            pushFollow(FollowSets000.FOLLOW_ruleProperty_in_entryRuleProperty2419);
             iv_ruleProperty=ruleProperty();
 
             state._fsp--;
 
              current =iv_ruleProperty; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleProperty2543); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleProperty2429); 
 
             }
 
@@ -3019,7 +2867,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleProperty"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1285:1: ruleProperty returns [EObject current=null] : ( () otherlv_1= 'Property' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'description' ( (lv_description_5_0= ruleEString ) ) )? (otherlv_6= 'value' ( (lv_value_7_0= ruleEString ) ) )? (otherlv_8= 'type' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_10= '}' ) ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1228:1: ruleProperty returns [EObject current=null] : ( () otherlv_1= 'Property' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'description' ( (lv_description_5_0= ruleEString ) ) )? (otherlv_6= 'value' ( (lv_value_7_0= ruleEString ) ) )? (otherlv_8= 'type' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_10= '}' ) ;
     public final EObject ruleProperty() throws RecognitionException {
         EObject current = null;
 
@@ -3039,14 +2887,14 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1288:28: ( ( () otherlv_1= 'Property' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'description' ( (lv_description_5_0= ruleEString ) ) )? (otherlv_6= 'value' ( (lv_value_7_0= ruleEString ) ) )? (otherlv_8= 'type' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_10= '}' ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1289:1: ( () otherlv_1= 'Property' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'description' ( (lv_description_5_0= ruleEString ) ) )? (otherlv_6= 'value' ( (lv_value_7_0= ruleEString ) ) )? (otherlv_8= 'type' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_10= '}' )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1231:28: ( ( () otherlv_1= 'Property' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'description' ( (lv_description_5_0= ruleEString ) ) )? (otherlv_6= 'value' ( (lv_value_7_0= ruleEString ) ) )? (otherlv_8= 'type' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_10= '}' ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1232:1: ( () otherlv_1= 'Property' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'description' ( (lv_description_5_0= ruleEString ) ) )? (otherlv_6= 'value' ( (lv_value_7_0= ruleEString ) ) )? (otherlv_8= 'type' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_10= '}' )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1289:1: ( () otherlv_1= 'Property' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'description' ( (lv_description_5_0= ruleEString ) ) )? (otherlv_6= 'value' ( (lv_value_7_0= ruleEString ) ) )? (otherlv_8= 'type' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_10= '}' )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1289:2: () otherlv_1= 'Property' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'description' ( (lv_description_5_0= ruleEString ) ) )? (otherlv_6= 'value' ( (lv_value_7_0= ruleEString ) ) )? (otherlv_8= 'type' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_10= '}'
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1232:1: ( () otherlv_1= 'Property' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'description' ( (lv_description_5_0= ruleEString ) ) )? (otherlv_6= 'value' ( (lv_value_7_0= ruleEString ) ) )? (otherlv_8= 'type' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_10= '}' )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1232:2: () otherlv_1= 'Property' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'description' ( (lv_description_5_0= ruleEString ) ) )? (otherlv_6= 'value' ( (lv_value_7_0= ruleEString ) ) )? (otherlv_8= 'type' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_10= '}'
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1289:2: ()
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1290:5: 
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1232:2: ()
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1233:5: 
             {
 
                     current = forceCreateModelElement(
@@ -3056,20 +2904,20 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,47,FollowSets000.FOLLOW_47_in_ruleProperty2589); 
+            otherlv_1=(Token)match(input,45,FollowSets000.FOLLOW_45_in_ruleProperty2475); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getPropertyAccess().getPropertyKeyword_1());
                 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1299:1: ( (lv_name_2_0= ruleEString ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1300:1: (lv_name_2_0= ruleEString )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1242:1: ( (lv_name_2_0= ruleEString ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1243:1: (lv_name_2_0= ruleEString )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1300:1: (lv_name_2_0= ruleEString )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1301:3: lv_name_2_0= ruleEString
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1243:1: (lv_name_2_0= ruleEString )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1244:3: lv_name_2_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getPropertyAccess().getNameEStringParserRuleCall_2_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleProperty2610);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleProperty2496);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
@@ -3091,35 +2939,35 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleProperty2622); 
+            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleProperty2508); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getPropertyAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1321:1: (otherlv_4= 'description' ( (lv_description_5_0= ruleEString ) ) )?
-            int alt32=2;
-            int LA32_0 = input.LA(1);
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1264:1: (otherlv_4= 'description' ( (lv_description_5_0= ruleEString ) ) )?
+            int alt29=2;
+            int LA29_0 = input.LA(1);
 
-            if ( (LA32_0==48) ) {
-                alt32=1;
+            if ( (LA29_0==46) ) {
+                alt29=1;
             }
-            switch (alt32) {
+            switch (alt29) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1321:3: otherlv_4= 'description' ( (lv_description_5_0= ruleEString ) )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1264:3: otherlv_4= 'description' ( (lv_description_5_0= ruleEString ) )
                     {
-                    otherlv_4=(Token)match(input,48,FollowSets000.FOLLOW_48_in_ruleProperty2635); 
+                    otherlv_4=(Token)match(input,46,FollowSets000.FOLLOW_46_in_ruleProperty2521); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getPropertyAccess().getDescriptionKeyword_4_0());
                         
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1325:1: ( (lv_description_5_0= ruleEString ) )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1326:1: (lv_description_5_0= ruleEString )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1268:1: ( (lv_description_5_0= ruleEString ) )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1269:1: (lv_description_5_0= ruleEString )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1326:1: (lv_description_5_0= ruleEString )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1327:3: lv_description_5_0= ruleEString
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1269:1: (lv_description_5_0= ruleEString )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1270:3: lv_description_5_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getPropertyAccess().getDescriptionEStringParserRuleCall_4_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleProperty2656);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleProperty2542);
                     lv_description_5_0=ruleEString();
 
                     state._fsp--;
@@ -3147,31 +2995,31 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1343:4: (otherlv_6= 'value' ( (lv_value_7_0= ruleEString ) ) )?
-            int alt33=2;
-            int LA33_0 = input.LA(1);
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1286:4: (otherlv_6= 'value' ( (lv_value_7_0= ruleEString ) ) )?
+            int alt30=2;
+            int LA30_0 = input.LA(1);
 
-            if ( (LA33_0==49) ) {
-                alt33=1;
+            if ( (LA30_0==47) ) {
+                alt30=1;
             }
-            switch (alt33) {
+            switch (alt30) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1343:6: otherlv_6= 'value' ( (lv_value_7_0= ruleEString ) )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1286:6: otherlv_6= 'value' ( (lv_value_7_0= ruleEString ) )
                     {
-                    otherlv_6=(Token)match(input,49,FollowSets000.FOLLOW_49_in_ruleProperty2671); 
+                    otherlv_6=(Token)match(input,47,FollowSets000.FOLLOW_47_in_ruleProperty2557); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getPropertyAccess().getValueKeyword_5_0());
                         
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1347:1: ( (lv_value_7_0= ruleEString ) )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1348:1: (lv_value_7_0= ruleEString )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1290:1: ( (lv_value_7_0= ruleEString ) )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1291:1: (lv_value_7_0= ruleEString )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1348:1: (lv_value_7_0= ruleEString )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1349:3: lv_value_7_0= ruleEString
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1291:1: (lv_value_7_0= ruleEString )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1292:3: lv_value_7_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getPropertyAccess().getValueEStringParserRuleCall_5_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleProperty2692);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleProperty2578);
                     lv_value_7_0=ruleEString();
 
                     state._fsp--;
@@ -3199,26 +3047,26 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1365:4: (otherlv_8= 'type' ( ( ruleQualifiedNameWithDot ) ) )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1308:4: (otherlv_8= 'type' ( ( ruleQualifiedNameWithDot ) ) )?
+            int alt31=2;
+            int LA31_0 = input.LA(1);
 
-            if ( (LA34_0==20) ) {
-                alt34=1;
+            if ( (LA31_0==20) ) {
+                alt31=1;
             }
-            switch (alt34) {
+            switch (alt31) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1365:6: otherlv_8= 'type' ( ( ruleQualifiedNameWithDot ) )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1308:6: otherlv_8= 'type' ( ( ruleQualifiedNameWithDot ) )
                     {
-                    otherlv_8=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleProperty2707); 
+                    otherlv_8=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleProperty2593); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getPropertyAccess().getTypeKeyword_6_0());
                         
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1369:1: ( ( ruleQualifiedNameWithDot ) )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1370:1: ( ruleQualifiedNameWithDot )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1312:1: ( ( ruleQualifiedNameWithDot ) )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1313:1: ( ruleQualifiedNameWithDot )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1370:1: ( ruleQualifiedNameWithDot )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1371:3: ruleQualifiedNameWithDot
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1313:1: ( ruleQualifiedNameWithDot )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1314:3: ruleQualifiedNameWithDot
                     {
 
                     			if (current==null) {
@@ -3228,7 +3076,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getPropertyAccess().getTypeDataTypeCrossReference_6_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleQualifiedNameWithDot_in_ruleProperty2730);
+                    pushFollow(FollowSets000.FOLLOW_ruleQualifiedNameWithDot_in_ruleProperty2616);
                     ruleQualifiedNameWithDot();
 
                     state._fsp--;
@@ -3248,7 +3096,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_10=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleProperty2744); 
+            otherlv_10=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleProperty2630); 
 
                 	newLeafNode(otherlv_10, grammarAccess.getPropertyAccess().getRightCurlyBracketKeyword_7());
                 
@@ -3273,7 +3121,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOperation"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1396:1: entryRuleOperation returns [EObject current=null] : iv_ruleOperation= ruleOperation EOF ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1339:1: entryRuleOperation returns [EObject current=null] : iv_ruleOperation= ruleOperation EOF ;
     public final EObject entryRuleOperation() throws RecognitionException {
         EObject current = null;
 
@@ -3281,17 +3129,17 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1397:2: (iv_ruleOperation= ruleOperation EOF )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1398:2: iv_ruleOperation= ruleOperation EOF
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1340:2: (iv_ruleOperation= ruleOperation EOF )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1341:2: iv_ruleOperation= ruleOperation EOF
             {
              newCompositeNode(grammarAccess.getOperationRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleOperation_in_entryRuleOperation2780);
+            pushFollow(FollowSets000.FOLLOW_ruleOperation_in_entryRuleOperation2666);
             iv_ruleOperation=ruleOperation();
 
             state._fsp--;
 
              current =iv_ruleOperation; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleOperation2790); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleOperation2676); 
 
             }
 
@@ -3309,7 +3157,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOperation"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1405:1: ruleOperation returns [EObject current=null] : ( () otherlv_1= 'Operation' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'documentation' ( (lv_documentation_5_0= ruleEString ) ) )? (otherlv_6= 'returnType' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_8= '}' ) ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1348:1: ruleOperation returns [EObject current=null] : ( () otherlv_1= 'Operation' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'documentation' ( (lv_documentation_5_0= ruleEString ) ) )? (otherlv_6= 'returnType' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_8= '}' ) ;
     public final EObject ruleOperation() throws RecognitionException {
         EObject current = null;
 
@@ -3326,14 +3174,14 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1408:28: ( ( () otherlv_1= 'Operation' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'documentation' ( (lv_documentation_5_0= ruleEString ) ) )? (otherlv_6= 'returnType' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_8= '}' ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1409:1: ( () otherlv_1= 'Operation' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'documentation' ( (lv_documentation_5_0= ruleEString ) ) )? (otherlv_6= 'returnType' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_8= '}' )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1351:28: ( ( () otherlv_1= 'Operation' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'documentation' ( (lv_documentation_5_0= ruleEString ) ) )? (otherlv_6= 'returnType' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_8= '}' ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1352:1: ( () otherlv_1= 'Operation' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'documentation' ( (lv_documentation_5_0= ruleEString ) ) )? (otherlv_6= 'returnType' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_8= '}' )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1409:1: ( () otherlv_1= 'Operation' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'documentation' ( (lv_documentation_5_0= ruleEString ) ) )? (otherlv_6= 'returnType' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_8= '}' )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1409:2: () otherlv_1= 'Operation' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'documentation' ( (lv_documentation_5_0= ruleEString ) ) )? (otherlv_6= 'returnType' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_8= '}'
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1352:1: ( () otherlv_1= 'Operation' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'documentation' ( (lv_documentation_5_0= ruleEString ) ) )? (otherlv_6= 'returnType' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_8= '}' )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1352:2: () otherlv_1= 'Operation' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'documentation' ( (lv_documentation_5_0= ruleEString ) ) )? (otherlv_6= 'returnType' ( ( ruleQualifiedNameWithDot ) ) )? otherlv_8= '}'
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1409:2: ()
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1410:5: 
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1352:2: ()
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1353:5: 
             {
 
                     current = forceCreateModelElement(
@@ -3343,20 +3191,20 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,50,FollowSets000.FOLLOW_50_in_ruleOperation2836); 
+            otherlv_1=(Token)match(input,48,FollowSets000.FOLLOW_48_in_ruleOperation2722); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getOperationAccess().getOperationKeyword_1());
                 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1419:1: ( (lv_name_2_0= ruleEString ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1420:1: (lv_name_2_0= ruleEString )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1362:1: ( (lv_name_2_0= ruleEString ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1363:1: (lv_name_2_0= ruleEString )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1420:1: (lv_name_2_0= ruleEString )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1421:3: lv_name_2_0= ruleEString
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1363:1: (lv_name_2_0= ruleEString )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1364:3: lv_name_2_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getOperationAccess().getNameEStringParserRuleCall_2_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleOperation2857);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleOperation2743);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
@@ -3378,35 +3226,35 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleOperation2869); 
+            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleOperation2755); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getOperationAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1441:1: (otherlv_4= 'documentation' ( (lv_documentation_5_0= ruleEString ) ) )?
-            int alt35=2;
-            int LA35_0 = input.LA(1);
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1384:1: (otherlv_4= 'documentation' ( (lv_documentation_5_0= ruleEString ) ) )?
+            int alt32=2;
+            int LA32_0 = input.LA(1);
 
-            if ( (LA35_0==51) ) {
-                alt35=1;
+            if ( (LA32_0==49) ) {
+                alt32=1;
             }
-            switch (alt35) {
+            switch (alt32) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1441:3: otherlv_4= 'documentation' ( (lv_documentation_5_0= ruleEString ) )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1384:3: otherlv_4= 'documentation' ( (lv_documentation_5_0= ruleEString ) )
                     {
-                    otherlv_4=(Token)match(input,51,FollowSets000.FOLLOW_51_in_ruleOperation2882); 
+                    otherlv_4=(Token)match(input,49,FollowSets000.FOLLOW_49_in_ruleOperation2768); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getOperationAccess().getDocumentationKeyword_4_0());
                         
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1445:1: ( (lv_documentation_5_0= ruleEString ) )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1446:1: (lv_documentation_5_0= ruleEString )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1388:1: ( (lv_documentation_5_0= ruleEString ) )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1389:1: (lv_documentation_5_0= ruleEString )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1446:1: (lv_documentation_5_0= ruleEString )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1447:3: lv_documentation_5_0= ruleEString
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1389:1: (lv_documentation_5_0= ruleEString )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1390:3: lv_documentation_5_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getOperationAccess().getDocumentationEStringParserRuleCall_4_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleOperation2903);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleOperation2789);
                     lv_documentation_5_0=ruleEString();
 
                     state._fsp--;
@@ -3434,26 +3282,26 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1463:4: (otherlv_6= 'returnType' ( ( ruleQualifiedNameWithDot ) ) )?
-            int alt36=2;
-            int LA36_0 = input.LA(1);
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1406:4: (otherlv_6= 'returnType' ( ( ruleQualifiedNameWithDot ) ) )?
+            int alt33=2;
+            int LA33_0 = input.LA(1);
 
-            if ( (LA36_0==52) ) {
-                alt36=1;
+            if ( (LA33_0==50) ) {
+                alt33=1;
             }
-            switch (alt36) {
+            switch (alt33) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1463:6: otherlv_6= 'returnType' ( ( ruleQualifiedNameWithDot ) )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1406:6: otherlv_6= 'returnType' ( ( ruleQualifiedNameWithDot ) )
                     {
-                    otherlv_6=(Token)match(input,52,FollowSets000.FOLLOW_52_in_ruleOperation2918); 
+                    otherlv_6=(Token)match(input,50,FollowSets000.FOLLOW_50_in_ruleOperation2804); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getOperationAccess().getReturnTypeKeyword_5_0());
                         
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1467:1: ( ( ruleQualifiedNameWithDot ) )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1468:1: ( ruleQualifiedNameWithDot )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1410:1: ( ( ruleQualifiedNameWithDot ) )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1411:1: ( ruleQualifiedNameWithDot )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1468:1: ( ruleQualifiedNameWithDot )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1469:3: ruleQualifiedNameWithDot
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1411:1: ( ruleQualifiedNameWithDot )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1412:3: ruleQualifiedNameWithDot
                     {
 
                     			if (current==null) {
@@ -3463,7 +3311,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getOperationAccess().getReturnTypeDataTypeCrossReference_5_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleQualifiedNameWithDot_in_ruleOperation2941);
+                    pushFollow(FollowSets000.FOLLOW_ruleQualifiedNameWithDot_in_ruleOperation2827);
                     ruleQualifiedNameWithDot();
 
                     state._fsp--;
@@ -3483,7 +3331,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_8=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleOperation2955); 
+            otherlv_8=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleOperation2841); 
 
                 	newLeafNode(otherlv_8, grammarAccess.getOperationAccess().getRightCurlyBracketKeyword_6());
                 
@@ -3508,7 +3356,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEShort"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1494:1: entryRuleEShort returns [String current=null] : iv_ruleEShort= ruleEShort EOF ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1437:1: entryRuleEShort returns [String current=null] : iv_ruleEShort= ruleEShort EOF ;
     public final String entryRuleEShort() throws RecognitionException {
         String current = null;
 
@@ -3516,17 +3364,17 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1495:2: (iv_ruleEShort= ruleEShort EOF )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1496:2: iv_ruleEShort= ruleEShort EOF
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1438:2: (iv_ruleEShort= ruleEShort EOF )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1439:2: iv_ruleEShort= ruleEShort EOF
             {
              newCompositeNode(grammarAccess.getEShortRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEShort_in_entryRuleEShort2992);
+            pushFollow(FollowSets000.FOLLOW_ruleEShort_in_entryRuleEShort2878);
             iv_ruleEShort=ruleEShort();
 
             state._fsp--;
 
              current =iv_ruleEShort.getText(); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEShort3003); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEShort2889); 
 
             }
 
@@ -3544,7 +3392,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEShort"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1503:1: ruleEShort returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_INT_1= RULE_INT ) ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1446:1: ruleEShort returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_INT_1= RULE_INT ) ;
     public final AntlrDatatypeRuleToken ruleEShort() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -3554,24 +3402,24 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1506:28: ( ( (kw= '-' )? this_INT_1= RULE_INT ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1507:1: ( (kw= '-' )? this_INT_1= RULE_INT )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1449:28: ( ( (kw= '-' )? this_INT_1= RULE_INT ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1450:1: ( (kw= '-' )? this_INT_1= RULE_INT )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1507:1: ( (kw= '-' )? this_INT_1= RULE_INT )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1507:2: (kw= '-' )? this_INT_1= RULE_INT
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1450:1: ( (kw= '-' )? this_INT_1= RULE_INT )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1450:2: (kw= '-' )? this_INT_1= RULE_INT
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1507:2: (kw= '-' )?
-            int alt37=2;
-            int LA37_0 = input.LA(1);
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1450:2: (kw= '-' )?
+            int alt34=2;
+            int LA34_0 = input.LA(1);
 
-            if ( (LA37_0==53) ) {
-                alt37=1;
+            if ( (LA34_0==51) ) {
+                alt34=1;
             }
-            switch (alt37) {
+            switch (alt34) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1508:2: kw= '-'
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1451:2: kw= '-'
                     {
-                    kw=(Token)match(input,53,FollowSets000.FOLLOW_53_in_ruleEShort3042); 
+                    kw=(Token)match(input,51,FollowSets000.FOLLOW_51_in_ruleEShort2928); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getEShortAccess().getHyphenMinusKeyword_0()); 
@@ -3582,7 +3430,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_ruleEShort3059); 
+            this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_ruleEShort2945); 
 
             		current.merge(this_INT_1);
                 
@@ -3610,7 +3458,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleActivity"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1530:1: entryRuleActivity returns [EObject current=null] : iv_ruleActivity= ruleActivity EOF ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1473:1: entryRuleActivity returns [EObject current=null] : iv_ruleActivity= ruleActivity EOF ;
     public final EObject entryRuleActivity() throws RecognitionException {
         EObject current = null;
 
@@ -3618,17 +3466,17 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1531:2: (iv_ruleActivity= ruleActivity EOF )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1532:2: iv_ruleActivity= ruleActivity EOF
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1474:2: (iv_ruleActivity= ruleActivity EOF )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1475:2: iv_ruleActivity= ruleActivity EOF
             {
              newCompositeNode(grammarAccess.getActivityRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleActivity_in_entryRuleActivity3106);
+            pushFollow(FollowSets000.FOLLOW_ruleActivity_in_entryRuleActivity2992);
             iv_ruleActivity=ruleActivity();
 
             state._fsp--;
 
              current =iv_ruleActivity; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleActivity3116); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleActivity3002); 
 
             }
 
@@ -3646,7 +3494,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleActivity"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1539:1: ruleActivity returns [EObject current=null] : (otherlv_0= 'Activity' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' otherlv_3= 'scheduler' ( (lv_scheduler_4_0= ruleScheduler ) ) otherlv_5= 'cpuAffinity' ( (lv_cpuAffinity_6_0= ruleEString ) ) otherlv_7= 'period' ( (lv_period_8_0= ruleEFloat ) ) otherlv_9= 'priority' ( (lv_priority_10_0= ruleEInt ) ) (otherlv_11= 'taskContext' ( ( ruleEString ) ) )? (otherlv_13= 'slave' otherlv_14= '{' ( (lv_slave_15_0= ruleSlave ) ) (otherlv_16= ',' ( (lv_slave_17_0= ruleSlave ) ) )* otherlv_18= '}' )? otherlv_19= '}' ) ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1482:1: ruleActivity returns [EObject current=null] : (otherlv_0= 'Activity' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' otherlv_3= 'scheduler' ( (lv_scheduler_4_0= ruleScheduler ) ) otherlv_5= 'cpuAffinity' ( (lv_cpuAffinity_6_0= ruleEString ) ) otherlv_7= 'period' ( (lv_period_8_0= ruleEFloat ) ) otherlv_9= 'priority' ( (lv_priority_10_0= ruleEInt ) ) (otherlv_11= 'taskContext' ( ( ruleEString ) ) )? (otherlv_13= 'slave' otherlv_14= '{' ( (lv_slave_15_0= ruleSlave ) ) (otherlv_16= ',' ( (lv_slave_17_0= ruleSlave ) ) )* otherlv_18= '}' )? otherlv_19= '}' ) ;
     public final EObject ruleActivity() throws RecognitionException {
         EObject current = null;
 
@@ -3680,26 +3528,26 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1542:28: ( (otherlv_0= 'Activity' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' otherlv_3= 'scheduler' ( (lv_scheduler_4_0= ruleScheduler ) ) otherlv_5= 'cpuAffinity' ( (lv_cpuAffinity_6_0= ruleEString ) ) otherlv_7= 'period' ( (lv_period_8_0= ruleEFloat ) ) otherlv_9= 'priority' ( (lv_priority_10_0= ruleEInt ) ) (otherlv_11= 'taskContext' ( ( ruleEString ) ) )? (otherlv_13= 'slave' otherlv_14= '{' ( (lv_slave_15_0= ruleSlave ) ) (otherlv_16= ',' ( (lv_slave_17_0= ruleSlave ) ) )* otherlv_18= '}' )? otherlv_19= '}' ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1543:1: (otherlv_0= 'Activity' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' otherlv_3= 'scheduler' ( (lv_scheduler_4_0= ruleScheduler ) ) otherlv_5= 'cpuAffinity' ( (lv_cpuAffinity_6_0= ruleEString ) ) otherlv_7= 'period' ( (lv_period_8_0= ruleEFloat ) ) otherlv_9= 'priority' ( (lv_priority_10_0= ruleEInt ) ) (otherlv_11= 'taskContext' ( ( ruleEString ) ) )? (otherlv_13= 'slave' otherlv_14= '{' ( (lv_slave_15_0= ruleSlave ) ) (otherlv_16= ',' ( (lv_slave_17_0= ruleSlave ) ) )* otherlv_18= '}' )? otherlv_19= '}' )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1485:28: ( (otherlv_0= 'Activity' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' otherlv_3= 'scheduler' ( (lv_scheduler_4_0= ruleScheduler ) ) otherlv_5= 'cpuAffinity' ( (lv_cpuAffinity_6_0= ruleEString ) ) otherlv_7= 'period' ( (lv_period_8_0= ruleEFloat ) ) otherlv_9= 'priority' ( (lv_priority_10_0= ruleEInt ) ) (otherlv_11= 'taskContext' ( ( ruleEString ) ) )? (otherlv_13= 'slave' otherlv_14= '{' ( (lv_slave_15_0= ruleSlave ) ) (otherlv_16= ',' ( (lv_slave_17_0= ruleSlave ) ) )* otherlv_18= '}' )? otherlv_19= '}' ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1486:1: (otherlv_0= 'Activity' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' otherlv_3= 'scheduler' ( (lv_scheduler_4_0= ruleScheduler ) ) otherlv_5= 'cpuAffinity' ( (lv_cpuAffinity_6_0= ruleEString ) ) otherlv_7= 'period' ( (lv_period_8_0= ruleEFloat ) ) otherlv_9= 'priority' ( (lv_priority_10_0= ruleEInt ) ) (otherlv_11= 'taskContext' ( ( ruleEString ) ) )? (otherlv_13= 'slave' otherlv_14= '{' ( (lv_slave_15_0= ruleSlave ) ) (otherlv_16= ',' ( (lv_slave_17_0= ruleSlave ) ) )* otherlv_18= '}' )? otherlv_19= '}' )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1543:1: (otherlv_0= 'Activity' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' otherlv_3= 'scheduler' ( (lv_scheduler_4_0= ruleScheduler ) ) otherlv_5= 'cpuAffinity' ( (lv_cpuAffinity_6_0= ruleEString ) ) otherlv_7= 'period' ( (lv_period_8_0= ruleEFloat ) ) otherlv_9= 'priority' ( (lv_priority_10_0= ruleEInt ) ) (otherlv_11= 'taskContext' ( ( ruleEString ) ) )? (otherlv_13= 'slave' otherlv_14= '{' ( (lv_slave_15_0= ruleSlave ) ) (otherlv_16= ',' ( (lv_slave_17_0= ruleSlave ) ) )* otherlv_18= '}' )? otherlv_19= '}' )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1543:3: otherlv_0= 'Activity' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' otherlv_3= 'scheduler' ( (lv_scheduler_4_0= ruleScheduler ) ) otherlv_5= 'cpuAffinity' ( (lv_cpuAffinity_6_0= ruleEString ) ) otherlv_7= 'period' ( (lv_period_8_0= ruleEFloat ) ) otherlv_9= 'priority' ( (lv_priority_10_0= ruleEInt ) ) (otherlv_11= 'taskContext' ( ( ruleEString ) ) )? (otherlv_13= 'slave' otherlv_14= '{' ( (lv_slave_15_0= ruleSlave ) ) (otherlv_16= ',' ( (lv_slave_17_0= ruleSlave ) ) )* otherlv_18= '}' )? otherlv_19= '}'
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1486:1: (otherlv_0= 'Activity' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' otherlv_3= 'scheduler' ( (lv_scheduler_4_0= ruleScheduler ) ) otherlv_5= 'cpuAffinity' ( (lv_cpuAffinity_6_0= ruleEString ) ) otherlv_7= 'period' ( (lv_period_8_0= ruleEFloat ) ) otherlv_9= 'priority' ( (lv_priority_10_0= ruleEInt ) ) (otherlv_11= 'taskContext' ( ( ruleEString ) ) )? (otherlv_13= 'slave' otherlv_14= '{' ( (lv_slave_15_0= ruleSlave ) ) (otherlv_16= ',' ( (lv_slave_17_0= ruleSlave ) ) )* otherlv_18= '}' )? otherlv_19= '}' )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1486:3: otherlv_0= 'Activity' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' otherlv_3= 'scheduler' ( (lv_scheduler_4_0= ruleScheduler ) ) otherlv_5= 'cpuAffinity' ( (lv_cpuAffinity_6_0= ruleEString ) ) otherlv_7= 'period' ( (lv_period_8_0= ruleEFloat ) ) otherlv_9= 'priority' ( (lv_priority_10_0= ruleEInt ) ) (otherlv_11= 'taskContext' ( ( ruleEString ) ) )? (otherlv_13= 'slave' otherlv_14= '{' ( (lv_slave_15_0= ruleSlave ) ) (otherlv_16= ',' ( (lv_slave_17_0= ruleSlave ) ) )* otherlv_18= '}' )? otherlv_19= '}'
             {
-            otherlv_0=(Token)match(input,54,FollowSets000.FOLLOW_54_in_ruleActivity3153); 
+            otherlv_0=(Token)match(input,52,FollowSets000.FOLLOW_52_in_ruleActivity3039); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getActivityAccess().getActivityKeyword_0());
                 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1547:1: ( (lv_name_1_0= ruleEString ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1548:1: (lv_name_1_0= ruleEString )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1490:1: ( (lv_name_1_0= ruleEString ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1491:1: (lv_name_1_0= ruleEString )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1548:1: (lv_name_1_0= ruleEString )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1549:3: lv_name_1_0= ruleEString
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1491:1: (lv_name_1_0= ruleEString )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1492:3: lv_name_1_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getActivityAccess().getNameEStringParserRuleCall_1_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleActivity3174);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleActivity3060);
             lv_name_1_0=ruleEString();
 
             state._fsp--;
@@ -3721,24 +3569,24 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleActivity3186); 
+            otherlv_2=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleActivity3072); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getActivityAccess().getLeftCurlyBracketKeyword_2());
                 
-            otherlv_3=(Token)match(input,55,FollowSets000.FOLLOW_55_in_ruleActivity3198); 
+            otherlv_3=(Token)match(input,53,FollowSets000.FOLLOW_53_in_ruleActivity3084); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getActivityAccess().getSchedulerKeyword_3());
                 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1573:1: ( (lv_scheduler_4_0= ruleScheduler ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1574:1: (lv_scheduler_4_0= ruleScheduler )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1516:1: ( (lv_scheduler_4_0= ruleScheduler ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1517:1: (lv_scheduler_4_0= ruleScheduler )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1574:1: (lv_scheduler_4_0= ruleScheduler )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1575:3: lv_scheduler_4_0= ruleScheduler
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1517:1: (lv_scheduler_4_0= ruleScheduler )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1518:3: lv_scheduler_4_0= ruleScheduler
             {
              
             	        newCompositeNode(grammarAccess.getActivityAccess().getSchedulerSchedulerEnumRuleCall_4_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleScheduler_in_ruleActivity3219);
+            pushFollow(FollowSets000.FOLLOW_ruleScheduler_in_ruleActivity3105);
             lv_scheduler_4_0=ruleScheduler();
 
             state._fsp--;
@@ -3760,20 +3608,20 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,56,FollowSets000.FOLLOW_56_in_ruleActivity3231); 
+            otherlv_5=(Token)match(input,54,FollowSets000.FOLLOW_54_in_ruleActivity3117); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getActivityAccess().getCpuAffinityKeyword_5());
                 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1595:1: ( (lv_cpuAffinity_6_0= ruleEString ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1596:1: (lv_cpuAffinity_6_0= ruleEString )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1538:1: ( (lv_cpuAffinity_6_0= ruleEString ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1539:1: (lv_cpuAffinity_6_0= ruleEString )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1596:1: (lv_cpuAffinity_6_0= ruleEString )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1597:3: lv_cpuAffinity_6_0= ruleEString
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1539:1: (lv_cpuAffinity_6_0= ruleEString )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1540:3: lv_cpuAffinity_6_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getActivityAccess().getCpuAffinityEStringParserRuleCall_6_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleActivity3252);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleActivity3138);
             lv_cpuAffinity_6_0=ruleEString();
 
             state._fsp--;
@@ -3795,20 +3643,20 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,57,FollowSets000.FOLLOW_57_in_ruleActivity3264); 
+            otherlv_7=(Token)match(input,55,FollowSets000.FOLLOW_55_in_ruleActivity3150); 
 
                 	newLeafNode(otherlv_7, grammarAccess.getActivityAccess().getPeriodKeyword_7());
                 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1617:1: ( (lv_period_8_0= ruleEFloat ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1618:1: (lv_period_8_0= ruleEFloat )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1560:1: ( (lv_period_8_0= ruleEFloat ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1561:1: (lv_period_8_0= ruleEFloat )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1618:1: (lv_period_8_0= ruleEFloat )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1619:3: lv_period_8_0= ruleEFloat
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1561:1: (lv_period_8_0= ruleEFloat )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1562:3: lv_period_8_0= ruleEFloat
             {
              
             	        newCompositeNode(grammarAccess.getActivityAccess().getPeriodEFloatParserRuleCall_8_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEFloat_in_ruleActivity3285);
+            pushFollow(FollowSets000.FOLLOW_ruleEFloat_in_ruleActivity3171);
             lv_period_8_0=ruleEFloat();
 
             state._fsp--;
@@ -3830,20 +3678,20 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,58,FollowSets000.FOLLOW_58_in_ruleActivity3297); 
+            otherlv_9=(Token)match(input,56,FollowSets000.FOLLOW_56_in_ruleActivity3183); 
 
                 	newLeafNode(otherlv_9, grammarAccess.getActivityAccess().getPriorityKeyword_9());
                 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1639:1: ( (lv_priority_10_0= ruleEInt ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1640:1: (lv_priority_10_0= ruleEInt )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1582:1: ( (lv_priority_10_0= ruleEInt ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1583:1: (lv_priority_10_0= ruleEInt )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1640:1: (lv_priority_10_0= ruleEInt )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1641:3: lv_priority_10_0= ruleEInt
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1583:1: (lv_priority_10_0= ruleEInt )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1584:3: lv_priority_10_0= ruleEInt
             {
              
             	        newCompositeNode(grammarAccess.getActivityAccess().getPriorityEIntParserRuleCall_10_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleActivity3318);
+            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleActivity3204);
             lv_priority_10_0=ruleEInt();
 
             state._fsp--;
@@ -3865,26 +3713,26 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1657:2: (otherlv_11= 'taskContext' ( ( ruleEString ) ) )?
-            int alt38=2;
-            int LA38_0 = input.LA(1);
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1600:2: (otherlv_11= 'taskContext' ( ( ruleEString ) ) )?
+            int alt35=2;
+            int LA35_0 = input.LA(1);
 
-            if ( (LA38_0==59) ) {
-                alt38=1;
+            if ( (LA35_0==57) ) {
+                alt35=1;
             }
-            switch (alt38) {
+            switch (alt35) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1657:4: otherlv_11= 'taskContext' ( ( ruleEString ) )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1600:4: otherlv_11= 'taskContext' ( ( ruleEString ) )
                     {
-                    otherlv_11=(Token)match(input,59,FollowSets000.FOLLOW_59_in_ruleActivity3331); 
+                    otherlv_11=(Token)match(input,57,FollowSets000.FOLLOW_57_in_ruleActivity3217); 
 
                         	newLeafNode(otherlv_11, grammarAccess.getActivityAccess().getTaskContextKeyword_11_0());
                         
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1661:1: ( ( ruleEString ) )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1662:1: ( ruleEString )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1604:1: ( ( ruleEString ) )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1605:1: ( ruleEString )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1662:1: ( ruleEString )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1663:3: ruleEString
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1605:1: ( ruleEString )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1606:3: ruleEString
                     {
 
                     			if (current==null) {
@@ -3894,7 +3742,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getActivityAccess().getTaskContextTaskContextCrossReference_11_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleActivity3354);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleActivity3240);
                     ruleEString();
 
                     state._fsp--;
@@ -3914,35 +3762,35 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1676:4: (otherlv_13= 'slave' otherlv_14= '{' ( (lv_slave_15_0= ruleSlave ) ) (otherlv_16= ',' ( (lv_slave_17_0= ruleSlave ) ) )* otherlv_18= '}' )?
-            int alt40=2;
-            int LA40_0 = input.LA(1);
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1619:4: (otherlv_13= 'slave' otherlv_14= '{' ( (lv_slave_15_0= ruleSlave ) ) (otherlv_16= ',' ( (lv_slave_17_0= ruleSlave ) ) )* otherlv_18= '}' )?
+            int alt37=2;
+            int LA37_0 = input.LA(1);
 
-            if ( (LA40_0==60) ) {
-                alt40=1;
+            if ( (LA37_0==58) ) {
+                alt37=1;
             }
-            switch (alt40) {
+            switch (alt37) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1676:6: otherlv_13= 'slave' otherlv_14= '{' ( (lv_slave_15_0= ruleSlave ) ) (otherlv_16= ',' ( (lv_slave_17_0= ruleSlave ) ) )* otherlv_18= '}'
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1619:6: otherlv_13= 'slave' otherlv_14= '{' ( (lv_slave_15_0= ruleSlave ) ) (otherlv_16= ',' ( (lv_slave_17_0= ruleSlave ) ) )* otherlv_18= '}'
                     {
-                    otherlv_13=(Token)match(input,60,FollowSets000.FOLLOW_60_in_ruleActivity3369); 
+                    otherlv_13=(Token)match(input,58,FollowSets000.FOLLOW_58_in_ruleActivity3255); 
 
                         	newLeafNode(otherlv_13, grammarAccess.getActivityAccess().getSlaveKeyword_12_0());
                         
-                    otherlv_14=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleActivity3381); 
+                    otherlv_14=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleActivity3267); 
 
                         	newLeafNode(otherlv_14, grammarAccess.getActivityAccess().getLeftCurlyBracketKeyword_12_1());
                         
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1684:1: ( (lv_slave_15_0= ruleSlave ) )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1685:1: (lv_slave_15_0= ruleSlave )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1627:1: ( (lv_slave_15_0= ruleSlave ) )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1628:1: (lv_slave_15_0= ruleSlave )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1685:1: (lv_slave_15_0= ruleSlave )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1686:3: lv_slave_15_0= ruleSlave
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1628:1: (lv_slave_15_0= ruleSlave )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1629:3: lv_slave_15_0= ruleSlave
                     {
                      
                     	        newCompositeNode(grammarAccess.getActivityAccess().getSlaveSlaveParserRuleCall_12_2_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleSlave_in_ruleActivity3402);
+                    pushFollow(FollowSets000.FOLLOW_ruleSlave_in_ruleActivity3288);
                     lv_slave_15_0=ruleSlave();
 
                     state._fsp--;
@@ -3964,35 +3812,35 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1702:2: (otherlv_16= ',' ( (lv_slave_17_0= ruleSlave ) ) )*
-                    loop39:
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1645:2: (otherlv_16= ',' ( (lv_slave_17_0= ruleSlave ) ) )*
+                    loop36:
                     do {
-                        int alt39=2;
-                        int LA39_0 = input.LA(1);
+                        int alt36=2;
+                        int LA36_0 = input.LA(1);
 
-                        if ( (LA39_0==14) ) {
-                            alt39=1;
+                        if ( (LA36_0==14) ) {
+                            alt36=1;
                         }
 
 
-                        switch (alt39) {
+                        switch (alt36) {
                     	case 1 :
-                    	    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1702:4: otherlv_16= ',' ( (lv_slave_17_0= ruleSlave ) )
+                    	    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1645:4: otherlv_16= ',' ( (lv_slave_17_0= ruleSlave ) )
                     	    {
-                    	    otherlv_16=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleActivity3415); 
+                    	    otherlv_16=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleActivity3301); 
 
                     	        	newLeafNode(otherlv_16, grammarAccess.getActivityAccess().getCommaKeyword_12_3_0());
                     	        
-                    	    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1706:1: ( (lv_slave_17_0= ruleSlave ) )
-                    	    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1707:1: (lv_slave_17_0= ruleSlave )
+                    	    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1649:1: ( (lv_slave_17_0= ruleSlave ) )
+                    	    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1650:1: (lv_slave_17_0= ruleSlave )
                     	    {
-                    	    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1707:1: (lv_slave_17_0= ruleSlave )
-                    	    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1708:3: lv_slave_17_0= ruleSlave
+                    	    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1650:1: (lv_slave_17_0= ruleSlave )
+                    	    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1651:3: lv_slave_17_0= ruleSlave
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getActivityAccess().getSlaveSlaveParserRuleCall_12_3_1_0()); 
                     	    	    
-                    	    pushFollow(FollowSets000.FOLLOW_ruleSlave_in_ruleActivity3436);
+                    	    pushFollow(FollowSets000.FOLLOW_ruleSlave_in_ruleActivity3322);
                     	    lv_slave_17_0=ruleSlave();
 
                     	    state._fsp--;
@@ -4019,11 +3867,11 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop39;
+                    	    break loop36;
                         }
                     } while (true);
 
-                    otherlv_18=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleActivity3450); 
+                    otherlv_18=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleActivity3336); 
 
                         	newLeafNode(otherlv_18, grammarAccess.getActivityAccess().getRightCurlyBracketKeyword_12_4());
                         
@@ -4033,7 +3881,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_19=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleActivity3464); 
+            otherlv_19=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleActivity3350); 
 
                 	newLeafNode(otherlv_19, grammarAccess.getActivityAccess().getRightCurlyBracketKeyword_13());
                 
@@ -4058,7 +3906,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSlave"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1740:1: entryRuleSlave returns [EObject current=null] : iv_ruleSlave= ruleSlave EOF ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1683:1: entryRuleSlave returns [EObject current=null] : iv_ruleSlave= ruleSlave EOF ;
     public final EObject entryRuleSlave() throws RecognitionException {
         EObject current = null;
 
@@ -4066,17 +3914,17 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1741:2: (iv_ruleSlave= ruleSlave EOF )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1742:2: iv_ruleSlave= ruleSlave EOF
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1684:2: (iv_ruleSlave= ruleSlave EOF )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1685:2: iv_ruleSlave= ruleSlave EOF
             {
              newCompositeNode(grammarAccess.getSlaveRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleSlave_in_entryRuleSlave3500);
+            pushFollow(FollowSets000.FOLLOW_ruleSlave_in_entryRuleSlave3386);
             iv_ruleSlave=ruleSlave();
 
             state._fsp--;
 
              current =iv_ruleSlave; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleSlave3510); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleSlave3396); 
 
             }
 
@@ -4094,7 +3942,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSlave"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1749:1: ruleSlave returns [EObject current=null] : ( () otherlv_1= 'Slave' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'taskContext' ( ( ruleEString ) ) )? otherlv_6= '}' ) ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1692:1: ruleSlave returns [EObject current=null] : ( () otherlv_1= 'Slave' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'taskContext' ( ( ruleEString ) ) )? otherlv_6= '}' ) ;
     public final EObject ruleSlave() throws RecognitionException {
         EObject current = null;
 
@@ -4108,14 +3956,14 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1752:28: ( ( () otherlv_1= 'Slave' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'taskContext' ( ( ruleEString ) ) )? otherlv_6= '}' ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1753:1: ( () otherlv_1= 'Slave' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'taskContext' ( ( ruleEString ) ) )? otherlv_6= '}' )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1695:28: ( ( () otherlv_1= 'Slave' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'taskContext' ( ( ruleEString ) ) )? otherlv_6= '}' ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1696:1: ( () otherlv_1= 'Slave' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'taskContext' ( ( ruleEString ) ) )? otherlv_6= '}' )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1753:1: ( () otherlv_1= 'Slave' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'taskContext' ( ( ruleEString ) ) )? otherlv_6= '}' )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1753:2: () otherlv_1= 'Slave' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'taskContext' ( ( ruleEString ) ) )? otherlv_6= '}'
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1696:1: ( () otherlv_1= 'Slave' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'taskContext' ( ( ruleEString ) ) )? otherlv_6= '}' )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1696:2: () otherlv_1= 'Slave' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'taskContext' ( ( ruleEString ) ) )? otherlv_6= '}'
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1753:2: ()
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1754:5: 
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1696:2: ()
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1697:5: 
             {
 
                     current = forceCreateModelElement(
@@ -4125,20 +3973,20 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,61,FollowSets000.FOLLOW_61_in_ruleSlave3556); 
+            otherlv_1=(Token)match(input,59,FollowSets000.FOLLOW_59_in_ruleSlave3442); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getSlaveAccess().getSlaveKeyword_1());
                 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1763:1: ( (lv_name_2_0= ruleEString ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1764:1: (lv_name_2_0= ruleEString )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1706:1: ( (lv_name_2_0= ruleEString ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1707:1: (lv_name_2_0= ruleEString )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1764:1: (lv_name_2_0= ruleEString )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1765:3: lv_name_2_0= ruleEString
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1707:1: (lv_name_2_0= ruleEString )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1708:3: lv_name_2_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getSlaveAccess().getNameEStringParserRuleCall_2_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleSlave3577);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleSlave3463);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
@@ -4160,30 +4008,30 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleSlave3589); 
+            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleSlave3475); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getSlaveAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1785:1: (otherlv_4= 'taskContext' ( ( ruleEString ) ) )?
-            int alt41=2;
-            int LA41_0 = input.LA(1);
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1728:1: (otherlv_4= 'taskContext' ( ( ruleEString ) ) )?
+            int alt38=2;
+            int LA38_0 = input.LA(1);
 
-            if ( (LA41_0==59) ) {
-                alt41=1;
+            if ( (LA38_0==57) ) {
+                alt38=1;
             }
-            switch (alt41) {
+            switch (alt38) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1785:3: otherlv_4= 'taskContext' ( ( ruleEString ) )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1728:3: otherlv_4= 'taskContext' ( ( ruleEString ) )
                     {
-                    otherlv_4=(Token)match(input,59,FollowSets000.FOLLOW_59_in_ruleSlave3602); 
+                    otherlv_4=(Token)match(input,57,FollowSets000.FOLLOW_57_in_ruleSlave3488); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getSlaveAccess().getTaskContextKeyword_4_0());
                         
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1789:1: ( ( ruleEString ) )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1790:1: ( ruleEString )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1732:1: ( ( ruleEString ) )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1733:1: ( ruleEString )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1790:1: ( ruleEString )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1791:3: ruleEString
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1733:1: ( ruleEString )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1734:3: ruleEString
                     {
 
                     			if (current==null) {
@@ -4193,7 +4041,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getSlaveAccess().getTaskContextTaskContextCrossReference_4_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleSlave3625);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleSlave3511);
                     ruleEString();
 
                     state._fsp--;
@@ -4213,7 +4061,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleSlave3639); 
+            otherlv_6=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleSlave3525); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getSlaveAccess().getRightCurlyBracketKeyword_5());
                 
@@ -4238,7 +4086,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEString"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1816:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1759:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
     public final String entryRuleEString() throws RecognitionException {
         String current = null;
 
@@ -4246,17 +4094,17 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1817:2: (iv_ruleEString= ruleEString EOF )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1818:2: iv_ruleEString= ruleEString EOF
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1760:2: (iv_ruleEString= ruleEString EOF )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1761:2: iv_ruleEString= ruleEString EOF
             {
              newCompositeNode(grammarAccess.getEStringRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_entryRuleEString3676);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_entryRuleEString3562);
             iv_ruleEString=ruleEString();
 
             state._fsp--;
 
              current =iv_ruleEString.getText(); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEString3687); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEString3573); 
 
             }
 
@@ -4274,7 +4122,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEString"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1825:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1768:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
     public final AntlrDatatypeRuleToken ruleEString() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4284,30 +4132,30 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1828:28: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1829:1: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1771:28: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1772:1: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1829:1: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
-            int alt42=2;
-            int LA42_0 = input.LA(1);
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1772:1: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            int alt39=2;
+            int LA39_0 = input.LA(1);
 
-            if ( (LA42_0==RULE_STRING) ) {
-                alt42=1;
+            if ( (LA39_0==RULE_STRING) ) {
+                alt39=1;
             }
-            else if ( (LA42_0==RULE_ID) ) {
-                alt42=2;
+            else if ( (LA39_0==RULE_ID) ) {
+                alt39=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 42, 0, input);
+                    new NoViableAltException("", 39, 0, input);
 
                 throw nvae;
             }
-            switch (alt42) {
+            switch (alt39) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1829:6: this_STRING_0= RULE_STRING
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1772:6: this_STRING_0= RULE_STRING
                     {
-                    this_STRING_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleEString3727); 
+                    this_STRING_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleEString3613); 
 
                     		current.merge(this_STRING_0);
                         
@@ -4318,9 +4166,9 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1837:10: this_ID_1= RULE_ID
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1780:10: this_ID_1= RULE_ID
                     {
-                    this_ID_1=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleEString3753); 
+                    this_ID_1=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleEString3639); 
 
                     		current.merge(this_ID_1);
                         
@@ -4351,7 +4199,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEFloat"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1852:1: entryRuleEFloat returns [String current=null] : iv_ruleEFloat= ruleEFloat EOF ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1795:1: entryRuleEFloat returns [String current=null] : iv_ruleEFloat= ruleEFloat EOF ;
     public final String entryRuleEFloat() throws RecognitionException {
         String current = null;
 
@@ -4359,17 +4207,17 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1853:2: (iv_ruleEFloat= ruleEFloat EOF )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1854:2: iv_ruleEFloat= ruleEFloat EOF
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1796:2: (iv_ruleEFloat= ruleEFloat EOF )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1797:2: iv_ruleEFloat= ruleEFloat EOF
             {
              newCompositeNode(grammarAccess.getEFloatRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEFloat_in_entryRuleEFloat3799);
+            pushFollow(FollowSets000.FOLLOW_ruleEFloat_in_entryRuleEFloat3685);
             iv_ruleEFloat=ruleEFloat();
 
             state._fsp--;
 
              current =iv_ruleEFloat.getText(); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEFloat3810); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEFloat3696); 
 
             }
 
@@ -4387,7 +4235,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEFloat"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1861:1: ruleEFloat returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? ) ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1804:1: ruleEFloat returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? ) ;
     public final AntlrDatatypeRuleToken ruleEFloat() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4399,24 +4247,24 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1864:28: ( ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1865:1: ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1807:28: ( ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1808:1: ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1865:1: ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1865:2: (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )?
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1808:1: ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1808:2: (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )?
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1865:2: (kw= '-' )?
-            int alt43=2;
-            int LA43_0 = input.LA(1);
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1808:2: (kw= '-' )?
+            int alt40=2;
+            int LA40_0 = input.LA(1);
 
-            if ( (LA43_0==53) ) {
-                alt43=1;
+            if ( (LA40_0==51) ) {
+                alt40=1;
             }
-            switch (alt43) {
+            switch (alt40) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1866:2: kw= '-'
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1809:2: kw= '-'
                     {
-                    kw=(Token)match(input,53,FollowSets000.FOLLOW_53_in_ruleEFloat3849); 
+                    kw=(Token)match(input,51,FollowSets000.FOLLOW_51_in_ruleEFloat3735); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getEFloatAccess().getHyphenMinusKeyword_0()); 
@@ -4427,18 +4275,18 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1871:3: (this_INT_1= RULE_INT )?
-            int alt44=2;
-            int LA44_0 = input.LA(1);
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1814:3: (this_INT_1= RULE_INT )?
+            int alt41=2;
+            int LA41_0 = input.LA(1);
 
-            if ( (LA44_0==RULE_INT) ) {
-                alt44=1;
+            if ( (LA41_0==RULE_INT) ) {
+                alt41=1;
             }
-            switch (alt44) {
+            switch (alt41) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1871:8: this_INT_1= RULE_INT
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1814:8: this_INT_1= RULE_INT
                     {
-                    this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_ruleEFloat3867); 
+                    this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_ruleEFloat3753); 
 
                     		current.merge(this_INT_1);
                         
@@ -4451,50 +4299,50 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            kw=(Token)match(input,62,FollowSets000.FOLLOW_62_in_ruleEFloat3887); 
+            kw=(Token)match(input,60,FollowSets000.FOLLOW_60_in_ruleEFloat3773); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getEFloatAccess().getFullStopKeyword_2()); 
                 
-            this_INT_3=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_ruleEFloat3902); 
+            this_INT_3=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_ruleEFloat3788); 
 
             		current.merge(this_INT_3);
                 
              
                 newLeafNode(this_INT_3, grammarAccess.getEFloatAccess().getINTTerminalRuleCall_3()); 
                 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1891:1: ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )?
-            int alt47=2;
-            int LA47_0 = input.LA(1);
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1834:1: ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )?
+            int alt44=2;
+            int LA44_0 = input.LA(1);
 
-            if ( ((LA47_0>=63 && LA47_0<=64)) ) {
-                alt47=1;
+            if ( ((LA44_0>=61 && LA44_0<=62)) ) {
+                alt44=1;
             }
-            switch (alt47) {
+            switch (alt44) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1891:2: (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1834:2: (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1891:2: (kw= 'E' | kw= 'e' )
-                    int alt45=2;
-                    int LA45_0 = input.LA(1);
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1834:2: (kw= 'E' | kw= 'e' )
+                    int alt42=2;
+                    int LA42_0 = input.LA(1);
 
-                    if ( (LA45_0==63) ) {
-                        alt45=1;
+                    if ( (LA42_0==61) ) {
+                        alt42=1;
                     }
-                    else if ( (LA45_0==64) ) {
-                        alt45=2;
+                    else if ( (LA42_0==62) ) {
+                        alt42=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 45, 0, input);
+                            new NoViableAltException("", 42, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt45) {
+                    switch (alt42) {
                         case 1 :
-                            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1892:2: kw= 'E'
+                            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1835:2: kw= 'E'
                             {
-                            kw=(Token)match(input,63,FollowSets000.FOLLOW_63_in_ruleEFloat3922); 
+                            kw=(Token)match(input,61,FollowSets000.FOLLOW_61_in_ruleEFloat3808); 
 
                                     current.merge(kw);
                                     newLeafNode(kw, grammarAccess.getEFloatAccess().getEKeyword_4_0_0()); 
@@ -4503,9 +4351,9 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1899:2: kw= 'e'
+                            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1842:2: kw= 'e'
                             {
-                            kw=(Token)match(input,64,FollowSets000.FOLLOW_64_in_ruleEFloat3941); 
+                            kw=(Token)match(input,62,FollowSets000.FOLLOW_62_in_ruleEFloat3827); 
 
                                     current.merge(kw);
                                     newLeafNode(kw, grammarAccess.getEFloatAccess().getEKeyword_4_0_1()); 
@@ -4516,18 +4364,18 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1904:2: (kw= '-' )?
-                    int alt46=2;
-                    int LA46_0 = input.LA(1);
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1847:2: (kw= '-' )?
+                    int alt43=2;
+                    int LA43_0 = input.LA(1);
 
-                    if ( (LA46_0==53) ) {
-                        alt46=1;
+                    if ( (LA43_0==51) ) {
+                        alt43=1;
                     }
-                    switch (alt46) {
+                    switch (alt43) {
                         case 1 :
-                            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1905:2: kw= '-'
+                            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1848:2: kw= '-'
                             {
-                            kw=(Token)match(input,53,FollowSets000.FOLLOW_53_in_ruleEFloat3956); 
+                            kw=(Token)match(input,51,FollowSets000.FOLLOW_51_in_ruleEFloat3842); 
 
                                     current.merge(kw);
                                     newLeafNode(kw, grammarAccess.getEFloatAccess().getHyphenMinusKeyword_4_1()); 
@@ -4538,7 +4386,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    this_INT_7=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_ruleEFloat3973); 
+                    this_INT_7=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_ruleEFloat3859); 
 
                     		current.merge(this_INT_7);
                         
@@ -4572,7 +4420,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEInt"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1925:1: entryRuleEInt returns [String current=null] : iv_ruleEInt= ruleEInt EOF ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1868:1: entryRuleEInt returns [String current=null] : iv_ruleEInt= ruleEInt EOF ;
     public final String entryRuleEInt() throws RecognitionException {
         String current = null;
 
@@ -4580,17 +4428,17 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1926:2: (iv_ruleEInt= ruleEInt EOF )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1927:2: iv_ruleEInt= ruleEInt EOF
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1869:2: (iv_ruleEInt= ruleEInt EOF )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1870:2: iv_ruleEInt= ruleEInt EOF
             {
              newCompositeNode(grammarAccess.getEIntRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_entryRuleEInt4021);
+            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_entryRuleEInt3907);
             iv_ruleEInt=ruleEInt();
 
             state._fsp--;
 
              current =iv_ruleEInt.getText(); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEInt4032); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEInt3918); 
 
             }
 
@@ -4608,7 +4456,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEInt"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1934:1: ruleEInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_INT_1= RULE_INT ) ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1877:1: ruleEInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_INT_1= RULE_INT ) ;
     public final AntlrDatatypeRuleToken ruleEInt() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4618,24 +4466,24 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1937:28: ( ( (kw= '-' )? this_INT_1= RULE_INT ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1938:1: ( (kw= '-' )? this_INT_1= RULE_INT )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1880:28: ( ( (kw= '-' )? this_INT_1= RULE_INT ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1881:1: ( (kw= '-' )? this_INT_1= RULE_INT )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1938:1: ( (kw= '-' )? this_INT_1= RULE_INT )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1938:2: (kw= '-' )? this_INT_1= RULE_INT
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1881:1: ( (kw= '-' )? this_INT_1= RULE_INT )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1881:2: (kw= '-' )? this_INT_1= RULE_INT
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1938:2: (kw= '-' )?
-            int alt48=2;
-            int LA48_0 = input.LA(1);
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1881:2: (kw= '-' )?
+            int alt45=2;
+            int LA45_0 = input.LA(1);
 
-            if ( (LA48_0==53) ) {
-                alt48=1;
+            if ( (LA45_0==51) ) {
+                alt45=1;
             }
-            switch (alt48) {
+            switch (alt45) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1939:2: kw= '-'
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1882:2: kw= '-'
                     {
-                    kw=(Token)match(input,53,FollowSets000.FOLLOW_53_in_ruleEInt4071); 
+                    kw=(Token)match(input,51,FollowSets000.FOLLOW_51_in_ruleEInt3957); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getEIntAccess().getHyphenMinusKeyword_0()); 
@@ -4646,7 +4494,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_ruleEInt4088); 
+            this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_ruleEInt3974); 
 
             		current.merge(this_INT_1);
                 
@@ -4674,7 +4522,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualifiedName"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1959:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1902:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
     public final String entryRuleQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -4682,17 +4530,17 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1960:2: (iv_ruleQualifiedName= ruleQualifiedName EOF )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1961:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1903:2: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1904:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
              newCompositeNode(grammarAccess.getQualifiedNameRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName4134);
+            pushFollow(FollowSets000.FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName4020);
             iv_ruleQualifiedName=ruleQualifiedName();
 
             state._fsp--;
 
              current =iv_ruleQualifiedName.getText(); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleQualifiedName4145); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleQualifiedName4031); 
 
             }
 
@@ -4710,7 +4558,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedName"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1968:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '::' this_ID_2= RULE_ID )* ) ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1911:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '::' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4721,40 +4569,40 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1971:28: ( (this_ID_0= RULE_ID (kw= '::' this_ID_2= RULE_ID )* ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1972:1: (this_ID_0= RULE_ID (kw= '::' this_ID_2= RULE_ID )* )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1914:28: ( (this_ID_0= RULE_ID (kw= '::' this_ID_2= RULE_ID )* ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1915:1: (this_ID_0= RULE_ID (kw= '::' this_ID_2= RULE_ID )* )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1972:1: (this_ID_0= RULE_ID (kw= '::' this_ID_2= RULE_ID )* )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1972:6: this_ID_0= RULE_ID (kw= '::' this_ID_2= RULE_ID )*
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1915:1: (this_ID_0= RULE_ID (kw= '::' this_ID_2= RULE_ID )* )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1915:6: this_ID_0= RULE_ID (kw= '::' this_ID_2= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleQualifiedName4185); 
+            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleQualifiedName4071); 
 
             		current.merge(this_ID_0);
                 
              
                 newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
                 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1979:1: (kw= '::' this_ID_2= RULE_ID )*
-            loop49:
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1922:1: (kw= '::' this_ID_2= RULE_ID )*
+            loop46:
             do {
-                int alt49=2;
-                int LA49_0 = input.LA(1);
+                int alt46=2;
+                int LA46_0 = input.LA(1);
 
-                if ( (LA49_0==65) ) {
-                    alt49=1;
+                if ( (LA46_0==63) ) {
+                    alt46=1;
                 }
 
 
-                switch (alt49) {
+                switch (alt46) {
             	case 1 :
-            	    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1980:2: kw= '::' this_ID_2= RULE_ID
+            	    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1923:2: kw= '::' this_ID_2= RULE_ID
             	    {
-            	    kw=(Token)match(input,65,FollowSets000.FOLLOW_65_in_ruleQualifiedName4204); 
+            	    kw=(Token)match(input,63,FollowSets000.FOLLOW_63_in_ruleQualifiedName4090); 
 
             	            current.merge(kw);
             	            newLeafNode(kw, grammarAccess.getQualifiedNameAccess().getColonColonKeyword_1_0()); 
             	        
-            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleQualifiedName4219); 
+            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleQualifiedName4105); 
 
             	    		current.merge(this_ID_2);
             	        
@@ -4766,7 +4614,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop49;
+            	    break loop46;
                 }
             } while (true);
 
@@ -4791,7 +4639,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualifiedNameWithDot"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2000:1: entryRuleQualifiedNameWithDot returns [String current=null] : iv_ruleQualifiedNameWithDot= ruleQualifiedNameWithDot EOF ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1943:1: entryRuleQualifiedNameWithDot returns [String current=null] : iv_ruleQualifiedNameWithDot= ruleQualifiedNameWithDot EOF ;
     public final String entryRuleQualifiedNameWithDot() throws RecognitionException {
         String current = null;
 
@@ -4799,17 +4647,17 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2001:2: (iv_ruleQualifiedNameWithDot= ruleQualifiedNameWithDot EOF )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2002:2: iv_ruleQualifiedNameWithDot= ruleQualifiedNameWithDot EOF
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1944:2: (iv_ruleQualifiedNameWithDot= ruleQualifiedNameWithDot EOF )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1945:2: iv_ruleQualifiedNameWithDot= ruleQualifiedNameWithDot EOF
             {
              newCompositeNode(grammarAccess.getQualifiedNameWithDotRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleQualifiedNameWithDot_in_entryRuleQualifiedNameWithDot4267);
+            pushFollow(FollowSets000.FOLLOW_ruleQualifiedNameWithDot_in_entryRuleQualifiedNameWithDot4153);
             iv_ruleQualifiedNameWithDot=ruleQualifiedNameWithDot();
 
             state._fsp--;
 
              current =iv_ruleQualifiedNameWithDot.getText(); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleQualifiedNameWithDot4278); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleQualifiedNameWithDot4164); 
 
             }
 
@@ -4827,7 +4675,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedNameWithDot"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2009:1: ruleQualifiedNameWithDot returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1952:1: ruleQualifiedNameWithDot returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedNameWithDot() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4839,16 +4687,16 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2012:28: ( (this_QualifiedName_0= ruleQualifiedName (kw= '.' this_ID_2= RULE_ID )* ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2013:1: (this_QualifiedName_0= ruleQualifiedName (kw= '.' this_ID_2= RULE_ID )* )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1955:28: ( (this_QualifiedName_0= ruleQualifiedName (kw= '.' this_ID_2= RULE_ID )* ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1956:1: (this_QualifiedName_0= ruleQualifiedName (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2013:1: (this_QualifiedName_0= ruleQualifiedName (kw= '.' this_ID_2= RULE_ID )* )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2014:5: this_QualifiedName_0= ruleQualifiedName (kw= '.' this_ID_2= RULE_ID )*
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1956:1: (this_QualifiedName_0= ruleQualifiedName (kw= '.' this_ID_2= RULE_ID )* )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1957:5: this_QualifiedName_0= ruleQualifiedName (kw= '.' this_ID_2= RULE_ID )*
             {
              
                     newCompositeNode(grammarAccess.getQualifiedNameWithDotAccess().getQualifiedNameParserRuleCall_0()); 
                 
-            pushFollow(FollowSets000.FOLLOW_ruleQualifiedName_in_ruleQualifiedNameWithDot4325);
+            pushFollow(FollowSets000.FOLLOW_ruleQualifiedName_in_ruleQualifiedNameWithDot4211);
             this_QualifiedName_0=ruleQualifiedName();
 
             state._fsp--;
@@ -4859,27 +4707,27 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
              
                     afterParserOrEnumRuleCall();
                 
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2024:1: (kw= '.' this_ID_2= RULE_ID )*
-            loop50:
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1967:1: (kw= '.' this_ID_2= RULE_ID )*
+            loop47:
             do {
-                int alt50=2;
-                int LA50_0 = input.LA(1);
+                int alt47=2;
+                int LA47_0 = input.LA(1);
 
-                if ( (LA50_0==62) ) {
-                    alt50=1;
+                if ( (LA47_0==60) ) {
+                    alt47=1;
                 }
 
 
-                switch (alt50) {
+                switch (alt47) {
             	case 1 :
-            	    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2025:2: kw= '.' this_ID_2= RULE_ID
+            	    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1968:2: kw= '.' this_ID_2= RULE_ID
             	    {
-            	    kw=(Token)match(input,62,FollowSets000.FOLLOW_62_in_ruleQualifiedNameWithDot4344); 
+            	    kw=(Token)match(input,60,FollowSets000.FOLLOW_60_in_ruleQualifiedNameWithDot4230); 
 
             	            current.merge(kw);
             	            newLeafNode(kw, grammarAccess.getQualifiedNameWithDotAccess().getFullStopKeyword_1_0()); 
             	        
-            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleQualifiedNameWithDot4359); 
+            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleQualifiedNameWithDot4245); 
 
             	    		current.merge(this_ID_2);
             	        
@@ -4891,7 +4739,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop50;
+            	    break loop47;
                 }
             } while (true);
 
@@ -4916,7 +4764,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConnectionPolicyLockPolicy"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2045:1: ruleConnectionPolicyLockPolicy returns [Enumerator current=null] : ( (enumLiteral_0= 'UNSYNC' ) | (enumLiteral_1= 'LOCKED' ) | (enumLiteral_2= 'LOCK_FREE' ) ) ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1988:1: ruleConnectionPolicyLockPolicy returns [Enumerator current=null] : ( (enumLiteral_0= 'UNSYNC' ) | (enumLiteral_1= 'LOCKED' ) | (enumLiteral_2= 'LOCK_FREE' ) ) ;
     public final Enumerator ruleConnectionPolicyLockPolicy() throws RecognitionException {
         Enumerator current = null;
 
@@ -4926,42 +4774,42 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2047:28: ( ( (enumLiteral_0= 'UNSYNC' ) | (enumLiteral_1= 'LOCKED' ) | (enumLiteral_2= 'LOCK_FREE' ) ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2048:1: ( (enumLiteral_0= 'UNSYNC' ) | (enumLiteral_1= 'LOCKED' ) | (enumLiteral_2= 'LOCK_FREE' ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1990:28: ( ( (enumLiteral_0= 'UNSYNC' ) | (enumLiteral_1= 'LOCKED' ) | (enumLiteral_2= 'LOCK_FREE' ) ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1991:1: ( (enumLiteral_0= 'UNSYNC' ) | (enumLiteral_1= 'LOCKED' ) | (enumLiteral_2= 'LOCK_FREE' ) )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2048:1: ( (enumLiteral_0= 'UNSYNC' ) | (enumLiteral_1= 'LOCKED' ) | (enumLiteral_2= 'LOCK_FREE' ) )
-            int alt51=3;
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1991:1: ( (enumLiteral_0= 'UNSYNC' ) | (enumLiteral_1= 'LOCKED' ) | (enumLiteral_2= 'LOCK_FREE' ) )
+            int alt48=3;
             switch ( input.LA(1) ) {
+            case 64:
+                {
+                alt48=1;
+                }
+                break;
+            case 65:
+                {
+                alt48=2;
+                }
+                break;
             case 66:
                 {
-                alt51=1;
-                }
-                break;
-            case 67:
-                {
-                alt51=2;
-                }
-                break;
-            case 68:
-                {
-                alt51=3;
+                alt48=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 51, 0, input);
+                    new NoViableAltException("", 48, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt51) {
+            switch (alt48) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2048:2: (enumLiteral_0= 'UNSYNC' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1991:2: (enumLiteral_0= 'UNSYNC' )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2048:2: (enumLiteral_0= 'UNSYNC' )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2048:4: enumLiteral_0= 'UNSYNC'
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1991:2: (enumLiteral_0= 'UNSYNC' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1991:4: enumLiteral_0= 'UNSYNC'
                     {
-                    enumLiteral_0=(Token)match(input,66,FollowSets000.FOLLOW_66_in_ruleConnectionPolicyLockPolicy4420); 
+                    enumLiteral_0=(Token)match(input,64,FollowSets000.FOLLOW_64_in_ruleConnectionPolicyLockPolicy4306); 
 
                             current = grammarAccess.getConnectionPolicyLockPolicyAccess().getUNSYNCEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getConnectionPolicyLockPolicyAccess().getUNSYNCEnumLiteralDeclaration_0()); 
@@ -4973,12 +4821,12 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2054:6: (enumLiteral_1= 'LOCKED' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1997:6: (enumLiteral_1= 'LOCKED' )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2054:6: (enumLiteral_1= 'LOCKED' )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2054:8: enumLiteral_1= 'LOCKED'
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1997:6: (enumLiteral_1= 'LOCKED' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:1997:8: enumLiteral_1= 'LOCKED'
                     {
-                    enumLiteral_1=(Token)match(input,67,FollowSets000.FOLLOW_67_in_ruleConnectionPolicyLockPolicy4437); 
+                    enumLiteral_1=(Token)match(input,65,FollowSets000.FOLLOW_65_in_ruleConnectionPolicyLockPolicy4323); 
 
                             current = grammarAccess.getConnectionPolicyLockPolicyAccess().getLOCKEDEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getConnectionPolicyLockPolicyAccess().getLOCKEDEnumLiteralDeclaration_1()); 
@@ -4990,12 +4838,12 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2060:6: (enumLiteral_2= 'LOCK_FREE' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2003:6: (enumLiteral_2= 'LOCK_FREE' )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2060:6: (enumLiteral_2= 'LOCK_FREE' )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2060:8: enumLiteral_2= 'LOCK_FREE'
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2003:6: (enumLiteral_2= 'LOCK_FREE' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2003:8: enumLiteral_2= 'LOCK_FREE'
                     {
-                    enumLiteral_2=(Token)match(input,68,FollowSets000.FOLLOW_68_in_ruleConnectionPolicyLockPolicy4454); 
+                    enumLiteral_2=(Token)match(input,66,FollowSets000.FOLLOW_66_in_ruleConnectionPolicyLockPolicy4340); 
 
                             current = grammarAccess.getConnectionPolicyLockPolicyAccess().getLOCK_FREEEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getConnectionPolicyLockPolicyAccess().getLOCK_FREEEnumLiteralDeclaration_2()); 
@@ -5027,7 +4875,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConnectionPolicyType"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2070:1: ruleConnectionPolicyType returns [Enumerator current=null] : ( (enumLiteral_0= 'DATA' ) | (enumLiteral_1= 'BUFFER' ) | (enumLiteral_2= 'CIRCULAR_BUFFER' ) ) ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2013:1: ruleConnectionPolicyType returns [Enumerator current=null] : ( (enumLiteral_0= 'DATA' ) | (enumLiteral_1= 'BUFFER' ) | (enumLiteral_2= 'CIRCULAR_BUFFER' ) ) ;
     public final Enumerator ruleConnectionPolicyType() throws RecognitionException {
         Enumerator current = null;
 
@@ -5037,42 +4885,42 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2072:28: ( ( (enumLiteral_0= 'DATA' ) | (enumLiteral_1= 'BUFFER' ) | (enumLiteral_2= 'CIRCULAR_BUFFER' ) ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2073:1: ( (enumLiteral_0= 'DATA' ) | (enumLiteral_1= 'BUFFER' ) | (enumLiteral_2= 'CIRCULAR_BUFFER' ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2015:28: ( ( (enumLiteral_0= 'DATA' ) | (enumLiteral_1= 'BUFFER' ) | (enumLiteral_2= 'CIRCULAR_BUFFER' ) ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2016:1: ( (enumLiteral_0= 'DATA' ) | (enumLiteral_1= 'BUFFER' ) | (enumLiteral_2= 'CIRCULAR_BUFFER' ) )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2073:1: ( (enumLiteral_0= 'DATA' ) | (enumLiteral_1= 'BUFFER' ) | (enumLiteral_2= 'CIRCULAR_BUFFER' ) )
-            int alt52=3;
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2016:1: ( (enumLiteral_0= 'DATA' ) | (enumLiteral_1= 'BUFFER' ) | (enumLiteral_2= 'CIRCULAR_BUFFER' ) )
+            int alt49=3;
             switch ( input.LA(1) ) {
+            case 67:
+                {
+                alt49=1;
+                }
+                break;
+            case 68:
+                {
+                alt49=2;
+                }
+                break;
             case 69:
                 {
-                alt52=1;
-                }
-                break;
-            case 70:
-                {
-                alt52=2;
-                }
-                break;
-            case 71:
-                {
-                alt52=3;
+                alt49=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 52, 0, input);
+                    new NoViableAltException("", 49, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt52) {
+            switch (alt49) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2073:2: (enumLiteral_0= 'DATA' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2016:2: (enumLiteral_0= 'DATA' )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2073:2: (enumLiteral_0= 'DATA' )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2073:4: enumLiteral_0= 'DATA'
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2016:2: (enumLiteral_0= 'DATA' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2016:4: enumLiteral_0= 'DATA'
                     {
-                    enumLiteral_0=(Token)match(input,69,FollowSets000.FOLLOW_69_in_ruleConnectionPolicyType4499); 
+                    enumLiteral_0=(Token)match(input,67,FollowSets000.FOLLOW_67_in_ruleConnectionPolicyType4385); 
 
                             current = grammarAccess.getConnectionPolicyTypeAccess().getDATAEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getConnectionPolicyTypeAccess().getDATAEnumLiteralDeclaration_0()); 
@@ -5084,12 +4932,12 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2079:6: (enumLiteral_1= 'BUFFER' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2022:6: (enumLiteral_1= 'BUFFER' )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2079:6: (enumLiteral_1= 'BUFFER' )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2079:8: enumLiteral_1= 'BUFFER'
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2022:6: (enumLiteral_1= 'BUFFER' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2022:8: enumLiteral_1= 'BUFFER'
                     {
-                    enumLiteral_1=(Token)match(input,70,FollowSets000.FOLLOW_70_in_ruleConnectionPolicyType4516); 
+                    enumLiteral_1=(Token)match(input,68,FollowSets000.FOLLOW_68_in_ruleConnectionPolicyType4402); 
 
                             current = grammarAccess.getConnectionPolicyTypeAccess().getBUFFEREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getConnectionPolicyTypeAccess().getBUFFEREnumLiteralDeclaration_1()); 
@@ -5101,12 +4949,12 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2085:6: (enumLiteral_2= 'CIRCULAR_BUFFER' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2028:6: (enumLiteral_2= 'CIRCULAR_BUFFER' )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2085:6: (enumLiteral_2= 'CIRCULAR_BUFFER' )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2085:8: enumLiteral_2= 'CIRCULAR_BUFFER'
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2028:6: (enumLiteral_2= 'CIRCULAR_BUFFER' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2028:8: enumLiteral_2= 'CIRCULAR_BUFFER'
                     {
-                    enumLiteral_2=(Token)match(input,71,FollowSets000.FOLLOW_71_in_ruleConnectionPolicyType4533); 
+                    enumLiteral_2=(Token)match(input,69,FollowSets000.FOLLOW_69_in_ruleConnectionPolicyType4419); 
 
                             current = grammarAccess.getConnectionPolicyTypeAccess().getCIRCULAR_BUFFEREnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getConnectionPolicyTypeAccess().getCIRCULAR_BUFFEREnumLiteralDeclaration_2()); 
@@ -5138,7 +4986,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConnectionPolicyTransport"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2095:1: ruleConnectionPolicyTransport returns [Enumerator current=null] : ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'CORBA' ) | (enumLiteral_2= 'MQUEUE' ) | (enumLiteral_3= 'ROS' ) ) ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2038:1: ruleConnectionPolicyTransport returns [Enumerator current=null] : ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'CORBA' ) | (enumLiteral_2= 'MQUEUE' ) | (enumLiteral_3= 'ROS' ) ) ;
     public final Enumerator ruleConnectionPolicyTransport() throws RecognitionException {
         Enumerator current = null;
 
@@ -5149,47 +4997,47 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2097:28: ( ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'CORBA' ) | (enumLiteral_2= 'MQUEUE' ) | (enumLiteral_3= 'ROS' ) ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2098:1: ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'CORBA' ) | (enumLiteral_2= 'MQUEUE' ) | (enumLiteral_3= 'ROS' ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2040:28: ( ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'CORBA' ) | (enumLiteral_2= 'MQUEUE' ) | (enumLiteral_3= 'ROS' ) ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2041:1: ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'CORBA' ) | (enumLiteral_2= 'MQUEUE' ) | (enumLiteral_3= 'ROS' ) )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2098:1: ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'CORBA' ) | (enumLiteral_2= 'MQUEUE' ) | (enumLiteral_3= 'ROS' ) )
-            int alt53=4;
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2041:1: ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'CORBA' ) | (enumLiteral_2= 'MQUEUE' ) | (enumLiteral_3= 'ROS' ) )
+            int alt50=4;
             switch ( input.LA(1) ) {
+            case 70:
+                {
+                alt50=1;
+                }
+                break;
+            case 71:
+                {
+                alt50=2;
+                }
+                break;
             case 72:
                 {
-                alt53=1;
+                alt50=3;
                 }
                 break;
             case 73:
                 {
-                alt53=2;
-                }
-                break;
-            case 74:
-                {
-                alt53=3;
-                }
-                break;
-            case 75:
-                {
-                alt53=4;
+                alt50=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 53, 0, input);
+                    new NoViableAltException("", 50, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt53) {
+            switch (alt50) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2098:2: (enumLiteral_0= 'default' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2041:2: (enumLiteral_0= 'default' )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2098:2: (enumLiteral_0= 'default' )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2098:4: enumLiteral_0= 'default'
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2041:2: (enumLiteral_0= 'default' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2041:4: enumLiteral_0= 'default'
                     {
-                    enumLiteral_0=(Token)match(input,72,FollowSets000.FOLLOW_72_in_ruleConnectionPolicyTransport4578); 
+                    enumLiteral_0=(Token)match(input,70,FollowSets000.FOLLOW_70_in_ruleConnectionPolicyTransport4464); 
 
                             current = grammarAccess.getConnectionPolicyTransportAccess().getDefaultEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getConnectionPolicyTransportAccess().getDefaultEnumLiteralDeclaration_0()); 
@@ -5201,12 +5049,12 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2104:6: (enumLiteral_1= 'CORBA' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2047:6: (enumLiteral_1= 'CORBA' )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2104:6: (enumLiteral_1= 'CORBA' )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2104:8: enumLiteral_1= 'CORBA'
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2047:6: (enumLiteral_1= 'CORBA' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2047:8: enumLiteral_1= 'CORBA'
                     {
-                    enumLiteral_1=(Token)match(input,73,FollowSets000.FOLLOW_73_in_ruleConnectionPolicyTransport4595); 
+                    enumLiteral_1=(Token)match(input,71,FollowSets000.FOLLOW_71_in_ruleConnectionPolicyTransport4481); 
 
                             current = grammarAccess.getConnectionPolicyTransportAccess().getCORBAEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getConnectionPolicyTransportAccess().getCORBAEnumLiteralDeclaration_1()); 
@@ -5218,12 +5066,12 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2110:6: (enumLiteral_2= 'MQUEUE' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2053:6: (enumLiteral_2= 'MQUEUE' )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2110:6: (enumLiteral_2= 'MQUEUE' )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2110:8: enumLiteral_2= 'MQUEUE'
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2053:6: (enumLiteral_2= 'MQUEUE' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2053:8: enumLiteral_2= 'MQUEUE'
                     {
-                    enumLiteral_2=(Token)match(input,74,FollowSets000.FOLLOW_74_in_ruleConnectionPolicyTransport4612); 
+                    enumLiteral_2=(Token)match(input,72,FollowSets000.FOLLOW_72_in_ruleConnectionPolicyTransport4498); 
 
                             current = grammarAccess.getConnectionPolicyTransportAccess().getMQUEUEEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getConnectionPolicyTransportAccess().getMQUEUEEnumLiteralDeclaration_2()); 
@@ -5235,12 +5083,12 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2116:6: (enumLiteral_3= 'ROS' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2059:6: (enumLiteral_3= 'ROS' )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2116:6: (enumLiteral_3= 'ROS' )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2116:8: enumLiteral_3= 'ROS'
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2059:6: (enumLiteral_3= 'ROS' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2059:8: enumLiteral_3= 'ROS'
                     {
-                    enumLiteral_3=(Token)match(input,75,FollowSets000.FOLLOW_75_in_ruleConnectionPolicyTransport4629); 
+                    enumLiteral_3=(Token)match(input,73,FollowSets000.FOLLOW_73_in_ruleConnectionPolicyTransport4515); 
 
                             current = grammarAccess.getConnectionPolicyTransportAccess().getROSEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getConnectionPolicyTransportAccess().getROSEnumLiteralDeclaration_3()); 
@@ -5272,7 +5120,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleScheduler"
-    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2126:1: ruleScheduler returns [Enumerator current=null] : ( (enumLiteral_0= 'ORO_SCHED_OTHER' ) | (enumLiteral_1= 'ORO_SCHED_RT' ) ) ;
+    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2069:1: ruleScheduler returns [Enumerator current=null] : ( (enumLiteral_0= 'ORO_SCHED_OTHER' ) | (enumLiteral_1= 'ORO_SCHED_RT' ) ) ;
     public final Enumerator ruleScheduler() throws RecognitionException {
         Enumerator current = null;
 
@@ -5281,33 +5129,33 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2128:28: ( ( (enumLiteral_0= 'ORO_SCHED_OTHER' ) | (enumLiteral_1= 'ORO_SCHED_RT' ) ) )
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2129:1: ( (enumLiteral_0= 'ORO_SCHED_OTHER' ) | (enumLiteral_1= 'ORO_SCHED_RT' ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2071:28: ( ( (enumLiteral_0= 'ORO_SCHED_OTHER' ) | (enumLiteral_1= 'ORO_SCHED_RT' ) ) )
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2072:1: ( (enumLiteral_0= 'ORO_SCHED_OTHER' ) | (enumLiteral_1= 'ORO_SCHED_RT' ) )
             {
-            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2129:1: ( (enumLiteral_0= 'ORO_SCHED_OTHER' ) | (enumLiteral_1= 'ORO_SCHED_RT' ) )
-            int alt54=2;
-            int LA54_0 = input.LA(1);
+            // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2072:1: ( (enumLiteral_0= 'ORO_SCHED_OTHER' ) | (enumLiteral_1= 'ORO_SCHED_RT' ) )
+            int alt51=2;
+            int LA51_0 = input.LA(1);
 
-            if ( (LA54_0==76) ) {
-                alt54=1;
+            if ( (LA51_0==74) ) {
+                alt51=1;
             }
-            else if ( (LA54_0==77) ) {
-                alt54=2;
+            else if ( (LA51_0==75) ) {
+                alt51=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 54, 0, input);
+                    new NoViableAltException("", 51, 0, input);
 
                 throw nvae;
             }
-            switch (alt54) {
+            switch (alt51) {
                 case 1 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2129:2: (enumLiteral_0= 'ORO_SCHED_OTHER' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2072:2: (enumLiteral_0= 'ORO_SCHED_OTHER' )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2129:2: (enumLiteral_0= 'ORO_SCHED_OTHER' )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2129:4: enumLiteral_0= 'ORO_SCHED_OTHER'
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2072:2: (enumLiteral_0= 'ORO_SCHED_OTHER' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2072:4: enumLiteral_0= 'ORO_SCHED_OTHER'
                     {
-                    enumLiteral_0=(Token)match(input,76,FollowSets000.FOLLOW_76_in_ruleScheduler4674); 
+                    enumLiteral_0=(Token)match(input,74,FollowSets000.FOLLOW_74_in_ruleScheduler4560); 
 
                             current = grammarAccess.getSchedulerAccess().getORO_SCHED_OTHEREnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getSchedulerAccess().getORO_SCHED_OTHEREnumLiteralDeclaration_0()); 
@@ -5319,12 +5167,12 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2135:6: (enumLiteral_1= 'ORO_SCHED_RT' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2078:6: (enumLiteral_1= 'ORO_SCHED_RT' )
                     {
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2135:6: (enumLiteral_1= 'ORO_SCHED_RT' )
-                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2135:8: enumLiteral_1= 'ORO_SCHED_RT'
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2078:6: (enumLiteral_1= 'ORO_SCHED_RT' )
+                    // ../be.kuleuven.rodinia.dsl.rtt/src-gen/be/kuleuven/rodinia/dsl/rtt/parser/antlr/internal/InternalRttStructure.g:2078:8: enumLiteral_1= 'ORO_SCHED_RT'
                     {
-                    enumLiteral_1=(Token)match(input,77,FollowSets000.FOLLOW_77_in_ruleScheduler4691); 
+                    enumLiteral_1=(Token)match(input,75,FollowSets000.FOLLOW_75_in_ruleScheduler4577); 
 
                             current = grammarAccess.getSchedulerAccess().getORO_SCHED_RTEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getSchedulerAccess().getORO_SCHED_RTEnumLiteralDeclaration_1()); 
@@ -5394,7 +5242,7 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_ruleQualifiedNameWithDot_in_ruleTaskContext613 = new BitSet(new long[]{0x0000000000100000L});
         public static final BitSet FOLLOW_20_in_ruleTaskContext625 = new BitSet(new long[]{0x0000000000000040L});
         public static final BitSet FOLLOW_ruleQualifiedNameWithDot_in_ruleTaskContext646 = new BitSet(new long[]{0x0000000000200000L});
-        public static final BitSet FOLLOW_21_in_ruleTaskContext658 = new BitSet(new long[]{0x0040000000000000L});
+        public static final BitSet FOLLOW_21_in_ruleTaskContext658 = new BitSet(new long[]{0x0010000000000000L});
         public static final BitSet FOLLOW_ruleActivity_in_ruleTaskContext679 = new BitSet(new long[]{0x0000000007C08000L});
         public static final BitSet FOLLOW_22_in_ruleTaskContext692 = new BitSet(new long[]{0x0000000000001000L});
         public static final BitSet FOLLOW_12_in_ruleTaskContext704 = new BitSet(new long[]{0x0000020000000000L});
@@ -5403,27 +5251,27 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_ruleInputPort_in_ruleTaskContext759 = new BitSet(new long[]{0x000000000000C000L});
         public static final BitSet FOLLOW_15_in_ruleTaskContext773 = new BitSet(new long[]{0x0000000007808000L});
         public static final BitSet FOLLOW_23_in_ruleTaskContext788 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleTaskContext800 = new BitSet(new long[]{0x0000100000000000L});
+        public static final BitSet FOLLOW_12_in_ruleTaskContext800 = new BitSet(new long[]{0x0000080000000000L});
         public static final BitSet FOLLOW_ruleEventPort_in_ruleTaskContext821 = new BitSet(new long[]{0x000000000000C000L});
-        public static final BitSet FOLLOW_14_in_ruleTaskContext834 = new BitSet(new long[]{0x0000100000000000L});
+        public static final BitSet FOLLOW_14_in_ruleTaskContext834 = new BitSet(new long[]{0x0000080000000000L});
         public static final BitSet FOLLOW_ruleEventPort_in_ruleTaskContext855 = new BitSet(new long[]{0x000000000000C000L});
         public static final BitSet FOLLOW_15_in_ruleTaskContext869 = new BitSet(new long[]{0x0000000007008000L});
         public static final BitSet FOLLOW_24_in_ruleTaskContext884 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleTaskContext896 = new BitSet(new long[]{0x0000200000000000L});
+        public static final BitSet FOLLOW_12_in_ruleTaskContext896 = new BitSet(new long[]{0x0000100000000000L});
         public static final BitSet FOLLOW_ruleOutputPort_in_ruleTaskContext917 = new BitSet(new long[]{0x000000000000C000L});
-        public static final BitSet FOLLOW_14_in_ruleTaskContext930 = new BitSet(new long[]{0x0000200000000000L});
+        public static final BitSet FOLLOW_14_in_ruleTaskContext930 = new BitSet(new long[]{0x0000100000000000L});
         public static final BitSet FOLLOW_ruleOutputPort_in_ruleTaskContext951 = new BitSet(new long[]{0x000000000000C000L});
         public static final BitSet FOLLOW_15_in_ruleTaskContext965 = new BitSet(new long[]{0x0000000006008000L});
         public static final BitSet FOLLOW_25_in_ruleTaskContext980 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleTaskContext992 = new BitSet(new long[]{0x0000800000000000L});
+        public static final BitSet FOLLOW_12_in_ruleTaskContext992 = new BitSet(new long[]{0x0000200000000000L});
         public static final BitSet FOLLOW_ruleProperty_in_ruleTaskContext1013 = new BitSet(new long[]{0x000000000000C000L});
-        public static final BitSet FOLLOW_14_in_ruleTaskContext1026 = new BitSet(new long[]{0x0000800000000000L});
+        public static final BitSet FOLLOW_14_in_ruleTaskContext1026 = new BitSet(new long[]{0x0000200000000000L});
         public static final BitSet FOLLOW_ruleProperty_in_ruleTaskContext1047 = new BitSet(new long[]{0x000000000000C000L});
         public static final BitSet FOLLOW_15_in_ruleTaskContext1061 = new BitSet(new long[]{0x0000000004008000L});
         public static final BitSet FOLLOW_26_in_ruleTaskContext1076 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleTaskContext1088 = new BitSet(new long[]{0x0004000000000000L});
+        public static final BitSet FOLLOW_12_in_ruleTaskContext1088 = new BitSet(new long[]{0x0001000000000000L});
         public static final BitSet FOLLOW_ruleOperation_in_ruleTaskContext1109 = new BitSet(new long[]{0x000000000000C000L});
-        public static final BitSet FOLLOW_14_in_ruleTaskContext1122 = new BitSet(new long[]{0x0004000000000000L});
+        public static final BitSet FOLLOW_14_in_ruleTaskContext1122 = new BitSet(new long[]{0x0001000000000000L});
         public static final BitSet FOLLOW_ruleOperation_in_ruleTaskContext1143 = new BitSet(new long[]{0x000000000000C000L});
         public static final BitSet FOLLOW_15_in_ruleTaskContext1157 = new BitSet(new long[]{0x0000000000008000L});
         public static final BitSet FOLLOW_15_in_ruleTaskContext1171 = new BitSet(new long[]{0x0000000000000002L});
@@ -5452,143 +5300,137 @@ public class InternalRttStructureParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_ruleEString_in_ruleConnectionPolicy1620 = new BitSet(new long[]{0x000001F800108000L});
         public static final BitSet FOLLOW_35_in_ruleConnectionPolicy1638 = new BitSet(new long[]{0x000001F000108000L});
         public static final BitSet FOLLOW_36_in_ruleConnectionPolicy1670 = new BitSet(new long[]{0x000001E000108000L});
-        public static final BitSet FOLLOW_37_in_ruleConnectionPolicy1697 = new BitSet(new long[]{0x0020000000000010L});
+        public static final BitSet FOLLOW_37_in_ruleConnectionPolicy1697 = new BitSet(new long[]{0x0008000000000010L});
         public static final BitSet FOLLOW_ruleEShort_in_ruleConnectionPolicy1718 = new BitSet(new long[]{0x000001C000108000L});
-        public static final BitSet FOLLOW_38_in_ruleConnectionPolicy1733 = new BitSet(new long[]{0x0020000000000010L});
+        public static final BitSet FOLLOW_38_in_ruleConnectionPolicy1733 = new BitSet(new long[]{0x0008000000000010L});
         public static final BitSet FOLLOW_ruleEShort_in_ruleConnectionPolicy1754 = new BitSet(new long[]{0x0000018000108000L});
-        public static final BitSet FOLLOW_39_in_ruleConnectionPolicy1769 = new BitSet(new long[]{0x0000000000000000L,0x000000000000001CL});
+        public static final BitSet FOLLOW_39_in_ruleConnectionPolicy1769 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000007L});
         public static final BitSet FOLLOW_ruleConnectionPolicyLockPolicy_in_ruleConnectionPolicy1790 = new BitSet(new long[]{0x0000010000108000L});
-        public static final BitSet FOLLOW_40_in_ruleConnectionPolicy1805 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000F00L});
+        public static final BitSet FOLLOW_40_in_ruleConnectionPolicy1805 = new BitSet(new long[]{0x0000000000000000L,0x00000000000003C0L});
         public static final BitSet FOLLOW_ruleConnectionPolicyTransport_in_ruleConnectionPolicy1826 = new BitSet(new long[]{0x0000000000108000L});
-        public static final BitSet FOLLOW_20_in_ruleConnectionPolicy1841 = new BitSet(new long[]{0x0000000000000000L,0x00000000000000E0L});
+        public static final BitSet FOLLOW_20_in_ruleConnectionPolicy1841 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000038L});
         public static final BitSet FOLLOW_ruleConnectionPolicyType_in_ruleConnectionPolicy1862 = new BitSet(new long[]{0x0000000000008000L});
         public static final BitSet FOLLOW_15_in_ruleConnectionPolicy1876 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleInputPort_in_entryRuleInputPort1912 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleInputPort1922 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_41_in_ruleInputPort1959 = new BitSet(new long[]{0x0000000000000060L});
         public static final BitSet FOLLOW_ruleEString_in_ruleInputPort1980 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleInputPort1992 = new BitSet(new long[]{0x00000C0000008000L});
+        public static final BitSet FOLLOW_12_in_ruleInputPort1992 = new BitSet(new long[]{0x0000040000008000L});
         public static final BitSet FOLLOW_42_in_ruleInputPort2005 = new BitSet(new long[]{0x0000000000000040L});
-        public static final BitSet FOLLOW_ruleQualifiedNameWithDot_in_ruleInputPort2028 = new BitSet(new long[]{0x0000080000008000L});
-        public static final BitSet FOLLOW_43_in_ruleInputPort2043 = new BitSet(new long[]{0x0000000000000060L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleInputPort2066 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_15_in_ruleInputPort2080 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEventPort_in_entryRuleEventPort2116 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleEventPort2126 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_44_in_ruleEventPort2172 = new BitSet(new long[]{0x0000000000000060L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleEventPort2193 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleEventPort2205 = new BitSet(new long[]{0x00000C0000008000L});
-        public static final BitSet FOLLOW_42_in_ruleEventPort2218 = new BitSet(new long[]{0x0000000000000060L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleEventPort2241 = new BitSet(new long[]{0x0000080000008000L});
-        public static final BitSet FOLLOW_43_in_ruleEventPort2256 = new BitSet(new long[]{0x0000000000000060L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleEventPort2279 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_15_in_ruleEventPort2293 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleOutputPort_in_entryRuleOutputPort2329 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleOutputPort2339 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_45_in_ruleOutputPort2376 = new BitSet(new long[]{0x0000000000000060L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleOutputPort2397 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleOutputPort2409 = new BitSet(new long[]{0x0000440000008000L});
-        public static final BitSet FOLLOW_42_in_ruleOutputPort2422 = new BitSet(new long[]{0x0000000000000040L});
-        public static final BitSet FOLLOW_ruleQualifiedNameWithDot_in_ruleOutputPort2445 = new BitSet(new long[]{0x0000400000008000L});
-        public static final BitSet FOLLOW_46_in_ruleOutputPort2460 = new BitSet(new long[]{0x0000000000000060L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleOutputPort2483 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_15_in_ruleOutputPort2497 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleProperty_in_entryRuleProperty2533 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleProperty2543 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_47_in_ruleProperty2589 = new BitSet(new long[]{0x0000000000000060L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleProperty2610 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleProperty2622 = new BitSet(new long[]{0x0003000000108000L});
-        public static final BitSet FOLLOW_48_in_ruleProperty2635 = new BitSet(new long[]{0x0000000000000060L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleProperty2656 = new BitSet(new long[]{0x0002000000108000L});
-        public static final BitSet FOLLOW_49_in_ruleProperty2671 = new BitSet(new long[]{0x0000000000000060L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleProperty2692 = new BitSet(new long[]{0x0000000000108000L});
-        public static final BitSet FOLLOW_20_in_ruleProperty2707 = new BitSet(new long[]{0x0000000000000040L});
-        public static final BitSet FOLLOW_ruleQualifiedNameWithDot_in_ruleProperty2730 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_15_in_ruleProperty2744 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleOperation_in_entryRuleOperation2780 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleOperation2790 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_50_in_ruleOperation2836 = new BitSet(new long[]{0x0000000000000060L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleOperation2857 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleOperation2869 = new BitSet(new long[]{0x0018000000008000L});
-        public static final BitSet FOLLOW_51_in_ruleOperation2882 = new BitSet(new long[]{0x0000000000000060L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleOperation2903 = new BitSet(new long[]{0x0010000000008000L});
-        public static final BitSet FOLLOW_52_in_ruleOperation2918 = new BitSet(new long[]{0x0000000000000040L});
-        public static final BitSet FOLLOW_ruleQualifiedNameWithDot_in_ruleOperation2941 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_15_in_ruleOperation2955 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEShort_in_entryRuleEShort2992 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleEShort3003 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_ruleEShort3042 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_INT_in_ruleEShort3059 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleActivity_in_entryRuleActivity3106 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleActivity3116 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_54_in_ruleActivity3153 = new BitSet(new long[]{0x0000000000000060L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleActivity3174 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleActivity3186 = new BitSet(new long[]{0x0080000000000000L});
-        public static final BitSet FOLLOW_55_in_ruleActivity3198 = new BitSet(new long[]{0x0000000000000000L,0x0000000000003000L});
-        public static final BitSet FOLLOW_ruleScheduler_in_ruleActivity3219 = new BitSet(new long[]{0x0100000000000000L});
-        public static final BitSet FOLLOW_56_in_ruleActivity3231 = new BitSet(new long[]{0x0000000000000060L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleActivity3252 = new BitSet(new long[]{0x0200000000000000L});
-        public static final BitSet FOLLOW_57_in_ruleActivity3264 = new BitSet(new long[]{0x4020000000000010L});
-        public static final BitSet FOLLOW_ruleEFloat_in_ruleActivity3285 = new BitSet(new long[]{0x0400000000000000L});
-        public static final BitSet FOLLOW_58_in_ruleActivity3297 = new BitSet(new long[]{0x0020000000000010L});
-        public static final BitSet FOLLOW_ruleEInt_in_ruleActivity3318 = new BitSet(new long[]{0x1800000000008000L});
-        public static final BitSet FOLLOW_59_in_ruleActivity3331 = new BitSet(new long[]{0x0000000000000060L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleActivity3354 = new BitSet(new long[]{0x1000000000008000L});
-        public static final BitSet FOLLOW_60_in_ruleActivity3369 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleActivity3381 = new BitSet(new long[]{0x2000000000000000L});
-        public static final BitSet FOLLOW_ruleSlave_in_ruleActivity3402 = new BitSet(new long[]{0x000000000000C000L});
-        public static final BitSet FOLLOW_14_in_ruleActivity3415 = new BitSet(new long[]{0x2000000000000000L});
-        public static final BitSet FOLLOW_ruleSlave_in_ruleActivity3436 = new BitSet(new long[]{0x000000000000C000L});
-        public static final BitSet FOLLOW_15_in_ruleActivity3450 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_15_in_ruleActivity3464 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleSlave_in_entryRuleSlave3500 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleSlave3510 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_61_in_ruleSlave3556 = new BitSet(new long[]{0x0000000000000060L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleSlave3577 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleSlave3589 = new BitSet(new long[]{0x0800000000008000L});
-        public static final BitSet FOLLOW_59_in_ruleSlave3602 = new BitSet(new long[]{0x0000000000000060L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleSlave3625 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_15_in_ruleSlave3639 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_entryRuleEString3676 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleEString3687 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_STRING_in_ruleEString3727 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleEString3753 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEFloat_in_entryRuleEFloat3799 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleEFloat3810 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_ruleEFloat3849 = new BitSet(new long[]{0x4000000000000010L});
-        public static final BitSet FOLLOW_RULE_INT_in_ruleEFloat3867 = new BitSet(new long[]{0x4000000000000000L});
-        public static final BitSet FOLLOW_62_in_ruleEFloat3887 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_INT_in_ruleEFloat3902 = new BitSet(new long[]{0x8000000000000002L,0x0000000000000001L});
-        public static final BitSet FOLLOW_63_in_ruleEFloat3922 = new BitSet(new long[]{0x0020000000000010L});
-        public static final BitSet FOLLOW_64_in_ruleEFloat3941 = new BitSet(new long[]{0x0020000000000010L});
-        public static final BitSet FOLLOW_53_in_ruleEFloat3956 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_INT_in_ruleEFloat3973 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEInt_in_entryRuleEInt4021 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleEInt4032 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_ruleEInt4071 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_INT_in_ruleEInt4088 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName4134 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedName4145 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName4185 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000002L});
-        public static final BitSet FOLLOW_65_in_ruleQualifiedName4204 = new BitSet(new long[]{0x0000000000000040L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName4219 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleQualifiedNameWithDot_in_entryRuleQualifiedNameWithDot4267 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedNameWithDot4278 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleQualifiedName_in_ruleQualifiedNameWithDot4325 = new BitSet(new long[]{0x4000000000000002L});
-        public static final BitSet FOLLOW_62_in_ruleQualifiedNameWithDot4344 = new BitSet(new long[]{0x0000000000000040L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedNameWithDot4359 = new BitSet(new long[]{0x4000000000000002L});
-        public static final BitSet FOLLOW_66_in_ruleConnectionPolicyLockPolicy4420 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_67_in_ruleConnectionPolicyLockPolicy4437 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_68_in_ruleConnectionPolicyLockPolicy4454 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_69_in_ruleConnectionPolicyType4499 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_70_in_ruleConnectionPolicyType4516 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_71_in_ruleConnectionPolicyType4533 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_72_in_ruleConnectionPolicyTransport4578 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_73_in_ruleConnectionPolicyTransport4595 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_74_in_ruleConnectionPolicyTransport4612 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_75_in_ruleConnectionPolicyTransport4629 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_76_in_ruleScheduler4674 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_77_in_ruleScheduler4691 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleQualifiedNameWithDot_in_ruleInputPort2028 = new BitSet(new long[]{0x0000000000008000L});
+        public static final BitSet FOLLOW_15_in_ruleInputPort2042 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEventPort_in_entryRuleEventPort2078 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleEventPort2088 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_43_in_ruleEventPort2134 = new BitSet(new long[]{0x0000000000000060L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleEventPort2155 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleEventPort2167 = new BitSet(new long[]{0x0000040000008000L});
+        public static final BitSet FOLLOW_42_in_ruleEventPort2180 = new BitSet(new long[]{0x0000000000000060L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleEventPort2203 = new BitSet(new long[]{0x0000000000008000L});
+        public static final BitSet FOLLOW_15_in_ruleEventPort2217 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleOutputPort_in_entryRuleOutputPort2253 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleOutputPort2263 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_44_in_ruleOutputPort2300 = new BitSet(new long[]{0x0000000000000060L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleOutputPort2321 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleOutputPort2333 = new BitSet(new long[]{0x0000040000008000L});
+        public static final BitSet FOLLOW_42_in_ruleOutputPort2346 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_ruleQualifiedNameWithDot_in_ruleOutputPort2369 = new BitSet(new long[]{0x0000000000008000L});
+        public static final BitSet FOLLOW_15_in_ruleOutputPort2383 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleProperty_in_entryRuleProperty2419 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleProperty2429 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_45_in_ruleProperty2475 = new BitSet(new long[]{0x0000000000000060L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleProperty2496 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleProperty2508 = new BitSet(new long[]{0x0000C00000108000L});
+        public static final BitSet FOLLOW_46_in_ruleProperty2521 = new BitSet(new long[]{0x0000000000000060L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleProperty2542 = new BitSet(new long[]{0x0000800000108000L});
+        public static final BitSet FOLLOW_47_in_ruleProperty2557 = new BitSet(new long[]{0x0000000000000060L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleProperty2578 = new BitSet(new long[]{0x0000000000108000L});
+        public static final BitSet FOLLOW_20_in_ruleProperty2593 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_ruleQualifiedNameWithDot_in_ruleProperty2616 = new BitSet(new long[]{0x0000000000008000L});
+        public static final BitSet FOLLOW_15_in_ruleProperty2630 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleOperation_in_entryRuleOperation2666 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleOperation2676 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_48_in_ruleOperation2722 = new BitSet(new long[]{0x0000000000000060L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleOperation2743 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleOperation2755 = new BitSet(new long[]{0x0006000000008000L});
+        public static final BitSet FOLLOW_49_in_ruleOperation2768 = new BitSet(new long[]{0x0000000000000060L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleOperation2789 = new BitSet(new long[]{0x0004000000008000L});
+        public static final BitSet FOLLOW_50_in_ruleOperation2804 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_ruleQualifiedNameWithDot_in_ruleOperation2827 = new BitSet(new long[]{0x0000000000008000L});
+        public static final BitSet FOLLOW_15_in_ruleOperation2841 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEShort_in_entryRuleEShort2878 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleEShort2889 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_51_in_ruleEShort2928 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_INT_in_ruleEShort2945 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleActivity_in_entryRuleActivity2992 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleActivity3002 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_ruleActivity3039 = new BitSet(new long[]{0x0000000000000060L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleActivity3060 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleActivity3072 = new BitSet(new long[]{0x0020000000000000L});
+        public static final BitSet FOLLOW_53_in_ruleActivity3084 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000C00L});
+        public static final BitSet FOLLOW_ruleScheduler_in_ruleActivity3105 = new BitSet(new long[]{0x0040000000000000L});
+        public static final BitSet FOLLOW_54_in_ruleActivity3117 = new BitSet(new long[]{0x0000000000000060L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleActivity3138 = new BitSet(new long[]{0x0080000000000000L});
+        public static final BitSet FOLLOW_55_in_ruleActivity3150 = new BitSet(new long[]{0x1008000000000010L});
+        public static final BitSet FOLLOW_ruleEFloat_in_ruleActivity3171 = new BitSet(new long[]{0x0100000000000000L});
+        public static final BitSet FOLLOW_56_in_ruleActivity3183 = new BitSet(new long[]{0x0008000000000010L});
+        public static final BitSet FOLLOW_ruleEInt_in_ruleActivity3204 = new BitSet(new long[]{0x0600000000008000L});
+        public static final BitSet FOLLOW_57_in_ruleActivity3217 = new BitSet(new long[]{0x0000000000000060L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleActivity3240 = new BitSet(new long[]{0x0400000000008000L});
+        public static final BitSet FOLLOW_58_in_ruleActivity3255 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleActivity3267 = new BitSet(new long[]{0x0800000000000000L});
+        public static final BitSet FOLLOW_ruleSlave_in_ruleActivity3288 = new BitSet(new long[]{0x000000000000C000L});
+        public static final BitSet FOLLOW_14_in_ruleActivity3301 = new BitSet(new long[]{0x0800000000000000L});
+        public static final BitSet FOLLOW_ruleSlave_in_ruleActivity3322 = new BitSet(new long[]{0x000000000000C000L});
+        public static final BitSet FOLLOW_15_in_ruleActivity3336 = new BitSet(new long[]{0x0000000000008000L});
+        public static final BitSet FOLLOW_15_in_ruleActivity3350 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleSlave_in_entryRuleSlave3386 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleSlave3396 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_59_in_ruleSlave3442 = new BitSet(new long[]{0x0000000000000060L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleSlave3463 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleSlave3475 = new BitSet(new long[]{0x0200000000008000L});
+        public static final BitSet FOLLOW_57_in_ruleSlave3488 = new BitSet(new long[]{0x0000000000000060L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleSlave3511 = new BitSet(new long[]{0x0000000000008000L});
+        public static final BitSet FOLLOW_15_in_ruleSlave3525 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_entryRuleEString3562 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleEString3573 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleEString3613 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleEString3639 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEFloat_in_entryRuleEFloat3685 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleEFloat3696 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_51_in_ruleEFloat3735 = new BitSet(new long[]{0x1000000000000010L});
+        public static final BitSet FOLLOW_RULE_INT_in_ruleEFloat3753 = new BitSet(new long[]{0x1000000000000000L});
+        public static final BitSet FOLLOW_60_in_ruleEFloat3773 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_INT_in_ruleEFloat3788 = new BitSet(new long[]{0x6000000000000002L});
+        public static final BitSet FOLLOW_61_in_ruleEFloat3808 = new BitSet(new long[]{0x0008000000000010L});
+        public static final BitSet FOLLOW_62_in_ruleEFloat3827 = new BitSet(new long[]{0x0008000000000010L});
+        public static final BitSet FOLLOW_51_in_ruleEFloat3842 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_INT_in_ruleEFloat3859 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEInt_in_entryRuleEInt3907 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleEInt3918 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_51_in_ruleEInt3957 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_INT_in_ruleEInt3974 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName4020 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedName4031 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName4071 = new BitSet(new long[]{0x8000000000000002L});
+        public static final BitSet FOLLOW_63_in_ruleQualifiedName4090 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName4105 = new BitSet(new long[]{0x8000000000000002L});
+        public static final BitSet FOLLOW_ruleQualifiedNameWithDot_in_entryRuleQualifiedNameWithDot4153 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedNameWithDot4164 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleQualifiedName_in_ruleQualifiedNameWithDot4211 = new BitSet(new long[]{0x1000000000000002L});
+        public static final BitSet FOLLOW_60_in_ruleQualifiedNameWithDot4230 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedNameWithDot4245 = new BitSet(new long[]{0x1000000000000002L});
+        public static final BitSet FOLLOW_64_in_ruleConnectionPolicyLockPolicy4306 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_65_in_ruleConnectionPolicyLockPolicy4323 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_66_in_ruleConnectionPolicyLockPolicy4340 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_67_in_ruleConnectionPolicyType4385 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_68_in_ruleConnectionPolicyType4402 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_69_in_ruleConnectionPolicyType4419 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_70_in_ruleConnectionPolicyTransport4464 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_71_in_ruleConnectionPolicyTransport4481 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_72_in_ruleConnectionPolicyTransport4498 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_73_in_ruleConnectionPolicyTransport4515 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_74_in_ruleScheduler4560 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_75_in_ruleScheduler4577 = new BitSet(new long[]{0x0000000000000002L});
     }
 
 

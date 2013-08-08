@@ -1058,28 +1058,9 @@ ruleInputPort returns [EObject current=null]
 	    }
 
 )
-))?(	otherlv_5='inputConnectionPolicy' 
+))?	otherlv_5='}' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getInputPortAccess().getInputConnectionPolicyKeyword_4_0());
-    }
-(
-(
-		{
-			if ($current==null) {
-	            $current = createModelElement(grammarAccess.getInputPortRule());
-	        }
-        }
-		{ 
-	        newCompositeNode(grammarAccess.getInputPortAccess().getInputConnectionPolicyConnectionPolicyCrossReference_4_1_0()); 
-	    }
-		ruleEString		{ 
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))?	otherlv_7='}' 
-    {
-    	newLeafNode(otherlv_7, grammarAccess.getInputPortAccess().getRightCurlyBracketKeyword_5());
+    	newLeafNode(otherlv_5, grammarAccess.getInputPortAccess().getRightCurlyBracketKeyword_4());
     }
 )
 ;
@@ -1153,28 +1134,9 @@ ruleEventPort returns [EObject current=null]
 	    }
 
 )
-))?(	otherlv_6='inputConnectionPolicy' 
+))?	otherlv_6='}' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getEventPortAccess().getInputConnectionPolicyKeyword_5_0());
-    }
-(
-(
-		{
-			if ($current==null) {
-	            $current = createModelElement(grammarAccess.getEventPortRule());
-	        }
-        }
-		{ 
-	        newCompositeNode(grammarAccess.getEventPortAccess().getInputConnectionPolicyConnectionPolicyCrossReference_5_1_0()); 
-	    }
-		ruleEString		{ 
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))?	otherlv_8='}' 
-    {
-    	newLeafNode(otherlv_8, grammarAccess.getEventPortAccess().getRightCurlyBracketKeyword_6());
+    	newLeafNode(otherlv_6, grammarAccess.getEventPortAccess().getRightCurlyBracketKeyword_5());
     }
 )
 ;
@@ -1242,28 +1204,9 @@ ruleOutputPort returns [EObject current=null]
 	    }
 
 )
-))?(	otherlv_5='outputConnectionPolicy' 
+))?	otherlv_5='}' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getOutputPortAccess().getOutputConnectionPolicyKeyword_4_0());
-    }
-(
-(
-		{
-			if ($current==null) {
-	            $current = createModelElement(grammarAccess.getOutputPortRule());
-	        }
-        }
-		{ 
-	        newCompositeNode(grammarAccess.getOutputPortAccess().getOutputConnectionPolicyConnectionPolicyCrossReference_4_1_0()); 
-	    }
-		ruleEString		{ 
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))?	otherlv_7='}' 
-    {
-    	newLeafNode(otherlv_7, grammarAccess.getOutputPortAccess().getRightCurlyBracketKeyword_5());
+    	newLeafNode(otherlv_5, grammarAccess.getOutputPortAccess().getRightCurlyBracketKeyword_4());
     }
 )
 ;

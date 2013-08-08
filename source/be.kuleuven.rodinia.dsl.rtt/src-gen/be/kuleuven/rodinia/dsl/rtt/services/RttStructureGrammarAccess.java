@@ -732,20 +732,15 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cDataTypeAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
 		private final CrossReference cDataTypeDataTypeCrossReference_3_1_0 = (CrossReference)cDataTypeAssignment_3_1.eContents().get(0);
 		private final RuleCall cDataTypeDataTypeQualifiedNameWithDotParserRuleCall_3_1_0_1 = (RuleCall)cDataTypeDataTypeCrossReference_3_1_0.eContents().get(1);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cInputConnectionPolicyKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cInputConnectionPolicyAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final CrossReference cInputConnectionPolicyConnectionPolicyCrossReference_4_1_0 = (CrossReference)cInputConnectionPolicyAssignment_4_1.eContents().get(0);
-		private final RuleCall cInputConnectionPolicyConnectionPolicyEStringParserRuleCall_4_1_0_1 = (RuleCall)cInputConnectionPolicyConnectionPolicyCrossReference_4_1_0.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//InputPort:
-		//	"InputPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|QualifiedNameWithDot])?
-		//	("inputConnectionPolicy" inputConnectionPolicy=[ConnectionPolicy|EString])? "}";
+		//	"InputPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|QualifiedNameWithDot])? //('inputConnectionPolicy' inputConnectionPolicy=[ConnectionPolicy|EString])?
+		//	"}";
 		public ParserRule getRule() { return rule; }
 
-		//"InputPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|QualifiedNameWithDot])? ("inputConnectionPolicy"
-		//inputConnectionPolicy=[ConnectionPolicy|EString])? "}"
+		//"InputPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|QualifiedNameWithDot])? //('inputConnectionPolicy' inputConnectionPolicy=[ConnectionPolicy|EString])?
+		//"}"
 		public Group getGroup() { return cGroup; }
 
 		//"InputPort"
@@ -775,23 +770,9 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 		//QualifiedNameWithDot
 		public RuleCall getDataTypeDataTypeQualifiedNameWithDotParserRuleCall_3_1_0_1() { return cDataTypeDataTypeQualifiedNameWithDotParserRuleCall_3_1_0_1; }
 
-		//("inputConnectionPolicy" inputConnectionPolicy=[ConnectionPolicy|EString])?
-		public Group getGroup_4() { return cGroup_4; }
-
-		//"inputConnectionPolicy"
-		public Keyword getInputConnectionPolicyKeyword_4_0() { return cInputConnectionPolicyKeyword_4_0; }
-
-		//inputConnectionPolicy=[ConnectionPolicy|EString]
-		public Assignment getInputConnectionPolicyAssignment_4_1() { return cInputConnectionPolicyAssignment_4_1; }
-
-		//[ConnectionPolicy|EString]
-		public CrossReference getInputConnectionPolicyConnectionPolicyCrossReference_4_1_0() { return cInputConnectionPolicyConnectionPolicyCrossReference_4_1_0; }
-
-		//EString
-		public RuleCall getInputConnectionPolicyConnectionPolicyEStringParserRuleCall_4_1_0_1() { return cInputConnectionPolicyConnectionPolicyEStringParserRuleCall_4_1_0_1; }
-
+		////('inputConnectionPolicy' inputConnectionPolicy=[ConnectionPolicy|EString])?
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 
 	public class EventPortElements extends AbstractParserRuleElementFinder {
@@ -807,20 +788,15 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cDataTypeAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final CrossReference cDataTypeDataTypeCrossReference_4_1_0 = (CrossReference)cDataTypeAssignment_4_1.eContents().get(0);
 		private final RuleCall cDataTypeDataTypeEStringParserRuleCall_4_1_0_1 = (RuleCall)cDataTypeDataTypeCrossReference_4_1_0.eContents().get(1);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cInputConnectionPolicyKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cInputConnectionPolicyAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final CrossReference cInputConnectionPolicyConnectionPolicyCrossReference_5_1_0 = (CrossReference)cInputConnectionPolicyAssignment_5_1.eContents().get(0);
-		private final RuleCall cInputConnectionPolicyConnectionPolicyEStringParserRuleCall_5_1_0_1 = (RuleCall)cInputConnectionPolicyConnectionPolicyCrossReference_5_1_0.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//EventPort:
-		//	{EventPort} "EventPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|EString])? ("inputConnectionPolicy"
-		//	inputConnectionPolicy=[ConnectionPolicy|EString])? "}";
+		//	{EventPort} "EventPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|EString])? //('inputConnectionPolicy' inputConnectionPolicy=[ConnectionPolicy|EString])?
+		//	"}";
 		public ParserRule getRule() { return rule; }
 
-		//{EventPort} "EventPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|EString])? ("inputConnectionPolicy"
-		//inputConnectionPolicy=[ConnectionPolicy|EString])? "}"
+		//{EventPort} "EventPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|EString])? //('inputConnectionPolicy' inputConnectionPolicy=[ConnectionPolicy|EString])?
+		//"}"
 		public Group getGroup() { return cGroup; }
 
 		//{EventPort}
@@ -853,23 +829,9 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getDataTypeDataTypeEStringParserRuleCall_4_1_0_1() { return cDataTypeDataTypeEStringParserRuleCall_4_1_0_1; }
 
-		//("inputConnectionPolicy" inputConnectionPolicy=[ConnectionPolicy|EString])?
-		public Group getGroup_5() { return cGroup_5; }
-
-		//"inputConnectionPolicy"
-		public Keyword getInputConnectionPolicyKeyword_5_0() { return cInputConnectionPolicyKeyword_5_0; }
-
-		//inputConnectionPolicy=[ConnectionPolicy|EString]
-		public Assignment getInputConnectionPolicyAssignment_5_1() { return cInputConnectionPolicyAssignment_5_1; }
-
-		//[ConnectionPolicy|EString]
-		public CrossReference getInputConnectionPolicyConnectionPolicyCrossReference_5_1_0() { return cInputConnectionPolicyConnectionPolicyCrossReference_5_1_0; }
-
-		//EString
-		public RuleCall getInputConnectionPolicyConnectionPolicyEStringParserRuleCall_5_1_0_1() { return cInputConnectionPolicyConnectionPolicyEStringParserRuleCall_5_1_0_1; }
-
+		////('inputConnectionPolicy' inputConnectionPolicy=[ConnectionPolicy|EString])?
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class OutputPortElements extends AbstractParserRuleElementFinder {
@@ -884,20 +846,15 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cDataTypeAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
 		private final CrossReference cDataTypeDataTypeCrossReference_3_1_0 = (CrossReference)cDataTypeAssignment_3_1.eContents().get(0);
 		private final RuleCall cDataTypeDataTypeQualifiedNameWithDotParserRuleCall_3_1_0_1 = (RuleCall)cDataTypeDataTypeCrossReference_3_1_0.eContents().get(1);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cOutputConnectionPolicyKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cOutputConnectionPolicyAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final CrossReference cOutputConnectionPolicyConnectionPolicyCrossReference_4_1_0 = (CrossReference)cOutputConnectionPolicyAssignment_4_1.eContents().get(0);
-		private final RuleCall cOutputConnectionPolicyConnectionPolicyEStringParserRuleCall_4_1_0_1 = (RuleCall)cOutputConnectionPolicyConnectionPolicyCrossReference_4_1_0.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//OutputPort:
-		//	"OutputPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|QualifiedNameWithDot])?
-		//	("outputConnectionPolicy" outputConnectionPolicy=[ConnectionPolicy|EString])? "}";
+		//	"OutputPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|QualifiedNameWithDot])? //('outputConnectionPolicy' outputConnectionPolicy=[ConnectionPolicy|EString])?
+		//	"}";
 		public ParserRule getRule() { return rule; }
 
-		//"OutputPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|QualifiedNameWithDot])?
-		//("outputConnectionPolicy" outputConnectionPolicy=[ConnectionPolicy|EString])? "}"
+		//"OutputPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|QualifiedNameWithDot])? //('outputConnectionPolicy' outputConnectionPolicy=[ConnectionPolicy|EString])?
+		//"}"
 		public Group getGroup() { return cGroup; }
 
 		//"OutputPort"
@@ -927,23 +884,9 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 		//QualifiedNameWithDot
 		public RuleCall getDataTypeDataTypeQualifiedNameWithDotParserRuleCall_3_1_0_1() { return cDataTypeDataTypeQualifiedNameWithDotParserRuleCall_3_1_0_1; }
 
-		//("outputConnectionPolicy" outputConnectionPolicy=[ConnectionPolicy|EString])?
-		public Group getGroup_4() { return cGroup_4; }
-
-		//"outputConnectionPolicy"
-		public Keyword getOutputConnectionPolicyKeyword_4_0() { return cOutputConnectionPolicyKeyword_4_0; }
-
-		//outputConnectionPolicy=[ConnectionPolicy|EString]
-		public Assignment getOutputConnectionPolicyAssignment_4_1() { return cOutputConnectionPolicyAssignment_4_1; }
-
-		//[ConnectionPolicy|EString]
-		public CrossReference getOutputConnectionPolicyConnectionPolicyCrossReference_4_1_0() { return cOutputConnectionPolicyConnectionPolicyCrossReference_4_1_0; }
-
-		//EString
-		public RuleCall getOutputConnectionPolicyConnectionPolicyEStringParserRuleCall_4_1_0_1() { return cOutputConnectionPolicyConnectionPolicyEStringParserRuleCall_4_1_0_1; }
-
+		////('outputConnectionPolicy' outputConnectionPolicy=[ConnectionPolicy|EString])?
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 
 	public class PropertyElements extends AbstractParserRuleElementFinder {
@@ -1786,8 +1729,8 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//InputPort:
-	//	"InputPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|QualifiedNameWithDot])?
-	//	("inputConnectionPolicy" inputConnectionPolicy=[ConnectionPolicy|EString])? "}";
+	//	"InputPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|QualifiedNameWithDot])? //('inputConnectionPolicy' inputConnectionPolicy=[ConnectionPolicy|EString])?
+	//	"}";
 	public InputPortElements getInputPortAccess() {
 		return (pInputPort != null) ? pInputPort : (pInputPort = new InputPortElements());
 	}
@@ -1797,8 +1740,8 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//EventPort:
-	//	{EventPort} "EventPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|EString])? ("inputConnectionPolicy"
-	//	inputConnectionPolicy=[ConnectionPolicy|EString])? "}";
+	//	{EventPort} "EventPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|EString])? //('inputConnectionPolicy' inputConnectionPolicy=[ConnectionPolicy|EString])?
+	//	"}";
 	public EventPortElements getEventPortAccess() {
 		return (pEventPort != null) ? pEventPort : (pEventPort = new EventPortElements());
 	}
@@ -1808,8 +1751,8 @@ public class RttStructureGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//OutputPort:
-	//	"OutputPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|QualifiedNameWithDot])?
-	//	("outputConnectionPolicy" outputConnectionPolicy=[ConnectionPolicy|EString])? "}";
+	//	"OutputPort" name=EString "{" ("dataType" dataType=[datatypes::DataType|QualifiedNameWithDot])? //('outputConnectionPolicy' outputConnectionPolicy=[ConnectionPolicy|EString])?
+	//	"}";
 	public OutputPortElements getOutputPortAccess() {
 		return (pOutputPort != null) ? pOutputPort : (pOutputPort = new OutputPortElements());
 	}

@@ -95,13 +95,11 @@
     <genClasses ecoreClass="rtt.ecore#//InputPort">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//InputPort/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rtt.ecore#//InputPort/dataType"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rtt.ecore#//InputPort/inputConnectionPolicy"/>
     </genClasses>
     <genClasses ecoreClass="rtt.ecore#//EventPort"/>
     <genClasses ecoreClass="rtt.ecore#//OutputPort">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//OutputPort/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rtt.ecore#//OutputPort/dataType"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rtt.ecore#//OutputPort/outputConnectionPolicy"/>
     </genClasses>
     <genClasses ecoreClass="rtt.ecore#//Property">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//Property/name"/>

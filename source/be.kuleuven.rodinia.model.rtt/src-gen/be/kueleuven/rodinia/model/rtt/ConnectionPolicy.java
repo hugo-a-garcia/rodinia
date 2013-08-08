@@ -59,7 +59,6 @@ public interface ConnectionPolicy extends EObject
 
   /**
    * Returns the value of the '<em><b>Input Port</b></em>' reference.
-   * It is bidirectional and its opposite is '{@link be.kueleuven.rodinia.model.rtt.InputPort#getInputConnectionPolicy <em>Input Connection Policy</em>}'.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Input Port</em>' reference isn't clear,
@@ -69,8 +68,7 @@ public interface ConnectionPolicy extends EObject
    * @return the value of the '<em>Input Port</em>' reference.
    * @see #setInputPort(InputPort)
    * @see be.kueleuven.rodinia.model.rtt.RttPackage#getConnectionPolicy_InputPort()
-   * @see be.kueleuven.rodinia.model.rtt.InputPort#getInputConnectionPolicy
-   * @model opposite="inputConnectionPolicy" required="true"
+   * @model required="true"
    * @generated
    */
   InputPort getInputPort();
@@ -87,7 +85,6 @@ public interface ConnectionPolicy extends EObject
 
   /**
    * Returns the value of the '<em><b>Output Port</b></em>' reference.
-   * It is bidirectional and its opposite is '{@link be.kueleuven.rodinia.model.rtt.OutputPort#getOutputConnectionPolicy <em>Output Connection Policy</em>}'.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Output Port</em>' reference isn't clear,
@@ -97,8 +94,7 @@ public interface ConnectionPolicy extends EObject
    * @return the value of the '<em>Output Port</em>' reference.
    * @see #setOutputPort(OutputPort)
    * @see be.kueleuven.rodinia.model.rtt.RttPackage#getConnectionPolicy_OutputPort()
-   * @see be.kueleuven.rodinia.model.rtt.OutputPort#getOutputConnectionPolicy
-   * @model opposite="outputConnectionPolicy" required="true"
+   * @model required="true"
    * @generated
    */
   OutputPort getOutputPort();

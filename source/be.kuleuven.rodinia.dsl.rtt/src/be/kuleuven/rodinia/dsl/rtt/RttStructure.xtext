@@ -68,7 +68,7 @@ InputPort returns InputPort:
 	name=EString
 	'{'
 		('dataType' dataType=[datatypes::DataType|QualifiedNameWithDot])?
-		('inputConnectionPolicy' inputConnectionPolicy=[ConnectionPolicy|EString])?
+		//('inputConnectionPolicy' inputConnectionPolicy=[ConnectionPolicy|EString])?
 	'}';
 	
 EventPort returns EventPort:
@@ -77,7 +77,7 @@ EventPort returns EventPort:
 	name=EString
 	'{'
 		('dataType' dataType=[datatypes::DataType|EString])?
-		('inputConnectionPolicy' inputConnectionPolicy=[ConnectionPolicy|EString])?
+		//('inputConnectionPolicy' inputConnectionPolicy=[ConnectionPolicy|EString])?
 	'}';
 
 OutputPort returns OutputPort:
@@ -85,7 +85,7 @@ OutputPort returns OutputPort:
 	name=EString
 	'{'
 		('dataType' dataType=[datatypes::DataType|QualifiedNameWithDot])?
-		('outputConnectionPolicy' outputConnectionPolicy=[ConnectionPolicy|EString])?
+		//('outputConnectionPolicy' outputConnectionPolicy=[ConnectionPolicy|EString])?
 	'}';
 	
 Property returns Property:
