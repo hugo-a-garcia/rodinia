@@ -25,7 +25,7 @@ public class DatatypesParser extends org.eclipse.xtext.parser.antlr.AbstractAntl
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Domainmodel";
+		return "TypeModel";
 	}
 	
 	public DatatypesGrammarAccess getGrammarAccess() {

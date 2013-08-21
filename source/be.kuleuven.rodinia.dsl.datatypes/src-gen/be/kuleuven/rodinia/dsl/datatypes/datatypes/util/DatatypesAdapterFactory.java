@@ -75,9 +75,9 @@ public class DatatypesAdapterFactory extends AdapterFactoryImpl
     new DatatypesSwitch<Adapter>()
     {
       @Override
-      public Adapter caseDomainmodel(Domainmodel object)
+      public Adapter caseTypeModel(TypeModel object)
       {
-        return createDomainmodelAdapter();
+        return createTypeModelAdapter();
       }
       @Override
       public Adapter caseAbstractElement(AbstractElement object)
@@ -105,9 +105,9 @@ public class DatatypesAdapterFactory extends AdapterFactoryImpl
         return createSimpleTypeAdapter();
       }
       @Override
-      public Adapter caseCustomType(CustomType object)
+      public Adapter caseComplexType(ComplexType object)
       {
-        return createCustomTypeAdapter();
+        return createComplexTypeAdapter();
       }
       @Override
       public Adapter caseField(Field object)
@@ -137,16 +137,16 @@ public class DatatypesAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.Domainmodel <em>Domainmodel</em>}'.
+   * Creates a new adapter for an object of class '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.TypeModel <em>Type Model</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.Domainmodel
+   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.TypeModel
    * @generated
    */
-  public Adapter createDomainmodelAdapter()
+  public Adapter createTypeModelAdapter()
   {
     return null;
   }
@@ -227,16 +227,16 @@ public class DatatypesAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.CustomType <em>Custom Type</em>}'.
+   * Creates a new adapter for an object of class '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.ComplexType <em>Complex Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.CustomType
+   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.ComplexType
    * @generated
    */
-  public Adapter createCustomTypeAdapter()
+  public Adapter createComplexTypeAdapter()
   {
     return null;
   }

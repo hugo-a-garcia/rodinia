@@ -2,7 +2,7 @@
  */
 package be.kuleuven.rodinia.dsl.datatypes.datatypes.impl;
 
-import be.kuleuven.rodinia.dsl.datatypes.datatypes.CustomType;
+import be.kuleuven.rodinia.dsl.datatypes.datatypes.ComplexType;
 import be.kuleuven.rodinia.dsl.datatypes.datatypes.DatatypesPackage;
 import be.kuleuven.rodinia.dsl.datatypes.datatypes.Field;
 
@@ -23,19 +23,19 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Custom Type</b></em>'.
+ * An implementation of the model object '<em><b>Complex Type</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.CustomTypeImpl#getSuperType <em>Super Type</em>}</li>
- *   <li>{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.CustomTypeImpl#getFields <em>Fields</em>}</li>
+ *   <li>{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.ComplexTypeImpl#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.ComplexTypeImpl#getFields <em>Fields</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class CustomTypeImpl extends DataTypeImpl implements CustomType
+public class ComplexTypeImpl extends DataTypeImpl implements ComplexType
 {
   /**
    * The cached value of the '{@link #getSuperType() <em>Super Type</em>}' reference.
@@ -45,7 +45,7 @@ public class CustomTypeImpl extends DataTypeImpl implements CustomType
    * @generated
    * @ordered
    */
-  protected CustomType superType;
+  protected ComplexType superType;
 
   /**
    * The cached value of the '{@link #getFields() <em>Fields</em>}' containment reference list.
@@ -62,7 +62,7 @@ public class CustomTypeImpl extends DataTypeImpl implements CustomType
    * <!-- end-user-doc -->
    * @generated
    */
-  protected CustomTypeImpl()
+  protected ComplexTypeImpl()
   {
     super();
   }
@@ -75,7 +75,7 @@ public class CustomTypeImpl extends DataTypeImpl implements CustomType
   @Override
   protected EClass eStaticClass()
   {
-    return DatatypesPackage.Literals.CUSTOM_TYPE;
+    return DatatypesPackage.Literals.COMPLEX_TYPE;
   }
 
   /**
@@ -83,16 +83,16 @@ public class CustomTypeImpl extends DataTypeImpl implements CustomType
    * <!-- end-user-doc -->
    * @generated
    */
-  public CustomType getSuperType()
+  public ComplexType getSuperType()
   {
     if (superType != null && superType.eIsProxy())
     {
       InternalEObject oldSuperType = (InternalEObject)superType;
-      superType = (CustomType)eResolveProxy(oldSuperType);
+      superType = (ComplexType)eResolveProxy(oldSuperType);
       if (superType != oldSuperType)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, DatatypesPackage.CUSTOM_TYPE__SUPER_TYPE, oldSuperType, superType));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, DatatypesPackage.COMPLEX_TYPE__SUPER_TYPE, oldSuperType, superType));
       }
     }
     return superType;
@@ -103,7 +103,7 @@ public class CustomTypeImpl extends DataTypeImpl implements CustomType
    * <!-- end-user-doc -->
    * @generated
    */
-  public CustomType basicGetSuperType()
+  public ComplexType basicGetSuperType()
   {
     return superType;
   }
@@ -113,12 +113,12 @@ public class CustomTypeImpl extends DataTypeImpl implements CustomType
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSuperType(CustomType newSuperType)
+  public void setSuperType(ComplexType newSuperType)
   {
-    CustomType oldSuperType = superType;
+    ComplexType oldSuperType = superType;
     superType = newSuperType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DatatypesPackage.CUSTOM_TYPE__SUPER_TYPE, oldSuperType, superType));
+      eNotify(new ENotificationImpl(this, Notification.SET, DatatypesPackage.COMPLEX_TYPE__SUPER_TYPE, oldSuperType, superType));
   }
 
   /**
@@ -130,7 +130,7 @@ public class CustomTypeImpl extends DataTypeImpl implements CustomType
   {
     if (fields == null)
     {
-      fields = new EObjectContainmentEList<Field>(Field.class, this, DatatypesPackage.CUSTOM_TYPE__FIELDS);
+      fields = new EObjectContainmentEList<Field>(Field.class, this, DatatypesPackage.COMPLEX_TYPE__FIELDS);
     }
     return fields;
   }
@@ -145,7 +145,7 @@ public class CustomTypeImpl extends DataTypeImpl implements CustomType
   {
     switch (featureID)
     {
-      case DatatypesPackage.CUSTOM_TYPE__FIELDS:
+      case DatatypesPackage.COMPLEX_TYPE__FIELDS:
         return ((InternalEList<?>)getFields()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -161,10 +161,10 @@ public class CustomTypeImpl extends DataTypeImpl implements CustomType
   {
     switch (featureID)
     {
-      case DatatypesPackage.CUSTOM_TYPE__SUPER_TYPE:
+      case DatatypesPackage.COMPLEX_TYPE__SUPER_TYPE:
         if (resolve) return getSuperType();
         return basicGetSuperType();
-      case DatatypesPackage.CUSTOM_TYPE__FIELDS:
+      case DatatypesPackage.COMPLEX_TYPE__FIELDS:
         return getFields();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -181,10 +181,10 @@ public class CustomTypeImpl extends DataTypeImpl implements CustomType
   {
     switch (featureID)
     {
-      case DatatypesPackage.CUSTOM_TYPE__SUPER_TYPE:
-        setSuperType((CustomType)newValue);
+      case DatatypesPackage.COMPLEX_TYPE__SUPER_TYPE:
+        setSuperType((ComplexType)newValue);
         return;
-      case DatatypesPackage.CUSTOM_TYPE__FIELDS:
+      case DatatypesPackage.COMPLEX_TYPE__FIELDS:
         getFields().clear();
         getFields().addAll((Collection<? extends Field>)newValue);
         return;
@@ -202,10 +202,10 @@ public class CustomTypeImpl extends DataTypeImpl implements CustomType
   {
     switch (featureID)
     {
-      case DatatypesPackage.CUSTOM_TYPE__SUPER_TYPE:
-        setSuperType((CustomType)null);
+      case DatatypesPackage.COMPLEX_TYPE__SUPER_TYPE:
+        setSuperType((ComplexType)null);
         return;
-      case DatatypesPackage.CUSTOM_TYPE__FIELDS:
+      case DatatypesPackage.COMPLEX_TYPE__FIELDS:
         getFields().clear();
         return;
     }
@@ -222,12 +222,12 @@ public class CustomTypeImpl extends DataTypeImpl implements CustomType
   {
     switch (featureID)
     {
-      case DatatypesPackage.CUSTOM_TYPE__SUPER_TYPE:
+      case DatatypesPackage.COMPLEX_TYPE__SUPER_TYPE:
         return superType != null;
-      case DatatypesPackage.CUSTOM_TYPE__FIELDS:
+      case DatatypesPackage.COMPLEX_TYPE__FIELDS:
         return fields != null && !fields.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //CustomTypeImpl
+} //ComplexTypeImpl

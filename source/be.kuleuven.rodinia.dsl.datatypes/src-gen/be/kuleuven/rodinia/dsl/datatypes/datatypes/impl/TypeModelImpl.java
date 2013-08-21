@@ -4,7 +4,7 @@ package be.kuleuven.rodinia.dsl.datatypes.datatypes.impl;
 
 import be.kuleuven.rodinia.dsl.datatypes.datatypes.AbstractElement;
 import be.kuleuven.rodinia.dsl.datatypes.datatypes.DatatypesPackage;
-import be.kuleuven.rodinia.dsl.datatypes.datatypes.Domainmodel;
+import be.kuleuven.rodinia.dsl.datatypes.datatypes.TypeModel;
 
 import java.util.Collection;
 
@@ -22,18 +22,18 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Domainmodel</b></em>'.
+ * An implementation of the model object '<em><b>Type Model</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.DomainmodelImpl#getElements <em>Elements</em>}</li>
+ *   <li>{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.TypeModelImpl#getElements <em>Elements</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class DomainmodelImpl extends MinimalEObjectImpl.Container implements Domainmodel
+public class TypeModelImpl extends MinimalEObjectImpl.Container implements TypeModel
 {
   /**
    * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
@@ -50,7 +50,7 @@ public class DomainmodelImpl extends MinimalEObjectImpl.Container implements Dom
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DomainmodelImpl()
+  protected TypeModelImpl()
   {
     super();
   }
@@ -63,7 +63,7 @@ public class DomainmodelImpl extends MinimalEObjectImpl.Container implements Dom
   @Override
   protected EClass eStaticClass()
   {
-    return DatatypesPackage.Literals.DOMAINMODEL;
+    return DatatypesPackage.Literals.TYPE_MODEL;
   }
 
   /**
@@ -75,7 +75,7 @@ public class DomainmodelImpl extends MinimalEObjectImpl.Container implements Dom
   {
     if (elements == null)
     {
-      elements = new EObjectContainmentEList<AbstractElement>(AbstractElement.class, this, DatatypesPackage.DOMAINMODEL__ELEMENTS);
+      elements = new EObjectContainmentEList<AbstractElement>(AbstractElement.class, this, DatatypesPackage.TYPE_MODEL__ELEMENTS);
     }
     return elements;
   }
@@ -90,7 +90,7 @@ public class DomainmodelImpl extends MinimalEObjectImpl.Container implements Dom
   {
     switch (featureID)
     {
-      case DatatypesPackage.DOMAINMODEL__ELEMENTS:
+      case DatatypesPackage.TYPE_MODEL__ELEMENTS:
         return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -106,7 +106,7 @@ public class DomainmodelImpl extends MinimalEObjectImpl.Container implements Dom
   {
     switch (featureID)
     {
-      case DatatypesPackage.DOMAINMODEL__ELEMENTS:
+      case DatatypesPackage.TYPE_MODEL__ELEMENTS:
         return getElements();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -123,7 +123,7 @@ public class DomainmodelImpl extends MinimalEObjectImpl.Container implements Dom
   {
     switch (featureID)
     {
-      case DatatypesPackage.DOMAINMODEL__ELEMENTS:
+      case DatatypesPackage.TYPE_MODEL__ELEMENTS:
         getElements().clear();
         getElements().addAll((Collection<? extends AbstractElement>)newValue);
         return;
@@ -141,7 +141,7 @@ public class DomainmodelImpl extends MinimalEObjectImpl.Container implements Dom
   {
     switch (featureID)
     {
-      case DatatypesPackage.DOMAINMODEL__ELEMENTS:
+      case DatatypesPackage.TYPE_MODEL__ELEMENTS:
         getElements().clear();
         return;
     }
@@ -158,10 +158,10 @@ public class DomainmodelImpl extends MinimalEObjectImpl.Container implements Dom
   {
     switch (featureID)
     {
-      case DatatypesPackage.DOMAINMODEL__ELEMENTS:
+      case DatatypesPackage.TYPE_MODEL__ELEMENTS:
         return elements != null && !elements.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //DomainmodelImpl
+} //TypeModelImpl

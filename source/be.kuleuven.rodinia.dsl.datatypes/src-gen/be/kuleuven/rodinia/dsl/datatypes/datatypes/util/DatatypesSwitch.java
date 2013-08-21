@@ -72,10 +72,10 @@ public class DatatypesSwitch<T> extends Switch<T>
   {
     switch (classifierID)
     {
-      case DatatypesPackage.DOMAINMODEL:
+      case DatatypesPackage.TYPE_MODEL:
       {
-        Domainmodel domainmodel = (Domainmodel)theEObject;
-        T result = caseDomainmodel(domainmodel);
+        TypeModel typeModel = (TypeModel)theEObject;
+        T result = caseTypeModel(typeModel);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -119,12 +119,12 @@ public class DatatypesSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case DatatypesPackage.CUSTOM_TYPE:
+      case DatatypesPackage.COMPLEX_TYPE:
       {
-        CustomType customType = (CustomType)theEObject;
-        T result = caseCustomType(customType);
-        if (result == null) result = caseDataType(customType);
-        if (result == null) result = caseAbstractElement(customType);
+        ComplexType complexType = (ComplexType)theEObject;
+        T result = caseComplexType(complexType);
+        if (result == null) result = caseDataType(complexType);
+        if (result == null) result = caseAbstractElement(complexType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -140,17 +140,17 @@ public class DatatypesSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Domainmodel</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Type Model</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Domainmodel</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Type Model</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseDomainmodel(Domainmodel object)
+  public T caseTypeModel(TypeModel object)
   {
     return null;
   }
@@ -236,17 +236,17 @@ public class DatatypesSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Custom Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Complex Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Custom Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Complex Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseCustomType(CustomType object)
+  public T caseComplexType(ComplexType object)
   {
     return null;
   }

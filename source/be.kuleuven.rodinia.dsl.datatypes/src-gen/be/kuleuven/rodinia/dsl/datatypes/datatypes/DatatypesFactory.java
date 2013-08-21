@@ -23,13 +23,13 @@ public interface DatatypesFactory extends EFactory
   DatatypesFactory eINSTANCE = be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.DatatypesFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Domainmodel</em>'.
+   * Returns a new object of class '<em>Type Model</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Domainmodel</em>'.
+   * @return a new object of class '<em>Type Model</em>'.
    * @generated
    */
-  Domainmodel createDomainmodel();
+  TypeModel createTypeModel();
 
   /**
    * Returns a new object of class '<em>Abstract Element</em>'.
@@ -77,13 +77,13 @@ public interface DatatypesFactory extends EFactory
   SimpleType createSimpleType();
 
   /**
-   * Returns a new object of class '<em>Custom Type</em>'.
+   * Returns a new object of class '<em>Complex Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Custom Type</em>'.
+   * @return a new object of class '<em>Complex Type</em>'.
    * @generated
    */
-  CustomType createCustomType();
+  ComplexType createComplexType();
 
   /**
    * Returns a new object of class '<em>Field</em>'.

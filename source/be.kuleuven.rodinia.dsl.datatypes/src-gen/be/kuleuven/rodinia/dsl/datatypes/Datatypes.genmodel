@@ -7,8 +7,8 @@
     editorPluginID="be.kuleuven.rodinia.dsl.datatypes.editor" runtimeVersion="2.9">
   <genPackages prefix="Datatypes" basePackage="be.kuleuven.rodinia.dsl.datatypes"
       disposableProviderFactory="true" fileExtensions="datatypes" ecorePackage="Datatypes.ecore#/">
-    <genClasses ecoreClass="Datatypes.ecore#//Domainmodel">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Datatypes.ecore#//Domainmodel/elements"/>
+    <genClasses ecoreClass="Datatypes.ecore#//TypeModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Datatypes.ecore#//TypeModel/elements"/>
     </genClasses>
     <genClasses ecoreClass="Datatypes.ecore#//AbstractElement"/>
     <genClasses ecoreClass="Datatypes.ecore#//DataTypeLibrary">
@@ -22,9 +22,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Datatypes.ecore#//DataType/name"/>
     </genClasses>
     <genClasses ecoreClass="Datatypes.ecore#//SimpleType"/>
-    <genClasses ecoreClass="Datatypes.ecore#//CustomType">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Datatypes.ecore#//CustomType/superType"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Datatypes.ecore#//CustomType/fields"/>
+    <genClasses ecoreClass="Datatypes.ecore#//ComplexType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Datatypes.ecore#//ComplexType/superType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Datatypes.ecore#//ComplexType/fields"/>
     </genClasses>
     <genClasses ecoreClass="Datatypes.ecore#//Field">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Datatypes.ecore#//Field/many"/>

@@ -57,14 +57,14 @@ public interface DatatypesPackage extends EPackage
   DatatypesPackage eINSTANCE = be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.DatatypesPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.DomainmodelImpl <em>Domainmodel</em>}' class.
+   * The meta object id for the '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.TypeModelImpl <em>Type Model</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.DomainmodelImpl
-   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.DatatypesPackageImpl#getDomainmodel()
+   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.TypeModelImpl
+   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.DatatypesPackageImpl#getTypeModel()
    * @generated
    */
-  int DOMAINMODEL = 0;
+  int TYPE_MODEL = 0;
 
   /**
    * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -73,16 +73,16 @@ public interface DatatypesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DOMAINMODEL__ELEMENTS = 0;
+  int TYPE_MODEL__ELEMENTS = 0;
 
   /**
-   * The number of structural features of the '<em>Domainmodel</em>' class.
+   * The number of structural features of the '<em>Type Model</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DOMAINMODEL_FEATURE_COUNT = 1;
+  int TYPE_MODEL_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.AbstractElementImpl <em>Abstract Element</em>}' class.
@@ -225,14 +225,14 @@ public interface DatatypesPackage extends EPackage
   int SIMPLE_TYPE_FEATURE_COUNT = DATA_TYPE_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.CustomTypeImpl <em>Custom Type</em>}' class.
+   * The meta object id for the '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.ComplexTypeImpl <em>Complex Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.CustomTypeImpl
-   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.DatatypesPackageImpl#getCustomType()
+   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.ComplexTypeImpl
+   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.DatatypesPackageImpl#getComplexType()
    * @generated
    */
-  int CUSTOM_TYPE = 6;
+  int COMPLEX_TYPE = 6;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -241,7 +241,7 @@ public interface DatatypesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CUSTOM_TYPE__NAME = DATA_TYPE__NAME;
+  int COMPLEX_TYPE__NAME = DATA_TYPE__NAME;
 
   /**
    * The feature id for the '<em><b>Super Type</b></em>' reference.
@@ -250,7 +250,7 @@ public interface DatatypesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CUSTOM_TYPE__SUPER_TYPE = DATA_TYPE_FEATURE_COUNT + 0;
+  int COMPLEX_TYPE__SUPER_TYPE = DATA_TYPE_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Fields</b></em>' containment reference list.
@@ -259,16 +259,16 @@ public interface DatatypesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CUSTOM_TYPE__FIELDS = DATA_TYPE_FEATURE_COUNT + 1;
+  int COMPLEX_TYPE__FIELDS = DATA_TYPE_FEATURE_COUNT + 1;
 
   /**
-   * The number of structural features of the '<em>Custom Type</em>' class.
+   * The number of structural features of the '<em>Complex Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CUSTOM_TYPE_FEATURE_COUNT = DATA_TYPE_FEATURE_COUNT + 2;
+  int COMPLEX_TYPE_FEATURE_COUNT = DATA_TYPE_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.FieldImpl <em>Field</em>}' class.
@@ -318,25 +318,25 @@ public interface DatatypesPackage extends EPackage
 
 
   /**
-   * Returns the meta object for class '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.Domainmodel <em>Domainmodel</em>}'.
+   * Returns the meta object for class '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.TypeModel <em>Type Model</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Domainmodel</em>'.
-   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.Domainmodel
+   * @return the meta object for class '<em>Type Model</em>'.
+   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.TypeModel
    * @generated
    */
-  EClass getDomainmodel();
+  EClass getTypeModel();
 
   /**
-   * Returns the meta object for the containment reference list '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.Domainmodel#getElements <em>Elements</em>}'.
+   * Returns the meta object for the containment reference list '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.TypeModel#getElements <em>Elements</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Elements</em>'.
-   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.Domainmodel#getElements()
-   * @see #getDomainmodel()
+   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.TypeModel#getElements()
+   * @see #getTypeModel()
    * @generated
    */
-  EReference getDomainmodel_Elements();
+  EReference getTypeModel_Elements();
 
   /**
    * Returns the meta object for class '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.AbstractElement <em>Abstract Element</em>}'.
@@ -433,36 +433,36 @@ public interface DatatypesPackage extends EPackage
   EClass getSimpleType();
 
   /**
-   * Returns the meta object for class '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.CustomType <em>Custom Type</em>}'.
+   * Returns the meta object for class '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.ComplexType <em>Complex Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Custom Type</em>'.
-   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.CustomType
+   * @return the meta object for class '<em>Complex Type</em>'.
+   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.ComplexType
    * @generated
    */
-  EClass getCustomType();
+  EClass getComplexType();
 
   /**
-   * Returns the meta object for the reference '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.CustomType#getSuperType <em>Super Type</em>}'.
+   * Returns the meta object for the reference '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.ComplexType#getSuperType <em>Super Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the reference '<em>Super Type</em>'.
-   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.CustomType#getSuperType()
-   * @see #getCustomType()
+   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.ComplexType#getSuperType()
+   * @see #getComplexType()
    * @generated
    */
-  EReference getCustomType_SuperType();
+  EReference getComplexType_SuperType();
 
   /**
-   * Returns the meta object for the containment reference list '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.CustomType#getFields <em>Fields</em>}'.
+   * Returns the meta object for the containment reference list '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.ComplexType#getFields <em>Fields</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Fields</em>'.
-   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.CustomType#getFields()
-   * @see #getCustomType()
+   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.ComplexType#getFields()
+   * @see #getComplexType()
    * @generated
    */
-  EReference getCustomType_Fields();
+  EReference getComplexType_Fields();
 
   /**
    * Returns the meta object for class '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.Field <em>Field</em>}'.
@@ -531,14 +531,14 @@ public interface DatatypesPackage extends EPackage
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.DomainmodelImpl <em>Domainmodel</em>}' class.
+     * The meta object literal for the '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.TypeModelImpl <em>Type Model</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.DomainmodelImpl
-     * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.DatatypesPackageImpl#getDomainmodel()
+     * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.TypeModelImpl
+     * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.DatatypesPackageImpl#getTypeModel()
      * @generated
      */
-    EClass DOMAINMODEL = eINSTANCE.getDomainmodel();
+    EClass TYPE_MODEL = eINSTANCE.getTypeModel();
 
     /**
      * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
@@ -546,7 +546,7 @@ public interface DatatypesPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DOMAINMODEL__ELEMENTS = eINSTANCE.getDomainmodel_Elements();
+    EReference TYPE_MODEL__ELEMENTS = eINSTANCE.getTypeModel_Elements();
 
     /**
      * The meta object literal for the '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.AbstractElementImpl <em>Abstract Element</em>}' class.
@@ -631,14 +631,14 @@ public interface DatatypesPackage extends EPackage
     EClass SIMPLE_TYPE = eINSTANCE.getSimpleType();
 
     /**
-     * The meta object literal for the '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.CustomTypeImpl <em>Custom Type</em>}' class.
+     * The meta object literal for the '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.ComplexTypeImpl <em>Complex Type</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.CustomTypeImpl
-     * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.DatatypesPackageImpl#getCustomType()
+     * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.ComplexTypeImpl
+     * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.DatatypesPackageImpl#getComplexType()
      * @generated
      */
-    EClass CUSTOM_TYPE = eINSTANCE.getCustomType();
+    EClass COMPLEX_TYPE = eINSTANCE.getComplexType();
 
     /**
      * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
@@ -646,7 +646,7 @@ public interface DatatypesPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CUSTOM_TYPE__SUPER_TYPE = eINSTANCE.getCustomType_SuperType();
+    EReference COMPLEX_TYPE__SUPER_TYPE = eINSTANCE.getComplexType_SuperType();
 
     /**
      * The meta object literal for the '<em><b>Fields</b></em>' containment reference list feature.
@@ -654,7 +654,7 @@ public interface DatatypesPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CUSTOM_TYPE__FIELDS = eINSTANCE.getCustomType_Fields();
+    EReference COMPLEX_TYPE__FIELDS = eINSTANCE.getComplexType_Fields();
 
     /**
      * The meta object literal for the '{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.impl.FieldImpl <em>Field</em>}' class.

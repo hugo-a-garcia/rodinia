@@ -8,21 +8,21 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Domainmodel</b></em>'.
+ * A representation of the model object '<em><b>Type Model</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.Domainmodel#getElements <em>Elements</em>}</li>
+ *   <li>{@link be.kuleuven.rodinia.dsl.datatypes.datatypes.TypeModel#getElements <em>Elements</em>}</li>
  * </ul>
  * </p>
  *
- * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.DatatypesPackage#getDomainmodel()
+ * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.DatatypesPackage#getTypeModel()
  * @model
  * @generated
  */
-public interface Domainmodel extends EObject
+public interface TypeModel extends EObject
 {
   /**
    * Returns the value of the '<em><b>Elements</b></em>' containment reference list.
@@ -34,10 +34,10 @@ public interface Domainmodel extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Elements</em>' containment reference list.
-   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.DatatypesPackage#getDomainmodel_Elements()
+   * @see be.kuleuven.rodinia.dsl.datatypes.datatypes.DatatypesPackage#getTypeModel_Elements()
    * @model containment="true"
    * @generated
    */
   EList<AbstractElement> getElements();
 
-} // Domainmodel
+} // TypeModel

@@ -45,20 +45,20 @@ public class DatatypesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDataTypeLibraryAccess().getGroup(), "rule__DataTypeLibrary__Group__0");
 					put(grammarAccess.getImportAccess().getGroup(), "rule__Import__Group__0");
 					put(grammarAccess.getSimpleTypeAccess().getGroup(), "rule__SimpleType__Group__0");
-					put(grammarAccess.getCustomTypeAccess().getGroup(), "rule__CustomType__Group__0");
-					put(grammarAccess.getCustomTypeAccess().getGroup_2(), "rule__CustomType__Group_2__0");
-					put(grammarAccess.getCustomTypeAccess().getGroup_3(), "rule__CustomType__Group_3__0");
-					put(grammarAccess.getCustomTypeAccess().getGroup_3_3(), "rule__CustomType__Group_3_3__0");
+					put(grammarAccess.getComplexTypeAccess().getGroup(), "rule__ComplexType__Group__0");
+					put(grammarAccess.getComplexTypeAccess().getGroup_2(), "rule__ComplexType__Group_2__0");
+					put(grammarAccess.getComplexTypeAccess().getGroup_4(), "rule__ComplexType__Group_4__0");
+					put(grammarAccess.getComplexTypeAccess().getGroup_4_3(), "rule__ComplexType__Group_4_3__0");
 					put(grammarAccess.getFieldAccess().getGroup(), "rule__Field__Group__0");
-					put(grammarAccess.getDomainmodelAccess().getElementsAssignment(), "rule__Domainmodel__ElementsAssignment");
+					put(grammarAccess.getTypeModelAccess().getElementsAssignment(), "rule__TypeModel__ElementsAssignment");
 					put(grammarAccess.getDataTypeLibraryAccess().getNameAssignment_1(), "rule__DataTypeLibrary__NameAssignment_1");
 					put(grammarAccess.getDataTypeLibraryAccess().getElementsAssignment_3(), "rule__DataTypeLibrary__ElementsAssignment_3");
 					put(grammarAccess.getImportAccess().getImportedNamespaceAssignment_1(), "rule__Import__ImportedNamespaceAssignment_1");
 					put(grammarAccess.getSimpleTypeAccess().getNameAssignment_1(), "rule__SimpleType__NameAssignment_1");
-					put(grammarAccess.getCustomTypeAccess().getNameAssignment_1(), "rule__CustomType__NameAssignment_1");
-					put(grammarAccess.getCustomTypeAccess().getSuperTypeAssignment_2_1(), "rule__CustomType__SuperTypeAssignment_2_1");
-					put(grammarAccess.getCustomTypeAccess().getFieldsAssignment_3_2(), "rule__CustomType__FieldsAssignment_3_2");
-					put(grammarAccess.getCustomTypeAccess().getFieldsAssignment_3_3_1(), "rule__CustomType__FieldsAssignment_3_3_1");
+					put(grammarAccess.getComplexTypeAccess().getNameAssignment_1(), "rule__ComplexType__NameAssignment_1");
+					put(grammarAccess.getComplexTypeAccess().getSuperTypeAssignment_2_1(), "rule__ComplexType__SuperTypeAssignment_2_1");
+					put(grammarAccess.getComplexTypeAccess().getFieldsAssignment_4_2(), "rule__ComplexType__FieldsAssignment_4_2");
+					put(grammarAccess.getComplexTypeAccess().getFieldsAssignment_4_3_1(), "rule__ComplexType__FieldsAssignment_4_3_1");
 					put(grammarAccess.getFieldAccess().getManyAssignment_0(), "rule__Field__ManyAssignment_0");
 					put(grammarAccess.getFieldAccess().getNameAssignment_1(), "rule__Field__NameAssignment_1");
 					put(grammarAccess.getFieldAccess().getTypeAssignment_3(), "rule__Field__TypeAssignment_3");
@@ -72,7 +72,7 @@ public class DatatypesParser extends AbstractContentAssistParser {
 	protected Collection<FollowElement> getFollowElements(AbstractInternalContentAssistParser parser) {
 		try {
 			be.kuleuven.rodinia.dsl.datatypes.ui.contentassist.antlr.internal.InternalDatatypesParser typedParser = (be.kuleuven.rodinia.dsl.datatypes.ui.contentassist.antlr.internal.InternalDatatypesParser) parser;
-			typedParser.entryRuleDomainmodel();
+			typedParser.entryRuleTypeModel();
 			return typedParser.getFollowElements();
 		} catch(RecognitionException ex) {
 			throw new RuntimeException(ex);

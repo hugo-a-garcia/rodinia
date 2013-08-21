@@ -64,13 +64,13 @@ public class DatatypesFactoryImpl extends EFactoryImpl implements DatatypesFacto
   {
     switch (eClass.getClassifierID())
     {
-      case DatatypesPackage.DOMAINMODEL: return createDomainmodel();
+      case DatatypesPackage.TYPE_MODEL: return createTypeModel();
       case DatatypesPackage.ABSTRACT_ELEMENT: return createAbstractElement();
       case DatatypesPackage.DATA_TYPE_LIBRARY: return createDataTypeLibrary();
       case DatatypesPackage.IMPORT: return createImport();
       case DatatypesPackage.DATA_TYPE: return createDataType();
       case DatatypesPackage.SIMPLE_TYPE: return createSimpleType();
-      case DatatypesPackage.CUSTOM_TYPE: return createCustomType();
+      case DatatypesPackage.COMPLEX_TYPE: return createComplexType();
       case DatatypesPackage.FIELD: return createField();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -82,10 +82,10 @@ public class DatatypesFactoryImpl extends EFactoryImpl implements DatatypesFacto
    * <!-- end-user-doc -->
    * @generated
    */
-  public Domainmodel createDomainmodel()
+  public TypeModel createTypeModel()
   {
-    DomainmodelImpl domainmodel = new DomainmodelImpl();
-    return domainmodel;
+    TypeModelImpl typeModel = new TypeModelImpl();
+    return typeModel;
   }
 
   /**
@@ -148,10 +148,10 @@ public class DatatypesFactoryImpl extends EFactoryImpl implements DatatypesFacto
    * <!-- end-user-doc -->
    * @generated
    */
-  public CustomType createCustomType()
+  public ComplexType createComplexType()
   {
-    CustomTypeImpl customType = new CustomTypeImpl();
-    return customType;
+    ComplexTypeImpl complexType = new ComplexTypeImpl();
+    return complexType;
   }
 
   /**

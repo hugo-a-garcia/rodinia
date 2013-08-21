@@ -3,15 +3,15 @@
 package be.kuleuven.rodinia.dsl.datatypes.datatypes.impl;
 
 import be.kuleuven.rodinia.dsl.datatypes.datatypes.AbstractElement;
-import be.kuleuven.rodinia.dsl.datatypes.datatypes.CustomType;
+import be.kuleuven.rodinia.dsl.datatypes.datatypes.ComplexType;
 import be.kuleuven.rodinia.dsl.datatypes.datatypes.DataType;
 import be.kuleuven.rodinia.dsl.datatypes.datatypes.DataTypeLibrary;
 import be.kuleuven.rodinia.dsl.datatypes.datatypes.DatatypesFactory;
 import be.kuleuven.rodinia.dsl.datatypes.datatypes.DatatypesPackage;
-import be.kuleuven.rodinia.dsl.datatypes.datatypes.Domainmodel;
 import be.kuleuven.rodinia.dsl.datatypes.datatypes.Field;
 import be.kuleuven.rodinia.dsl.datatypes.datatypes.Import;
 import be.kuleuven.rodinia.dsl.datatypes.datatypes.SimpleType;
+import be.kuleuven.rodinia.dsl.datatypes.datatypes.TypeModel;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -33,7 +33,7 @@ public class DatatypesPackageImpl extends EPackageImpl implements DatatypesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass domainmodelEClass = null;
+  private EClass typeModelEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -75,7 +75,7 @@ public class DatatypesPackageImpl extends EPackageImpl implements DatatypesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass customTypeEClass = null;
+  private EClass complexTypeEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -152,9 +152,9 @@ public class DatatypesPackageImpl extends EPackageImpl implements DatatypesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getDomainmodel()
+  public EClass getTypeModel()
   {
-    return domainmodelEClass;
+    return typeModelEClass;
   }
 
   /**
@@ -162,9 +162,9 @@ public class DatatypesPackageImpl extends EPackageImpl implements DatatypesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDomainmodel_Elements()
+  public EReference getTypeModel_Elements()
   {
-    return (EReference)domainmodelEClass.getEStructuralFeatures().get(0);
+    return (EReference)typeModelEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -262,9 +262,9 @@ public class DatatypesPackageImpl extends EPackageImpl implements DatatypesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getCustomType()
+  public EClass getComplexType()
   {
-    return customTypeEClass;
+    return complexTypeEClass;
   }
 
   /**
@@ -272,9 +272,9 @@ public class DatatypesPackageImpl extends EPackageImpl implements DatatypesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getCustomType_SuperType()
+  public EReference getComplexType_SuperType()
   {
-    return (EReference)customTypeEClass.getEStructuralFeatures().get(0);
+    return (EReference)complexTypeEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -282,9 +282,9 @@ public class DatatypesPackageImpl extends EPackageImpl implements DatatypesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getCustomType_Fields()
+  public EReference getComplexType_Fields()
   {
-    return (EReference)customTypeEClass.getEStructuralFeatures().get(1);
+    return (EReference)complexTypeEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -357,8 +357,8 @@ public class DatatypesPackageImpl extends EPackageImpl implements DatatypesPacka
     isCreated = true;
 
     // Create classes and their features
-    domainmodelEClass = createEClass(DOMAINMODEL);
-    createEReference(domainmodelEClass, DOMAINMODEL__ELEMENTS);
+    typeModelEClass = createEClass(TYPE_MODEL);
+    createEReference(typeModelEClass, TYPE_MODEL__ELEMENTS);
 
     abstractElementEClass = createEClass(ABSTRACT_ELEMENT);
 
@@ -374,9 +374,9 @@ public class DatatypesPackageImpl extends EPackageImpl implements DatatypesPacka
 
     simpleTypeEClass = createEClass(SIMPLE_TYPE);
 
-    customTypeEClass = createEClass(CUSTOM_TYPE);
-    createEReference(customTypeEClass, CUSTOM_TYPE__SUPER_TYPE);
-    createEReference(customTypeEClass, CUSTOM_TYPE__FIELDS);
+    complexTypeEClass = createEClass(COMPLEX_TYPE);
+    createEReference(complexTypeEClass, COMPLEX_TYPE__SUPER_TYPE);
+    createEReference(complexTypeEClass, COMPLEX_TYPE__FIELDS);
 
     fieldEClass = createEClass(FIELD);
     createEAttribute(fieldEClass, FIELD__MANY);
@@ -417,11 +417,11 @@ public class DatatypesPackageImpl extends EPackageImpl implements DatatypesPacka
     importEClass.getESuperTypes().add(this.getAbstractElement());
     dataTypeEClass.getESuperTypes().add(this.getAbstractElement());
     simpleTypeEClass.getESuperTypes().add(this.getDataType());
-    customTypeEClass.getESuperTypes().add(this.getDataType());
+    complexTypeEClass.getESuperTypes().add(this.getDataType());
 
     // Initialize classes and features; add operations and parameters
-    initEClass(domainmodelEClass, Domainmodel.class, "Domainmodel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDomainmodel_Elements(), this.getAbstractElement(), null, "elements", null, 0, -1, Domainmodel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(typeModelEClass, TypeModel.class, "TypeModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTypeModel_Elements(), this.getAbstractElement(), null, "elements", null, 0, -1, TypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(abstractElementEClass, AbstractElement.class, "AbstractElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -437,9 +437,9 @@ public class DatatypesPackageImpl extends EPackageImpl implements DatatypesPacka
 
     initEClass(simpleTypeEClass, SimpleType.class, "SimpleType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(customTypeEClass, CustomType.class, "CustomType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getCustomType_SuperType(), this.getCustomType(), null, "superType", null, 0, 1, CustomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCustomType_Fields(), this.getField(), null, "fields", null, 0, -1, CustomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(complexTypeEClass, ComplexType.class, "ComplexType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getComplexType_SuperType(), this.getComplexType(), null, "superType", null, 0, 1, ComplexType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getComplexType_Fields(), this.getField(), null, "fields", null, 0, -1, ComplexType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(fieldEClass, Field.class, "Field", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getField_Many(), ecorePackage.getEBoolean(), "many", null, 0, 1, Field.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

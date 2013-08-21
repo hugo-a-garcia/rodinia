@@ -18,12 +18,12 @@ import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 public class DatatypesGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
-	public class DomainmodelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Domainmodel");
+	public class TypeModelElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TypeModel");
 		private final Assignment cElementsAssignment = (Assignment)rule.eContents().get(1);
 		private final RuleCall cElementsAbstractElementParserRuleCall_0 = (RuleCall)cElementsAssignment.eContents().get(0);
 		
-		//Domainmodel:
+		//TypeModel:
 		//	elements+=AbstractElement*;
 		public ParserRule getRule() { return rule; }
 
@@ -174,20 +174,20 @@ public class DatatypesGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DataType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cSimpleTypeParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cCustomTypeParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cComplexTypeParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//DataType:
-		//	SimpleType | CustomType;
+		//	SimpleType | ComplexType;
 		public ParserRule getRule() { return rule; }
 
-		//SimpleType | CustomType
+		//SimpleType | ComplexType
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//SimpleType
 		public RuleCall getSimpleTypeParserRuleCall_0() { return cSimpleTypeParserRuleCall_0; }
 
-		//CustomType
-		public RuleCall getCustomTypeParserRuleCall_1() { return cCustomTypeParserRuleCall_1; }
+		//ComplexType
+		public RuleCall getComplexTypeParserRuleCall_1() { return cComplexTypeParserRuleCall_1; }
 	}
 
 	public class SimpleTypeElements extends AbstractParserRuleElementFinder {
@@ -214,39 +214,41 @@ public class DatatypesGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 	}
 
-	public class CustomTypeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CustomType");
+	public class ComplexTypeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ComplexType");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cCustomTypeKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cComplexTypeKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cSuperTypeKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Keyword cExtendsKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Assignment cSuperTypeAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final CrossReference cSuperTypeCustomTypeCrossReference_2_1_0 = (CrossReference)cSuperTypeAssignment_2_1.eContents().get(0);
-		private final RuleCall cSuperTypeCustomTypeQualifiedNameParserRuleCall_2_1_0_1 = (RuleCall)cSuperTypeCustomTypeCrossReference_2_1_0.eContents().get(1);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cFieldsKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
-		private final Assignment cFieldsAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
-		private final RuleCall cFieldsFieldParserRuleCall_3_2_0 = (RuleCall)cFieldsAssignment_3_2.eContents().get(0);
-		private final Group cGroup_3_3 = (Group)cGroup_3.eContents().get(3);
-		private final Keyword cCommaKeyword_3_3_0 = (Keyword)cGroup_3_3.eContents().get(0);
-		private final Assignment cFieldsAssignment_3_3_1 = (Assignment)cGroup_3_3.eContents().get(1);
-		private final RuleCall cFieldsFieldParserRuleCall_3_3_1_0 = (RuleCall)cFieldsAssignment_3_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_3_4 = (Keyword)cGroup_3.eContents().get(4);
+		private final CrossReference cSuperTypeComplexTypeCrossReference_2_1_0 = (CrossReference)cSuperTypeAssignment_2_1.eContents().get(0);
+		private final RuleCall cSuperTypeComplexTypeQualifiedNameParserRuleCall_2_1_0_1 = (RuleCall)cSuperTypeComplexTypeCrossReference_2_1_0.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cFieldsKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
+		private final Assignment cFieldsAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
+		private final RuleCall cFieldsFieldParserRuleCall_4_2_0 = (RuleCall)cFieldsAssignment_4_2.eContents().get(0);
+		private final Group cGroup_4_3 = (Group)cGroup_4.eContents().get(3);
+		private final Keyword cCommaKeyword_4_3_0 = (Keyword)cGroup_4_3.eContents().get(0);
+		private final Assignment cFieldsAssignment_4_3_1 = (Assignment)cGroup_4_3.eContents().get(1);
+		private final RuleCall cFieldsFieldParserRuleCall_4_3_1_0 = (RuleCall)cFieldsAssignment_4_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4_4 = (Keyword)cGroup_4.eContents().get(4);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//CustomType:
-		//	"CustomType" name=ID ("superType" superType=[CustomType|QualifiedName])? ("fields" "{" fields+=Field (","
-		//	fields+=Field)* "}")?;
+		//ComplexType:
+		//	"ComplexType" name=ID ("extends" superType=[ComplexType|QualifiedName])? "{" ("fields" "{" fields+=Field (","
+		//	fields+=Field)* "}")? "}";
 		public ParserRule getRule() { return rule; }
 
-		//"CustomType" name=ID ("superType" superType=[CustomType|QualifiedName])? ("fields" "{" fields+=Field (","
-		//fields+=Field)* "}")?
+		//"ComplexType" name=ID ("extends" superType=[ComplexType|QualifiedName])? "{" ("fields" "{" fields+=Field (","
+		//fields+=Field)* "}")? "}"
 		public Group getGroup() { return cGroup; }
 
-		//"CustomType"
-		public Keyword getCustomTypeKeyword_0() { return cCustomTypeKeyword_0; }
+		//"ComplexType"
+		public Keyword getComplexTypeKeyword_0() { return cComplexTypeKeyword_0; }
 
 		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -254,50 +256,56 @@ public class DatatypesGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//("superType" superType=[CustomType|QualifiedName])?
+		//("extends" superType=[ComplexType|QualifiedName])?
 		public Group getGroup_2() { return cGroup_2; }
 
-		//"superType"
-		public Keyword getSuperTypeKeyword_2_0() { return cSuperTypeKeyword_2_0; }
+		//"extends"
+		public Keyword getExtendsKeyword_2_0() { return cExtendsKeyword_2_0; }
 
-		//superType=[CustomType|QualifiedName]
+		//superType=[ComplexType|QualifiedName]
 		public Assignment getSuperTypeAssignment_2_1() { return cSuperTypeAssignment_2_1; }
 
-		//[CustomType|QualifiedName]
-		public CrossReference getSuperTypeCustomTypeCrossReference_2_1_0() { return cSuperTypeCustomTypeCrossReference_2_1_0; }
+		//[ComplexType|QualifiedName]
+		public CrossReference getSuperTypeComplexTypeCrossReference_2_1_0() { return cSuperTypeComplexTypeCrossReference_2_1_0; }
 
 		//QualifiedName
-		public RuleCall getSuperTypeCustomTypeQualifiedNameParserRuleCall_2_1_0_1() { return cSuperTypeCustomTypeQualifiedNameParserRuleCall_2_1_0_1; }
-
-		//("fields" "{" fields+=Field ("," fields+=Field)* "}")?
-		public Group getGroup_3() { return cGroup_3; }
-
-		//"fields"
-		public Keyword getFieldsKeyword_3_0() { return cFieldsKeyword_3_0; }
+		public RuleCall getSuperTypeComplexTypeQualifiedNameParserRuleCall_2_1_0_1() { return cSuperTypeComplexTypeQualifiedNameParserRuleCall_2_1_0_1; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_3_1() { return cLeftCurlyBracketKeyword_3_1; }
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+
+		//("fields" "{" fields+=Field ("," fields+=Field)* "}")?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//"fields"
+		public Keyword getFieldsKeyword_4_0() { return cFieldsKeyword_4_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_4_1() { return cLeftCurlyBracketKeyword_4_1; }
 
 		//fields+=Field
-		public Assignment getFieldsAssignment_3_2() { return cFieldsAssignment_3_2; }
+		public Assignment getFieldsAssignment_4_2() { return cFieldsAssignment_4_2; }
 
 		//Field
-		public RuleCall getFieldsFieldParserRuleCall_3_2_0() { return cFieldsFieldParserRuleCall_3_2_0; }
+		public RuleCall getFieldsFieldParserRuleCall_4_2_0() { return cFieldsFieldParserRuleCall_4_2_0; }
 
 		//("," fields+=Field)*
-		public Group getGroup_3_3() { return cGroup_3_3; }
+		public Group getGroup_4_3() { return cGroup_4_3; }
 
 		//","
-		public Keyword getCommaKeyword_3_3_0() { return cCommaKeyword_3_3_0; }
+		public Keyword getCommaKeyword_4_3_0() { return cCommaKeyword_4_3_0; }
 
 		//fields+=Field
-		public Assignment getFieldsAssignment_3_3_1() { return cFieldsAssignment_3_3_1; }
+		public Assignment getFieldsAssignment_4_3_1() { return cFieldsAssignment_4_3_1; }
 
 		//Field
-		public RuleCall getFieldsFieldParserRuleCall_3_3_1_0() { return cFieldsFieldParserRuleCall_3_3_1_0; }
+		public RuleCall getFieldsFieldParserRuleCall_4_3_1_0() { return cFieldsFieldParserRuleCall_4_3_1_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_3_4() { return cRightCurlyBracketKeyword_3_4; }
+		public Keyword getRightCurlyBracketKeyword_4_4() { return cRightCurlyBracketKeyword_4_4; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class FieldElements extends AbstractParserRuleElementFinder {
@@ -345,7 +353,7 @@ public class DatatypesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	
-	private DomainmodelElements pDomainmodel;
+	private TypeModelElements pTypeModel;
 	private QualifiedNameElements pQualifiedName;
 	private QualifiedNameWithWildcardElements pQualifiedNameWithWildcard;
 	private AbstractElementElements pAbstractElement;
@@ -353,7 +361,7 @@ public class DatatypesGrammarAccess extends AbstractGrammarElementFinder {
 	private ImportElements pImport;
 	private DataTypeElements pDataType;
 	private SimpleTypeElements pSimpleType;
-	private CustomTypeElements pCustomType;
+	private ComplexTypeElements pComplexType;
 	private FieldElements pField;
 	
 	private final Grammar grammar;
@@ -394,14 +402,14 @@ public class DatatypesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//Domainmodel:
+	//TypeModel:
 	//	elements+=AbstractElement*;
-	public DomainmodelElements getDomainmodelAccess() {
-		return (pDomainmodel != null) ? pDomainmodel : (pDomainmodel = new DomainmodelElements());
+	public TypeModelElements getTypeModelAccess() {
+		return (pTypeModel != null) ? pTypeModel : (pTypeModel = new TypeModelElements());
 	}
 	
-	public ParserRule getDomainmodelRule() {
-		return getDomainmodelAccess().getRule();
+	public ParserRule getTypeModelRule() {
+		return getTypeModelAccess().getRule();
 	}
 
 	//QualifiedName:
@@ -455,7 +463,7 @@ public class DatatypesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//DataType:
-	//	SimpleType | CustomType;
+	//	SimpleType | ComplexType;
 	public DataTypeElements getDataTypeAccess() {
 		return (pDataType != null) ? pDataType : (pDataType = new DataTypeElements());
 	}
@@ -474,15 +482,15 @@ public class DatatypesGrammarAccess extends AbstractGrammarElementFinder {
 		return getSimpleTypeAccess().getRule();
 	}
 
-	//CustomType:
-	//	"CustomType" name=ID ("superType" superType=[CustomType|QualifiedName])? ("fields" "{" fields+=Field (","
-	//	fields+=Field)* "}")?;
-	public CustomTypeElements getCustomTypeAccess() {
-		return (pCustomType != null) ? pCustomType : (pCustomType = new CustomTypeElements());
+	//ComplexType:
+	//	"ComplexType" name=ID ("extends" superType=[ComplexType|QualifiedName])? "{" ("fields" "{" fields+=Field (","
+	//	fields+=Field)* "}")? "}";
+	public ComplexTypeElements getComplexTypeAccess() {
+		return (pComplexType != null) ? pComplexType : (pComplexType = new ComplexTypeElements());
 	}
 	
-	public ParserRule getCustomTypeRule() {
-		return getCustomTypeAccess().getRule();
+	public ParserRule getComplexTypeRule() {
+		return getComplexTypeAccess().getRule();
 	}
 
 	//Field:

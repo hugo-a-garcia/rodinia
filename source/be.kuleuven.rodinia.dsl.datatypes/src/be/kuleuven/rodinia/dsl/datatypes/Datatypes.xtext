@@ -2,7 +2,7 @@ grammar be.kuleuven.rodinia.dsl.datatypes.Datatypes with org.eclipse.xtext.commo
 
 generate datatypes "http://www.kuleuven.be/rodinia/dsl/datatypes/Datatypes"
 
-Domainmodel:
+TypeModel:
 		(elements+=AbstractElement)*;
 
 QualifiedName:
@@ -27,14 +27,17 @@ Import:
 ;
 
 DataType:
-	SimpleType | CustomType;
+	SimpleType | ComplexType;
 
 SimpleType:
 	'SimpleType' name=ID;
 
-CustomType:
-	'CustomType' name=ID ('superType' superType=[CustomType|QualifiedName])?
-		('fields' '{' fields+=Field ( "," fields+=Field)* '}' )?;
+ComplexType:
+	'ComplexType' name=ID ('extends' superType=[ComplexType|QualifiedName])?
+	'{'
+		('fields' '{' fields+=Field ( "," fields+=Field)* '}' )?
+	'}'
+;
 
 Field:
 	(many?='many')? name=ID ':' type=[DataType|QualifiedName];	

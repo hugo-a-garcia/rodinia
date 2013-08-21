@@ -1,12 +1,12 @@
 package be.kuleuven.rodinia.dsl.datatypes.serializer;
 
-import be.kuleuven.rodinia.dsl.datatypes.datatypes.CustomType;
+import be.kuleuven.rodinia.dsl.datatypes.datatypes.ComplexType;
 import be.kuleuven.rodinia.dsl.datatypes.datatypes.DataTypeLibrary;
 import be.kuleuven.rodinia.dsl.datatypes.datatypes.DatatypesPackage;
-import be.kuleuven.rodinia.dsl.datatypes.datatypes.Domainmodel;
 import be.kuleuven.rodinia.dsl.datatypes.datatypes.Field;
 import be.kuleuven.rodinia.dsl.datatypes.datatypes.Import;
 import be.kuleuven.rodinia.dsl.datatypes.datatypes.SimpleType;
+import be.kuleuven.rodinia.dsl.datatypes.datatypes.TypeModel;
 import be.kuleuven.rodinia.dsl.datatypes.services.DatatypesGrammarAccess;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
@@ -30,11 +30,11 @@ public class DatatypesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == DatatypesPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
-			case DatatypesPackage.CUSTOM_TYPE:
+			case DatatypesPackage.COMPLEX_TYPE:
 				if(context == grammarAccess.getAbstractElementRule() ||
-				   context == grammarAccess.getCustomTypeRule() ||
+				   context == grammarAccess.getComplexTypeRule() ||
 				   context == grammarAccess.getDataTypeRule()) {
-					sequence_CustomType(context, (CustomType) semanticObject); 
+					sequence_ComplexType(context, (ComplexType) semanticObject); 
 					return; 
 				}
 				else break;
@@ -42,12 +42,6 @@ public class DatatypesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				if(context == grammarAccess.getAbstractElementRule() ||
 				   context == grammarAccess.getDataTypeLibraryRule()) {
 					sequence_DataTypeLibrary(context, (DataTypeLibrary) semanticObject); 
-					return; 
-				}
-				else break;
-			case DatatypesPackage.DOMAINMODEL:
-				if(context == grammarAccess.getDomainmodelRule()) {
-					sequence_Domainmodel(context, (Domainmodel) semanticObject); 
 					return; 
 				}
 				else break;
@@ -72,15 +66,21 @@ public class DatatypesSemanticSequencer extends AbstractDelegatingSemanticSequen
 					return; 
 				}
 				else break;
+			case DatatypesPackage.TYPE_MODEL:
+				if(context == grammarAccess.getTypeModelRule()) {
+					sequence_TypeModel(context, (TypeModel) semanticObject); 
+					return; 
+				}
+				else break;
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
 	
 	/**
 	 * Constraint:
-	 *     (name=ID superType=[CustomType|QualifiedName]? (fields+=Field fields+=Field*)?)
+	 *     (name=ID superType=[ComplexType|QualifiedName]? (fields+=Field fields+=Field*)?)
 	 */
-	protected void sequence_CustomType(EObject context, CustomType semanticObject) {
+	protected void sequence_ComplexType(EObject context, ComplexType semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -90,15 +90,6 @@ public class DatatypesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     (name=QualifiedName elements+=AbstractElement*)
 	 */
 	protected void sequence_DataTypeLibrary(EObject context, DataTypeLibrary semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     elements+=AbstractElement*
-	 */
-	protected void sequence_Domainmodel(EObject context, Domainmodel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -141,5 +132,14 @@ public class DatatypesSemanticSequencer extends AbstractDelegatingSemanticSequen
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getSimpleTypeAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     elements+=AbstractElement*
+	 */
+	protected void sequence_TypeModel(EObject context, TypeModel semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 }
