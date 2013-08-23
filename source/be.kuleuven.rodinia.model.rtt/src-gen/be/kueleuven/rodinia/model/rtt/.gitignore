@@ -3,3 +3,17 @@
 /RttPackage.java
 /TaskContext.java
 /PeerGroup.java
+/Activity.java
+/ConnectionPolicy.java
+/ConnectionPolicyLockPolicy.java
+/ConnectionPolicyTransport.java
+/ConnectionPolicyType.java
+/EventPort.java
+/IActivity.java
+/InputPort.java
+/Operation.java
+/OrocosPackage.java
+/OutputPort.java
+/Property.java
+/Scheduler.java
+/Slave.java

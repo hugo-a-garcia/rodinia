@@ -3,3 +3,12 @@
 /RttPackageImpl.java
 /TaskContextImpl.java
 /PeerGroupImpl.java
+/ActivityImpl.java
+/ConnectionPolicyImpl.java
+/EventPortImpl.java
+/InputPortImpl.java
+/OperationImpl.java
+/OrocosPackageImpl.java
+/OutputPortImpl.java
+/PropertyImpl.java
+/SlaveImpl.java
