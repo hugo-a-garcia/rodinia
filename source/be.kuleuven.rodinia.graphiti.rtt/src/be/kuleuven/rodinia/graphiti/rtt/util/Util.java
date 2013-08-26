@@ -1,7 +1,12 @@
 package be.kuleuven.rodinia.graphiti.rtt.util;
 
+import org.eclipse.graphiti.mm.algorithms.styles.Color;
+import org.eclipse.graphiti.mm.pictograms.Diagram;
+import org.eclipse.graphiti.services.Graphiti;
 import org.eclipse.jface.dialogs.InputDialog;
 import org.eclipse.jface.window.Window;
+import org.eclipse.swt.graphics.RGB;
+import org.eclipse.swt.widgets.ColorDialog;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.PlatformUI;
 
@@ -41,6 +46,27 @@ public class Util {
 	 */
 	private static Shell getShell() {
 		return PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
+	}
+	
+	public static Color editColor(Color color) {
+		if (color != null && color.eContainer() instanceof Diagram) {
+			Shell shell = getShell();
+			ColorDialog colorDialog = new ColorDialog(shell);
+			colorDialog.setText("Choose the new color");
+			colorDialog.setRGB(new RGB(color.getRed(), color.getGreen(), color.getBlue()));
+
+			RGB retRgb = colorDialog.open();
+			if (retRgb == null) {
+				return null;
+			}
+
+			Diagram diagram = (Diagram) color.eContainer();
+			Color newColor = Graphiti.getGaService().manageColor(diagram, retRgb.red, retRgb.green, retRgb.blue);
+			return newColor;
+
+		}
+
+		return null;
 	}
 
 }

@@ -5,8 +5,10 @@ import org.eclipse.graphiti.features.context.ICreateContext;
 import org.eclipse.graphiti.features.impl.AbstractCreateFeature;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 
+import be.kueleuven.rodinia.model.rtt.OrocosPackage;
 import be.kueleuven.rodinia.model.rtt.RttFactory;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
+import be.kueleuven.rodinia.model.rtt.Activity;
 import be.kuleuven.rodinia.graphiti.rtt.util.Util;
 
 public class TaskContextCreateFeature extends AbstractCreateFeature {
@@ -33,8 +35,19 @@ public class TaskContextCreateFeature extends AbstractCreateFeature {
 
 		TaskContext taskContext = RttFactory.eINSTANCE.createTaskContext();
 		taskContext.setName(taskContentName);
-		taskContext.setNamespace("");
-		taskContext.setType("");
+		taskContext.setNamespace("test1");
+		taskContext.setType("test2");
+		
+        final Object target = getBusinessObjectForPictogramElement(context.getTargetContainer());
+        if (target instanceof OrocosPackage) {
+            OrocosPackage domainObject = (OrocosPackage) target;
+            domainObject.getTaskContexts().add(taskContext);
+            
+            //adding a dummy for the problem for the moment with taskcontext
+            Activity dummy = RttFactory.eINSTANCE.createActivity();
+            dummy.setName("dummy");
+            taskContext.setActivity(dummy);
+        }
         
 		// do the add
 		addGraphicalRepresentation(context, taskContext);
