@@ -23,6 +23,7 @@ import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetWidgetFactory;
 
 import be.kueleuven.rodinia.model.rtt.InputPort;
 
+@SuppressWarnings("unused")
 public class InputPortSection extends GFPropertySection implements ITabbedPropertyConstants {
 	 
 	private CCombo portTypeList;
@@ -56,7 +57,7 @@ public class InputPortSection extends GFPropertySection implements ITabbedProper
      data = new FormData();
      data.left = new FormAttachment(0, 110);
      data.right = new FormAttachment(100, -500);
-     data.top = new FormAttachment(50, VSPACE);
+     data.top = new FormAttachment(0, VSPACE);
      portTypeList.setLayoutData(data);
 
      CLabel valueLabel = factory.createCLabel(composite, "PortType:");

@@ -51,6 +51,7 @@ import org.eclipse.xtext.EcoreUtil2;
 import be.kueleuven.rodinia.model.rtt.OrocosPackage;
 import be.kueleuven.rodinia.model.rtt.RttFactory;
 
+@SuppressWarnings({ "unused", "restriction" })
 public class FileService {
 
 	/**

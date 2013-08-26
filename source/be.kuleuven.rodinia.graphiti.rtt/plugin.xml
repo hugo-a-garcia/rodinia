@@ -36,5 +36,128 @@
             name="New RTT Structural Graph">
       </wizard>
    </extension>
+   
+    <extension
+    point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+    <propertyContributor contributorId="rttStructure.PropertyContributor">
+        <propertyCategory category="Graphiti">
+        </propertyCategory>
+    </propertyContributor>
+</extension>
+
+<extension
+      point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+   <propertyTabs
+          contributorId="rttStructure.PropertyContributor">
+    <propertyTab
+         category="Graphiti"
+         id="graphiti.Activity.tab"
+         label="Activity">
+    </propertyTab>
+    <propertyTab
+         category="Graphiti"
+         id="graphiti.InputPort.tab"
+         label="InputPort">
+    </propertyTab>
+    <propertyTab
+         category="Graphiti"
+         id="graphiti.OutputPort.tab"
+         label="OutputPort">
+    </propertyTab>
+    <propertyTab
+         category="Graphiti"
+         id="graphiti.ConnectionPolicy.tab"
+         label="ConPol">
+    </propertyTab>
+    <propertyTab
+         category="Graphiti"
+         id="graphiti.TaskContext.tab"
+         label="TaskContext">
+    </propertyTab>
+   <propertyTab
+         category="Graphiti"
+         id="graphiti.main.tab"
+         label="Main">
+    </propertyTab>
+   </propertyTabs>
+</extension>
+
+<extension
+      point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections
+          contributorId="rttStructure.PropertyContributor">
+        <propertySection
+              class="be.kuleuven.rodinia.graphiti.rtt.propertiesTab.RttStructureSection"
+              filter="be.kuleuven.rodinia.graphiti.rtt.propertiesTab.RttStructureFilter"
+              id="graphiti.main.tab.emfclass"
+              tab="graphiti.main.tab">
+        </propertySection>
+    </propertySections>
+</extension>
+
+<extension
+      point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections
+          contributorId="rttStructure.PropertyContributor">
+        <propertySection
+              class="be.kuleuven.rodinia.graphiti.rtt.propertiesTab.TaskContextSection"
+              filter="be.kuleuven.rodinia.graphiti.rtt.propertiesTab.TaskContextFilter"
+              id="graphiti.TaskContext.tab.emfclass"
+              tab="graphiti.TaskContext.tab">
+        </propertySection>
+    </propertySections>
+</extension>
+
+<extension
+      point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections
+          contributorId="rttStructure.PropertyContributor">
+        <propertySection
+              class="be.kuleuven.rodinia.graphiti.rtt.propertiesTab.ActivitySection"
+              filter="be.kuleuven.rodinia.graphiti.rtt.propertiesTab.ActivityFilter"
+              id="graphiti.Activity.tab.emfclass"
+              tab="graphiti.Activity.tab">
+        </propertySection>
+    </propertySections>
+</extension>
+
+<extension
+      point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections
+          contributorId="rttStructure.PropertyContributor">
+        <propertySection
+              class="be.kuleuven.rodinia.graphiti.rtt.propertiesTab.InputPortSection"
+              filter="be.kuleuven.rodinia.graphiti.rtt.propertiesTab.InputPortFilter"
+              id="graphiti.InputPort.tab.emfclass"
+              tab="graphiti.InputPort.tab">
+        </propertySection>
+    </propertySections>
+</extension>
+
+<extension
+      point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections
+          contributorId="rttStructure.PropertyContributor">
+        <propertySection
+              class="be.kuleuven.rodinia.graphiti.rtt.propertiesTab.OutputPortSection"
+              filter="be.kuleuven.rodinia.graphiti.rtt.propertiesTab.OutputPortFilter"
+              id="graphiti.OutputPort.tab.emfclass"
+              tab="graphiti.OutputPort.tab">
+        </propertySection>
+    </propertySections>
+</extension>
+
+<extension
+      point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections
+          contributorId="rttStructure.PropertyContributor">
+        <propertySection
+              class="be.kuleuven.rodinia.graphiti.rtt.propertiesTab.ConnectionPolicySection"
+              filter="be.kuleuven.rodinia.graphiti.rtt.propertiesTab.ConnectionPolicyFilter"
+              id="graphiti.ConnectionPolicy.tab.emfclass"
+              tab="graphiti.ConnectionPolicy.tab">
+        </propertySection>
+    </propertySections>
+</extension>
 
 </plugin>
