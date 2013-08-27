@@ -5,7 +5,6 @@ import org.eclipse.graphiti.features.IFeature;
 import org.eclipse.graphiti.features.context.IContext;
 import org.eclipse.graphiti.features.context.impl.CustomContext;
 import org.eclipse.graphiti.features.impl.AbstractFeature;
-import org.eclipse.graphiti.mm.algorithms.impl.RectangleImpl;
 import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.services.Graphiti;
 import org.eclipse.graphiti.ui.platform.GFPropertySection;
@@ -22,7 +21,6 @@ import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetWidgetFactory;
 
 import be.kueleuven.rodinia.model.rtt.Activity;
-import be.kueleuven.rodinia.model.rtt.TaskContext;
 
 public class ActivitySection extends GFPropertySection implements ITabbedPropertyConstants {
 	 

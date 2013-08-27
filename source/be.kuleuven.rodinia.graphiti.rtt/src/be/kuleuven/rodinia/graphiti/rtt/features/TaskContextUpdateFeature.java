@@ -5,7 +5,6 @@ import org.eclipse.graphiti.features.IReason;
 import org.eclipse.graphiti.features.context.IUpdateContext;
 import org.eclipse.graphiti.features.impl.AbstractUpdateFeature;
 import org.eclipse.graphiti.features.impl.Reason;
-import org.eclipse.graphiti.mm.algorithms.Rectangle;
 import org.eclipse.graphiti.mm.algorithms.Text;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.PictogramElement;
@@ -60,7 +59,8 @@ public class TaskContextUpdateFeature 	extends AbstractUpdateFeature {
  
     public boolean update(IUpdateContext context) {
         String businessName = null;
-        String activityName = null;
+        @SuppressWarnings("unused")
+		String activityName = null;
         PictogramElement pictogramElement = context.getPictogramElement();
         Object bo = getBusinessObjectForPictogramElement(pictogramElement);
         if (bo instanceof TaskContext) {

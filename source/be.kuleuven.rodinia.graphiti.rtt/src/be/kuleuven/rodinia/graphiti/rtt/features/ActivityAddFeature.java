@@ -54,11 +54,11 @@ public class ActivityAddFeature extends AbstractAddShapeFeature{
             // create and set graphics algorithm
             roundedRectangle = gaService.createRoundedRectangle(containerShape, 5, 5);
             roundedRectangle.setStyle(StyleUtil.getStyleForActivity(getDiagram()));
-            roundedRectangle.setLineWidth(2);
+            roundedRectangle.setLineWidth(1);
             roundedRectangle.setTransparency(0.5);
 			//final Object target = getBusinessObjectForPictogramElement(context.getTargetContainer());
             
-            gaService.setLocationAndSize(roundedRectangle,10, 19, width-20, 24);
+            gaService.setLocationAndSize(roundedRectangle,10, 19, width-5, 24);
             // if added Class has no resource we add it to the resource
             // of the diagram
             // in a real scenario the business model would have its own resource

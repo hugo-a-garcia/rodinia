@@ -3,7 +3,6 @@ package be.kuleuven.rodinia.graphiti.rtt.features;
 import org.eclipse.graphiti.features.IFeatureProvider;
 import org.eclipse.graphiti.features.context.ICreateContext;
 import org.eclipse.graphiti.features.impl.AbstractCreateFeature;
-import org.eclipse.graphiti.mm.algorithms.Text;
 import org.eclipse.graphiti.mm.algorithms.impl.RectangleImpl;
 
 import be.kueleuven.rodinia.model.rtt.Activity;

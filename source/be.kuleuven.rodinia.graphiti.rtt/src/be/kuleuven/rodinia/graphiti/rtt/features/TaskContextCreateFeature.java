@@ -8,7 +8,6 @@ import org.eclipse.graphiti.mm.pictograms.Diagram;
 import be.kueleuven.rodinia.model.rtt.OrocosPackage;
 import be.kueleuven.rodinia.model.rtt.RttFactory;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
-import be.kueleuven.rodinia.model.rtt.Activity;
 import be.kuleuven.rodinia.graphiti.rtt.util.Util;
 
 public class TaskContextCreateFeature extends AbstractCreateFeature {
