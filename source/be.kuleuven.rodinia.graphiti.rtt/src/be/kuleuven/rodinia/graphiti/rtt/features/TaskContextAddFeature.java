@@ -8,6 +8,7 @@ import org.eclipse.graphiti.mm.algorithms.Polyline;
 import org.eclipse.graphiti.mm.algorithms.Rectangle;
 import org.eclipse.graphiti.mm.algorithms.RoundedRectangle;
 import org.eclipse.graphiti.mm.algorithms.Text;
+import org.eclipse.graphiti.mm.algorithms.styles.Font;
 import org.eclipse.graphiti.mm.algorithms.styles.Orientation;
 import org.eclipse.graphiti.mm.pictograms.ChopboxAnchor;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
@@ -165,19 +166,79 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
         
         // SHAPE WITH Rectangle activity box
         {
-            // create shape for text
+            // create shape for rectangel
             Shape shape = peCreateService.createContainerShape(containerShape, false);
- 
+            
             // create and set text graphics algorithm
             Rectangle rectangle3 = gaService.createPlainRectangle(shape);
             rectangle3.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
             rectangle3.setLineWidth(2);
-            rectangle3.setTransparency(1.0);
-            gaService.setLocationAndSize(rectangle3, 0 , 20, width, height-20);
+            rectangle3.setTransparency(0.0);
+            gaService.setLocationAndSize(rectangle3, 10 , 19, width-20, 25);
             
             // create link and wire it
             ChopboxAnchor boxAnchor = peCreateService.createChopboxAnchor(shape);
             boxAnchor.setReferencedGraphicsAlgorithm(rectangle3);
+            
+            Text text = gaService.createText(rectangle3, "act");
+            text.setStyle(StyleUtil.getStyleForTextTip(getDiagram()));
+            text.setHorizontalAlignment(Orientation.ALIGNMENT_RIGHT );
+            // vertical alignment has as default value "center"
+            text.setFont(gaService.manageDefaultFont(getDiagram(), false, true));
+            gaService.setLocationAndSize(text, 10, 0, width-35, 20);
+            
+            link(shape, addedClass);
+        }
+        
+     // SHAPE WITH Rectangle values box
+        {
+            // create shape for rectangel
+            Shape shape = peCreateService.createContainerShape(containerShape, false);
+            
+            // create and set text graphics algorithm
+            Rectangle rectangle3 = gaService.createPlainRectangle(shape);
+            rectangle3.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
+            rectangle3.setLineWidth(2);
+            rectangle3.setTransparency(0.0);
+            gaService.setLocationAndSize(rectangle3, 10 , 42, width-20, 25);
+            
+            // create link and wire it
+            ChopboxAnchor boxAnchor = peCreateService.createChopboxAnchor(shape);
+            boxAnchor.setReferencedGraphicsAlgorithm(rectangle3);
+            
+            Text text = gaService.createText(rectangle3, "vals");
+            text.setStyle(StyleUtil.getStyleForTextTip(getDiagram()));
+            text.setHorizontalAlignment(Orientation.ALIGNMENT_RIGHT );
+            // vertical alignment has as default value "center"
+            text.setFont(gaService.manageDefaultFont(getDiagram(), false, true));
+            gaService.setLocationAndSize(text, 10, 0, width-35, 20);
+            
+            link(shape, addedClass);
+        }
+        
+        // SHAPE WITH Rectangle values box
+        {
+            // create shape for rectangel
+            Shape shape = peCreateService.createContainerShape(containerShape, false);
+            
+            // create and set text graphics algorithm
+            Rectangle rectangle3 = gaService.createPlainRectangle(shape);
+            rectangle3.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
+            rectangle3.setLineWidth(2);
+            rectangle3.setTransparency(0.0);
+            gaService.setLocationAndSize(rectangle3, 10 , 67, width-20, 25);
+            
+            // create link and wire it
+            ChopboxAnchor boxAnchor = peCreateService.createChopboxAnchor(shape);
+            boxAnchor.setReferencedGraphicsAlgorithm(rectangle3);
+            
+            Text text = gaService.createText(rectangle3, "ops");
+            text.setStyle(StyleUtil.getStyleForTextTip(getDiagram()));
+            text.setHorizontalAlignment(Orientation.ALIGNMENT_RIGHT );
+            // vertical alignment has as default value "center"
+            text.setFont(gaService.manageDefaultFont(getDiagram(), false, true));
+            gaService.setLocationAndSize(text, 10, 0, width-35, 20);
+            
             link(shape, addedClass);
         }
         

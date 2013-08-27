@@ -95,6 +95,40 @@ public class TaskContextLayoutFeature 	extends AbstractLayoutFeature {
                 			} else {
                 				gaService.setWidth(rec,width);
                 			}
+                			if (rec.getX() == 10 && rec.getY() == 19){
+                				rec.setWidth(containerWidth-20);
+                				rec.setHeight(25);
+                				for (GraphicsAlgorithm shapeInRec : rec.getGraphicsAlgorithmChildren()){
+                					if (shapeInRec instanceof Text){
+                						shapeInRec.setWidth(containerWidth-35);
+                					}
+                				}
+                			}
+                			if (rec.getX() == 10 && rec.getY() == 42){
+                				rec.setWidth(containerWidth-20);
+                				for (GraphicsAlgorithm shapeInRec : rec.getGraphicsAlgorithmChildren()){
+                					if (shapeInRec instanceof Text){
+                						shapeInRec.setWidth(containerWidth-35);
+                					}
+                				}
+                			}
+                			if (rec.getX() == 10  && rec.getY() > 50 && rec.getY() < containerHeight - 25){
+                				rec.setWidth(containerWidth-20);
+                				rec.setX(10);
+                				rec.setY(51);
+                				if ((containerHeight-42)/2 <= 25){
+                					rec.setHeight(25);
+                					rec.setY(67);
+                				} else {
+                					rec.setHeight(((containerHeight-42)/2)+1);
+                					rec.setY(42 + ((containerHeight-42)/2));
+                				}
+                				for (GraphicsAlgorithm shapeInRec : rec.getGraphicsAlgorithmChildren()){
+                					if (shapeInRec instanceof Text){
+                						shapeInRec.setWidth(containerWidth-35);
+                					}
+                				}
+                			}
                 			anythingChanged = true;
                 	} else {
                 		if (graphicsAlgorithm instanceof Text || graphicsAlgorithm instanceof RoundedRectangle){

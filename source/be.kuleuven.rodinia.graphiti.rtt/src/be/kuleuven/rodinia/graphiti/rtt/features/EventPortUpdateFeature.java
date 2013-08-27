@@ -5,24 +5,23 @@ import org.eclipse.graphiti.features.IReason;
 import org.eclipse.graphiti.features.context.IUpdateContext;
 import org.eclipse.graphiti.features.impl.AbstractUpdateFeature;
 import org.eclipse.graphiti.features.impl.Reason;
-import org.eclipse.graphiti.mm.algorithms.Rectangle;
 import org.eclipse.graphiti.mm.algorithms.Text;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.mm.pictograms.Shape;
 
-import be.kueleuven.rodinia.model.rtt.TaskContext;
+import be.kueleuven.rodinia.model.rtt.EventPort;
 
-public class TaskContextUpdateFeature 	extends AbstractUpdateFeature {
+public class EventPortUpdateFeature extends AbstractUpdateFeature {
  
-    public TaskContextUpdateFeature(IFeatureProvider fp) {
+    public EventPortUpdateFeature(IFeatureProvider fp) {
         super(fp);
     }
  
     public boolean canUpdate(IUpdateContext context) {
         Object bo =
             getBusinessObjectForPictogramElement(context.getPictogramElement());
-        return (bo instanceof TaskContext);
+        return (bo instanceof EventPort);
     }
  
     public IReason updateNeeded(IUpdateContext context) {
@@ -40,17 +39,14 @@ public class TaskContextUpdateFeature 	extends AbstractUpdateFeature {
  
         String businessName = null;
         Object bo = getBusinessObjectForPictogramElement(pictogramElement);
-        if (bo instanceof TaskContext) {
-            TaskContext eClass = (TaskContext) bo;
+        if (bo instanceof EventPort) {
+            EventPort eClass = (EventPort) bo;
             businessName = eClass.getName();
         }
  
         boolean updateNameNeeded =
             ((pictogramName == null && businessName != null) ||
-                (pictogramName != null && !pictogramName.equals(businessName)) );
-        if(pictogramName == null){
-        	return Reason.createFalseReason();
-        }
+                (pictogramName != null && !pictogramName.equals(businessName)));
         if (updateNameNeeded) {
             return Reason.createTrueReason("Name is out of date");
         } else {
@@ -60,13 +56,11 @@ public class TaskContextUpdateFeature 	extends AbstractUpdateFeature {
  
     public boolean update(IUpdateContext context) {
         String businessName = null;
-        String activityName = null;
         PictogramElement pictogramElement = context.getPictogramElement();
         Object bo = getBusinessObjectForPictogramElement(pictogramElement);
-        if (bo instanceof TaskContext) {
-            TaskContext eClass = (TaskContext) bo;
+        if (bo instanceof EventPort) {
+            EventPort eClass = (EventPort) bo;
             businessName = eClass.getName();
-            activityName = eClass.getActivity().getName();
         }
  
         if (pictogramElement instanceof ContainerShape) {

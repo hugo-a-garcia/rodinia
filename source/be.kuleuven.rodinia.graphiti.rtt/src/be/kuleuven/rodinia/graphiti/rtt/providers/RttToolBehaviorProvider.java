@@ -156,17 +156,15 @@ public class RttToolBehaviorProvider extends DefaultToolBehaviorProvider{
 	public IDecorator[] getDecorators(PictogramElement pe) {
 	    IFeatureProvider featureProvider = getFeatureProvider();
 	    Object bo = featureProvider.getBusinessObjectForPictogramElement(pe);
-	    if (bo instanceof Activity) {
-	        Activity eClass = (Activity) bo;
-	        String name = eClass.getName();
-	        if (eClass.getTaskContext() == null) {
-	            IDecorator imageRenderingDecorator =
-	                new ImageDecorator(
-	                    IPlatformImageConstants.IMG_ECLIPSE_WARNING_TSK);
-	            imageRenderingDecorator
-	                .setMessage("No TaskContext for Activity found");
+	    if (bo instanceof TaskContext) {
+	        TaskContext eClass = (TaskContext) bo;
+	        if (eClass.getActivity() == null) {
+	            IDecorator imageRenderingDecorator = new ImageDecorator(IPlatformImageConstants.IMG_ECLIPSE_WARNING_TSK);
+	            imageRenderingDecorator.setMessage("No Activity, need an activity to save");
 	            return new IDecorator[] { imageRenderingDecorator };
-	        }
+	       } else {
+	    	   return super.getDecorators(pe);
+	       }
 	    }
 	 
 	    return super.getDecorators(pe);

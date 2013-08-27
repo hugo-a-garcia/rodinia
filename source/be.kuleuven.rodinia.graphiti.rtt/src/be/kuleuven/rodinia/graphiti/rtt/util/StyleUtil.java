@@ -12,6 +12,7 @@ import org.eclipse.graphiti.util.IColorConstant;
 public class StyleUtil {
 	
 	private static final IColorConstant TEXT_FOREGROUND = IColorConstant.BLACK;
+	private static final IColorConstant TEXT_TIP_FOREGROUND = IColorConstant.GRAY;
 	private static final IColorConstant TASK_CONTEXT_FOREGROUND = new ColorConstant(98, 131, 167);
 	private static final IColorConstant TASK_CONTEXT_BACKGROUND = new ColorConstant(187, 218, 247);
 	private static final IColorConstant ACTIVITY_FOREGROUND = IColorConstant.BLACK;
@@ -19,6 +20,7 @@ public class StyleUtil {
 	private static final IColorConstant PORT_FOREGROUND = new ColorConstant(98, 131, 167);
 	private static final IColorConstant INPUT_PORT_BACKGROUND = new ColorConstant(119, 193, 255);
 	private static final IColorConstant OUTPUT_PORT_BACKGROUND = new ColorConstant(147, 214, 147);
+	private static final IColorConstant EVENT_PORT_BACKGROUND = new ColorConstant(254, 254, 254);
 	
     private static void setCommonValues(Style style) {
         style.setLineStyle(LineStyle.SOLID);
@@ -35,6 +37,16 @@ public class StyleUtil {
             style.setVerticalAlignment(Orientation.ALIGNMENT_CENTER);
             style.setForeground(gaService.manageColor(diagram,
                 TEXT_FOREGROUND));
+        }
+    
+    private static void setCommonTextTipValues(Diagram diagram,
+            IGaService gaService, Style style) {
+            style.setFilled(false);
+            style.setAngle(0);
+            style.setHorizontalAlignment(Orientation.ALIGNMENT_CENTER);
+            style.setVerticalAlignment(Orientation.ALIGNMENT_CENTER);
+            style.setForeground(gaService.manageColor(diagram,
+                TEXT_TIP_FOREGROUND));
         }
 	
     public static Style getStyleForCommonValues(Diagram diagram) {
@@ -123,6 +135,24 @@ public class StyleUtil {
       
     }
     
+    public static Style getStyleForEventPort(Diagram diagram) {
+        final String styleId = "EVENT_PORT";
+        IGaService gaService = Graphiti.getGaService();
+
+        // this is a child style of the common-values-style
+        Style parentStyle = getStyleForCommonValues(diagram);
+        Style style = gaService.findStyle(parentStyle, styleId);
+
+        if (style == null) { // style not found - create new style
+            style = gaService.createPlainStyle(parentStyle, styleId);
+            style.setFilled(true);
+            style.setForeground(gaService.manageColor(diagram,PORT_FOREGROUND));
+            style.setBackground(gaService.manageColor(diagram,EVENT_PORT_BACKGROUND));
+        }
+        return style;
+      
+    }
+    
     public static Style getStyleForText(Diagram diagram) {
             final String styleId = "TEXT";
             IGaService gaService = Graphiti.getGaService();
@@ -138,4 +168,20 @@ public class StyleUtil {
             }
             return style;
         }
+    
+    public static Style getStyleForTextTip(Diagram diagram) {
+        final String styleId = "TEXT";
+        IGaService gaService = Graphiti.getGaService();
+
+        // this is a child style of the common-values-style
+        Style parentStyle = getStyleForCommonValues(diagram);
+        Style style = gaService.findStyle(parentStyle, styleId);
+
+        if (style == null) { // style not found - create new style
+            style = gaService.createPlainStyle(parentStyle, styleId);
+            setCommonTextTipValues(diagram, gaService, style);
+            style.setFont(gaService.manageFont(diagram, "attribute", 8, true, false));
+        }
+        return style;
+    }
 }

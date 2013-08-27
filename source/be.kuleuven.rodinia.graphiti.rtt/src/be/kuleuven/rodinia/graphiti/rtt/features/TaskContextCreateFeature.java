@@ -42,11 +42,6 @@ public class TaskContextCreateFeature extends AbstractCreateFeature {
         if (target instanceof OrocosPackage) {
             OrocosPackage domainObject = (OrocosPackage) target;
             domainObject.getTaskContexts().add(taskContext);
-            
-            //adding a dummy for the problem for the moment with taskcontext
-            Activity dummy = RttFactory.eINSTANCE.createActivity();
-            dummy.setName("dummy");
-            taskContext.setActivity(dummy);
         }
         
 		// do the add

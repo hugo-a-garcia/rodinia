@@ -1,21 +1,18 @@
 package be.kuleuven.rodinia.graphiti.rtt.propertiesTab;
 
-import java.util.ArrayList;
 
 import org.eclipse.graphiti.features.IFeature;
 import org.eclipse.graphiti.features.context.IContext;
 import org.eclipse.graphiti.features.context.impl.CustomContext;
 import org.eclipse.graphiti.features.impl.AbstractFeature;
+import org.eclipse.graphiti.mm.algorithms.impl.RectangleImpl;
 import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.services.Graphiti;
 import org.eclipse.graphiti.ui.platform.GFPropertySection;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.custom.CCombo;
 import org.eclipse.swt.custom.CLabel;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
-import org.eclipse.swt.events.SelectionEvent;
-import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.layout.FormAttachment;
 import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.widgets.Composite;
@@ -25,12 +22,10 @@ import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetWidgetFactory;
 
 import be.kueleuven.rodinia.model.rtt.Activity;
-import be.kueleuven.rodinia.model.rtt.OrocosPackage;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
 
 public class ActivitySection extends GFPropertySection implements ITabbedPropertyConstants {
 	 
-	private CCombo TaskContextList;
 	private Text cpuAffinity;
 	private Text period;
 	private Text priority;
@@ -44,27 +39,12 @@ public class ActivitySection extends GFPropertySection implements ITabbedPropert
       Composite composite = factory.createFlatFormComposite(parent);
       FormData data;
       FormData data2;
-
-      TaskContextList = factory.createCCombo(composite, SWT.READ_ONLY);
-      data = new FormData();
-      data.left = new FormAttachment(0, 110);
-      data.right = new FormAttachment(100, -500);
-      data.top = new FormAttachment(0, VSPACE);
-      TaskContextList.setLayoutData(data);
-      TaskContextList.addSelectionListener(getTaskContext);
-
-      CLabel valueLabel = factory.createCLabel(composite, "Task Context:");
-      data = new FormData();
-      data.left = new FormAttachment(0, 0);
-      data.right = new FormAttachment(TaskContextList, -HSPACE);
-      data.top = new FormAttachment(TaskContextList, 0, SWT.CENTER);
-      valueLabel.setLayoutData(data);
       
       cpuAffinity = factory.createText(composite, "a");
       data = new FormData();
       data.left = new FormAttachment(0, 110);
       data.right = new FormAttachment(100, -500);
-      data.top = new FormAttachment(0, 40);
+      data.top = new FormAttachment(0, 0);
       cpuAffinity.setLayoutData(data);
       cpuAffinity.addModifyListener(cpuAffinityModify);
 
@@ -79,7 +59,7 @@ public class ActivitySection extends GFPropertySection implements ITabbedPropert
       data2 = new FormData();
       data2.left = new FormAttachment(0, 110);
       data2.right = new FormAttachment(100, -500);
-      data2.top = new FormAttachment(0, 70);
+      data2.top = new FormAttachment(0, 30);
       period.setLayoutData(data2);
       period.addModifyListener(periodModify);
 
@@ -94,7 +74,7 @@ public class ActivitySection extends GFPropertySection implements ITabbedPropert
       data2 = new FormData();
       data2.left = new FormAttachment(0, 110);
       data2.right = new FormAttachment(100, -500);
-      data2.top = new FormAttachment(0, 100);
+      data2.top = new FormAttachment(0, 60);
       priority.setLayoutData(data2);
       priority.addModifyListener(priorityModify);
 
@@ -110,7 +90,6 @@ public class ActivitySection extends GFPropertySection implements ITabbedPropert
 
 @Override
   public void refresh() {
-    TaskContextList.removeSelectionListener(getTaskContext);
     cpuAffinity.removeModifyListener(cpuAffinityModify);
     period.removeModifyListener(periodModify);
     priority.removeModifyListener(priorityModify);
@@ -122,79 +101,15 @@ public class ActivitySection extends GFPropertySection implements ITabbedPropert
               return;
           }
           if (bo instanceof Activity){
-        	  OrocosPackage taskcontexts = ((OrocosPackage) getDiagram().getLink().getBusinessObjects().get(0));
-        	  ArrayList<String> bla = new ArrayList<String>();
-        	  bla.add("<none>");
-        	  for (int i = 0; i < taskcontexts.getTaskContexts().size(); i++){
-        		  bla.add(taskcontexts.getTaskContexts().get(i).getName());
-        	  }
-         	  String []strArray = new String[bla.size()];
-         	  bla.toArray(strArray);
-         	  TaskContextList.setItems(strArray);
-         	  boolean selected = false;
-        	  for (int i = 0; i < taskcontexts.getTaskContexts().size(); i++){
-        		  if (taskcontexts.getTaskContexts().get(i) == ((Activity)bo).getTaskContext()){
-        			  TaskContextList.select(i+1);
-        			  selected = true;
-        		  }
-        	  }
-        	  if (selected == false){
-        		  TaskContextList.select(0);
-        	  }
         	  cpuAffinity.setText(((Activity) bo).getCpuAffinity());
         	  period.setText("" + ((Activity) bo).getPeriod());
         	  priority.setText("" + ((Activity) bo).getPriority());
           }
       }
-      TaskContextList.addSelectionListener(getTaskContext);
       cpuAffinity.addModifyListener(cpuAffinityModify);
       period.addModifyListener(periodModify);
       priority.addModifyListener(priorityModify);
   }
-	   
-	   private SelectionListener getTaskContext = new SelectionListener(){
-
-		@Override
-		public void widgetSelected(SelectionEvent e) {
-			int value = TaskContextList.getSelectionIndex() -1;
-   			
-   			final int typedValue = value;
-	   		IFeature feature = new AbstractFeature(getDiagramTypeProvider().getFeatureProvider()) {	
-		   		@Override
-		   		public void execute(IContext context) {
-		   			PictogramElement pe = getSelectedPictogramElement();
-		   			if (pe != null) {
-		   				Object bo = Graphiti.getLinkService().getBusinessObjectForLinkedPictogramElement(pe);
-		   				if (bo == null)
-		   					return;
-		   		   		if (bo instanceof Activity){
-		   		   			Activity acty = (Activity) bo;
-		   		   			if (typedValue < 0){
-		   		   				acty.setTaskContext(null);
-		   		   			} else {
-		   		   				TaskContext taskValue = ((OrocosPackage) getDiagram().getLink().getBusinessObjects().get(0)).getTaskContexts().get(typedValue);
-		   		   				acty.setTaskContext(taskValue);
-		   		   			}
-		   		   		}
-		   			}
-	
-		   		}
-
-				@Override
-				public boolean canExecute(IContext context) {
-					return true;
-				}
-	   		};
-	   		CustomContext context = new CustomContext();
-	   		execute(feature, context);
-	   	}
-
-		@Override
-		public void widgetDefaultSelected(SelectionEvent e) {
-			
-		}
-		   
-	   };
 	   
 	private ModifyListener periodModify = new ModifyListener() {
 		@Override

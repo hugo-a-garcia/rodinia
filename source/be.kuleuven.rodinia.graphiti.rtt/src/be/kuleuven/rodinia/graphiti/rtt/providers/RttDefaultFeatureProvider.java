@@ -24,18 +24,27 @@ import org.eclipse.graphiti.ui.features.DefaultFeatureProvider;
 
 import be.kueleuven.rodinia.model.rtt.Activity;
 import be.kueleuven.rodinia.model.rtt.ConnectionPolicy;
+import be.kueleuven.rodinia.model.rtt.EventPort;
 import be.kueleuven.rodinia.model.rtt.InputPort;
 import be.kueleuven.rodinia.model.rtt.OutputPort;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
 import be.kuleuven.rodinia.graphiti.rtt.features.ActivityAddFeature;
+import be.kuleuven.rodinia.graphiti.rtt.features.ActivityCreateFeature;
 //import be.kuleuven.rodinia.graphiti.rtt.features.ActivityCreateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.ActivityLayoutFeature;
+import be.kuleuven.rodinia.graphiti.rtt.features.ActivityMoveFeature;
+import be.kuleuven.rodinia.graphiti.rtt.features.ActivityResizeFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.ActivityUpdateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.ConnectionPolicyAddFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.ConnectionPolicyCreateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.ConnectionPolicyReconnectFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.CustomChangeColorFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.CustomHideLabelFeature;
+import be.kuleuven.rodinia.graphiti.rtt.features.EventPortAddFeature;
+import be.kuleuven.rodinia.graphiti.rtt.features.EventPortCreateFeature;
+import be.kuleuven.rodinia.graphiti.rtt.features.EventPortMoveFeature;
+import be.kuleuven.rodinia.graphiti.rtt.features.EventPortResizeFeature;
+import be.kuleuven.rodinia.graphiti.rtt.features.EventPortUpdateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.InputPortAddFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.InputPortCreateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.InputPortMoveFeature;
@@ -68,6 +77,9 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	    if (context.getNewObject() instanceof OutputPort){
 	    	return new OutputPortAddFeature(this);
 	    }
+	    if (context.getNewObject() instanceof EventPort){
+	    	return new EventPortAddFeature(this);
+	    }
 	    if (context.getNewObject() instanceof ConnectionPolicy){
 	    	return new ConnectionPolicyAddFeature(this);
 	    }
@@ -79,7 +91,7 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 
 	@Override
 	public ICreateFeature[] getCreateFeatures() {
-		 return new ICreateFeature[] { /*new ActivityCreateFeature(this),*/ new TaskContextCreateFeature(this), new InputPortCreateFeature(this), new OutputPortCreateFeature(this) };
+		 return new ICreateFeature[] { new ActivityCreateFeature(this), new TaskContextCreateFeature(this), new InputPortCreateFeature(this), new OutputPortCreateFeature(this), new EventPortCreateFeature(this) };
 	}
 	
 	@Override
@@ -105,6 +117,12 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	    if (bo instanceof OutputPort) {
 	        return new OutputPortMoveFeature(this);
 	    }
+	    if (bo instanceof EventPort) {
+	        return new EventPortMoveFeature(this);
+	    }
+	    if (bo instanceof Activity){
+	    	return new ActivityMoveFeature(this);
+	    }
 	    return super.getMoveShapeFeature(context);
 	} 
 	
@@ -118,6 +136,12 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	    }
 	    if (bo instanceof OutputPort) {
 	        return new OutputPortResizeFeature(this);
+	    }
+	    if (bo instanceof EventPort) {
+	        return new EventPortResizeFeature(this);
+	    }
+	    if (bo instanceof Activity){
+	    	return new ActivityResizeFeature(this);
 	    }
 	    return super.getResizeShapeFeature(context);
 	}
@@ -155,6 +179,9 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	       }
 	       if (bo instanceof OutputPort) {
 	           return new OutputPortUpdateFeature(this);
+	       }
+	       if (bo instanceof EventPort) {
+	           return new EventPortUpdateFeature(this);
 	       }
 	       if (bo instanceof ConnectionPolicy) {
 	           return new OutputPortUpdateFeature(this);
