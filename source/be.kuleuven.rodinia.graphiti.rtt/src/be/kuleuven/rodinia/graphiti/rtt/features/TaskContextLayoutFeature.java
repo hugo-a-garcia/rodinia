@@ -146,8 +146,17 @@ public class TaskContextLayoutFeature 	extends AbstractLayoutFeature {
             							gaService.setLocation(graphicsAlgorithm, containerWidth-size.getWidth(), graphicsAlgorithm.getY());
             						}
             					} else {
-            						gaService.setWidth(graphicsAlgorithm, containerWidth-20);
-            						gaService.setHeight(graphicsAlgorithm, containerHeight);
+            						if (size.getHeight() == 24){
+            							gaService.setLocationAndSize(graphicsAlgorithm, 10, 19, containerWidth-45, 24);
+            							for (GraphicsAlgorithm innerShape : graphicsAlgorithm.getGraphicsAlgorithmChildren()){
+            								if (innerShape instanceof Text){
+            									innerShape.setWidth(containerWidth-47);
+            								}
+            							}
+            						} else {
+            							gaService.setWidth(graphicsAlgorithm, containerWidth-20);
+            							gaService.setHeight(graphicsAlgorithm, containerHeight);
+            						}
             					}
             				} else {
             					if (graphicsAlgorithm instanceof Text){

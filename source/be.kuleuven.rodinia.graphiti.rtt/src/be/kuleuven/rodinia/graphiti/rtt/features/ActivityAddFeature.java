@@ -58,7 +58,7 @@ public class ActivityAddFeature extends AbstractAddShapeFeature{
             roundedRectangle.setTransparency(0.5);
 			//final Object target = getBusinessObjectForPictogramElement(context.getTargetContainer());
             
-            gaService.setLocationAndSize(roundedRectangle,10, 19, width, 25);
+            gaService.setLocationAndSize(roundedRectangle,10, 19, width-20, 24);
             // if added Class has no resource we add it to the resource
             // of the diagram
             // in a real scenario the business model would have its own resource
@@ -79,7 +79,7 @@ public class ActivityAddFeature extends AbstractAddShapeFeature{
             Text text = gaService.createText(shape, addedClass.getName());
             text.setStyle(StyleUtil.getStyleForText(getDiagram()));
             // vertical alignment has as default value "center"
-            gaService.setLocationAndSize(text, 5, 0, width-2, 20);
+            gaService.setLocationAndSize(text, 5, 0, width-22, 20);
             text.setHorizontalAlignment(Orientation.ALIGNMENT_LEFT );
  
             // create link and wire it
