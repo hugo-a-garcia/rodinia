@@ -19,7 +19,9 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.epsilon.erl.engine;bundle-version="1.0.0",
  org.eclipse.epsilon.etl.engine;bundle-version="1.0.0",
  be.kuleuven.rodinia.epsilon.service;bundle-version="1.0.0",
- be.kuleuven.rodinia.model.cpf;bundle-version="0.1.0"
+ be.kuleuven.rodinia.model.cpf;bundle-version="0.1.0",
+ be.kuleuven.rodinia.model.rtt;bundle-version="0.1.0",
+ be.kuleuven.rodinia.dsl.datatypes;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
 Service-Component: OSGI-INF/component.xml

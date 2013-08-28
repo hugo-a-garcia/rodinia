@@ -12,27 +12,29 @@ namespace [%=taskContext.namespace%]
 {
 	class [%=taskContext.type%]: public RTT::TaskContext
 	{
-
-		[%for(anInputPort in taskContext.inputPorts) {%]
 [*
+		[%for(anInputPort in taskContext.inputPorts) {%]
+
 		Commented out for testing
 		InputPort<[%=anInputPort.type%]> [%=anInputPort.name%];
-*]
+
 		InputPort<int> [%=anInputPort.name%];
 		[%}%]
 		[%for(eventPort in taskContext.eventPorts) {%]
-[*
+
 		Commented out for testing
 		InputPort<[%=anInputPort.type%]> [%=anInputPort.name%];
-*]
+
 		InputPort<int> [%=eventPort.name%];
 		[%}%]
-		[%for(anOutputPort in taskContext.outputPorts) {%]
+*]		[%for(anOutputPort in taskContext.outputPorts) {%]
 [*
 		Commented out for testing
 		OutputPort<[%=anOutputPort.type%]> [%=anOutputPort.name%];
 *]
 		OutputPort<int> [%=anOutputPort.name%];
+		// --> [%=anOutputPort.dataType.name%]  <--
+		///////////////////////////////////////////
 		[%}%]
 		
 		[%=out.startPreserve("/*", "*/", "declarations", true)%]

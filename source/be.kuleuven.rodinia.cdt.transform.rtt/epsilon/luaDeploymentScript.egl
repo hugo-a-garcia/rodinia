@@ -40,6 +40,8 @@ cp.size = [%=connection.bufferSize%]
 cp.data_size = [%=connection.dataSize%]
 cp.init = [%=connection.init%]
 cp.pull = [%=connection.pull%]
-[%}%]
+[%}%][%}%]
+[*
 connect("[%=connection.outputPort.eContainer.name%].[%=connection.outputPort.name%]", "[%=connection.inputPort.eContainer.name%].[%=connection.inputPort.name%]", cp)
-[%}%]
+
+*]

@@ -1,5 +1,7 @@
 package be.kuleuven.rodinia.epsilon.service.egl;
 
+import org.eclipse.emf.common.util.URI;
+
 import be.kuleuven.rodinia.epsilon.service.AbstractTransformParameter;
 
 /**
@@ -18,6 +20,7 @@ public class EglTransformParameter extends AbstractTransformParameter implements
 	private boolean sourceReadOnLoad = true;
 	private boolean sourceStoreOnDisposal = false;
 	private String outputRoot = "output";
+	private URI sourceModelURI;
 
 	public EglTransformParameter() {
 	}
@@ -114,10 +117,17 @@ public class EglTransformParameter extends AbstractTransformParameter implements
 	public boolean checkParameters() {
 		if (pluginID == null) return false;
 		if (eglTransformationFileName == null) return false;
-		if (sourceModelFilePath == null) return false;
-		if (sourceModelFilePath == null) return false;
+		//if (sourceModelFilePath == null) return false;
+		//if (sourceModelFilePath == null) return false;
 		if (outputRoot == null) return false;
 		return true;
+	}
+
+	public URI getSourceModelURI() {
+		return this.sourceModelURI;
+	}
+	public void setSourceModelURI(URI sourceModelURI) {
+		this.sourceModelURI = sourceModelURI;
 	}
 
 }

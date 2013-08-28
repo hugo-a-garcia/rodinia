@@ -96,7 +96,8 @@ public class EglJob extends WorkspaceJob {
 		EmfModel emfModel = new EmfModel();
 		emfModel.setName(parameter.getSourceName());
 		emfModel.setMetamodelUri(parameter.getSourceMetaModelURI());
-		emfModel.setModelFile(parameter.getSourceModelFilePath());
+		//emfModel.setModelFile(parameter.getSourceModelFilePath());
+		emfModel.setModelFileUri(parameter.getSourceModelURI());
 		emfModel.setReadOnLoad(parameter.isSourceReadOnLoad());
 		emfModel.setStoredOnDisposal(parameter.isSourceStoreOnDisposal());
 		try {

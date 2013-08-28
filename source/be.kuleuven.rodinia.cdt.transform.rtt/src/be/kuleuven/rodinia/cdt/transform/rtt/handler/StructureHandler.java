@@ -31,19 +31,21 @@ public class StructureHandler extends AbstractHandler {
 			if(firstElement instanceof IResource) {
 				resource = (IResource) firstElement;
 				String projectPath = resource.getProject().getLocation().toOSString();
-				doTransformations(projectPath);
+				URI resrouceURI = URI.createPlatformResourceURI(resource.getFullPath().toString(), false);
+				doTransformations(projectPath, resrouceURI);
 			}
 			
 		}
 		return null;
 	}
 
-	private void doTransformations(String projectPath) {
-		doEglTransformation(projectPath);
-		doEtlTransformation(projectPath);
+	private void doTransformations(String projectPath, URI resrouceURI) {
+		doEglTransformation(projectPath, resrouceURI);
+		//XML generation is disabled for now.
+		//doEtlTransformation(projectPath);
 	}
 
-	private void doEglTransformation(String projectPath) {
+	private void doEglTransformation(String projectPath, URI resrouceURI) {
 		EglTransformParameter transformParameter = new EglTransformParameter();
 		
 		String eglTransformFileName = "epsilon/package.egl";
@@ -61,6 +63,8 @@ public class StructureHandler extends AbstractHandler {
 		transformParameter.setPluginID(pluginID);
 		transformParameter.setSourceMetaModelURI(sourceMetaModelURI);
 		transformParameter.setSourceModelFilePath(sourceModelFilePath);
+		//URI sourceModelURI = URI.createPlatformResourceURI(sourceModelFilePath, false);
+		transformParameter.setSourceModelURI(resrouceURI);
 		transformParameter.setSourceReadOnLoad(sourceReadOnLoad);
 		transformParameter.setSourceStoreOnDisposal(sourceStoreOnDisposal);
 		
@@ -83,6 +87,10 @@ public class StructureHandler extends AbstractHandler {
 		String targetModelFilePath = createTarget(projectPath, resource.getName());;
 		boolean targetReadOnLoad = false;
 		boolean targetStoreOnDisposal = true;
+
+		URI psourceModelURI = URI.createPlatformResourceURI(sourceModelFilePath, false);
+		URI ptargetModelURI = URI.createPlatformResourceURI(targetModelFilePath, false);
+		
 		URI sourceModelURI = URI.createFileURI(sourceModelFilePath);
 		URI targetModelURI = URI.createFileURI(targetModelFilePath);
 		
