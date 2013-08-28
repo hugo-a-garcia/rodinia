@@ -180,6 +180,7 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
             boxAnchor.setReferencedGraphicsAlgorithm(rectangle3);
             
             Text text = gaService.createText(rectangle3, "act");
+            text.setTransparency(0.25);
             text.setStyle(StyleUtil.getStyleForTextTip(getDiagram()));
             text.setHorizontalAlignment(Orientation.ALIGNMENT_RIGHT );
             // vertical alignment has as default value "center"
@@ -206,6 +207,7 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
             boxAnchor.setReferencedGraphicsAlgorithm(rectangle3);
             
             Text text = gaService.createText(rectangle3, "vals");
+            text.setTransparency(0.25);
             text.setStyle(StyleUtil.getStyleForTextTip(getDiagram()));
             text.setHorizontalAlignment(Orientation.ALIGNMENT_RIGHT );
             // vertical alignment has as default value "center"
@@ -232,6 +234,7 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
             boxAnchor.setReferencedGraphicsAlgorithm(rectangle3);
             
             Text text = gaService.createText(rectangle3, "ops");
+            text.setTransparency(0.25);
             text.setStyle(StyleUtil.getStyleForTextTip(getDiagram()));
             text.setHorizontalAlignment(Orientation.ALIGNMENT_RIGHT );
             // vertical alignment has as default value "center"
