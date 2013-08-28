@@ -19,6 +19,7 @@ import org.eclipse.graphiti.mm.pictograms.Shape;
 import org.eclipse.graphiti.services.Graphiti;
 import org.eclipse.graphiti.services.IGaService;
 
+import be.kueleuven.rodinia.model.rtt.Property;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
 
 public class TaskContextLayoutFeature 	extends AbstractLayoutFeature {
@@ -150,7 +151,24 @@ public class TaskContextLayoutFeature 	extends AbstractLayoutFeature {
             							gaService.setLocationAndSize(graphicsAlgorithm, 10, 19, containerWidth-50, 24);
             						} else {
             							if (size.getHeight() == 23) {
+            								final Object container = getBusinessObjectForPictogramElement(context.getPictogramElement());
+            								final Object target = getBusinessObjectForPictogramElement(graphicsAlgorithm.getPictogramElement());
+            								int number = 0;
+            								if (target instanceof Property){
+            									Property prop = (Property) target;
+            									if (container instanceof TaskContext){
+            										TaskContext task = (TaskContext) container;
+            										int i = 1;
+            										for (Property propx : task.getProperties()){
+            											if (propx.getName().equals(prop.getName())){
+            												number = i;
+            											}
+            											i++;
+            										}
+            									}
+            								}
             								gaService.setWidth(graphicsAlgorithm, containerWidth-60);
+            								gaService.setLocation(graphicsAlgorithm, 10, 19 + number * 23);
             							} else {
             								gaService.setWidth(graphicsAlgorithm, containerWidth-20);
             								gaService.setHeight(graphicsAlgorithm, containerHeight);
