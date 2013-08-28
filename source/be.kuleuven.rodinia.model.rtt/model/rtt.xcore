@@ -13,7 +13,7 @@ class TaskContext {
 	String [1] name
 	String [1] namespace
 	String [1] ^type = ""
-	contains Activity[1] activity
+	contains Activity activity
 	contains InputPort [] inputPorts
 	contains EventPort[] eventPorts
 	contains OutputPort [] outputPorts
@@ -70,10 +70,10 @@ interface IActivity {
 
 class Activity extends IActivity {
 	contains Slave[] slave opposite master
-	Scheduler[1] scheduler = "ORO_SCHED_OTHER"
-	String[1] cpuAffinity = "~0"
-	float[1] period = "0"
-	int[1] priority = "0"
+	Scheduler scheduler = "ORO_SCHED_OTHER"
+	String cpuAffinity = "~0"
+	float period = "0"
+	int priority = "0"
 }
 
 class Slave extends IActivity {

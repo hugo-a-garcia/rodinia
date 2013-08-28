@@ -58,7 +58,7 @@ public interface Activity extends IActivity
    * @see be.kueleuven.rodinia.model.rtt.Scheduler
    * @see #setScheduler(Scheduler)
    * @see be.kueleuven.rodinia.model.rtt.RttPackage#getActivity_Scheduler()
-   * @model default="ORO_SCHED_OTHER" unique="false" required="true"
+   * @model default="ORO_SCHED_OTHER" unique="false"
    * @generated
    */
   Scheduler getScheduler();
@@ -86,7 +86,7 @@ public interface Activity extends IActivity
    * @return the value of the '<em>Cpu Affinity</em>' attribute.
    * @see #setCpuAffinity(String)
    * @see be.kueleuven.rodinia.model.rtt.RttPackage#getActivity_CpuAffinity()
-   * @model default="~0" unique="false" required="true"
+   * @model default="~0" unique="false"
    * @generated
    */
   String getCpuAffinity();
@@ -113,7 +113,7 @@ public interface Activity extends IActivity
    * @return the value of the '<em>Period</em>' attribute.
    * @see #setPeriod(float)
    * @see be.kueleuven.rodinia.model.rtt.RttPackage#getActivity_Period()
-   * @model default="0" unique="false" required="true"
+   * @model default="0" unique="false"
    * @generated
    */
   float getPeriod();
@@ -140,7 +140,7 @@ public interface Activity extends IActivity
    * @return the value of the '<em>Priority</em>' attribute.
    * @see #setPriority(int)
    * @see be.kueleuven.rodinia.model.rtt.RttPackage#getActivity_Priority()
-   * @model default="0" unique="false" required="true"
+   * @model default="0" unique="false"
    * @generated
    */
   int getPriority();
