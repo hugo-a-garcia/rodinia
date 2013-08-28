@@ -5,6 +5,7 @@ import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.services.Graphiti;
 import org.eclipse.graphiti.ui.platform.AbstractPropertySectionFilter;
 
+import be.kueleuven.rodinia.model.rtt.EventPort;
 import be.kueleuven.rodinia.model.rtt.InputPort;
 
 public class InputPortFilter extends AbstractPropertySectionFilter {
@@ -14,7 +15,7 @@ public class InputPortFilter extends AbstractPropertySectionFilter {
         EObject eObject =
             Graphiti.getLinkService()
             .getBusinessObjectForLinkedPictogramElement(pe);
-        if (eObject instanceof InputPort ) {
+        if (eObject instanceof InputPort && !(eObject instanceof EventPort)) {
             return true;
         }
         return false;

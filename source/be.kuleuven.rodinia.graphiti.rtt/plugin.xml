@@ -59,6 +59,11 @@
          id="graphiti.InputPort.tab"
          label="InputPort">
     </propertyTab>
+     <propertyTab
+         category="Graphiti"
+         id="graphiti.EventPort.tab"
+         label="EventPort">
+    </propertyTab>
     <propertyTab
          category="Graphiti"
          id="graphiti.OutputPort.tab"
@@ -130,6 +135,19 @@
               filter="be.kuleuven.rodinia.graphiti.rtt.propertiesTab.InputPortFilter"
               id="graphiti.InputPort.tab.emfclass"
               tab="graphiti.InputPort.tab">
+        </propertySection>
+    </propertySections>
+</extension>
+
+<extension
+      point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections
+          contributorId="rttStructure.PropertyContributor">
+        <propertySection
+              class="be.kuleuven.rodinia.graphiti.rtt.propertiesTab.EventPortSection"
+              filter="be.kuleuven.rodinia.graphiti.rtt.propertiesTab.EventPortFilter"
+              id="graphiti.EventPort.tab.emfclass"
+              tab="graphiti.EventPort.tab">
         </propertySection>
     </propertySections>
 </extension>

@@ -23,6 +23,7 @@ import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetWidgetFactory;
 
 import be.kueleuven.rodinia.model.rtt.Activity;
 import be.kueleuven.rodinia.model.rtt.ConnectionPolicy;
+import be.kueleuven.rodinia.model.rtt.EventPort;
 import be.kueleuven.rodinia.model.rtt.InputPort;
 import be.kueleuven.rodinia.model.rtt.OutputPort;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
@@ -31,6 +32,7 @@ import be.kueleuven.rodinia.model.rtt.TaskContext;
 public class RttStructureSection extends GFPropertySection implements ITabbedPropertyConstants {
 	 
 	private Text nameText;
+	private CLabel typeValue;
 	
 	@Override
 	public void createControls(Composite parent,
@@ -40,12 +42,26 @@ public class RttStructureSection extends GFPropertySection implements ITabbedPro
         TabbedPropertySheetWidgetFactory factory = getWidgetFactory();
         Composite composite = factory.createFlatFormComposite(parent);
         FormData data;
+        
+        typeValue = factory.createCLabel(composite, "");
+        data = new FormData();
+        data.left = new FormAttachment(0, STANDARD_LABEL_WIDTH);
+        data.right = new FormAttachment(100, -500);
+        data.top = new FormAttachment(0, VSPACE);
+        typeValue.setLayoutData(data);
+        
+        CLabel typeLabel = factory.createCLabel(composite, "type:");
+        data = new FormData();
+        data.left = new FormAttachment(0, 0);
+        data.right = new FormAttachment(typeValue, -HSPACE);
+        data.top = new FormAttachment(typeValue, 0, SWT.CENTER);
+        typeLabel.setLayoutData(data);
  
         nameText = factory.createText(composite, "");
         data = new FormData();
         data.left = new FormAttachment(0, STANDARD_LABEL_WIDTH);
         data.right = new FormAttachment(100, -500);
-        data.top = new FormAttachment(0, VSPACE);
+        data.top = new FormAttachment(0, 30);
         nameText.setLayoutData(data);
         nameText.addModifyListener(listener);
  
@@ -70,22 +86,32 @@ public class RttStructureSection extends GFPropertySection implements ITabbedPro
             if (bo instanceof TaskContext){
             	String name = ((TaskContext) bo).getName();
             	nameText.setText(name == null ? "" : name);
+            	typeValue.setText("TaskContext");
             }
             if (bo instanceof Activity){
             	String name = ((Activity) bo).getName();
             	nameText.setText(name == null ? "" : name);
+            	typeValue.setText("Activity");
             }
-            if (bo instanceof InputPort){
+            if (bo instanceof InputPort && !(bo instanceof EventPort)){
             	String name = ((InputPort) bo).getName();
             	nameText.setText(name == null ? "" : name);
+            	typeValue.setText("InputPort");
+            }
+            if (bo instanceof EventPort){
+            	String name = ((EventPort) bo).getName();
+            	nameText.setText(name == null ? "" : name);
+            	typeValue.setText("EventPort");
             }
             if (bo instanceof OutputPort){
             	String name = ((OutputPort) bo).getName();
             	nameText.setText(name == null ? "" : name);
+            	typeValue.setText("OutputPort");
             }
             if (bo instanceof ConnectionPolicy){
             	String name = ((ConnectionPolicy) bo).getName();
             	nameText.setText(name == null ? "" : name);
+            	typeValue.setText("ConnectionPolicy");
             }
         }
         nameText.addModifyListener(listener);

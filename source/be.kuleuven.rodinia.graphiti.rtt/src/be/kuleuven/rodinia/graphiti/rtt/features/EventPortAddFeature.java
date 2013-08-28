@@ -104,14 +104,21 @@ public class EventPortAddFeature extends AbstractAddShapeFeature{
         	Shape shape = peCreateService.createShape(containerShape, false);
         	Ellipse el = gaService.createEllipse(shape);
             el.setStyle(StyleUtil.getStyleForEventPort(getDiagram()));
-            el.setLineWidth(2);
+            el.setLineWidth(4);
             if (LR == true){
             	gaService.setLocationAndSize(el, widthWithText-15, 0, 10, 10);
             } else {
             	gaService.setLocationAndSize(el, 5, 0, 10, 10);
             }
+        	
+        	Ellipse el2 = gaService.createEllipse(el);
+        	el2.setLineWidth(1);
+        	el2.setStyle(StyleUtil.getStyleForEventPort(getDiagram()));
+        	gaService.setLocationAndSize(el2, 3, 3, 5, 5);
+        	
         	link(shape, addedClass);
         	ellipse = el;
+        	
         }
         
         //make an anchor and link it to the ellipse wich is endpoints main structure for attaching edges

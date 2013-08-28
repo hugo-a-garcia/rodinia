@@ -16,7 +16,7 @@ public class StyleUtil {
 	private static final IColorConstant TASK_CONTEXT_FOREGROUND = new ColorConstant(98, 131, 167);
 	private static final IColorConstant TASK_CONTEXT_BACKGROUND = new ColorConstant(187, 218, 247);
 	private static final IColorConstant ACTIVITY_FOREGROUND = IColorConstant.BLACK;
-	private static final IColorConstant ACTIVITY_BACKGROUND = IColorConstant.RED;
+	private static final IColorConstant ACTIVITY_BACKGROUND = IColorConstant.GRAY;
 	private static final IColorConstant PORT_FOREGROUND = new ColorConstant(98, 131, 167);
 	private static final IColorConstant INPUT_PORT_BACKGROUND = new ColorConstant(119, 193, 255);
 	private static final IColorConstant OUTPUT_PORT_BACKGROUND = new ColorConstant(147, 214, 147);

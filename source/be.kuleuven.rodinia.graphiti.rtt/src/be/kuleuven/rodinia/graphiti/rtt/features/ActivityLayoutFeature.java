@@ -24,7 +24,6 @@ public class ActivityLayoutFeature extends AbstractLayoutFeature {
     public boolean layout(ILayoutContext context) {
     	context.getPictogramElement().getGraphicsAlgorithm().setX(10);
     	context.getPictogramElement().getGraphicsAlgorithm().setY(19);
-    	context.getPictogramElement().getGraphicsAlgorithm().setWidth(context.getPictogramElement().getGraphicsAlgorithm().getParentGraphicsAlgorithm().getWidth() - 20);
         return true;
     }
 }

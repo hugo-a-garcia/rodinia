@@ -55,7 +55,7 @@ public class ActivityAddFeature extends AbstractAddShapeFeature{
             roundedRectangle = gaService.createRoundedRectangle(containerShape, 5, 5);
             roundedRectangle.setStyle(StyleUtil.getStyleForActivity(getDiagram()));
             roundedRectangle.setLineWidth(1);
-            roundedRectangle.setTransparency(0.5);
+            roundedRectangle.setTransparency(0.7);
 			//final Object target = getBusinessObjectForPictogramElement(context.getTargetContainer());
             
             gaService.setLocationAndSize(roundedRectangle,10, 19, width-5, 24);
