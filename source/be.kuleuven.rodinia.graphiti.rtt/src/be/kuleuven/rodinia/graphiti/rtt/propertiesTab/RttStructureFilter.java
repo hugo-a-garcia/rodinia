@@ -9,6 +9,7 @@ import be.kueleuven.rodinia.model.rtt.Activity;
 //import be.kueleuven.rodinia.model.rtt.ConnectionPolicy;
 import be.kueleuven.rodinia.model.rtt.InputPort;
 import be.kueleuven.rodinia.model.rtt.OutputPort;
+import be.kueleuven.rodinia.model.rtt.Property;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
 
 public class RttStructureFilter extends AbstractPropertySectionFilter {
@@ -21,7 +22,8 @@ public class RttStructureFilter extends AbstractPropertySectionFilter {
         if (eObject instanceof TaskContext || 
         		eObject instanceof Activity || 
         		eObject instanceof InputPort || 
-        		eObject instanceof OutputPort //|| 
+        		eObject instanceof OutputPort ||
+        		eObject instanceof Property//|| 
         		//eObject instanceof ConnectionPolicy) {
         		){
             return true;

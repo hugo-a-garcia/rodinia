@@ -27,6 +27,7 @@ import be.kueleuven.rodinia.model.rtt.ConnectionPolicy;
 import be.kueleuven.rodinia.model.rtt.EventPort;
 import be.kueleuven.rodinia.model.rtt.InputPort;
 import be.kueleuven.rodinia.model.rtt.OutputPort;
+import be.kueleuven.rodinia.model.rtt.Property;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
 import be.kuleuven.rodinia.graphiti.rtt.features.ActivityAddFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.ActivityCreateFeature;
@@ -55,6 +56,8 @@ import be.kuleuven.rodinia.graphiti.rtt.features.OutputPortCreateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.OutputPortMoveFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.OutputPortResizeFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.OutputPortUpdateFeature;
+import be.kuleuven.rodinia.graphiti.rtt.features.PropertyAddFeature;
+import be.kuleuven.rodinia.graphiti.rtt.features.PropertyCreateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.TaskContextAddFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.TaskContextCreateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.TaskContextLayoutFeature;
@@ -86,12 +89,15 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	    if (context.getNewObject() instanceof Activity){
 	    	return new ActivityAddFeature(this);
 	    }
+	    if (context.getNewObject() instanceof Property){
+	    	return new PropertyAddFeature(this);
+	    }
 		return super.getAddFeature(context);
 	}
 
 	@Override
 	public ICreateFeature[] getCreateFeatures() {
-		 return new ICreateFeature[] { new ActivityCreateFeature(this), new TaskContextCreateFeature(this), new InputPortCreateFeature(this), new OutputPortCreateFeature(this), new EventPortCreateFeature(this) };
+		 return new ICreateFeature[] { new ActivityCreateFeature(this), new TaskContextCreateFeature(this), new InputPortCreateFeature(this), new OutputPortCreateFeature(this), new EventPortCreateFeature(this), new PropertyCreateFeature(this) };
 	}
 	
 	@Override

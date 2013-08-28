@@ -80,7 +80,7 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
         	
             // create and set graphics algorithm
             roundedRectangle =
-                gaService.createRoundedRectangle(shape, 5, 5);
+                gaService.createRoundedRectangle(shape, 10, 10);
             roundedRectangle.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
             roundedRectangle.setLineWidth(2);
             gaService.setLocationAndSize(roundedRectangle,
@@ -180,7 +180,7 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
             boxAnchor.setReferencedGraphicsAlgorithm(rectangle3);
             
             Text text = gaService.createText(rectangle3, "act");
-            text.setTransparency(0.25);
+            text.setTransparency(0.4);
             text.setStyle(StyleUtil.getStyleForTextTip(getDiagram()));
             text.setHorizontalAlignment(Orientation.ALIGNMENT_RIGHT );
             // vertical alignment has as default value "center"
@@ -206,8 +206,8 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
             ChopboxAnchor boxAnchor = peCreateService.createChopboxAnchor(shape);
             boxAnchor.setReferencedGraphicsAlgorithm(rectangle3);
             
-            Text text = gaService.createText(rectangle3, "vals");
-            text.setTransparency(0.25);
+            Text text = gaService.createText(rectangle3, "props");
+            text.setTransparency(0.4);
             text.setStyle(StyleUtil.getStyleForTextTip(getDiagram()));
             text.setHorizontalAlignment(Orientation.ALIGNMENT_RIGHT );
             // vertical alignment has as default value "center"
@@ -234,7 +234,7 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
             boxAnchor.setReferencedGraphicsAlgorithm(rectangle3);
             
             Text text = gaService.createText(rectangle3, "ops");
-            text.setTransparency(0.25);
+            text.setTransparency(0.4);
             text.setStyle(StyleUtil.getStyleForTextTip(getDiagram()));
             text.setHorizontalAlignment(Orientation.ALIGNMENT_RIGHT );
             // vertical alignment has as default value "center"

@@ -17,6 +17,8 @@ public class StyleUtil {
 	private static final IColorConstant TASK_CONTEXT_BACKGROUND = new ColorConstant(187, 218, 247);
 	private static final IColorConstant ACTIVITY_FOREGROUND = IColorConstant.BLACK;
 	private static final IColorConstant ACTIVITY_BACKGROUND = IColorConstant.GRAY;
+	private static final IColorConstant PROPERTY_FOREGROUND = IColorConstant.BLACK;
+	private static final IColorConstant PROPERTY_BACKGROUND = IColorConstant.WHITE;
 	private static final IColorConstant PORT_FOREGROUND = new ColorConstant(98, 131, 167);
 	private static final IColorConstant INPUT_PORT_BACKGROUND = new ColorConstant(119, 193, 255);
 	private static final IColorConstant OUTPUT_PORT_BACKGROUND = new ColorConstant(147, 214, 147);
@@ -48,7 +50,7 @@ public class StyleUtil {
             style.setForeground(gaService.manageColor(diagram,
                 TEXT_TIP_FOREGROUND));
         }
-	
+    
     public static Style getStyleForCommonValues(Diagram diagram) {
         final String styleId = "COMMON-VALUES";
         IGaService gaService = Graphiti.getGaService();
@@ -94,6 +96,24 @@ public class StyleUtil {
             style.setFilled(true);
             style.setForeground(gaService.manageColor(diagram,ACTIVITY_FOREGROUND));
             style.setBackground(gaService.manageColor(diagram,ACTIVITY_BACKGROUND));
+        }
+        return style;
+      
+    }
+    
+    public static Style getStyleForProperty(Diagram diagram) {
+        final String styleId = "PROPERTY";
+        IGaService gaService = Graphiti.getGaService();
+
+        // this is a child style of the common-values-style
+        Style parentStyle = getStyleForCommonValues(diagram);
+        Style style = gaService.findStyle(parentStyle, styleId);
+
+        if (style == null) { // style not found - create new style
+            style = gaService.createPlainStyle(parentStyle, styleId);
+            style.setFilled(true);
+            style.setForeground(gaService.manageColor(diagram,PROPERTY_FOREGROUND));
+            style.setBackground(gaService.manageColor(diagram,PROPERTY_BACKGROUND));
         }
         return style;
       
@@ -170,7 +190,7 @@ public class StyleUtil {
         }
     
     public static Style getStyleForTextTip(Diagram diagram) {
-        final String styleId = "TEXT";
+        final String styleId = "TEXTTIP";
         IGaService gaService = Graphiti.getGaService();
 
         // this is a child style of the common-values-style

@@ -26,6 +26,7 @@ import be.kueleuven.rodinia.model.rtt.ConnectionPolicy;
 import be.kueleuven.rodinia.model.rtt.EventPort;
 import be.kueleuven.rodinia.model.rtt.InputPort;
 import be.kueleuven.rodinia.model.rtt.OutputPort;
+import be.kueleuven.rodinia.model.rtt.Property;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
 
 @SuppressWarnings("unused")
@@ -112,6 +113,11 @@ public class RttStructureSection extends GFPropertySection implements ITabbedPro
             	String name = ((ConnectionPolicy) bo).getName();
             	nameText.setText(name == null ? "" : name);
             	typeValue.setText("ConnectionPolicy");
+            }
+            if (bo instanceof Property){
+            	String name = ((Property) bo).getName();
+            	nameText.setText(name == null ? "" : name);
+            	typeValue.setText("Property");
             }
         }
         nameText.addModifyListener(listener);

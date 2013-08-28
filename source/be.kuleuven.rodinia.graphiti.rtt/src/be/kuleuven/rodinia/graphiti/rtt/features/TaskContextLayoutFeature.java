@@ -149,8 +149,12 @@ public class TaskContextLayoutFeature 	extends AbstractLayoutFeature {
             						if (size.getHeight() == 24){
             							gaService.setLocationAndSize(graphicsAlgorithm, 10, 19, containerWidth-50, 24);
             						} else {
-            							gaService.setWidth(graphicsAlgorithm, containerWidth-20);
-            							gaService.setHeight(graphicsAlgorithm, containerHeight);
+            							if (size.getHeight() == 23) {
+            								gaService.setWidth(graphicsAlgorithm, containerWidth-60);
+            							} else {
+            								gaService.setWidth(graphicsAlgorithm, containerWidth-20);
+            								gaService.setHeight(graphicsAlgorithm, containerHeight);
+            							}
             						}
             					}
             				} else {

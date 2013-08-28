@@ -13,18 +13,19 @@ import org.eclipse.graphiti.services.Graphiti;
 import org.eclipse.graphiti.services.IGaService;
 import org.eclipse.graphiti.services.IPeCreateService;
 
-import be.kueleuven.rodinia.model.rtt.Activity;
+import be.kueleuven.rodinia.model.rtt.Property;
+import be.kueleuven.rodinia.model.rtt.TaskContext;
 import be.kuleuven.rodinia.graphiti.rtt.util.StyleUtil;
 
-public class ActivityAddFeature extends AbstractAddShapeFeature{
+public class PropertyAddFeature extends AbstractAddShapeFeature{
 	
-	public ActivityAddFeature(IFeatureProvider fp) {
+	public PropertyAddFeature(IFeatureProvider fp) {
 		super(fp);
 	}
 
 	@Override
 	public boolean canAdd(IAddContext context) {
-		if (context.getNewObject() instanceof Activity) {
+		if (context.getNewObject() instanceof Property) {
 			if (context.getTargetContainer() instanceof ContainerShape) {
 				return true;
 			}
@@ -34,10 +35,9 @@ public class ActivityAddFeature extends AbstractAddShapeFeature{
 
 	@Override
 	public PictogramElement add(IAddContext context) {
-	
-		final int width = context.getTargetContainer().getGraphicsAlgorithm().getWidth();        
+	    final int width = context.getTargetContainer().getGraphicsAlgorithm().getWidth();    
 	 
-		final Activity addedClass = (Activity) context.getNewObject();
+		final Property addedClass = (Property) context.getNewObject();
         final ContainerShape targetDiagram =  context.getTargetContainer();
   
         // CONTAINER SHAPE WITH ROUNDED RECTANGLE
@@ -51,12 +51,16 @@ public class ActivityAddFeature extends AbstractAddShapeFeature{
         {
             // create and set graphics algorithm
             roundedRectangle = gaService.createRoundedRectangle(containerShape, 5, 5);
-            roundedRectangle.setStyle(StyleUtil.getStyleForActivity(getDiagram()));
+            roundedRectangle.setStyle(StyleUtil.getStyleForProperty(getDiagram()));
             roundedRectangle.setLineWidth(1);
             roundedRectangle.setTransparency(0.7);
-			//final Object target = getBusinessObjectForPictogramElement(context.getTargetContainer());
-            
-            gaService.setLocationAndSize(roundedRectangle,10, 19, width-50, 24);
+			final Object target = getBusinessObjectForPictogramElement(context.getTargetContainer());
+			int number = 0;
+			if (target instanceof TaskContext){
+				TaskContext task = (TaskContext) target;
+				number = task.getProperties().size();
+			}
+            gaService.setLocationAndSize(roundedRectangle,10, 19 + number * 23, width-60, 23);
             // if added Class has no resource we add it to the resource
             // of the diagram
             // in a real scenario the business model would have its own resource
@@ -68,7 +72,7 @@ public class ActivityAddFeature extends AbstractAddShapeFeature{
             link(containerShape, addedClass);
         }
         
-        // SHAPE WITH TEXT
+        // SHAPE WITH TEXTActivity
         {
             // create shape for text
             Shape shape = peCreateService.createShape(containerShape, false);
