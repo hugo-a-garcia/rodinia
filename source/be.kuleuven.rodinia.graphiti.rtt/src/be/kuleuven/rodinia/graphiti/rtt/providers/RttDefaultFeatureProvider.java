@@ -58,6 +58,9 @@ import be.kuleuven.rodinia.graphiti.rtt.features.OutputPortResizeFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.OutputPortUpdateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.PropertyAddFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.PropertyCreateFeature;
+import be.kuleuven.rodinia.graphiti.rtt.features.PropertyLayoutFeature;
+import be.kuleuven.rodinia.graphiti.rtt.features.PropertyMoveFeature;
+import be.kuleuven.rodinia.graphiti.rtt.features.PropertyResizeFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.TaskContextAddFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.TaskContextCreateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.TaskContextLayoutFeature;
@@ -110,6 +113,9 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	    if (bo instanceof Activity){
 	    	return new ActivityLayoutFeature(this);
 	    }
+	    if (bo instanceof Property){
+	    	return new PropertyLayoutFeature(this);
+	    }
 	    return super.getLayoutFeature(context);
 	} 
 	
@@ -128,6 +134,10 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	    }
 	    if (bo instanceof Activity){
 	    	return new ActivityMoveFeature(this);
+	    }
+	    if (bo instanceof Property){
+	    	///return new PropertyMoveFeature(this);
+	    	return super.getMoveShapeFeature(context);
 	    }
 	    return super.getMoveShapeFeature(context);
 	} 
@@ -148,6 +158,9 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	    }
 	    if (bo instanceof Activity){
 	    	return new ActivityResizeFeature(this);
+	    }
+	    if (bo instanceof Property){
+	    	return new PropertyResizeFeature(this);
 	    }
 	    return super.getResizeShapeFeature(context);
 	}

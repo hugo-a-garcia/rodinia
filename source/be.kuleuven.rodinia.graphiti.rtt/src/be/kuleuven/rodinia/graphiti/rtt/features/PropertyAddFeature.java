@@ -72,7 +72,7 @@ public class PropertyAddFeature extends AbstractAddShapeFeature{
             link(containerShape, addedClass);
         }
         
-        // SHAPE WITH TEXTActivity
+        // SHAPE WITH TEXT
         {
             // create shape for text
             Shape shape = peCreateService.createShape(containerShape, false);
@@ -81,7 +81,7 @@ public class PropertyAddFeature extends AbstractAddShapeFeature{
             Text text = gaService.createText(shape, addedClass.getName());
             text.setStyle(StyleUtil.getStyleForText(getDiagram()));
             // vertical alignment has as default value "center"
-            gaService.setLocationAndSize(text, 5, 0, context.getTargetContainer().getGraphicsAlgorithm().getWidth() - 22, 20);
+            gaService.setLocationAndSize(text, 4, 0, context.getTargetContainer().getGraphicsAlgorithm().getWidth() - 22, 20);
             text.setHorizontalAlignment(Orientation.ALIGNMENT_LEFT );
  
             // create link and wire it

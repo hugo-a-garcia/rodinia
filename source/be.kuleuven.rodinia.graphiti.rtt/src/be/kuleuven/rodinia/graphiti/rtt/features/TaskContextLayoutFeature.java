@@ -27,6 +27,7 @@ public class TaskContextLayoutFeature 	extends AbstractLayoutFeature {
     private static final int MIN_HEIGHT = 30;
  
     private static final int MIN_WIDTH = 100;
+    private boolean hideText = false;
  
     public TaskContextLayoutFeature(IFeatureProvider fp) {
         super(fp);
@@ -162,6 +163,19 @@ public class TaskContextLayoutFeature 	extends AbstractLayoutFeature {
             										for (Property propx : task.getProperties()){
             											if (propx.getName().equals(prop.getName())){
             												number = i;
+            												if ((19+(number + 1) * 23) >= 42 + ((containerHeight-42)/2)){
+            													graphicsAlgorithm.setTransparency(1.0);
+            													for (GraphicsAlgorithm graph : graphicsAlgorithm.getGraphicsAlgorithmChildren()){
+            														graph.setTransparency(1.0);
+            													}
+            													hideText = false;
+            												} else {
+            													graphicsAlgorithm.setTransparency(0.7);
+            													for (GraphicsAlgorithm graph : graphicsAlgorithm.getGraphicsAlgorithmChildren()){
+            														graph.setTransparency(0.0);
+            													}
+            													hideText = true;
+            												}
             											}
             											i++;
             										}
@@ -180,6 +194,13 @@ public class TaskContextLayoutFeature 	extends AbstractLayoutFeature {
             						if (graphicsAlgorithm.getX() == 27){
             							gaService.setLocation(graphicsAlgorithm, 27, graphicsAlgorithm.getY());
             						} else {
+            							if (graphicsAlgorithm.getX() == 4){
+            								if (hideText == true) {
+            									graphicsAlgorithm.setTransparency(1.0);
+            								} else {
+            									graphicsAlgorithm.setTransparency(0.0);
+            								}
+            							}
             							gaService.setLocation(graphicsAlgorithm, 8, graphicsAlgorithm.getY());
             							gaService.setSize(graphicsAlgorithm, containerGa.getWidth(), 25);
             							Text a = (Text) graphicsAlgorithm;
