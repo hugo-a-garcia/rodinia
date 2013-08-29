@@ -61,6 +61,7 @@ import be.kuleuven.rodinia.graphiti.rtt.features.PropertyCreateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.PropertyLayoutFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.PropertyMoveFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.PropertyResizeFeature;
+import be.kuleuven.rodinia.graphiti.rtt.features.PropertyUpdateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.TaskContextAddFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.TaskContextCreateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.TaskContextLayoutFeature;
@@ -204,6 +205,9 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	       }
 	       if (bo instanceof ConnectionPolicy) {
 	           return new OutputPortUpdateFeature(this);
+	       }
+	       if (bo instanceof Property) {
+	    	   return new PropertyUpdateFeature(this);
 	       }
 	   }
 	   return super.getUpdateFeature(context);

@@ -154,6 +154,9 @@ public class RttStructureSection extends GFPropertySection implements ITabbedPro
     			if (bo instanceof ConnectionPolicy){
     				name = ((ConnectionPolicy) bo).getName();
     			}
+    			if (bo instanceof Property){
+    				name = ((Property) bo).getName();
+    			}
     			if (value.equals(name))
     				return;
     		}
@@ -181,6 +184,10 @@ public class RttStructureSection extends GFPropertySection implements ITabbedPro
     					}
     					if (bo instanceof OutputPort){
     						OutputPort eClass = (OutputPort) bo;
+    						eClass.setName(typedValue);
+    					}
+    					if (bo instanceof Property){
+    						Property eClass = (Property) bo;
     						eClass.setName(typedValue);
     					}
     					
