@@ -8,7 +8,6 @@ import org.eclipse.graphiti.mm.algorithms.Text;
 import org.eclipse.graphiti.mm.algorithms.styles.Orientation;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.PictogramElement;
-import org.eclipse.graphiti.mm.pictograms.Shape;
 import org.eclipse.graphiti.services.Graphiti;
 import org.eclipse.graphiti.services.IGaService;
 import org.eclipse.graphiti.services.IPeCreateService;
@@ -61,32 +60,24 @@ public class PropertyAddFeature extends AbstractAddShapeFeature{
 				number = task.getProperties().size();
 			}
             gaService.setLocationAndSize(roundedRectangle,10, 19 + number * 23, width-60, 23);
+            
+            Text text = gaService.createText(roundedRectangle, addedClass.getName());
+            text.setStyle(StyleUtil.getStyleForText(getDiagram()));
+            // vertical alignment has as default value "center"
+            gaService.setLocationAndSize(text, 4, 0, context.getTargetContainer().getGraphicsAlgorithm().getWidth() - 22, 20);
+            text.setHorizontalAlignment(Orientation.ALIGNMENT_LEFT );
+            
             // if added Class has no resource we add it to the resource
             // of the diagram
             // in a real scenario the business model would have its own resource
             if (addedClass.eResource() == null) {
-                     getDiagram().eResource().getContents().add(addedClass);
+            	getDiagram().eResource().getContents().add(addedClass);
             }
             
             // create link and wire it
             link(containerShape, addedClass);
         }
         
-        // SHAPE WITH TEXT
-        {
-            // create shape for text
-            Shape shape = peCreateService.createShape(containerShape, false);
- 
-            // create and set text graphics algorithm
-            Text text = gaService.createText(shape, addedClass.getName());
-            text.setStyle(StyleUtil.getStyleForText(getDiagram()));
-            // vertical alignment has as default value "center"
-            gaService.setLocationAndSize(text, 4, 0, context.getTargetContainer().getGraphicsAlgorithm().getWidth() - 22, 20);
-            text.setHorizontalAlignment(Orientation.ALIGNMENT_LEFT );
- 
-            // create link and wire it
-            link(shape, addedClass);
-        }
         
         layoutPictogramElement(containerShape);
         
