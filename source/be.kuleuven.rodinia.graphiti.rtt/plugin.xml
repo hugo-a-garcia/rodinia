@@ -79,6 +79,11 @@
          id="graphiti.TaskContext.tab"
          label="TaskContext">
     </propertyTab>
+    <propertyTab
+         category="Graphiti"
+         id="graphiti.Property.tab"
+         label="Property">
+    </propertyTab>
    <propertyTab
          category="Graphiti"
          id="graphiti.main.tab"
@@ -174,6 +179,19 @@
               filter="be.kuleuven.rodinia.graphiti.rtt.propertiesTab.ConnectionPolicyFilter"
               id="graphiti.ConnectionPolicy.tab.emfclass"
               tab="graphiti.ConnectionPolicy.tab">
+        </propertySection>
+    </propertySections>
+</extension>
+
+<extension
+      point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections
+          contributorId="rttStructure.PropertyContributor">
+        <propertySection
+              class="be.kuleuven.rodinia.graphiti.rtt.propertiesTab.PropertySection"
+              filter="be.kuleuven.rodinia.graphiti.rtt.propertiesTab.PropertyFilter"
+              id="graphiti.Property.tab.emfclass"
+              tab="graphiti.Property.tab">
         </propertySection>
     </propertySections>
 </extension>
