@@ -28,13 +28,7 @@ namespace [%=taskContext.namespace%]
 		InputPort<int> [%=eventPort.name%];
 		[%}%]
 *]		[%for(anOutputPort in taskContext.outputPorts) {%]
-[*
-		Commented out for testing
-		OutputPort<[%=anOutputPort.type%]> [%=anOutputPort.name%];
-*]
-		OutputPort<int> [%=anOutputPort.name%];
-		// --> [%=anOutputPort.dataType.name%]  <--
-		///////////////////////////////////////////
+		OutputPort<[%=anOutputPort.dataType.name%]> [%=anOutputPort.name%];
 		[%}%]
 		
 		[%=out.startPreserve("/*", "*/", "declarations", true)%]
