@@ -19,7 +19,7 @@ public class CustomChangeColorFeature 	extends AbstractCustomFeature {
 
     @Override
     public String getName() {
-        return "Change &foreground color";
+        return "Change foreground color";
     }
 
     @Override

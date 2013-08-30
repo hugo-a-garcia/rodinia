@@ -27,7 +27,6 @@ import be.kueleuven.rodinia.model.rtt.InputPort;
 public class InputPortSection extends GFPropertySection implements ITabbedPropertyConstants {
 	 
 	private CCombo portTypeList;
-	//private CCombo isEventPortlist;
 	
 	@Override
 	public void createControls(Composite parent,
@@ -37,21 +36,6 @@ public class InputPortSection extends GFPropertySection implements ITabbedProper
      TabbedPropertySheetWidgetFactory factory = getWidgetFactory();
      Composite composite = factory.createFlatFormComposite(parent);
      FormData data;
-
-     //isEventPortlist = factory.createCCombo(composite, SWT.READ_ONLY);
-     //data = new FormData();
-     //data.left = new FormAttachment(0, 110);
-     //data.right = new FormAttachment(100, -500);
-     //data.top = new FormAttachment(0, VSPACE);
-     //isEventPortlist.setLayoutData(data);
-     //isEventPortlist.addSelectionListener(getIsEventPort);
-
-     //CLabel valueLabel1 = factory.createCLabel(composite, "EventPort:");
-     //data = new FormData();
-     //data.left = new FormAttachment(0, 0);
-     //data.right = new FormAttachment(isEventPortlist, -HSPACE);
-     //data.top = new FormAttachment(isEventPortlist, 0, SWT.TOP);
-     //valueLabel1.setLayoutData(data);
      
      portTypeList = factory.createCCombo(composite, SWT.READ_ONLY);
      data = new FormData();
@@ -70,7 +54,6 @@ public class InputPortSection extends GFPropertySection implements ITabbedProper
 
 @Override
  public void refresh() {
-	//isEventPortlist.removeSelectionListener(getIsEventPort);
      PictogramElement pe = getSelectedPictogramElement();
      if (pe != null) {
          Object bo = Graphiti.getLinkService()
@@ -87,15 +70,8 @@ public class InputPortSection extends GFPropertySection implements ITabbedProper
         	 porttypes.toArray(strArray);
         	 portTypeList.setItems(strArray);
         	 portTypeList.select(0);
-        	 //isEventPortlist.setItems (new String [] {"True", "False"});
-        	 //if (((InputPort) bo).getIsEventPort()){
-        		 //isEventPortlist.select(0);
-        	 //} else {
-        		//isEventPortlist.select(1);
-        	 //}
         	 
          }
      }
-     //isEventPortlist.addSelectionListener(getIsEventPort);
  }
 }
