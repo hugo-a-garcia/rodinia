@@ -105,12 +105,13 @@
     <eLiterals name="ORO_SCHED_OTHER"/>
     <eLiterals name="ORO_SCHED_RT" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InputPort">
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractInputPort" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" lowerBound="1"
         eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataType" eType="ecore:EClass ../../be.kuleuven.rodinia.dsl.datatypes/src-gen/be/kuleuven/rodinia/dsl/datatypes/Datatypes.ecore#//DataType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EventPort" eSuperTypes="#//InputPort"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InputPort" eSuperTypes="#//AbstractInputPort"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EventPort" eSuperTypes="#//AbstractInputPort"/>
   <eClassifiers xsi:type="ecore:EClass" name="OutputPort">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" lowerBound="1"
         eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>

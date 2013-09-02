@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class EventPortImpl extends InputPortImpl implements EventPort
+public class EventPortImpl extends AbstractInputPortImpl implements EventPort
 {
   /**
    * <!-- begin-user-doc -->

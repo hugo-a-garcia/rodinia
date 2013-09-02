@@ -90,14 +90,10 @@ abstract class AbstractInputPort {
 	refers DataType dataType
 }
 
-class InputPort
-{
-	String [1] name
-	refers DataType dataType
+class InputPort extends AbstractInputPort{
 }
 
-class EventPort extends InputPort {
-	
+class EventPort extends AbstractInputPort {
 }
 
 class OutputPort

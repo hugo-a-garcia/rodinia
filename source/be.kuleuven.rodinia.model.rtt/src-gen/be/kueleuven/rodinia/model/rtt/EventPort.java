@@ -13,6 +13,6 @@ package be.kueleuven.rodinia.model.rtt;
  * @model
  * @generated
  */
-public interface EventPort extends InputPort
+public interface EventPort extends AbstractInputPort
 {
 } // EventPort
