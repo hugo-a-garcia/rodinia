@@ -37,7 +37,7 @@ public class RttDslParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getInputPortAccess().getAlternatives(), "rule__InputPort__Alternatives");
+					put(grammarAccess.getAbstractInputPortAccess().getAlternatives(), "rule__AbstractInputPort__Alternatives");
 					put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
 					put(grammarAccess.getEFloatAccess().getAlternatives_4_0(), "rule__EFloat__Alternatives_4_0");
 					put(grammarAccess.getSchedulerAccess().getAlternatives(), "rule__Scheduler__Alternatives");
@@ -61,8 +61,6 @@ public class RttDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTaskContextAccess().getGroup_10_3(), "rule__TaskContext__Group_10_3__0");
 					put(grammarAccess.getTaskContextAccess().getGroup_11(), "rule__TaskContext__Group_11__0");
 					put(grammarAccess.getTaskContextAccess().getGroup_11_3(), "rule__TaskContext__Group_11_3__0");
-					put(grammarAccess.getTaskContextAccess().getGroup_12(), "rule__TaskContext__Group_12__0");
-					put(grammarAccess.getTaskContextAccess().getGroup_12_3(), "rule__TaskContext__Group_12_3__0");
 					put(grammarAccess.getConnectionPolicyAccess().getGroup(), "rule__ConnectionPolicy__Group__0");
 					put(grammarAccess.getConnectionPolicyAccess().getGroup_7(), "rule__ConnectionPolicy__Group_7__0");
 					put(grammarAccess.getConnectionPolicyAccess().getGroup_8(), "rule__ConnectionPolicy__Group_8__0");
@@ -80,8 +78,8 @@ public class RttDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getActivityAccess().getGroup_8(), "rule__Activity__Group_8__0");
 					put(grammarAccess.getActivityAccess().getGroup_9(), "rule__Activity__Group_9__0");
 					put(grammarAccess.getActivityAccess().getGroup_9_3(), "rule__Activity__Group_9_3__0");
-					put(grammarAccess.getInputPort_ImplAccess().getGroup(), "rule__InputPort_Impl__Group__0");
-					put(grammarAccess.getInputPort_ImplAccess().getGroup_4(), "rule__InputPort_Impl__Group_4__0");
+					put(grammarAccess.getInputPortAccess().getGroup(), "rule__InputPort__Group__0");
+					put(grammarAccess.getInputPortAccess().getGroup_4(), "rule__InputPort__Group_4__0");
 					put(grammarAccess.getEventPortAccess().getGroup(), "rule__EventPort__Group__0");
 					put(grammarAccess.getEventPortAccess().getGroup_4(), "rule__EventPort__Group_4__0");
 					put(grammarAccess.getOutputPortAccess().getGroup(), "rule__OutputPort__Group__0");
@@ -116,14 +114,12 @@ public class RttDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTaskContextAccess().getActivityAssignment_7_1(), "rule__TaskContext__ActivityAssignment_7_1");
 					put(grammarAccess.getTaskContextAccess().getInputPortsAssignment_8_2(), "rule__TaskContext__InputPortsAssignment_8_2");
 					put(grammarAccess.getTaskContextAccess().getInputPortsAssignment_8_3_1(), "rule__TaskContext__InputPortsAssignment_8_3_1");
-					put(grammarAccess.getTaskContextAccess().getEventPortsAssignment_9_2(), "rule__TaskContext__EventPortsAssignment_9_2");
-					put(grammarAccess.getTaskContextAccess().getEventPortsAssignment_9_3_1(), "rule__TaskContext__EventPortsAssignment_9_3_1");
-					put(grammarAccess.getTaskContextAccess().getOutputPortsAssignment_10_2(), "rule__TaskContext__OutputPortsAssignment_10_2");
-					put(grammarAccess.getTaskContextAccess().getOutputPortsAssignment_10_3_1(), "rule__TaskContext__OutputPortsAssignment_10_3_1");
-					put(grammarAccess.getTaskContextAccess().getPropertiesAssignment_11_2(), "rule__TaskContext__PropertiesAssignment_11_2");
-					put(grammarAccess.getTaskContextAccess().getPropertiesAssignment_11_3_1(), "rule__TaskContext__PropertiesAssignment_11_3_1");
-					put(grammarAccess.getTaskContextAccess().getOperationsAssignment_12_2(), "rule__TaskContext__OperationsAssignment_12_2");
-					put(grammarAccess.getTaskContextAccess().getOperationsAssignment_12_3_1(), "rule__TaskContext__OperationsAssignment_12_3_1");
+					put(grammarAccess.getTaskContextAccess().getOutputPortsAssignment_9_2(), "rule__TaskContext__OutputPortsAssignment_9_2");
+					put(grammarAccess.getTaskContextAccess().getOutputPortsAssignment_9_3_1(), "rule__TaskContext__OutputPortsAssignment_9_3_1");
+					put(grammarAccess.getTaskContextAccess().getPropertiesAssignment_10_2(), "rule__TaskContext__PropertiesAssignment_10_2");
+					put(grammarAccess.getTaskContextAccess().getPropertiesAssignment_10_3_1(), "rule__TaskContext__PropertiesAssignment_10_3_1");
+					put(grammarAccess.getTaskContextAccess().getOperationsAssignment_11_2(), "rule__TaskContext__OperationsAssignment_11_2");
+					put(grammarAccess.getTaskContextAccess().getOperationsAssignment_11_3_1(), "rule__TaskContext__OperationsAssignment_11_3_1");
 					put(grammarAccess.getConnectionPolicyAccess().getNameAssignment_1(), "rule__ConnectionPolicy__NameAssignment_1");
 					put(grammarAccess.getConnectionPolicyAccess().getInputPortAssignment_4(), "rule__ConnectionPolicy__InputPortAssignment_4");
 					put(grammarAccess.getConnectionPolicyAccess().getOutputPortAssignment_6(), "rule__ConnectionPolicy__OutputPortAssignment_6");
@@ -146,8 +142,8 @@ public class RttDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getActivityAccess().getTaskContextAssignment_8_1(), "rule__Activity__TaskContextAssignment_8_1");
 					put(grammarAccess.getActivityAccess().getSlaveAssignment_9_2(), "rule__Activity__SlaveAssignment_9_2");
 					put(grammarAccess.getActivityAccess().getSlaveAssignment_9_3_1(), "rule__Activity__SlaveAssignment_9_3_1");
-					put(grammarAccess.getInputPort_ImplAccess().getNameAssignment_2(), "rule__InputPort_Impl__NameAssignment_2");
-					put(grammarAccess.getInputPort_ImplAccess().getDataTypeAssignment_4_1(), "rule__InputPort_Impl__DataTypeAssignment_4_1");
+					put(grammarAccess.getInputPortAccess().getNameAssignment_2(), "rule__InputPort__NameAssignment_2");
+					put(grammarAccess.getInputPortAccess().getDataTypeAssignment_4_1(), "rule__InputPort__DataTypeAssignment_4_1");
 					put(grammarAccess.getEventPortAccess().getNameAssignment_2(), "rule__EventPort__NameAssignment_2");
 					put(grammarAccess.getEventPortAccess().getDataTypeAssignment_4_1(), "rule__EventPort__DataTypeAssignment_4_1");
 					put(grammarAccess.getOutputPortAccess().getNameAssignment_2(), "rule__OutputPort__NameAssignment_2");

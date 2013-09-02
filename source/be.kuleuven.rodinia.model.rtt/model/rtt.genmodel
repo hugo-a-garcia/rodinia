@@ -56,7 +56,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//TaskContext/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rtt.ecore#//TaskContext/activity"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rtt.ecore#//TaskContext/inputPorts"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rtt.ecore#//TaskContext/eventPorts"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rtt.ecore#//TaskContext/outputPorts"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rtt.ecore#//TaskContext/properties"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rtt.ecore#//TaskContext/operations"/>

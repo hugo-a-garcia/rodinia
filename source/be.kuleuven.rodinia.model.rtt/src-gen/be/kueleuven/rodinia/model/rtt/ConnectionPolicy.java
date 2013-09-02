@@ -66,12 +66,12 @@ public interface ConnectionPolicy extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Input Port</em>' reference.
-   * @see #setInputPort(InputPort)
+   * @see #setInputPort(AbstractInputPort)
    * @see be.kueleuven.rodinia.model.rtt.RttPackage#getConnectionPolicy_InputPort()
    * @model required="true"
    * @generated
    */
-  InputPort getInputPort();
+  AbstractInputPort getInputPort();
 
   /**
    * Sets the value of the '{@link be.kueleuven.rodinia.model.rtt.ConnectionPolicy#getInputPort <em>Input Port</em>}' reference.
@@ -81,7 +81,7 @@ public interface ConnectionPolicy extends EObject
    * @see #getInputPort()
    * @generated
    */
-  void setInputPort(InputPort value);
+  void setInputPort(AbstractInputPort value);
 
   /**
    * Returns the value of the '<em><b>Output Port</b></em>' reference.

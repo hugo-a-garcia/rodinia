@@ -24,9 +24,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="activity" eType="#//Activity"
         containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputPorts" upperBound="-1"
-        eType="#//InputPort" containment="true" resolveProxies="false"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="eventPorts" upperBound="-1"
-        eType="#//EventPort" containment="true" resolveProxies="false"/>
+        eType="#//AbstractInputPort" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputPorts" upperBound="-1"
         eType="#//OutputPort" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
@@ -44,7 +42,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ConnectionPolicy">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputPort" lowerBound="1"
-        eType="#//InputPort"/>
+        eType="#//AbstractInputPort"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputPort" lowerBound="1"
         eType="#//OutputPort"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bufferSize" unique="false"

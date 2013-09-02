@@ -2,11 +2,11 @@
  */
 package be.kueleuven.rodinia.model.rtt.impl;
 
+import be.kueleuven.rodinia.model.rtt.AbstractInputPort;
 import be.kueleuven.rodinia.model.rtt.ConnectionPolicy;
 import be.kueleuven.rodinia.model.rtt.ConnectionPolicyLockPolicy;
 import be.kueleuven.rodinia.model.rtt.ConnectionPolicyTransport;
 import be.kueleuven.rodinia.model.rtt.ConnectionPolicyType;
-import be.kueleuven.rodinia.model.rtt.InputPort;
 import be.kueleuven.rodinia.model.rtt.OutputPort;
 import be.kueleuven.rodinia.model.rtt.RttPackage;
 
@@ -70,7 +70,7 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
    * @generated
    * @ordered
    */
-  protected InputPort inputPort;
+  protected AbstractInputPort inputPort;
 
   /**
    * The cached value of the '{@link #getOutputPort() <em>Output Port</em>}' reference.
@@ -271,12 +271,12 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public InputPort getInputPort()
+  public AbstractInputPort getInputPort()
   {
     if (inputPort != null && inputPort.eIsProxy())
     {
       InternalEObject oldInputPort = (InternalEObject)inputPort;
-      inputPort = (InputPort)eResolveProxy(oldInputPort);
+      inputPort = (AbstractInputPort)eResolveProxy(oldInputPort);
       if (inputPort != oldInputPort)
       {
         if (eNotificationRequired())
@@ -291,7 +291,7 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public InputPort basicGetInputPort()
+  public AbstractInputPort basicGetInputPort()
   {
     return inputPort;
   }
@@ -301,9 +301,9 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setInputPort(InputPort newInputPort)
+  public void setInputPort(AbstractInputPort newInputPort)
   {
-    InputPort oldInputPort = inputPort;
+    AbstractInputPort oldInputPort = inputPort;
     inputPort = newInputPort;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, RttPackage.CONNECTION_POLICY__INPUT_PORT, oldInputPort, inputPort));
@@ -563,7 +563,7 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
         setName((String)newValue);
         return;
       case RttPackage.CONNECTION_POLICY__INPUT_PORT:
-        setInputPort((InputPort)newValue);
+        setInputPort((AbstractInputPort)newValue);
         return;
       case RttPackage.CONNECTION_POLICY__OUTPUT_PORT:
         setOutputPort((OutputPort)newValue);
@@ -607,7 +607,7 @@ public class ConnectionPolicyImpl extends MinimalEObjectImpl.Container implement
         setName(NAME_EDEFAULT);
         return;
       case RttPackage.CONNECTION_POLICY__INPUT_PORT:
-        setInputPort((InputPort)null);
+        setInputPort((AbstractInputPort)null);
         return;
       case RttPackage.CONNECTION_POLICY__OUTPUT_PORT:
         setOutputPort((OutputPort)null);

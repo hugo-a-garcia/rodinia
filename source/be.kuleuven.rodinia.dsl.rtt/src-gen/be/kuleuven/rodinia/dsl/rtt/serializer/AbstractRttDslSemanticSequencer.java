@@ -45,16 +45,16 @@ public abstract class AbstractRttDslSemanticSequencer extends AbstractDelegating
 				}
 				else break;
 			case RttPackage.EVENT_PORT:
-				if(context == grammarAccess.getEventPortRule() ||
-				   context == grammarAccess.getInputPortRule()) {
+				if(context == grammarAccess.getAbstractInputPortRule() ||
+				   context == grammarAccess.getEventPortRule()) {
 					sequence_EventPort(context, (EventPort) semanticObject); 
 					return; 
 				}
 				else break;
 			case RttPackage.INPUT_PORT:
-				if(context == grammarAccess.getInputPortRule() ||
-				   context == grammarAccess.getInputPort_ImplRule()) {
-					sequence_InputPort_Impl(context, (InputPort) semanticObject); 
+				if(context == grammarAccess.getAbstractInputPortRule() ||
+				   context == grammarAccess.getInputPortRule()) {
+					sequence_InputPort(context, (InputPort) semanticObject); 
 					return; 
 				}
 				else break;
@@ -125,7 +125,7 @@ public abstract class AbstractRttDslSemanticSequencer extends AbstractDelegating
 	 * Constraint:
 	 *     (
 	 *         name=EString 
-	 *         inputPort=[InputPort|EString] 
+	 *         inputPort=[AbstractInputPort|EString] 
 	 *         outputPort=[OutputPort|EString] 
 	 *         bufferSize=EShort? 
 	 *         dataSize=EShort? 
@@ -154,7 +154,7 @@ public abstract class AbstractRttDslSemanticSequencer extends AbstractDelegating
 	 * Constraint:
 	 *     (name=EString dataType=[DataType|QualifiedNameWithDot]?)
 	 */
-	protected void sequence_InputPort_Impl(EObject context, InputPort semanticObject) {
+	protected void sequence_InputPort(EObject context, InputPort semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -225,8 +225,7 @@ public abstract class AbstractRttDslSemanticSequencer extends AbstractDelegating
 	 *         namespace=EString 
 	 *         type=EString 
 	 *         activity=Activity? 
-	 *         (inputPorts+=InputPort inputPorts+=InputPort*)? 
-	 *         (eventPorts+=EventPort eventPorts+=EventPort*)? 
+	 *         (inputPorts+=AbstractInputPort inputPorts+=AbstractInputPort*)? 
 	 *         (outputPorts+=OutputPort outputPorts+=OutputPort*)? 
 	 *         (properties+=Property properties+=Property*)? 
 	 *         (operations+=Operation operations+=Operation*)?

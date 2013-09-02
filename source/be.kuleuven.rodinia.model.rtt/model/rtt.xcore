@@ -14,8 +14,7 @@ class TaskContext {
 	String [1] namespace
 	String [1] ^type = ""
 	contains Activity activity
-	contains InputPort [] inputPorts
-	contains EventPort[] eventPorts
+	contains AbstractInputPort[] inputPorts
 	contains OutputPort [] outputPorts
 	contains Property[] properties
 	contains Operation[] operations
@@ -30,7 +29,7 @@ class PeerGroup {
 class ConnectionPolicy
 {
 	String name
-	refers InputPort [1] inputPort
+	refers AbstractInputPort [1] inputPort
 	refers OutputPort [1] outputPort
 	short bufferSize
 	short dataSize
