@@ -85,6 +85,11 @@ enum Scheduler {
 	ORO_SCHED_RT = 1
 }
 
+abstract class AbstractInputPort {
+	String [1] name
+	refers DataType dataType
+}
+
 class InputPort
 {
 	String [1] name
