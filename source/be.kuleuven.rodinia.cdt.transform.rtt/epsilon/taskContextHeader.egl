@@ -15,9 +15,6 @@ namespace [%=taskContext.namespace%]
 		[%for(anInputPort in taskContext.inputPorts) {%]
 		InputPort<[%=anInputPort.dataType.name%]> [%=anInputPort.name%];
 		[%}%]
-		[%for(eventPort in taskContext.eventPorts) {%]
-		InputPort<[%=eventPort.dataType.name%]> [%=eventPort.name%];
-		[%}%]
 		[%for(anOutputPort in taskContext.outputPorts) {%]
 		OutputPort<[%=anOutputPort.dataType.name%]> [%=anOutputPort.name%];
 		[%}%]
