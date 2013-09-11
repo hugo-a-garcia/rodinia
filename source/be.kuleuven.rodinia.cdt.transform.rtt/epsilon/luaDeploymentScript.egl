@@ -11,7 +11,6 @@ setActivity = depl:getOperation("setActivity")
 addPeer = depl:getOperation("addPeer")
 connect = depl:getOperation("connect")
 
---import the packages (you don't need to do "depl:import" at this point)
 import("[%=package.name%]")
 
 -- create components
@@ -29,8 +28,10 @@ loadComponent("[%=taskContext.name%]", "[%=taskContext.namespace%]::[%=taskConte
  			[%}%]
  		[%}%]
   [%}%]
-  
+ 
+-- connection policies
 [%for(connection in package.connectionPolicies) {%]
+
 cp = rtt.Variable('ConnPolicy')
 cp.name_id = "[%=connection.name%]"
 cp.type = [%=connection.type.value%] -- [%=connection.type%]
@@ -41,8 +42,8 @@ cp.size = [%=connection.bufferSize%]
 cp.data_size = [%=connection.dataSize%]
 cp.init = [%=connection.init%]
 cp.pull = [%=connection.pull%]
-[%}%][%}%]
-[*
+[%}%]
 connect("[%=connection.outputPort.eContainer.name%].[%=connection.outputPort.name%]", "[%=connection.inputPort.eContainer.name%].[%=connection.inputPort.name%]", cp)
+[%}%]
 
-*]
+
