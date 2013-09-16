@@ -2,18 +2,28 @@
  */
 package be.kueleuven.rodinia.model.rtt.impl;
 
+import be.kueleuven.rodinia.model.rtt.ExecutionType;
 import be.kueleuven.rodinia.model.rtt.Operation;
+import be.kueleuven.rodinia.model.rtt.OperationArgument;
 import be.kueleuven.rodinia.model.rtt.RttPackage;
 
 import be.kuleuven.rodinia.dsl.datatypes.datatypes.DataType;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,6 +34,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.OperationImpl#getName <em>Name</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.OperationImpl#getReturnType <em>Return Type</em>}</li>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.OperationImpl#getArguments <em>Arguments</em>}</li>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.OperationImpl#getExecutionType <em>Execution Type</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.OperationImpl#getDocumentation <em>Documentation</em>}</li>
  * </ul>
  * </p>
@@ -61,6 +73,36 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
    * @ordered
    */
   protected DataType returnType;
+
+  /**
+   * The cached value of the '{@link #getArguments() <em>Arguments</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getArguments()
+   * @generated
+   * @ordered
+   */
+  protected EList<OperationArgument> arguments;
+
+  /**
+   * The default value of the '{@link #getExecutionType() <em>Execution Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExecutionType()
+   * @generated
+   * @ordered
+   */
+  protected static final ExecutionType EXECUTION_TYPE_EDEFAULT = ExecutionType.CLIENT_THREAD;
+
+  /**
+   * The cached value of the '{@link #getExecutionType() <em>Execution Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExecutionType()
+   * @generated
+   * @ordered
+   */
+  protected ExecutionType executionType = EXECUTION_TYPE_EDEFAULT;
 
   /**
    * The default value of the '{@link #getDocumentation() <em>Documentation</em>}' attribute.
@@ -174,6 +216,43 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<OperationArgument> getArguments()
+  {
+    if (arguments == null)
+    {
+      arguments = new EObjectContainmentEList<OperationArgument>(OperationArgument.class, this, RttPackage.OPERATION__ARGUMENTS);
+    }
+    return arguments;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ExecutionType getExecutionType()
+  {
+    return executionType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setExecutionType(ExecutionType newExecutionType)
+  {
+    ExecutionType oldExecutionType = executionType;
+    executionType = newExecutionType == null ? EXECUTION_TYPE_EDEFAULT : newExecutionType;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RttPackage.OPERATION__EXECUTION_TYPE, oldExecutionType, executionType));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getDocumentation()
   {
     return documentation;
@@ -198,6 +277,22 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
    * @generated
    */
   @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case RttPackage.OPERATION__ARGUMENTS:
+        return ((InternalEList<?>)getArguments()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
@@ -207,6 +302,10 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
       case RttPackage.OPERATION__RETURN_TYPE:
         if (resolve) return getReturnType();
         return basicGetReturnType();
+      case RttPackage.OPERATION__ARGUMENTS:
+        return getArguments();
+      case RttPackage.OPERATION__EXECUTION_TYPE:
+        return getExecutionType();
       case RttPackage.OPERATION__DOCUMENTATION:
         return getDocumentation();
     }
@@ -218,6 +317,7 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -228,6 +328,13 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
         return;
       case RttPackage.OPERATION__RETURN_TYPE:
         setReturnType((DataType)newValue);
+        return;
+      case RttPackage.OPERATION__ARGUMENTS:
+        getArguments().clear();
+        getArguments().addAll((Collection<? extends OperationArgument>)newValue);
+        return;
+      case RttPackage.OPERATION__EXECUTION_TYPE:
+        setExecutionType((ExecutionType)newValue);
         return;
       case RttPackage.OPERATION__DOCUMENTATION:
         setDocumentation((String)newValue);
@@ -252,6 +359,12 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
       case RttPackage.OPERATION__RETURN_TYPE:
         setReturnType((DataType)null);
         return;
+      case RttPackage.OPERATION__ARGUMENTS:
+        getArguments().clear();
+        return;
+      case RttPackage.OPERATION__EXECUTION_TYPE:
+        setExecutionType(EXECUTION_TYPE_EDEFAULT);
+        return;
       case RttPackage.OPERATION__DOCUMENTATION:
         setDocumentation(DOCUMENTATION_EDEFAULT);
         return;
@@ -273,6 +386,10 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case RttPackage.OPERATION__RETURN_TYPE:
         return returnType != null;
+      case RttPackage.OPERATION__ARGUMENTS:
+        return arguments != null && !arguments.isEmpty();
+      case RttPackage.OPERATION__EXECUTION_TYPE:
+        return executionType != EXECUTION_TYPE_EDEFAULT;
       case RttPackage.OPERATION__DOCUMENTATION:
         return DOCUMENTATION_EDEFAULT == null ? documentation != null : !DOCUMENTATION_EDEFAULT.equals(documentation);
     }
@@ -292,6 +409,8 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", executionType: ");
+    result.append(executionType);
     result.append(", documentation: ");
     result.append(documentation);
     result.append(')');

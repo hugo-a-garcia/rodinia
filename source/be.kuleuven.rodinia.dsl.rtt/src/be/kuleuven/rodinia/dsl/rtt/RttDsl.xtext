@@ -110,10 +110,23 @@ Operation returns Operation:
 	{Operation}
 	'Operation'
 	name=EString
-	'{'
-		('documentation' documentation=EString)?
+		'{'
+		('executionType' executionType=ExecutionType)?
 		('returnType' returnType=[datatypes::DataType|QualifiedNameWithDot])?
+		('arguments' '(' arguments+=OperationArgument (',' arguments+=OperationArgument)* ')')?
+		('documentation' documentation=EString)?
+	'}'; 
+	
+OperationArgument returns OperationArgument:
+	{OperationArgument}
+	'OperationArgument'
+	name=EString
+	'{'
+		('type' type=[datatypes::DataType|QualifiedNameWithDot])?
 	'}';
+
+enum ExecutionType returns ExecutionType:
+	ClientThread | 	OwnThread;
 
 Slave returns Slave:
 	{Slave}

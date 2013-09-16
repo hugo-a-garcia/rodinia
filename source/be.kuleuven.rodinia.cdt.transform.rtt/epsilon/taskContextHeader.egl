@@ -30,11 +30,15 @@ namespace [%=taskContext.namespace%]
         void updateHook();
         void stopHook();
         void cleanupHook();
-[*  
-        [%for(anOperation in taskContext.operacion) {%]
-        [%=anOperation.returnType%] [%=anOperation.name%]();
+ 
+        [%for(anOperation in taskContext.operations) {%]
+        [%=anOperation.returnType.name%] [%=anOperation.name%](
+        [%for(argument in anOperation.arguments) {%]
+        	[%=argument.type.name%]& [%=argument.name%], 
         [%}%]
-*]        
+        );
+        [%}%]
+        
         [%=out.startPreserve("/*", "*/", "public", true)%]
         [%=out.stopPreserve()%]
         

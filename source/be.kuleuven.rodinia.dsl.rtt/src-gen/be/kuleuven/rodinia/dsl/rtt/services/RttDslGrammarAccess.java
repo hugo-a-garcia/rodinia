@@ -1153,23 +1153,39 @@ public class RttDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cDocumentationKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cDocumentationAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cDocumentationEStringParserRuleCall_4_1_0 = (RuleCall)cDocumentationAssignment_4_1.eContents().get(0);
+		private final Keyword cExecutionTypeKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cExecutionTypeAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cExecutionTypeExecutionTypeEnumRuleCall_4_1_0 = (RuleCall)cExecutionTypeAssignment_4_1.eContents().get(0);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
 		private final Keyword cReturnTypeKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
 		private final Assignment cReturnTypeAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
 		private final CrossReference cReturnTypeDataTypeCrossReference_5_1_0 = (CrossReference)cReturnTypeAssignment_5_1.eContents().get(0);
 		private final RuleCall cReturnTypeDataTypeQualifiedNameWithDotParserRuleCall_5_1_0_1 = (RuleCall)cReturnTypeDataTypeCrossReference_5_1_0.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
+		private final Keyword cArgumentsKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
+		private final Assignment cArgumentsAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
+		private final RuleCall cArgumentsOperationArgumentParserRuleCall_6_2_0 = (RuleCall)cArgumentsAssignment_6_2.eContents().get(0);
+		private final Group cGroup_6_3 = (Group)cGroup_6.eContents().get(3);
+		private final Keyword cCommaKeyword_6_3_0 = (Keyword)cGroup_6_3.eContents().get(0);
+		private final Assignment cArgumentsAssignment_6_3_1 = (Assignment)cGroup_6_3.eContents().get(1);
+		private final RuleCall cArgumentsOperationArgumentParserRuleCall_6_3_1_0 = (RuleCall)cArgumentsAssignment_6_3_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_6_4 = (Keyword)cGroup_6.eContents().get(4);
+		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
+		private final Keyword cDocumentationKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Assignment cDocumentationAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
+		private final RuleCall cDocumentationEStringParserRuleCall_7_1_0 = (RuleCall)cDocumentationAssignment_7_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//Operation:
-		//	{Operation} "Operation" name=EString "{" ("documentation" documentation=EString)? ("returnType"
-		//	returnType=[datatypes::DataType|QualifiedNameWithDot])? "}";
+		//	{Operation} "Operation" name=EString "{" ("executionType" executionType=ExecutionType)? ("returnType"
+		//	returnType=[datatypes::DataType|QualifiedNameWithDot])? ("arguments" "(" arguments+=OperationArgument (","
+		//	arguments+=OperationArgument)* ")")? ("documentation" documentation=EString)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//{Operation} "Operation" name=EString "{" ("documentation" documentation=EString)? ("returnType"
-		//returnType=[datatypes::DataType|QualifiedNameWithDot])? "}"
+		//{Operation} "Operation" name=EString "{" ("executionType" executionType=ExecutionType)? ("returnType"
+		//returnType=[datatypes::DataType|QualifiedNameWithDot])? ("arguments" "(" arguments+=OperationArgument (","
+		//arguments+=OperationArgument)* ")")? ("documentation" documentation=EString)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{Operation}
@@ -1187,17 +1203,17 @@ public class RttDslGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
-		//("documentation" documentation=EString)?
+		//("executionType" executionType=ExecutionType)?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"documentation"
-		public Keyword getDocumentationKeyword_4_0() { return cDocumentationKeyword_4_0; }
+		//"executionType"
+		public Keyword getExecutionTypeKeyword_4_0() { return cExecutionTypeKeyword_4_0; }
 
-		//documentation=EString
-		public Assignment getDocumentationAssignment_4_1() { return cDocumentationAssignment_4_1; }
+		//executionType=ExecutionType
+		public Assignment getExecutionTypeAssignment_4_1() { return cExecutionTypeAssignment_4_1; }
 
-		//EString
-		public RuleCall getDocumentationEStringParserRuleCall_4_1_0() { return cDocumentationEStringParserRuleCall_4_1_0; }
+		//ExecutionType
+		public RuleCall getExecutionTypeExecutionTypeEnumRuleCall_4_1_0() { return cExecutionTypeExecutionTypeEnumRuleCall_4_1_0; }
 
 		//("returnType" returnType=[datatypes::DataType|QualifiedNameWithDot])?
 		public Group getGroup_5() { return cGroup_5; }
@@ -1214,8 +1230,107 @@ public class RttDslGrammarAccess extends AbstractGrammarElementFinder {
 		//QualifiedNameWithDot
 		public RuleCall getReturnTypeDataTypeQualifiedNameWithDotParserRuleCall_5_1_0_1() { return cReturnTypeDataTypeQualifiedNameWithDotParserRuleCall_5_1_0_1; }
 
+		//("arguments" "(" arguments+=OperationArgument ("," arguments+=OperationArgument)* ")")?
+		public Group getGroup_6() { return cGroup_6; }
+
+		//"arguments"
+		public Keyword getArgumentsKeyword_6_0() { return cArgumentsKeyword_6_0; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_6_1() { return cLeftParenthesisKeyword_6_1; }
+
+		//arguments+=OperationArgument
+		public Assignment getArgumentsAssignment_6_2() { return cArgumentsAssignment_6_2; }
+
+		//OperationArgument
+		public RuleCall getArgumentsOperationArgumentParserRuleCall_6_2_0() { return cArgumentsOperationArgumentParserRuleCall_6_2_0; }
+
+		//("," arguments+=OperationArgument)*
+		public Group getGroup_6_3() { return cGroup_6_3; }
+
+		//","
+		public Keyword getCommaKeyword_6_3_0() { return cCommaKeyword_6_3_0; }
+
+		//arguments+=OperationArgument
+		public Assignment getArgumentsAssignment_6_3_1() { return cArgumentsAssignment_6_3_1; }
+
+		//OperationArgument
+		public RuleCall getArgumentsOperationArgumentParserRuleCall_6_3_1_0() { return cArgumentsOperationArgumentParserRuleCall_6_3_1_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_6_4() { return cRightParenthesisKeyword_6_4; }
+
+		//("documentation" documentation=EString)?
+		public Group getGroup_7() { return cGroup_7; }
+
+		//"documentation"
+		public Keyword getDocumentationKeyword_7_0() { return cDocumentationKeyword_7_0; }
+
+		//documentation=EString
+		public Assignment getDocumentationAssignment_7_1() { return cDocumentationAssignment_7_1; }
+
+		//EString
+		public RuleCall getDocumentationEStringParserRuleCall_7_1_0() { return cDocumentationEStringParserRuleCall_7_1_0; }
+
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+	}
+
+	public class OperationArgumentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "OperationArgument");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cOperationArgumentAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cOperationArgumentKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cTypeKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cTypeAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final CrossReference cTypeDataTypeCrossReference_4_1_0 = (CrossReference)cTypeAssignment_4_1.eContents().get(0);
+		private final RuleCall cTypeDataTypeQualifiedNameWithDotParserRuleCall_4_1_0_1 = (RuleCall)cTypeDataTypeCrossReference_4_1_0.eContents().get(1);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//OperationArgument:
+		//	{OperationArgument} "OperationArgument" name=EString "{" ("type" type=[datatypes::DataType|QualifiedNameWithDot])?
+		//	"}";
+		public ParserRule getRule() { return rule; }
+
+		//{OperationArgument} "OperationArgument" name=EString "{" ("type" type=[datatypes::DataType|QualifiedNameWithDot])? "}"
+		public Group getGroup() { return cGroup; }
+
+		//{OperationArgument}
+		public Action getOperationArgumentAction_0() { return cOperationArgumentAction_0; }
+
+		//"OperationArgument"
+		public Keyword getOperationArgumentKeyword_1() { return cOperationArgumentKeyword_1; }
+
+		//name=EString
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+
+		//EString
+		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+
+		//("type" type=[datatypes::DataType|QualifiedNameWithDot])?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//"type"
+		public Keyword getTypeKeyword_4_0() { return cTypeKeyword_4_0; }
+
+		//type=[datatypes::DataType|QualifiedNameWithDot]
+		public Assignment getTypeAssignment_4_1() { return cTypeAssignment_4_1; }
+
+		//[datatypes::DataType|QualifiedNameWithDot]
+		public CrossReference getTypeDataTypeCrossReference_4_1_0() { return cTypeDataTypeCrossReference_4_1_0; }
+
+		//QualifiedNameWithDot
+		public RuleCall getTypeDataTypeQualifiedNameWithDotParserRuleCall_4_1_0_1() { return cTypeDataTypeQualifiedNameWithDotParserRuleCall_4_1_0_1; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class SlaveElements extends AbstractParserRuleElementFinder {
@@ -1423,6 +1538,34 @@ public class RttDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	
+	public class ExecutionTypeElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "ExecutionType");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cClientThreadEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cClientThreadClientThreadKeyword_0_0 = (Keyword)cClientThreadEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cOwnThreadEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cOwnThreadOwnThreadKeyword_1_0 = (Keyword)cOwnThreadEnumLiteralDeclaration_1.eContents().get(0);
+		
+		//enum ExecutionType:
+		//	ClientThread | OwnThread;
+		public EnumRule getRule() { return rule; }
+
+		//ClientThread | OwnThread
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//ClientThread
+		public EnumLiteralDeclaration getClientThreadEnumLiteralDeclaration_0() { return cClientThreadEnumLiteralDeclaration_0; }
+
+		//"ClientThread"
+		public Keyword getClientThreadClientThreadKeyword_0_0() { return cClientThreadClientThreadKeyword_0_0; }
+
+		//OwnThread
+		public EnumLiteralDeclaration getOwnThreadEnumLiteralDeclaration_1() { return cOwnThreadEnumLiteralDeclaration_1; }
+
+		//"OwnThread"
+		public Keyword getOwnThreadOwnThreadKeyword_1_0() { return cOwnThreadOwnThreadKeyword_1_0; }
+	}
+
 	public class SchedulerElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "Scheduler");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -1579,6 +1722,8 @@ public class RttDslGrammarAccess extends AbstractGrammarElementFinder {
 	private OutputPortElements pOutputPort;
 	private PropertyElements pProperty;
 	private OperationElements pOperation;
+	private OperationArgumentElements pOperationArgument;
+	private ExecutionTypeElements unknownRuleExecutionType;
 	private SlaveElements pSlave;
 	private SchedulerElements unknownRuleScheduler;
 	private EFloatElements pEFloat;
@@ -1752,14 +1897,36 @@ public class RttDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Operation:
-	//	{Operation} "Operation" name=EString "{" ("documentation" documentation=EString)? ("returnType"
-	//	returnType=[datatypes::DataType|QualifiedNameWithDot])? "}";
+	//	{Operation} "Operation" name=EString "{" ("executionType" executionType=ExecutionType)? ("returnType"
+	//	returnType=[datatypes::DataType|QualifiedNameWithDot])? ("arguments" "(" arguments+=OperationArgument (","
+	//	arguments+=OperationArgument)* ")")? ("documentation" documentation=EString)? "}";
 	public OperationElements getOperationAccess() {
 		return (pOperation != null) ? pOperation : (pOperation = new OperationElements());
 	}
 	
 	public ParserRule getOperationRule() {
 		return getOperationAccess().getRule();
+	}
+
+	//OperationArgument:
+	//	{OperationArgument} "OperationArgument" name=EString "{" ("type" type=[datatypes::DataType|QualifiedNameWithDot])?
+	//	"}";
+	public OperationArgumentElements getOperationArgumentAccess() {
+		return (pOperationArgument != null) ? pOperationArgument : (pOperationArgument = new OperationArgumentElements());
+	}
+	
+	public ParserRule getOperationArgumentRule() {
+		return getOperationArgumentAccess().getRule();
+	}
+
+	//enum ExecutionType:
+	//	ClientThread | OwnThread;
+	public ExecutionTypeElements getExecutionTypeAccess() {
+		return (unknownRuleExecutionType != null) ? unknownRuleExecutionType : (unknownRuleExecutionType = new ExecutionTypeElements());
+	}
+	
+	public EnumRule getExecutionTypeRule() {
+		return getExecutionTypeAccess().getRule();
 	}
 
 	//Slave:

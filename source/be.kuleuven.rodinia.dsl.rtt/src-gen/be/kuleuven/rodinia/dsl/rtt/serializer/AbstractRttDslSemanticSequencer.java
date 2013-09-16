@@ -5,6 +5,7 @@ import be.kueleuven.rodinia.model.rtt.ConnectionPolicy;
 import be.kueleuven.rodinia.model.rtt.EventPort;
 import be.kueleuven.rodinia.model.rtt.InputPort;
 import be.kueleuven.rodinia.model.rtt.Operation;
+import be.kueleuven.rodinia.model.rtt.OperationArgument;
 import be.kueleuven.rodinia.model.rtt.OrocosPackage;
 import be.kueleuven.rodinia.model.rtt.OutputPort;
 import be.kueleuven.rodinia.model.rtt.PeerGroup;
@@ -61,6 +62,12 @@ public abstract class AbstractRttDslSemanticSequencer extends AbstractDelegating
 			case RttPackage.OPERATION:
 				if(context == grammarAccess.getOperationRule()) {
 					sequence_Operation(context, (Operation) semanticObject); 
+					return; 
+				}
+				else break;
+			case RttPackage.OPERATION_ARGUMENT:
+				if(context == grammarAccess.getOperationArgumentRule()) {
+					sequence_OperationArgument(context, (OperationArgument) semanticObject); 
 					return; 
 				}
 				else break;
@@ -161,7 +168,22 @@ public abstract class AbstractRttDslSemanticSequencer extends AbstractDelegating
 	
 	/**
 	 * Constraint:
-	 *     (name=EString documentation=EString? returnType=[DataType|QualifiedNameWithDot]?)
+	 *     (name=EString type=[DataType|QualifiedNameWithDot]?)
+	 */
+	protected void sequence_OperationArgument(EObject context, OperationArgument semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=EString 
+	 *         executionType=ExecutionType? 
+	 *         returnType=[DataType|QualifiedNameWithDot]? 
+	 *         (arguments+=OperationArgument arguments+=OperationArgument*)? 
+	 *         documentation=EString?
+	 *     )
 	 */
 	protected void sequence_Operation(EObject context, Operation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

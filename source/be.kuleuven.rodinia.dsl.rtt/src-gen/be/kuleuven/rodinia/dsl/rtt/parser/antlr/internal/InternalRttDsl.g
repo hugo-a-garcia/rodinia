@@ -1633,24 +1633,24 @@ ruleOperation returns [EObject current=null]
     {
     	newLeafNode(otherlv_3, grammarAccess.getOperationAccess().getLeftCurlyBracketKeyword_3());
     }
-(	otherlv_4='documentation' 
+(	otherlv_4='executionType' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getOperationAccess().getDocumentationKeyword_4_0());
+    	newLeafNode(otherlv_4, grammarAccess.getOperationAccess().getExecutionTypeKeyword_4_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getOperationAccess().getDocumentationEStringParserRuleCall_4_1_0()); 
+	        newCompositeNode(grammarAccess.getOperationAccess().getExecutionTypeExecutionTypeEnumRuleCall_4_1_0()); 
 	    }
-		lv_documentation_5_0=ruleEString		{
+		lv_executionType_5_0=ruleExecutionType		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getOperationRule());
 	        }
        		set(
        			$current, 
-       			"documentation",
-        		lv_documentation_5_0, 
-        		"EString");
+       			"executionType",
+        		lv_executionType_5_0, 
+        		"ExecutionType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1674,9 +1674,159 @@ ruleOperation returns [EObject current=null]
 	    }
 
 )
-))?	otherlv_8='}' 
+))?(	otherlv_8='arguments' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getOperationAccess().getRightCurlyBracketKeyword_6());
+    	newLeafNode(otherlv_8, grammarAccess.getOperationAccess().getArgumentsKeyword_6_0());
+    }
+	otherlv_9='(' 
+    {
+    	newLeafNode(otherlv_9, grammarAccess.getOperationAccess().getLeftParenthesisKeyword_6_1());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getOperationAccess().getArgumentsOperationArgumentParserRuleCall_6_2_0()); 
+	    }
+		lv_arguments_10_0=ruleOperationArgument		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getOperationRule());
+	        }
+       		add(
+       			$current, 
+       			"arguments",
+        		lv_arguments_10_0, 
+        		"OperationArgument");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_11=',' 
+    {
+    	newLeafNode(otherlv_11, grammarAccess.getOperationAccess().getCommaKeyword_6_3_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getOperationAccess().getArgumentsOperationArgumentParserRuleCall_6_3_1_0()); 
+	    }
+		lv_arguments_12_0=ruleOperationArgument		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getOperationRule());
+	        }
+       		add(
+       			$current, 
+       			"arguments",
+        		lv_arguments_12_0, 
+        		"OperationArgument");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*	otherlv_13=')' 
+    {
+    	newLeafNode(otherlv_13, grammarAccess.getOperationAccess().getRightParenthesisKeyword_6_4());
+    }
+)?(	otherlv_14='documentation' 
+    {
+    	newLeafNode(otherlv_14, grammarAccess.getOperationAccess().getDocumentationKeyword_7_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getOperationAccess().getDocumentationEStringParserRuleCall_7_1_0()); 
+	    }
+		lv_documentation_15_0=ruleEString		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getOperationRule());
+	        }
+       		set(
+       			$current, 
+       			"documentation",
+        		lv_documentation_15_0, 
+        		"EString");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))?	otherlv_16='}' 
+    {
+    	newLeafNode(otherlv_16, grammarAccess.getOperationAccess().getRightCurlyBracketKeyword_8());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleOperationArgument
+entryRuleOperationArgument returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getOperationArgumentRule()); }
+	 iv_ruleOperationArgument=ruleOperationArgument 
+	 { $current=$iv_ruleOperationArgument.current; } 
+	 EOF 
+;
+
+// Rule OperationArgument
+ruleOperationArgument returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+    {
+        $current = forceCreateModelElement(
+            grammarAccess.getOperationArgumentAccess().getOperationArgumentAction_0(),
+            $current);
+    }
+)	otherlv_1='OperationArgument' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getOperationArgumentAccess().getOperationArgumentKeyword_1());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getOperationArgumentAccess().getNameEStringParserRuleCall_2_0()); 
+	    }
+		lv_name_2_0=ruleEString		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getOperationArgumentRule());
+	        }
+       		set(
+       			$current, 
+       			"name",
+        		lv_name_2_0, 
+        		"EString");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_3='{' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getOperationArgumentAccess().getLeftCurlyBracketKeyword_3());
+    }
+(	otherlv_4='type' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getOperationArgumentAccess().getTypeKeyword_4_0());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getOperationArgumentRule());
+	        }
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getOperationArgumentAccess().getTypeDataTypeCrossReference_4_1_0()); 
+	    }
+		ruleQualifiedNameWithDot		{ 
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))?	otherlv_6='}' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getOperationArgumentAccess().getRightCurlyBracketKeyword_5());
     }
 )
 ;
@@ -1985,6 +2135,25 @@ ruleQualifiedNameWithDot returns [AntlrDatatypeRuleToken current=new AntlrDataty
     ;
 
 
+
+
+
+// Rule ExecutionType
+ruleExecutionType returns [Enumerator current=null] 
+    @init { enterRule(); }
+    @after { leaveRule(); }:
+((	enumLiteral_0='ClientThread' 
+	{
+        $current = grammarAccess.getExecutionTypeAccess().getClientThreadEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getExecutionTypeAccess().getClientThreadEnumLiteralDeclaration_0()); 
+    }
+)
+    |(	enumLiteral_1='OwnThread' 
+	{
+        $current = grammarAccess.getExecutionTypeAccess().getOwnThreadEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getExecutionTypeAccess().getOwnThreadEnumLiteralDeclaration_1()); 
+    }
+));
 
 
 

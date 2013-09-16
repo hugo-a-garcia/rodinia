@@ -111,5 +111,17 @@ class Property {
 class Operation {
 	String name
 	refers DataType returnType
+	contains OperationArgument[] arguments
+	ExecutionType executionType = "ClientThread"
 	String documentation
+}
+
+class OperationArgument {
+	String name
+	refers DataType ^type
+}
+
+enum ExecutionType {
+	ClientThread
+	OwnThread
 }

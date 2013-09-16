@@ -44,6 +44,10 @@
       <genEnumLiterals ecoreEnumLiteral="rtt.ecore#//Scheduler/ORO_SCHED_OTHER"/>
       <genEnumLiterals ecoreEnumLiteral="rtt.ecore#//Scheduler/ORO_SCHED_RT"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="rtt.ecore#//ExecutionType">
+      <genEnumLiterals ecoreEnumLiteral="rtt.ecore#//ExecutionType/ClientThread"/>
+      <genEnumLiterals ecoreEnumLiteral="rtt.ecore#//ExecutionType/OwnThread"/>
+    </genEnums>
     <genClasses ecoreClass="rtt.ecore#//OrocosPackage">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//OrocosPackage/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rtt.ecore#//OrocosPackage/taskContexts"/>
@@ -110,7 +114,13 @@
     <genClasses ecoreClass="rtt.ecore#//Operation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//Operation/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rtt.ecore#//Operation/returnType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rtt.ecore#//Operation/arguments"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//Operation/executionType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//Operation/documentation"/>
+    </genClasses>
+    <genClasses ecoreClass="rtt.ecore#//OperationArgument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//OperationArgument/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rtt.ecore#//OperationArgument/type"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
