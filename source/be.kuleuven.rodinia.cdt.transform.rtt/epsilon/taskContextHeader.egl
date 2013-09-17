@@ -33,9 +33,13 @@ namespace [%=taskContext.namespace%]
  
         [%for(anOperation in taskContext.operations) {%]
         [%=anOperation.returnType.name%] [%=anOperation.name%](
-        [%for(argument in anOperation.arguments) {%]
-        	[%=argument.type.name%]& [%=argument.name%], 
-        [%}%]
+        [%var str:String = "";
+        for(argument in anOperation.arguments) {
+        	str = str + argument.type.name + "& "+ argument.name + ", ";
+        }
+        str = str.subString(0, str.length() - 2);
+        %]
+        [%=str%]
         );
         [%}%]
         
