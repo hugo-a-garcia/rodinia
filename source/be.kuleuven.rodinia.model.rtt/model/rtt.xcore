@@ -103,9 +103,9 @@ class OutputPort
 
 class Property {
 	String name
-	String description
+	String variable
 	refers DataType ^type
-	String value
+	String documentation
 }
 
 class Operation {

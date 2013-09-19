@@ -107,9 +107,9 @@
     </genClasses>
     <genClasses ecoreClass="rtt.ecore#//Property">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//Property/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//Property/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//Property/variable"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rtt.ecore#//Property/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//Property/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//Property/documentation"/>
     </genClasses>
     <genClasses ecoreClass="rtt.ecore#//Operation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rtt.ecore#//Operation/name"/>

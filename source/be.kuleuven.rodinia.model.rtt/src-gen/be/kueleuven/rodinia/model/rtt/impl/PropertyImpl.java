@@ -23,9 +23,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.PropertyImpl#getName <em>Name</em>}</li>
- *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.PropertyImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.PropertyImpl#getVariable <em>Variable</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.PropertyImpl#getType <em>Type</em>}</li>
- *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.PropertyImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.impl.PropertyImpl#getDocumentation <em>Documentation</em>}</li>
  * </ul>
  * </p>
  *
@@ -54,24 +54,24 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+   * The default value of the '{@link #getVariable() <em>Variable</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDescription()
+   * @see #getVariable()
    * @generated
    * @ordered
    */
-  protected static final String DESCRIPTION_EDEFAULT = null;
+  protected static final String VARIABLE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+   * The cached value of the '{@link #getVariable() <em>Variable</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDescription()
+   * @see #getVariable()
    * @generated
    * @ordered
    */
-  protected String description = DESCRIPTION_EDEFAULT;
+  protected String variable = VARIABLE_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getType() <em>Type</em>}' reference.
@@ -84,24 +84,24 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
   protected DataType type;
 
   /**
-   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * The default value of the '{@link #getDocumentation() <em>Documentation</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValue()
+   * @see #getDocumentation()
    * @generated
    * @ordered
    */
-  protected static final String VALUE_EDEFAULT = null;
+  protected static final String DOCUMENTATION_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * The cached value of the '{@link #getDocumentation() <em>Documentation</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValue()
+   * @see #getDocumentation()
    * @generated
    * @ordered
    */
-  protected String value = VALUE_EDEFAULT;
+  protected String documentation = DOCUMENTATION_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -152,9 +152,9 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getDescription()
+  public String getVariable()
   {
-    return description;
+    return variable;
   }
 
   /**
@@ -162,12 +162,12 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setDescription(String newDescription)
+  public void setVariable(String newVariable)
   {
-    String oldDescription = description;
-    description = newDescription;
+    String oldVariable = variable;
+    variable = newVariable;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RttPackage.PROPERTY__DESCRIPTION, oldDescription, description));
+      eNotify(new ENotificationImpl(this, Notification.SET, RttPackage.PROPERTY__VARIABLE, oldVariable, variable));
   }
 
   /**
@@ -218,9 +218,9 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getValue()
+  public String getDocumentation()
   {
-    return value;
+    return documentation;
   }
 
   /**
@@ -228,12 +228,12 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValue(String newValue)
+  public void setDocumentation(String newDocumentation)
   {
-    String oldValue = value;
-    value = newValue;
+    String oldDocumentation = documentation;
+    documentation = newDocumentation;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RttPackage.PROPERTY__VALUE, oldValue, value));
+      eNotify(new ENotificationImpl(this, Notification.SET, RttPackage.PROPERTY__DOCUMENTATION, oldDocumentation, documentation));
   }
 
   /**
@@ -248,13 +248,13 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
     {
       case RttPackage.PROPERTY__NAME:
         return getName();
-      case RttPackage.PROPERTY__DESCRIPTION:
-        return getDescription();
+      case RttPackage.PROPERTY__VARIABLE:
+        return getVariable();
       case RttPackage.PROPERTY__TYPE:
         if (resolve) return getType();
         return basicGetType();
-      case RttPackage.PROPERTY__VALUE:
-        return getValue();
+      case RttPackage.PROPERTY__DOCUMENTATION:
+        return getDocumentation();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -272,14 +272,14 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
       case RttPackage.PROPERTY__NAME:
         setName((String)newValue);
         return;
-      case RttPackage.PROPERTY__DESCRIPTION:
-        setDescription((String)newValue);
+      case RttPackage.PROPERTY__VARIABLE:
+        setVariable((String)newValue);
         return;
       case RttPackage.PROPERTY__TYPE:
         setType((DataType)newValue);
         return;
-      case RttPackage.PROPERTY__VALUE:
-        setValue((String)newValue);
+      case RttPackage.PROPERTY__DOCUMENTATION:
+        setDocumentation((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -298,14 +298,14 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
       case RttPackage.PROPERTY__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case RttPackage.PROPERTY__DESCRIPTION:
-        setDescription(DESCRIPTION_EDEFAULT);
+      case RttPackage.PROPERTY__VARIABLE:
+        setVariable(VARIABLE_EDEFAULT);
         return;
       case RttPackage.PROPERTY__TYPE:
         setType((DataType)null);
         return;
-      case RttPackage.PROPERTY__VALUE:
-        setValue(VALUE_EDEFAULT);
+      case RttPackage.PROPERTY__DOCUMENTATION:
+        setDocumentation(DOCUMENTATION_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -323,12 +323,12 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
     {
       case RttPackage.PROPERTY__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case RttPackage.PROPERTY__DESCRIPTION:
-        return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+      case RttPackage.PROPERTY__VARIABLE:
+        return VARIABLE_EDEFAULT == null ? variable != null : !VARIABLE_EDEFAULT.equals(variable);
       case RttPackage.PROPERTY__TYPE:
         return type != null;
-      case RttPackage.PROPERTY__VALUE:
-        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+      case RttPackage.PROPERTY__DOCUMENTATION:
+        return DOCUMENTATION_EDEFAULT == null ? documentation != null : !DOCUMENTATION_EDEFAULT.equals(documentation);
     }
     return super.eIsSet(featureID);
   }
@@ -346,10 +346,10 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", description: ");
-    result.append(description);
-    result.append(", value: ");
-    result.append(value);
+    result.append(", variable: ");
+    result.append(variable);
+    result.append(", documentation: ");
+    result.append(documentation);
     result.append(')');
     return result.toString();
   }

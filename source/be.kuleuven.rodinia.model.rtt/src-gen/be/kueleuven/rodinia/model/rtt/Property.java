@@ -15,9 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.Property#getName <em>Name</em>}</li>
- *   <li>{@link be.kueleuven.rodinia.model.rtt.Property#getDescription <em>Description</em>}</li>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.Property#getVariable <em>Variable</em>}</li>
  *   <li>{@link be.kueleuven.rodinia.model.rtt.Property#getType <em>Type</em>}</li>
- *   <li>{@link be.kueleuven.rodinia.model.rtt.Property#getValue <em>Value</em>}</li>
+ *   <li>{@link be.kueleuven.rodinia.model.rtt.Property#getDocumentation <em>Documentation</em>}</li>
  * </ul>
  * </p>
  *
@@ -54,30 +54,30 @@ public interface Property extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Description</b></em>' attribute.
+   * Returns the value of the '<em><b>Variable</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Description</em>' attribute isn't clear,
+   * If the meaning of the '<em>Variable</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Description</em>' attribute.
-   * @see #setDescription(String)
-   * @see be.kueleuven.rodinia.model.rtt.RttPackage#getProperty_Description()
+   * @return the value of the '<em>Variable</em>' attribute.
+   * @see #setVariable(String)
+   * @see be.kueleuven.rodinia.model.rtt.RttPackage#getProperty_Variable()
    * @model unique="false"
    * @generated
    */
-  String getDescription();
+  String getVariable();
 
   /**
-   * Sets the value of the '{@link be.kueleuven.rodinia.model.rtt.Property#getDescription <em>Description</em>}' attribute.
+   * Sets the value of the '{@link be.kueleuven.rodinia.model.rtt.Property#getVariable <em>Variable</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Description</em>' attribute.
-   * @see #getDescription()
+   * @param value the new value of the '<em>Variable</em>' attribute.
+   * @see #getVariable()
    * @generated
    */
-  void setDescription(String value);
+  void setVariable(String value);
 
   /**
    * Returns the value of the '<em><b>Type</b></em>' reference.
@@ -106,29 +106,29 @@ public interface Property extends EObject
   void setType(DataType value);
 
   /**
-   * Returns the value of the '<em><b>Value</b></em>' attribute.
+   * Returns the value of the '<em><b>Documentation</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Value</em>' attribute isn't clear,
+   * If the meaning of the '<em>Documentation</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Value</em>' attribute.
-   * @see #setValue(String)
-   * @see be.kueleuven.rodinia.model.rtt.RttPackage#getProperty_Value()
+   * @return the value of the '<em>Documentation</em>' attribute.
+   * @see #setDocumentation(String)
+   * @see be.kueleuven.rodinia.model.rtt.RttPackage#getProperty_Documentation()
    * @model unique="false"
    * @generated
    */
-  String getValue();
+  String getDocumentation();
 
   /**
-   * Sets the value of the '{@link be.kueleuven.rodinia.model.rtt.Property#getValue <em>Value</em>}' attribute.
+   * Sets the value of the '{@link be.kueleuven.rodinia.model.rtt.Property#getDocumentation <em>Documentation</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Value</em>' attribute.
-   * @see #getValue()
+   * @param value the new value of the '<em>Documentation</em>' attribute.
+   * @see #getDocumentation()
    * @generated
    */
-  void setValue(String value);
+  void setDocumentation(String value);
 
 } // Property
