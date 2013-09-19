@@ -1063,27 +1063,27 @@ public class RttDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cDescriptionKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cDescriptionAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cDescriptionEStringParserRuleCall_4_1_0 = (RuleCall)cDescriptionAssignment_4_1.eContents().get(0);
+		private final Keyword cVariableKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cVariableAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cVariableQualifiedNameWithDotParserRuleCall_4_1_0 = (RuleCall)cVariableAssignment_4_1.eContents().get(0);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cValueKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cValueAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cValueEStringParserRuleCall_5_1_0 = (RuleCall)cValueAssignment_5_1.eContents().get(0);
+		private final Keyword cTypeKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cTypeAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final CrossReference cTypeDataTypeCrossReference_5_1_0 = (CrossReference)cTypeAssignment_5_1.eContents().get(0);
+		private final RuleCall cTypeDataTypeQualifiedNameWithDotParserRuleCall_5_1_0_1 = (RuleCall)cTypeDataTypeCrossReference_5_1_0.eContents().get(1);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cTypeKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cTypeAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final CrossReference cTypeDataTypeCrossReference_6_1_0 = (CrossReference)cTypeAssignment_6_1.eContents().get(0);
-		private final RuleCall cTypeDataTypeQualifiedNameWithDotParserRuleCall_6_1_0_1 = (RuleCall)cTypeDataTypeCrossReference_6_1_0.eContents().get(1);
+		private final Keyword cDocumentationKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cDocumentationAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cDocumentationEStringParserRuleCall_6_1_0 = (RuleCall)cDocumentationAssignment_6_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//Property:
-		//	{Property} "Property" name=EString "{" ("description" description=EString)? ("value" value=EString)? ("type"
-		//	type=[datatypes::DataType|QualifiedNameWithDot])? "}";
+		//	{Property} "Property" name=EString "{" ("variable" variable=QualifiedNameWithDot)? ("type"
+		//	type=[datatypes::DataType|QualifiedNameWithDot])? ("documentation" documentation=EString)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//{Property} "Property" name=EString "{" ("description" description=EString)? ("value" value=EString)? ("type"
-		//type=[datatypes::DataType|QualifiedNameWithDot])? "}"
+		//{Property} "Property" name=EString "{" ("variable" variable=QualifiedNameWithDot)? ("type"
+		//type=[datatypes::DataType|QualifiedNameWithDot])? ("documentation" documentation=EString)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{Property}
@@ -1101,44 +1101,44 @@ public class RttDslGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
-		//("description" description=EString)?
+		//("variable" variable=QualifiedNameWithDot)?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"description"
-		public Keyword getDescriptionKeyword_4_0() { return cDescriptionKeyword_4_0; }
+		//"variable"
+		public Keyword getVariableKeyword_4_0() { return cVariableKeyword_4_0; }
 
-		//description=EString
-		public Assignment getDescriptionAssignment_4_1() { return cDescriptionAssignment_4_1; }
-
-		//EString
-		public RuleCall getDescriptionEStringParserRuleCall_4_1_0() { return cDescriptionEStringParserRuleCall_4_1_0; }
-
-		//("value" value=EString)?
-		public Group getGroup_5() { return cGroup_5; }
-
-		//"value"
-		public Keyword getValueKeyword_5_0() { return cValueKeyword_5_0; }
-
-		//value=EString
-		public Assignment getValueAssignment_5_1() { return cValueAssignment_5_1; }
-
-		//EString
-		public RuleCall getValueEStringParserRuleCall_5_1_0() { return cValueEStringParserRuleCall_5_1_0; }
-
-		//("type" type=[datatypes::DataType|QualifiedNameWithDot])?
-		public Group getGroup_6() { return cGroup_6; }
-
-		//"type"
-		public Keyword getTypeKeyword_6_0() { return cTypeKeyword_6_0; }
-
-		//type=[datatypes::DataType|QualifiedNameWithDot]
-		public Assignment getTypeAssignment_6_1() { return cTypeAssignment_6_1; }
-
-		//[datatypes::DataType|QualifiedNameWithDot]
-		public CrossReference getTypeDataTypeCrossReference_6_1_0() { return cTypeDataTypeCrossReference_6_1_0; }
+		//variable=QualifiedNameWithDot
+		public Assignment getVariableAssignment_4_1() { return cVariableAssignment_4_1; }
 
 		//QualifiedNameWithDot
-		public RuleCall getTypeDataTypeQualifiedNameWithDotParserRuleCall_6_1_0_1() { return cTypeDataTypeQualifiedNameWithDotParserRuleCall_6_1_0_1; }
+		public RuleCall getVariableQualifiedNameWithDotParserRuleCall_4_1_0() { return cVariableQualifiedNameWithDotParserRuleCall_4_1_0; }
+
+		//("type" type=[datatypes::DataType|QualifiedNameWithDot])?
+		public Group getGroup_5() { return cGroup_5; }
+
+		//"type"
+		public Keyword getTypeKeyword_5_0() { return cTypeKeyword_5_0; }
+
+		//type=[datatypes::DataType|QualifiedNameWithDot]
+		public Assignment getTypeAssignment_5_1() { return cTypeAssignment_5_1; }
+
+		//[datatypes::DataType|QualifiedNameWithDot]
+		public CrossReference getTypeDataTypeCrossReference_5_1_0() { return cTypeDataTypeCrossReference_5_1_0; }
+
+		//QualifiedNameWithDot
+		public RuleCall getTypeDataTypeQualifiedNameWithDotParserRuleCall_5_1_0_1() { return cTypeDataTypeQualifiedNameWithDotParserRuleCall_5_1_0_1; }
+
+		//("documentation" documentation=EString)?
+		public Group getGroup_6() { return cGroup_6; }
+
+		//"documentation"
+		public Keyword getDocumentationKeyword_6_0() { return cDocumentationKeyword_6_0; }
+
+		//documentation=EString
+		public Assignment getDocumentationAssignment_6_1() { return cDocumentationAssignment_6_1; }
+
+		//EString
+		public RuleCall getDocumentationEStringParserRuleCall_6_1_0() { return cDocumentationEStringParserRuleCall_6_1_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
@@ -1886,8 +1886,8 @@ public class RttDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Property:
-	//	{Property} "Property" name=EString "{" ("description" description=EString)? ("value" value=EString)? ("type"
-	//	type=[datatypes::DataType|QualifiedNameWithDot])? "}";
+	//	{Property} "Property" name=EString "{" ("variable" variable=QualifiedNameWithDot)? ("type"
+	//	type=[datatypes::DataType|QualifiedNameWithDot])? ("documentation" documentation=EString)? "}";
 	public PropertyElements getPropertyAccess() {
 		return (pProperty != null) ? pProperty : (pProperty = new PropertyElements());
 	}

@@ -101,9 +101,9 @@ Property returns Property:
 	'Property'
 	name=EString
 	'{'
-		('description' description=EString)?
-		('value' value=EString)?
+		('variable' variable=QualifiedNameWithDot)?
 		('type' type=[datatypes::DataType|QualifiedNameWithDot])?
+		('documentation' documentation=EString)?
 	'}';
 
 Operation returns Operation:

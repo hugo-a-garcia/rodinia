@@ -155,9 +155,9 @@ public class RttDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOutputPortAccess().getNameAssignment_2(), "rule__OutputPort__NameAssignment_2");
 					put(grammarAccess.getOutputPortAccess().getDataTypeAssignment_4_1(), "rule__OutputPort__DataTypeAssignment_4_1");
 					put(grammarAccess.getPropertyAccess().getNameAssignment_2(), "rule__Property__NameAssignment_2");
-					put(grammarAccess.getPropertyAccess().getDescriptionAssignment_4_1(), "rule__Property__DescriptionAssignment_4_1");
-					put(grammarAccess.getPropertyAccess().getValueAssignment_5_1(), "rule__Property__ValueAssignment_5_1");
-					put(grammarAccess.getPropertyAccess().getTypeAssignment_6_1(), "rule__Property__TypeAssignment_6_1");
+					put(grammarAccess.getPropertyAccess().getVariableAssignment_4_1(), "rule__Property__VariableAssignment_4_1");
+					put(grammarAccess.getPropertyAccess().getTypeAssignment_5_1(), "rule__Property__TypeAssignment_5_1");
+					put(grammarAccess.getPropertyAccess().getDocumentationAssignment_6_1(), "rule__Property__DocumentationAssignment_6_1");
 					put(grammarAccess.getOperationAccess().getNameAssignment_2(), "rule__Operation__NameAssignment_2");
 					put(grammarAccess.getOperationAccess().getExecutionTypeAssignment_4_1(), "rule__Operation__ExecutionTypeAssignment_4_1");
 					put(grammarAccess.getOperationAccess().getReturnTypeAssignment_5_1(), "rule__Operation__ReturnTypeAssignment_5_1");

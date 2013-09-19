@@ -224,7 +224,7 @@ public abstract class AbstractRttDslSemanticSequencer extends AbstractDelegating
 	
 	/**
 	 * Constraint:
-	 *     (name=EString description=EString? value=EString? type=[DataType|QualifiedNameWithDot]?)
+	 *     (name=EString variable=QualifiedNameWithDot? type=[DataType|QualifiedNameWithDot]? documentation=EString?)
 	 */
 	protected void sequence_Property(EObject context, Property semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
