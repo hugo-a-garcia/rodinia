@@ -49,7 +49,7 @@ namespace [%=taskContext.namespace%]
     protected:
 
     	[%for(aProperty in taskContext.properties) {%]
-    	[%=aProperty.type%] [%=aProperty.name%];
+    	[%=aProperty.type.name%] [%=aProperty.variable%];
     	[%}%]
 
     	[%=out.startPreserve("/*", "*/", "protected", true)%]

@@ -14,10 +14,10 @@ using namespace [%=taskContext.namespace%];
     	[%}%]
 *]
 {
-[*	[%for(aProperty in taskContext.property) {%]
-	this->addProperty("[%=aProperty.name%]", [%=aProperty.name%]).doc("[%=aProperty.description%]");
+	[%for(aProperty in taskContext.properties) {%]
+	this->addProperty("[%=aProperty.name%]", [%=aProperty.variable%]).doc("[%=aProperty.documentation%]");
     [%}%]
-*]
+
     [%for(anOperation in taskContext.operations) {%]
     this->addOperation("[%=anOperation.name%]", &[%=taskContext.type%]::[%=anOperation.name%], this);
     [%}%]
