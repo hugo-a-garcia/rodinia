@@ -6,8 +6,8 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: be.kuleuven.rodinia.cdt.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- org.eclipse.cdt.core;bundle-version="5.5.0",
- org.eclipse.cdt.ui;bundle-version="5.6.0",
- org.eclipse.ui.editors;bundle-version="3.8.100"
+ org.eclipse.cdt.core,
+ org.eclipse.cdt.ui,
+ org.eclipse.ui.editors
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy

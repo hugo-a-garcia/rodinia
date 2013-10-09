@@ -14,5 +14,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.emf.ecore.xcore.lib,
- be.kuleuven.rodinia.dsl.datatypes;bundle-version="1.0.0"
+ be.kuleuven.rodinia.dsl.datatypes
 Bundle-ActivationPolicy: lazy
