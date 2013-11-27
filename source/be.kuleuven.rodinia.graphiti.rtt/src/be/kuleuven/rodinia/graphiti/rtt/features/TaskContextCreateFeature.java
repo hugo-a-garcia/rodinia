@@ -8,13 +8,10 @@ import org.eclipse.graphiti.mm.pictograms.Diagram;
 import be.kueleuven.rodinia.model.rtt.OrocosPackage;
 import be.kueleuven.rodinia.model.rtt.RttFactory;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
-import be.kuleuven.rodinia.graphiti.rtt.util.Util;
 
 public class TaskContextCreateFeature extends AbstractCreateFeature {
 
 	private static final String TITLE = "Create Task Context";
-
-	private static final String USER_QUESTION = "Enter new Task Context name";
 
 	public TaskContextCreateFeature(IFeatureProvider fp) {
 		super(fp, "TaskContext", TITLE);
@@ -27,12 +24,9 @@ public class TaskContextCreateFeature extends AbstractCreateFeature {
 
 	@Override
 	public Object[] create(ICreateContext context) {
-		String taskContentName = Util.askString(TITLE, USER_QUESTION, "");
-		if (taskContentName == null || taskContentName.trim().length() == 0) {
-			return EMPTY;
-		}
 
 		TaskContext taskContext = RttFactory.eINSTANCE.createTaskContext();
+		String taskContentName = "name";
 		taskContext.setName(taskContentName);
 		taskContext.setNamespace("test1");
 		taskContext.setType("test2");

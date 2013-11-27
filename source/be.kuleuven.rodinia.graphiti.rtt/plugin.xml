@@ -84,26 +84,9 @@
          id="graphiti.Property.tab"
          label="Property">
     </propertyTab>
-   <propertyTab
-         category="Graphiti"
-         id="graphiti.main.tab"
-         label="Main">
-    </propertyTab>
    </propertyTabs>
 </extension>
 
-<extension
-      point="org.eclipse.ui.views.properties.tabbed.propertySections">
-    <propertySections
-          contributorId="rttStructure.PropertyContributor">
-        <propertySection
-              class="be.kuleuven.rodinia.graphiti.rtt.propertiesTab.RttStructureSection"
-              filter="be.kuleuven.rodinia.graphiti.rtt.propertiesTab.RttStructureFilter"
-              id="graphiti.main.tab.emfclass"
-              tab="graphiti.main.tab">
-        </propertySection>
-    </propertySections>
-</extension>
 
 <extension
       point="org.eclipse.ui.views.properties.tabbed.propertySections">
