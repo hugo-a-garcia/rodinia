@@ -199,6 +199,7 @@ public class TaskContextSection extends GFPropertySection implements
 		namespaceText = factory.createText(composite, "");
 		CLabel typeLabel = factory.createCLabel(composite, "Type:");
 		typeText = factory.createText(composite, "");
+		CLabel longestLabel = namespaceLabel;
 
 		FormData nameLabelData = new FormData();
 		nameLabelData.left = new FormAttachment(0, 0);
@@ -206,7 +207,7 @@ public class TaskContextSection extends GFPropertySection implements
 		nameLabel.setLayoutData(nameLabelData);
 
 		FormData nameTextData = new FormData();
-		nameTextData.left = new FormAttachment(namespaceLabel,
+		nameTextData.left = new FormAttachment(longestLabel,
 				ITabbedPropertyConstants.HSPACE);
 		nameTextData.right = new FormAttachment(100);// (100, -500);
 		nameTextData.top = new FormAttachment(nameLabel, 0, SWT.CENTER);
@@ -230,12 +231,12 @@ public class TaskContextSection extends GFPropertySection implements
 
 		FormData typeLabelData = new FormData();
 		typeLabelData.left = new FormAttachment(0, 0);
-		typeLabelData.top = new FormAttachment(namespaceLabel,
+		typeLabelData.top = new FormAttachment(longestLabel,
 				ITabbedPropertyConstants.VSPACE);
 		typeLabel.setLayoutData(typeLabelData);
 
 		FormData tyepTextData = new FormData();
-		tyepTextData.left = new FormAttachment(namespaceLabel,
+		tyepTextData.left = new FormAttachment(longestLabel,
 				ITabbedPropertyConstants.HSPACE);
 		tyepTextData.right = new FormAttachment(100);
 		tyepTextData.top = new FormAttachment(typeLabel, 0, SWT.CENTER);

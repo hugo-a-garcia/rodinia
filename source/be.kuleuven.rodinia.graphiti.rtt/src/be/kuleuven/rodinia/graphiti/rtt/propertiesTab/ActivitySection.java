@@ -1,6 +1,5 @@
 package be.kuleuven.rodinia.graphiti.rtt.propertiesTab;
 
-
 import org.eclipse.graphiti.features.IFeature;
 import org.eclipse.graphiti.features.context.IContext;
 import org.eclipse.graphiti.features.context.impl.CustomContext;
@@ -23,145 +22,81 @@ import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetWidgetFactory;
 import be.kueleuven.rodinia.model.rtt.Activity;
 
 public class ActivitySection extends GFPropertySection implements ITabbedPropertyConstants {
-	 
-	private Text cpuAffinity;
-	private Text period;
-	private Text priority;
 	
-	@Override
-	public void createControls(Composite parent,
-      TabbedPropertySheetPage tabbedPropertySheetPage) {
-      super.createControls(parent, tabbedPropertySheetPage);
+	private Text nameText;
+	private Text cpuAffinityText;
+	private Text periodText;
+	private Text priorityText;
+	
+	private ModifyListener nameTextListener = new ModifyListener() {
 
-      TabbedPropertySheetWidgetFactory factory = getWidgetFactory();
-      Composite composite = factory.createFlatFormComposite(parent);
-      FormData data;
-      FormData data2;
-      
-      cpuAffinity = factory.createText(composite, "a");
-      data = new FormData();
-      data.left = new FormAttachment(0, 110);
-      data.right = new FormAttachment(100, -500);
-      data.top = new FormAttachment(0, 0);
-      cpuAffinity.setLayoutData(data);
-      cpuAffinity.addModifyListener(cpuAffinityModify);
-
-      CLabel valueLabel2 = factory.createCLabel(composite, "Cpu afinity:");
-      data = new FormData();
-      data.left = new FormAttachment(0, 0);
-      data.right = new FormAttachment(cpuAffinity, -HSPACE);
-      data.top = new FormAttachment(cpuAffinity, 0, SWT.CENTER);
-      valueLabel2.setLayoutData(data);
-      
-      period = factory.createText(composite, "b");
-      data2 = new FormData();
-      data2.left = new FormAttachment(0, 110);
-      data2.right = new FormAttachment(100, -500);
-      data2.top = new FormAttachment(0, 30);
-      period.setLayoutData(data2);
-      period.addModifyListener(periodModify);
-
-      CLabel valueLabel3 = factory.createCLabel(composite, "period:");
-      data2 = new FormData();
-      data2.left = new FormAttachment(0, 0);
-      data2.right = new FormAttachment(period, -HSPACE);
-      data2.top = new FormAttachment(period, 0, SWT.CENTER);
-      valueLabel3.setLayoutData(data2);
-      
-      priority = factory.createText(composite, "b");
-      data2 = new FormData();
-      data2.left = new FormAttachment(0, 110);
-      data2.right = new FormAttachment(100, -500);
-      data2.top = new FormAttachment(0, 60);
-      priority.setLayoutData(data2);
-      priority.addModifyListener(priorityModify);
-
-      CLabel valueLabel4 = factory.createCLabel(composite, "priority:");
-      data2 = new FormData();
-      data2.left = new FormAttachment(0, 0);
-      data2.right = new FormAttachment(priority, -HSPACE);
-      data2.top = new FormAttachment(priority, 0, SWT.CENTER);
-      valueLabel4.setLayoutData(data2);
-      
-      
-  }
-
-@Override
-  public void refresh() {
-    cpuAffinity.removeModifyListener(cpuAffinityModify);
-    period.removeModifyListener(periodModify);
-    priority.removeModifyListener(priorityModify);
-      PictogramElement pe = getSelectedPictogramElement();
-      if (pe != null) {
-          Object bo = Graphiti.getLinkService()
-               .getBusinessObjectForLinkedPictogramElement(pe);
-          if (bo == null){
-              return;
-          }
-          if (bo instanceof Activity){
-        	  cpuAffinity.setText(((Activity) bo).getCpuAffinity());
-        	  period.setText("" + ((Activity) bo).getPeriod());
-        	  priority.setText("" + ((Activity) bo).getPriority());
-          }
-      }
-      cpuAffinity.addModifyListener(cpuAffinityModify);
-      period.addModifyListener(periodModify);
-      priority.addModifyListener(priorityModify);
-  }
-	   
-	private ModifyListener periodModify = new ModifyListener() {
 		@Override
 		public void modifyText(ModifyEvent e) {
-			String temp = period.getText();
-			if (temp == null || temp.equals("")){
-				return;
+			String text = nameText.getText();
+			if (text == null) {
+				text = "";//$NON-NLS-1$
 			}
-			float value;
-			try {
-				value = Float.parseFloat(temp);
-			} catch (Exception E){
-				return;
-			}
-			final float typedValue = value;
-			IFeature feature = new AbstractFeature(getDiagramTypeProvider().getFeatureProvider()) {
-				@Override
-				public boolean canExecute(IContext context) {
-					return true;
+			PictogramElement pe = getSelectedPictogramElement();
+			if (pe != null) {
+				Object bo = Graphiti.getLinkService()
+						.getBusinessObjectForLinkedPictogramElement(pe);
+				if (bo == null) {
+					return;
 				}
-				@Override
-				public void execute(IContext context) {
-					PictogramElement pe = getSelectedPictogramElement();
-		   			if (pe != null) {
-		   				Object bo = Graphiti.getLinkService().getBusinessObjectForLinkedPictogramElement(pe);
-		   				if (bo == null)
-		   					return;
-		   		   		if (bo instanceof Activity){
-		   		   			Activity acty = (Activity) bo;
-		   		   			acty.setPeriod(typedValue);
-		   		   		}
-		   			}
-				}	
-			};
-	   		CustomContext context = new CustomContext();
-	   		execute(feature, context);
-			
+				String name = null;
+				if (bo instanceof Activity) {
+					name = ((Activity) bo).getName();
+					if (text.equals(name))
+						return;
+				}
+				final String finalText = text;
+				IFeature feature = new AbstractFeature(getDiagramTypeProvider()
+						.getFeatureProvider()) {
+
+					@Override
+					public void execute(IContext context) {
+						PictogramElement pe = getSelectedPictogramElement();
+						if (pe != null) {
+							Object bo = Graphiti
+									.getLinkService()
+									.getBusinessObjectForLinkedPictogramElement(
+											pe);
+							if (bo == null)
+								return;
+							if (bo instanceof Activity) {
+								Activity activity = (Activity) bo;
+								activity.setName(finalText);
+							}
+							updatePictogramElement(getSelectedPictogramElement());
+						}
+					}
+
+					@Override
+					public boolean canExecute(IContext context) {
+						return true;
+					}
+				};
+				CustomContext context = new CustomContext();
+				execute(feature, context);
+			}
 		}
 	};
 	
-	private ModifyListener priorityModify = new ModifyListener() {
+	private ModifyListener periodModifyTextListener = new ModifyListener() {
+		
 		@Override
 		public void modifyText(ModifyEvent e) {
-			String temp = priority.getText();
-			if (temp == null || temp.equals("")){
+			String text = periodText.getText();
+			if (text == null || text.equals("")){
 				return;
 			}
-			int value;
+			float floatValue;
 			try {
-				value = Integer.parseInt(temp);
+				floatValue = Float.parseFloat(text);
 			} catch (Exception E){
 				return;
 			}
-			final int typedValue = value;
+			final float finalFloatValue = floatValue;
 			IFeature feature = new AbstractFeature(getDiagramTypeProvider().getFeatureProvider()) {
 				@Override
 				public boolean canExecute(IContext context) {
@@ -175,15 +110,53 @@ public class ActivitySection extends GFPropertySection implements ITabbedPropert
 		   				if (bo == null)
 		   					return;
 		   		   		if (bo instanceof Activity){
-		   		   			Activity acty = (Activity) bo;
-		   		   			acty.setPriority(typedValue);
+		   		   			Activity activity = (Activity) bo;
+		   		   			activity.setPeriod(finalFloatValue);
 		   		   		}
 		   			}
 				}	
 			};
 	   		CustomContext context = new CustomContext();
 	   		execute(feature, context);
-			
+		}
+	};
+	
+	private ModifyListener priorityModifyLisstener = new ModifyListener() {
+		
+		@Override
+		public void modifyText(ModifyEvent e) {
+			String text = priorityText.getText();
+			if (text == null || text.equals("")){
+				return;
+			}
+			int intValue;
+			try {
+				intValue = Integer.parseInt(text);
+			} catch (Exception E){
+				return;
+			}
+			final int finalIntValue = intValue;
+			IFeature feature = new AbstractFeature(getDiagramTypeProvider().getFeatureProvider()) {
+				@Override
+				public boolean canExecute(IContext context) {
+					return true;
+				}
+				@Override
+				public void execute(IContext context) {
+					PictogramElement pe = getSelectedPictogramElement();
+		   			if (pe != null) {
+		   				Object bo = Graphiti.getLinkService().getBusinessObjectForLinkedPictogramElement(pe);
+		   				if (bo == null)
+		   					return;
+		   		   		if (bo instanceof Activity){
+		   		   			Activity activity = (Activity) bo;
+		   		   			activity.setPriority(finalIntValue);
+		   		   		}
+		   			}
+				}	
+			};
+	   		CustomContext context = new CustomContext();
+	   		execute(feature, context);
 		}
 	};
 	
@@ -191,11 +164,11 @@ public class ActivitySection extends GFPropertySection implements ITabbedPropert
 
 		@Override
 		public void modifyText(ModifyEvent e) {
-			String value = cpuAffinity.getText();
-			if (value == null){
+			String text = cpuAffinityText.getText();
+			if (text == null){
 				return;
 			}
-			final String typedValue = value;
+			final String finalText = text;
 			IFeature feature = new AbstractFeature(getDiagramTypeProvider().getFeatureProvider()) {
 				@Override
 				public boolean canExecute(IContext context) {
@@ -209,16 +182,108 @@ public class ActivitySection extends GFPropertySection implements ITabbedPropert
 		   				if (bo == null)
 		   					return;
 		   		   		if (bo instanceof Activity){
-		   		   			Activity acty = (Activity) bo;
-		   		   			acty.setCpuAffinity(typedValue);
+		   		   			Activity activity = (Activity) bo;
+		   		   			activity.setCpuAffinity(finalText);
 		   		   		}
 		   			}
 				}	
 			};
 	   		CustomContext context = new CustomContext();
 	   		execute(feature, context);
-			
 		}
-		
 	};
+	
+	@Override
+	public void createControls(Composite parent,
+			TabbedPropertySheetPage tabbedPropertySheetPage) {
+		
+		super.createControls(parent, tabbedPropertySheetPage);
+
+		TabbedPropertySheetWidgetFactory factory = getWidgetFactory();
+		Composite composite = factory.createFlatFormComposite(parent);
+		
+		CLabel nameLabel = factory.createCLabel(composite, "Name:");
+		nameText = factory.createText(composite, "");
+		CLabel periodLabel = factory.createCLabel(composite, "Period:");
+		periodText = factory.createText(composite, "");
+		CLabel priorityLabel = factory.createCLabel(composite, "Priority:");
+		priorityText = factory.createText(composite, "");
+		CLabel cpuAffinityLabel = factory.createCLabel(composite, "CPU Afinity:");
+		cpuAffinityText = factory.createText(composite, "");
+		CLabel longestLabel = cpuAffinityLabel;
+		
+		FormData nameLabelData = new FormData();
+		nameLabelData.left = new FormAttachment(0, 0);
+		nameLabelData.top = new FormAttachment(0, 0);
+		nameLabel.setLayoutData(nameLabelData);
+
+		FormData nameTextData = new FormData();
+		nameTextData.left = new FormAttachment(longestLabel, ITabbedPropertyConstants.HSPACE);
+		nameTextData.right = new FormAttachment(100);
+		nameTextData.top = new FormAttachment(nameLabel, 0, SWT.CENTER);
+		nameText.setLayoutData(nameTextData);
+		nameText.addModifyListener(nameTextListener);
+		
+		FormData periodLabelData = new FormData();
+		periodLabelData.left = new FormAttachment(0, 0);
+		periodLabelData.top = new FormAttachment(nameLabel, ITabbedPropertyConstants.VSPACE);
+		periodLabel.setLayoutData(periodLabelData);
+		
+		FormData periodTextData = new FormData();
+		periodTextData.left = new FormAttachment(longestLabel, ITabbedPropertyConstants.HSPACE);
+		periodTextData.right = new FormAttachment(100);
+		periodTextData.top = new FormAttachment(periodLabel, 0, SWT.CENTER);
+		periodText.setLayoutData(periodTextData);
+		periodText.addModifyListener(periodModifyTextListener);
+		
+		FormData priorityLabelData = new FormData();
+		priorityLabelData.left = new FormAttachment(0, 0);
+		priorityLabelData.top = new FormAttachment(periodLabel, ITabbedPropertyConstants.VSPACE);
+		priorityLabel.setLayoutData(priorityLabelData);
+		
+		FormData priorityTextData = new FormData();
+		priorityTextData.left = new FormAttachment(longestLabel, ITabbedPropertyConstants.HSPACE);
+		priorityTextData.right = new FormAttachment(100);
+		priorityTextData.top = new FormAttachment(priorityLabel, 0, SWT.CENTER);
+		priorityText.setLayoutData(priorityTextData);
+		priorityText.addModifyListener(priorityModifyLisstener);
+		
+		FormData cpuAffinityLabelData = new FormData();
+		cpuAffinityLabelData.left = new FormAttachment(0, 0);
+		cpuAffinityLabelData.top = new FormAttachment(priorityLabel, ITabbedPropertyConstants.VSPACE);
+		cpuAffinityLabel.setLayoutData(cpuAffinityLabelData);
+		
+		FormData cpuAffinityTextData = new FormData();
+		cpuAffinityTextData.left = new FormAttachment(longestLabel, ITabbedPropertyConstants.HSPACE);
+		cpuAffinityTextData.right = new FormAttachment(100);
+		cpuAffinityTextData.top = new FormAttachment(cpuAffinityLabel, 0, SWT.CENTER);
+		cpuAffinityText.setLayoutData(cpuAffinityTextData);
+		cpuAffinityText.addModifyListener(cpuAffinityModify);
+	}
+
+	@Override
+	public void refresh() {
+		nameText.removeModifyListener(nameTextListener);
+		cpuAffinityText.removeModifyListener(cpuAffinityModify);
+		periodText.removeModifyListener(periodModifyTextListener);
+		priorityText.removeModifyListener(priorityModifyLisstener);
+		PictogramElement pe = getSelectedPictogramElement();
+		if (pe != null) {
+			Object bo = Graphiti.getLinkService()
+					.getBusinessObjectForLinkedPictogramElement(pe);
+			if (bo == null) {
+				return;
+			}
+			if (bo instanceof Activity) {
+				nameText.setText(((Activity) bo).getName());
+				cpuAffinityText.setText(((Activity) bo).getCpuAffinity());
+				periodText.setText("" + ((Activity) bo).getPeriod());
+				priorityText.setText("" + ((Activity) bo).getPriority());
+			}
+		}
+		nameText.addModifyListener(nameTextListener);
+		cpuAffinityText.addModifyListener(cpuAffinityModify);
+		periodText.addModifyListener(periodModifyTextListener);
+		priorityText.addModifyListener(priorityModifyLisstener);
+	}
 }
