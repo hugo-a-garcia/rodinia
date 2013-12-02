@@ -152,23 +152,23 @@ public class RttToolBehaviorProvider extends DefaultToolBehaviorProvider{
 	    return super.getSelectionBorder(pe);
 	} 
 	
-	@Override
-	public IDecorator[] getDecorators(PictogramElement pe) {
-	    IFeatureProvider featureProvider = getFeatureProvider();
-	    Object bo = featureProvider.getBusinessObjectForPictogramElement(pe);
-	    if (bo instanceof TaskContext) {
-	        TaskContext eClass = (TaskContext) bo;
-	        if (eClass.getActivity() == null) {
-	            IDecorator imageRenderingDecorator = new ImageDecorator(IPlatformImageConstants.IMG_ECLIPSE_WARNING_TSK);
-	            imageRenderingDecorator.setMessage("No Activity, need an activity to save");
-	            return new IDecorator[] { imageRenderingDecorator };
-	       } else {
-	    	   return super.getDecorators(pe);
-	       }
-	    }
-	 
-	    return super.getDecorators(pe);
-	}
+//	@Override
+//	public IDecorator[] getDecorators(PictogramElement pe) {
+//	    IFeatureProvider featureProvider = getFeatureProvider();
+//	    Object bo = featureProvider.getBusinessObjectForPictogramElement(pe);
+//	    if (bo instanceof TaskContext) {
+//	        TaskContext eClass = (TaskContext) bo;
+//	        if (eClass.getActivity() == null) {
+//	            IDecorator imageRenderingDecorator = new ImageDecorator(IPlatformImageConstants.IMG_ECLIPSE_WARNING_TSK);
+//	            imageRenderingDecorator.setMessage("No Activity, need an activity to save");
+//	            return new IDecorator[] { imageRenderingDecorator };
+//	       } else {
+//	    	   return super.getDecorators(pe);
+//	       }
+//	    }
+//	 
+//	    return super.getDecorators(pe);
+//	}
 
 
 

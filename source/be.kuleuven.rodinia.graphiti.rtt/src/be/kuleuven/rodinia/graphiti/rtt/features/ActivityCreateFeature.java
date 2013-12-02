@@ -13,11 +13,8 @@ import be.kuleuven.rodinia.graphiti.rtt.util.Util;
 @SuppressWarnings("restriction")
 public class ActivityCreateFeature extends AbstractCreateFeature {
 	
-	private static final String TITLE = "Create Task Context";
+	private static final String TITLE = "Create Activityt";
 
-	private static final String USER_QUESTION = "Enter new Task Context name";
-	
-	
 	public ActivityCreateFeature(IFeatureProvider fp) {
 		super(fp, "Activity", "Create a Activity");
 	}
@@ -42,17 +39,13 @@ public class ActivityCreateFeature extends AbstractCreateFeature {
 
 	@Override
 	public Object[] create(ICreateContext context) {
-		String ActivityName = Util.askString(TITLE, USER_QUESTION, "");
-		if (ActivityName == null || ActivityName.trim().length() == 0) {
-			return EMPTY;
-		}
 
 		Activity act = RttFactory.eINSTANCE.createActivity();
-		act.setName(ActivityName);
 		
         final Object target = getBusinessObjectForPictogramElement(context.getTargetContainer());
         if (target instanceof TaskContext) {
         	TaskContext domainObject = (TaskContext) target;
+        	act.setName(domainObject.getName() + "_Activity");
         	domainObject.setActivity(act);
         	context.getTargetContainer().setVisible(false);
         	context.getTargetContainer().setVisible(true);
