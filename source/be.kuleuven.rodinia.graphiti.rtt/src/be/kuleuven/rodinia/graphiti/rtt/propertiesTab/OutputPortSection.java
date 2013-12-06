@@ -1,83 +1,169 @@
 package be.kuleuven.rodinia.graphiti.rtt.propertiesTab;
 
-
+import org.eclipse.graphiti.features.IFeature;
+import org.eclipse.graphiti.features.context.IContext;
+import org.eclipse.graphiti.features.context.impl.CustomContext;
+import org.eclipse.graphiti.features.impl.AbstractFeature;
 import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.services.Graphiti;
 import org.eclipse.graphiti.ui.platform.GFPropertySection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.CCombo;
 import org.eclipse.swt.custom.CLabel;
-import org.eclipse.swt.events.SelectionEvent;
-import org.eclipse.swt.events.SelectionListener;
+import org.eclipse.swt.events.ModifyEvent;
+import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.layout.FormAttachment;
 import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.views.properties.tabbed.ITabbedPropertyConstants;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetWidgetFactory;
 
 import be.kueleuven.rodinia.model.rtt.OutputPort;
 
-public class OutputPortSection extends GFPropertySection implements ITabbedPropertyConstants {
-	 
-	private CCombo portTypeList;
+public class OutputPortSection extends GFPropertySection implements
+		ITabbedPropertyConstants {
+
+	private Text nameText;
+	private CCombo dataTypeCombo;
 	private int selected = 0;
-	
+
+	private ModifyListener nameTextListener = new ModifyListener() {
+
+		@Override
+		public void modifyText(ModifyEvent e) {
+			String text = nameText.getText();
+			if (text == null) {
+				text = "";//$NON-NLS-1$
+			}
+			PictogramElement pictogramElement = getSelectedPictogramElement();
+			if (pictogramElement != null) {
+				Object businessObject = Graphiti.getLinkService()
+						.getBusinessObjectForLinkedPictogramElement(
+								pictogramElement);
+				if (businessObject == null) {
+					return;
+				}
+				String name = null;
+				if (businessObject instanceof OutputPort) {
+					name = ((OutputPort) businessObject).getName();
+					if (text.equals(name))
+						return;
+				}
+				final String finalText = text;
+				IFeature feature = new AbstractFeature(getDiagramTypeProvider()
+						.getFeatureProvider()) {
+
+					@Override
+					public void execute(IContext context) {
+						PictogramElement pictogramElement = getSelectedPictogramElement();
+						if (pictogramElement != null) {
+							Object businessObject = Graphiti
+									.getLinkService()
+									.getBusinessObjectForLinkedPictogramElement(
+											pictogramElement);
+							if (businessObject == null)
+								return;
+							if (businessObject instanceof OutputPort) {
+								OutputPort outputPort = (OutputPort) businessObject;
+								outputPort.setName(finalText);
+							}
+							updatePictogramElement(getSelectedPictogramElement());
+						}
+					}
+
+					@Override
+					public boolean canExecute(IContext context) {
+						return true;
+					}
+				};
+				CustomContext context = new CustomContext();
+				execute(feature, context);
+			}
+		}
+	};
+
+//	private SelectionListener dataTypeComboSelectinoLiistener = new SelectionListener() {
+//
+//		@Override
+//		public void widgetSelected(SelectionEvent e) {
+//			dataTypeCombo.select(dataTypeCombo.getSelectionIndex());
+//			selected = dataTypeCombo.getSelectionIndex();
+//		}
+//
+//		@Override
+//		public void widgetDefaultSelected(SelectionEvent e) {
+//		}
+//	};
+
 	@Override
 	public void createControls(Composite parent,
-     TabbedPropertySheetPage tabbedPropertySheetPage) {
-     super.createControls(parent, tabbedPropertySheetPage);
+			TabbedPropertySheetPage tabbedPropertySheetPage) {
 
-     TabbedPropertySheetWidgetFactory factory = getWidgetFactory();
-     Composite composite = factory.createFlatFormComposite(parent);
-     FormData data;
-     
-     portTypeList = factory.createCCombo(composite, SWT.READ_ONLY);
-     data = new FormData();
-     data.left = new FormAttachment(0, 110);
-     data.right = new FormAttachment(100, -500);
-     data.top = new FormAttachment(0, VSPACE);
-     portTypeList.setLayoutData(data);
-     portTypeList.addSelectionListener(blabla);
+		super.createControls(parent, tabbedPropertySheetPage);
 
-     CLabel valueLabel = factory.createCLabel(composite, "PortType:");
-     data = new FormData();
-     data.left = new FormAttachment(0, 0);
-     data.right = new FormAttachment(portTypeList, -HSPACE);
-     data.top = new FormAttachment(portTypeList, 0, SWT.TOP);
-     valueLabel.setLayoutData(data);
- }
+		TabbedPropertySheetWidgetFactory factory = getWidgetFactory();
+		Composite composite = factory.createFlatFormComposite(parent);
 
- @Override
- public void refresh() {
-	 portTypeList.removeSelectionListener(blabla);
-     PictogramElement pe = getSelectedPictogramElement();
-     if (pe != null) {
-         Object bo = Graphiti.getLinkService()
-              .getBusinessObjectForLinkedPictogramElement(pe);
-         if (bo == null){
-             return;
-         }
-         if (bo instanceof OutputPort){
-             portTypeList.setItems (new String [] {"Alpha", "Bravo", "Charlie"});
-             portTypeList.select(selected);
-         }
-     }
-     portTypeList.addSelectionListener(blabla);
- }	  
- 
- private SelectionListener blabla = new SelectionListener() {
-	 
-	
-	@Override
-	public void widgetSelected(SelectionEvent e) {
-		portTypeList.select(portTypeList.getSelectionIndex());
-		selected = portTypeList.getSelectionIndex();
+		CLabel nameLabel = factory.createCLabel(composite, "Name:");
+		nameText = factory.createText(composite, "");
+		CLabel dataTypeLabel = factory.createCLabel(composite, "Data Type:");
+		dataTypeCombo = factory.createCCombo(composite, SWT.READ_ONLY);
+
+		FormData nameLabelData = new FormData();
+		nameLabelData.left = new FormAttachment(0, 0);
+		nameLabelData.top = new FormAttachment(0, 0);
+		nameLabel.setLayoutData(nameLabelData);
+
+		FormData nameTextData = new FormData();
+		nameTextData.left = new FormAttachment(dataTypeLabel,
+				ITabbedPropertyConstants.HSPACE);
+		nameTextData.right = new FormAttachment(100);
+		nameTextData.top = new FormAttachment(nameLabel, 0, SWT.CENTER);
+		nameText.setLayoutData(nameTextData);
+		nameText.addModifyListener(nameTextListener);
+
+		FormData namespaceLabelData = new FormData();
+		namespaceLabelData.left = new FormAttachment(0, 0);
+		namespaceLabelData.top = new FormAttachment(nameLabel,
+				ITabbedPropertyConstants.VSPACE);
+		dataTypeLabel.setLayoutData(namespaceLabelData);
+
+		FormData nameSpaceTextData = new FormData();
+		nameSpaceTextData.left = new FormAttachment(dataTypeLabel,
+				ITabbedPropertyConstants.HSPACE);
+		nameSpaceTextData.right = new FormAttachment(100);
+		nameSpaceTextData.top = new FormAttachment(dataTypeLabel, 0, SWT.CENTER);
+		dataTypeCombo.setLayoutData(nameSpaceTextData);
+		// dataTypeText.addModifyList(dataTypeTextListener);
 	}
-	
+
 	@Override
-	public void widgetDefaultSelected(SelectionEvent e) {
-		
+	public void refresh() {
+		nameText.removeModifyListener(nameTextListener);
+		// dataTypeText.removeModifyListener(dataTypeTextListener);
+		PictogramElement pictogramElement = getSelectedPictogramElement();
+		if (pictogramElement != null) {
+			Object businessObject = Graphiti.getLinkService()
+					.getBusinessObjectForLinkedPictogramElement(
+							pictogramElement);
+			if (businessObject == null) {
+				return;
+			}
+			if (businessObject instanceof OutputPort) {
+				String name = ((OutputPort) businessObject).getName();
+				String dataTypeName = "";
+				if (((OutputPort) businessObject).getDataType() != null) {
+					dataTypeName = ((OutputPort) businessObject).getDataType()
+							.getName();
+				}
+				nameText.setText(name == null ? "" : name);
+				dataTypeCombo.setItems(new String[] { dataTypeName });
+				dataTypeCombo.select(selected);
+			}
+		}
+		// dataTypeText.addModifyListener(dataTypeTextListener);
+		nameText.addModifyListener(nameTextListener);
 	}
-};
 }
