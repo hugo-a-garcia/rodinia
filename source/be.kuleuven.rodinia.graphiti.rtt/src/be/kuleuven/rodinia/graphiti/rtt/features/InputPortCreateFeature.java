@@ -8,17 +8,12 @@ import org.eclipse.graphiti.mm.algorithms.impl.RectangleImpl;
 import be.kueleuven.rodinia.model.rtt.InputPort;
 import be.kueleuven.rodinia.model.rtt.RttFactory;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
-import be.kuleuven.rodinia.graphiti.rtt.util.Util;
 
 @SuppressWarnings("restriction")
 public class InputPortCreateFeature extends AbstractCreateFeature{
-
-	private static final String TITLE = "Create Input Port";
-
-	private static final String USER_QUESTION = "Enter new input port name";
 	
 	public InputPortCreateFeature(IFeatureProvider fp) {
-		super(fp, "InputPort", TITLE);
+		super(fp, "InputPort", "Create Input Port");
 	}
 
 	@Override
@@ -45,24 +40,17 @@ public class InputPortCreateFeature extends AbstractCreateFeature{
 
 	@Override
 	public Object[] create(ICreateContext context) {
-		String InputPortName = Util.askString(TITLE, USER_QUESTION, "");
-		if (InputPortName == null || InputPortName.trim().length() == 0) {
-			return EMPTY;
-		}
 
 		InputPort inputPort = RttFactory.eINSTANCE.createInputPort();
-		inputPort.setName(InputPortName);
+		inputPort.setName("name");
 		
         final Object target = getBusinessObjectForPictogramElement(context.getTargetContainer());
         if (target instanceof TaskContext) {
-            TaskContext domainObject = (TaskContext) target;
-            domainObject.getInputPorts().add(inputPort);
+            TaskContext taskContext = (TaskContext) target;
+            taskContext.getInputPorts().add(inputPort);
         }
         
-		// do the add
 		addGraphicalRepresentation(context, inputPort);
-
-		// return newly created business object(s)
 		return new Object[] { inputPort };
 	}
 

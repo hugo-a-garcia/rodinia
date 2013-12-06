@@ -8,17 +8,12 @@ import org.eclipse.graphiti.mm.algorithms.impl.RectangleImpl;
 import be.kueleuven.rodinia.model.rtt.EventPort;
 import be.kueleuven.rodinia.model.rtt.RttFactory;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
-import be.kuleuven.rodinia.graphiti.rtt.util.Util;
 
 @SuppressWarnings("restriction")
 public class EventPortCreateFeature extends AbstractCreateFeature{
-
-	private static final String TITLE = "Create Event Port";
-
-	private static final String USER_QUESTION = "Enter new event port name";
 	
 	public EventPortCreateFeature(IFeatureProvider fp) {
-		super(fp, "EventPort", TITLE);
+		super(fp, "EventPort", "Create Event Port");
 	}
 
 	@Override
@@ -47,25 +42,18 @@ public class EventPortCreateFeature extends AbstractCreateFeature{
 
 	@Override
 	public Object[] create(ICreateContext context) {
-		String InputPortName = Util.askString(TITLE, USER_QUESTION, "");
-		if (InputPortName == null || InputPortName.trim().length() == 0) {
-			return EMPTY;
-		}
 
-		EventPort inputPort = RttFactory.eINSTANCE.createEventPort();
-		inputPort.setName(InputPortName);
+		EventPort eventPort = RttFactory.eINSTANCE.createEventPort();
+		eventPort.setName("name");
 		
         final Object target = getBusinessObjectForPictogramElement(context.getTargetContainer());
         if (target instanceof TaskContext) {
-            TaskContext domainObject = (TaskContext) target;
-            domainObject.getEventPorts().add(inputPort);
+            TaskContext taskContext = (TaskContext) target;
+            taskContext.getEventPorts().add(eventPort);
         }
         
-		// do the add
-		addGraphicalRepresentation(context, inputPort);
-
-		// return newly created business object(s)
-		return new Object[] { inputPort };
+		addGraphicalRepresentation(context, eventPort);
+		return new Object[] { eventPort };
 	}
 
 }

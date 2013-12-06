@@ -4,20 +4,16 @@ import org.eclipse.graphiti.features.IFeatureProvider;
 import org.eclipse.graphiti.features.context.ICreateContext;
 import org.eclipse.graphiti.features.impl.AbstractCreateFeature;
 import org.eclipse.graphiti.mm.algorithms.impl.RectangleImpl;
+
 import be.kueleuven.rodinia.model.rtt.OutputPort;
 import be.kueleuven.rodinia.model.rtt.RttFactory;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
-import be.kuleuven.rodinia.graphiti.rtt.util.Util;
 
 @SuppressWarnings("restriction")
 public class OutputPortCreateFeature extends AbstractCreateFeature{
-
-	private static final String TITLE = "Create Output Port";
-
-	private static final String USER_QUESTION = "Enter new Output port name";
 	
 	public OutputPortCreateFeature(IFeatureProvider fp) {
-		super(fp, "OutputPort", TITLE);
+		super(fp, "OutputPort", "Create Output Port");
 	}
 
 	@Override
@@ -44,24 +40,17 @@ public class OutputPortCreateFeature extends AbstractCreateFeature{
 
 	@Override
 	public Object[] create(ICreateContext context) {
-		String OutputPortName = Util.askString(TITLE, USER_QUESTION, "");
-		if (OutputPortName == null || OutputPortName.trim().length() == 0) {
-			return EMPTY;
-		}
 
 		OutputPort outputPort = RttFactory.eINSTANCE.createOutputPort();
-		outputPort.setName(OutputPortName);
+		outputPort.setName("name");
 		
         final Object target = getBusinessObjectForPictogramElement(context.getTargetContainer());
         if (target instanceof TaskContext) {
-            TaskContext domainObject = (TaskContext) target;
-            domainObject.getOutputPorts().add(outputPort);
+            TaskContext taskContext = (TaskContext) target;
+            taskContext.getOutputPorts().add(outputPort);
         }
         
-		// do the add
 		addGraphicalRepresentation(context, outputPort);
-
-		// return newly created business object(s)
 		return new Object[] { outputPort };
 	}
 
