@@ -32,7 +32,6 @@ import be.kueleuven.rodinia.model.rtt.TaskContext;
 import be.kuleuven.rodinia.graphiti.rtt.features.ActivityAddFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.ActivityCreateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.ActivityLayoutFeature;
-import be.kuleuven.rodinia.graphiti.rtt.features.ActivityMoveFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.ActivityResizeFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.ActivityUpdateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.ConnectionPolicyAddFeature;
@@ -130,9 +129,6 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	    }
 	    if (bo instanceof EventPort) {
 	        return new EventPortMoveFeature(this);
-	    }
-	    if (bo instanceof Activity){
-	    	return new ActivityMoveFeature(this);
 	    }
 	    if (bo instanceof Property){
 	    	///return new PropertyMoveFeature(this);
