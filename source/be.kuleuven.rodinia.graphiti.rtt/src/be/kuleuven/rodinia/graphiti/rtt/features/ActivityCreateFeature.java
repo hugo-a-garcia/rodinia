@@ -8,15 +8,12 @@ import org.eclipse.graphiti.mm.algorithms.impl.RectangleImpl;
 import be.kueleuven.rodinia.model.rtt.Activity;
 import be.kueleuven.rodinia.model.rtt.RttFactory;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
-import be.kuleuven.rodinia.graphiti.rtt.util.Util;
 
 @SuppressWarnings("restriction")
 public class ActivityCreateFeature extends AbstractCreateFeature {
-	
-	private static final String TITLE = "Create Activityt";
 
 	public ActivityCreateFeature(IFeatureProvider fp) {
-		super(fp, "Activity", "Create a Activity");
+		super(fp, "Activity", "Create an Activity");
 	}
 
 	@Override

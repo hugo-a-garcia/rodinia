@@ -23,6 +23,9 @@ import be.kueleuven.rodinia.model.rtt.TaskContext;
 import be.kuleuven.rodinia.graphiti.rtt.util.StyleUtil;
 
 public class TaskContextAddFeature extends AbstractAddShapeFeature {
+	
+	private static int TASK_CONTEXT_DEFAULT_HEIGHT = 160;
+	private static int TASK_CONTEXT_DEFAULT_WIDTH = 160;
 
 	public TaskContextAddFeature(IFeatureProvider fp) {
 		super(fp);
@@ -50,28 +53,23 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
   
         // check whether the context has a size (e.g. from a create feature)
         // otherwise define a default size for the shape
-        final int width = context.getWidth() <= 0 ? 100 : context.getWidth();
-        final int height = context.getHeight() <= 0 ? 50 : context.getHeight();
-        
-        @SuppressWarnings("unused")
-		final int intWidth = width - 10;
-        @SuppressWarnings("unused")
-		final int intX = context.getX() + 5;
+        final int taskContextWidth = context.getWidth() <= 0 ? TASK_CONTEXT_DEFAULT_WIDTH : context.getWidth();
+        final int taskContextHeight = context.getHeight() <= 0 ? TASK_CONTEXT_DEFAULT_HEIGHT : context.getHeight();
 
         IGaService gaService = Graphiti.getGaService();
         RoundedRectangle roundedRectangle; // need to access it later
-        Rectangle bla;
+        Rectangle invisibleRectangle;
         
         
         //the invisble shape were everything is in
         {
-        	bla = gaService.createPlainRectangle(taskContextContainerShape);
-            bla.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
-            bla.setLineWidth(1);
-            bla.setTransparency(1.0);
-            gaService.setLocationAndSize(bla,
-                context.getX(), context.getY(), width, height);
-            bla.setLineVisible(false);
+        	invisibleRectangle = gaService.createPlainRectangle(taskContextContainerShape);
+            invisibleRectangle.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
+            invisibleRectangle.setLineWidth(1);
+            invisibleRectangle.setTransparency(1.0);
+            gaService.setLocationAndSize(invisibleRectangle,
+                context.getX(), context.getY(), taskContextWidth, taskContextHeight);
+            invisibleRectangle.setLineVisible(false);
             
             link(taskContextContainerShape, taskContext);
         }
@@ -85,7 +83,7 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
             roundedRectangle.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
             roundedRectangle.setLineWidth(2);
             gaService.setLocationAndSize(roundedRectangle,
-                10, 0, width-20, height-0);
+                10, 0, taskContextWidth-20, taskContextHeight-0);
             roundedRectangle.setLineVisible(true);
  
             // if added Class has no resource we add it to the resource
@@ -105,7 +103,7 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
  
             // create and set graphics algorithm
             Polyline polyline =
-                gaService.createPolyline(shape, new int[] { 10, 20, width, 20 });
+                gaService.createPolyline(shape, new int[] { 10, 20, taskContextWidth, 20 });
             polyline.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
             polyline.setLineWidth(2);
         }
@@ -121,7 +119,7 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
             text.setHorizontalAlignment(Orientation.ALIGNMENT_CENTER );
             // vertical alignment has as default value "center"
             text.setFont(gaService.manageDefaultFont(getDiagram(), false, true));
-            gaService.setLocationAndSize(text, 8, 0, width-16, 20);
+            gaService.setLocationAndSize(text, 8, 0, taskContextWidth-16, 20);
  
             // create link and wire it
             link(shape, taskContext);
@@ -138,7 +136,7 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
             rectangle.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
             rectangle.setLineWidth(2);
             rectangle.setTransparency(1.0);
-            gaService.setLocationAndSize(rectangle, 10, 20, ((width/2)-(width/10)) + 10, height-26);
+            gaService.setLocationAndSize(rectangle, 10, 20, ((taskContextWidth/2)-(taskContextWidth/10)) + 10, taskContextHeight-26);
             
             // create link and wire it
             ChopboxAnchor boxAnchor = peCreateService.createChopboxAnchor(shape);
@@ -156,7 +154,7 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
             rectangle2.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
             rectangle2.setLineWidth(2);
             rectangle2.setTransparency(1.0);
-            gaService.setLocationAndSize(rectangle2, (width/2) + 10 , 20, ((width/2)-(width/10)) - 10, height-26);
+            gaService.setLocationAndSize(rectangle2, (taskContextWidth/2) + 10 , 20, ((taskContextWidth/2)-(taskContextWidth/10)) - 10, taskContextHeight-26);
             
             // create link and wire it
             ChopboxAnchor boxAnchor = peCreateService.createChopboxAnchor(shape);
@@ -174,7 +172,7 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
             rectangle3.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
             rectangle3.setLineWidth(2);
             rectangle3.setTransparency(0.0);
-            gaService.setLocationAndSize(rectangle3, 10 , 19, width-20, 25);
+            gaService.setLocationAndSize(rectangle3, 10 , 19, taskContextWidth-20, 25);
             
             // create link and wire it
             ChopboxAnchor boxAnchor = peCreateService.createChopboxAnchor(shape);
@@ -186,7 +184,7 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
             text.setHorizontalAlignment(Orientation.ALIGNMENT_RIGHT );
             // vertical alignment has as default value "center"
             text.setFont(gaService.manageDefaultFont(getDiagram(), false, true));
-            gaService.setLocationAndSize(text, 10, 0, width-35, 20);
+            gaService.setLocationAndSize(text, 10, 0, taskContextWidth-35, 20);
             
             link(shape, taskContext);
         }
@@ -201,7 +199,7 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
             rectangle3.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
             rectangle3.setLineWidth(2);
             rectangle3.setTransparency(0.0);
-            gaService.setLocationAndSize(rectangle3, 10 , 42, width-20, 25);
+            gaService.setLocationAndSize(rectangle3, 10 , 42, taskContextWidth-20, 25);
             
             // create link and wire it
             ChopboxAnchor boxAnchor = peCreateService.createChopboxAnchor(shape);
@@ -213,7 +211,7 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
             text.setHorizontalAlignment(Orientation.ALIGNMENT_RIGHT );
             // vertical alignment has as default value "center"
             text.setFont(gaService.manageDefaultFont(getDiagram(), false, true));
-            gaService.setLocationAndSize(text, 10, 0, width-35, 20);
+            gaService.setLocationAndSize(text, 10, 0, taskContextWidth-35, 20);
             
             link(shape, taskContext);
         }
@@ -228,7 +226,7 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
             rectangle3.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
             rectangle3.setLineWidth(2);
             rectangle3.setTransparency(0.0);
-            gaService.setLocationAndSize(rectangle3, 10 , 67, width-20, 25);
+            gaService.setLocationAndSize(rectangle3, 10 , 67, taskContextWidth-20, 25);
             
             // create link and wire it
             ChopboxAnchor boxAnchor = peCreateService.createChopboxAnchor(shape);
@@ -240,7 +238,7 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
             text.setHorizontalAlignment(Orientation.ALIGNMENT_RIGHT );
             // vertical alignment has as default value "center"
             text.setFont(gaService.manageDefaultFont(getDiagram(), false, true));
-            gaService.setLocationAndSize(text, 10, 0, width-35, 20);
+            gaService.setLocationAndSize(text, 10, 0, taskContextWidth-35, 20);
             
             link(shape, taskContext);
         }
