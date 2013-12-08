@@ -20,17 +20,17 @@ public class OutputPortUpdateFeature extends AbstractUpdateFeature {
     }
  
     public boolean canUpdate(IUpdateContext context) {
-        Object bo =
+        Object businessObject =
             getBusinessObjectForPictogramElement(context.getPictogramElement());
-        return (bo instanceof OutputPort);
+        return (businessObject instanceof OutputPort);
     }
  
     public IReason updateNeeded(IUpdateContext context) {
         String pictogramName = null;
         PictogramElement pictogramElement = context.getPictogramElement();
         if (pictogramElement instanceof ContainerShape) {
-            ContainerShape cs = (ContainerShape) pictogramElement;
-            for (Shape shape : cs.getChildren()) {
+            ContainerShape containerShape = (ContainerShape) pictogramElement;
+            for (Shape shape : containerShape.getChildren()) {
                 if (shape.getGraphicsAlgorithm() instanceof Text) {
                     Text text = (Text) shape.getGraphicsAlgorithm();
                     pictogramName = text.getValue();
@@ -41,8 +41,8 @@ public class OutputPortUpdateFeature extends AbstractUpdateFeature {
         String businessName = null;
         Object bo = getBusinessObjectForPictogramElement(pictogramElement);
         if (bo instanceof OutputPort) {
-        	OutputPort eClass = (OutputPort) bo;
-            businessName = eClass.getName();
+        	OutputPort outputPort = (OutputPort) bo;
+            businessName = outputPort.getName();
         }
  
         boolean updateNameNeeded =
@@ -58,15 +58,15 @@ public class OutputPortUpdateFeature extends AbstractUpdateFeature {
     public boolean update(IUpdateContext context) {
         String businessName = null;
         PictogramElement pictogramElement = context.getPictogramElement();
-        Object bo = getBusinessObjectForPictogramElement(pictogramElement);
-        if (bo instanceof OutputPort) {
-        	OutputPort eClass = (OutputPort) bo;
-            businessName = eClass.getName();
+        Object businessObject = getBusinessObjectForPictogramElement(pictogramElement);
+        if (businessObject instanceof OutputPort) {
+        	OutputPort outpoutPort = (OutputPort) businessObject;
+            businessName = outpoutPort.getName();
         }
  
         if (pictogramElement instanceof ContainerShape) {
-            ContainerShape cs = (ContainerShape) pictogramElement;
-            for (Shape shape : cs.getChildren()) {
+            ContainerShape containerShape = (ContainerShape) pictogramElement;
+            for (Shape shape : containerShape.getChildren()) {
                 if (shape.getGraphicsAlgorithm() instanceof Text) {
                     Text text = (Text) shape.getGraphicsAlgorithm();
                     text.setValue(businessName);
