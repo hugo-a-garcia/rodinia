@@ -50,9 +50,7 @@ public class InputPortAddFeature extends AbstractAddShapeFeature{
   
         // check whether the context has a size (e.g. from a create feature)
         // otherwise define a default size for the shape
-        @SuppressWarnings("unused")
 		final int width = context.getWidth() <= 0 ? 100 : context.getWidth();
-        @SuppressWarnings("unused")
 		final int height = context.getHeight() <= 0 ? 50 : context.getHeight();
 
         IGaService gaService = Graphiti.getGaService();
@@ -72,8 +70,7 @@ public class InputPortAddFeature extends AbstractAddShapeFeature{
             roundedRectangle = gaService.createRoundedRectangle(containerShape, 5, 5);
             roundedRectangle.setStyle(StyleUtil.getStyleForInputPort(getDiagram()));
             roundedRectangle.setLineWidth(2);
-            roundedRectangle.setTransparency(1.0);
-            @SuppressWarnings("unused")
+            roundedRectangle.setTransparency(0.0);
 			final Object target = getBusinessObjectForPictogramElement(context.getTargetContainer());
             
             

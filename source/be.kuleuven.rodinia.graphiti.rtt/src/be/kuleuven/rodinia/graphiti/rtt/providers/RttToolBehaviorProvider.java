@@ -28,7 +28,6 @@ import be.kueleuven.rodinia.model.rtt.OutputPort;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
 import be.kuleuven.rodinia.graphiti.rtt.features.CustomHideLabelFeature;
 
-@SuppressWarnings("unused")
 public class RttToolBehaviorProvider extends DefaultToolBehaviorProvider{
 
 	public RttToolBehaviorProvider(IDiagramTypeProvider diagramTypeProvider) {
@@ -122,10 +121,10 @@ public class RttToolBehaviorProvider extends DefaultToolBehaviorProvider{
 	public GraphicsAlgorithm[] getClickArea(PictogramElement pe) {
 	    IFeatureProvider featureProvider = getFeatureProvider();
 	    Object bo = featureProvider.getBusinessObjectForPictogramElement(pe);
-	    if (bo instanceof TaskContext) {
-	        GraphicsAlgorithm invisible = pe.getGraphicsAlgorithm();
-	        return new GraphicsAlgorithm[] { ((ContainerShape)pe).getChildren().get(0).getGraphicsAlgorithm() };
-	    }
+//	    if (bo instanceof TaskContext) {
+//	        GraphicsAlgorithm invisible = pe.getGraphicsAlgorithm();
+//	        return new GraphicsAlgorithm[] { ((ContainerShape)pe).getChildren().get(0).getGraphicsAlgorithm() };
+//	    }
 	    if (bo instanceof InputPort || bo instanceof OutputPort){
 	    	GraphicsAlgorithm invisible = pe.getGraphicsAlgorithm();
 	        return new GraphicsAlgorithm[] { ((ContainerShape)pe).getChildren().get(0).getGraphicsAlgorithm(), ((ContainerShape)pe).getChildren().get(1).getGraphicsAlgorithm() };

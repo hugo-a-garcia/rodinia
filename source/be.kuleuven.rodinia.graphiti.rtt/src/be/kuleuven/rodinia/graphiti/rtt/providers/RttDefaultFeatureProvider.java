@@ -106,13 +106,13 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	    PictogramElement pictogramElement = context.getPictogramElement();
 	    Object bo = getBusinessObjectForPictogramElement(pictogramElement);
 	    if (bo instanceof TaskContext) {
-	        return new TaskContextLayoutFeature(this);
+	        //return new TaskContextLayoutFeature(this);
 	    }
 	    if (bo instanceof Activity){
-	    	return new ActivityLayoutFeature(this);
+	    	//return new ActivityLayoutFeature(this);
 	    }
 	    if (bo instanceof Property){
-	    	return new PropertyLayoutFeature(this);
+	    	//return new PropertyLayoutFeature(this);
 	    }
 	    return super.getLayoutFeature(context);
 	} 

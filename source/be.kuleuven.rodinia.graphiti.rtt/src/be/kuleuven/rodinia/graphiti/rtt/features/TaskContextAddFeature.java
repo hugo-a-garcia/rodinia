@@ -26,6 +26,10 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
 	
 	private static int TASK_CONTEXT_DEFAULT_HEIGHT = 160;
 	private static int TASK_CONTEXT_DEFAULT_WIDTH = 160;
+	private static int BORDER_WIDTH = 2;
+	private static int TEXT_BOX_HEIGHT = 24;
+	private static int BUFFER_SPACE = 5;
+	private TaskContext taskContext;
 
 	public TaskContextAddFeature(IFeatureProvider fp) {
 		super(fp);
@@ -43,268 +47,82 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
 
 	@Override
 	public PictogramElement add(IAddContext context) {
-        final TaskContext taskContext = (TaskContext) context.getNewObject();
-        final Diagram targetDiagram = (Diagram) context.getTargetContainer();
-  
-        // CONTAINER SHAPE WITH ROUNDED RECTANGLE
-        final IPeCreateService peCreateService = Graphiti.getPeCreateService();
-        final ContainerShape taskContextContainerShape =
-            peCreateService.createContainerShape(targetDiagram, true);
-  
-        // check whether the context has a size (e.g. from a create feature)
-        // otherwise define a default size for the shape
-        final int taskContextWidth = context.getWidth() <= 0 ? TASK_CONTEXT_DEFAULT_WIDTH : context.getWidth();
-        final int taskContextHeight = context.getHeight() <= 0 ? TASK_CONTEXT_DEFAULT_HEIGHT : context.getHeight();
 
-        IGaService gaService = Graphiti.getGaService();
-        RoundedRectangle roundedRectangle; // need to access it later
-        Rectangle invisibleRectangle;
-        
-        
-        //the invisble shape were everything is in
-        {
-        	invisibleRectangle = gaService.createPlainRectangle(taskContextContainerShape);
-            invisibleRectangle.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
-            invisibleRectangle.setLineWidth(1);
-            invisibleRectangle.setTransparency(1.0);
-            gaService.setLocationAndSize(invisibleRectangle,
-                context.getX(), context.getY(), taskContextWidth, taskContextHeight);
-            invisibleRectangle.setLineVisible(false);
-            
-            link(taskContextContainerShape, taskContext);
-        }
- 
-        {
-        	Shape shape = peCreateService.createShape(taskContextContainerShape, false);
-        	
-            // create and set graphics algorithm
-            roundedRectangle =
-                gaService.createRoundedRectangle(shape, 10, 10);
-            roundedRectangle.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
-            roundedRectangle.setLineWidth(2);
-            gaService.setLocationAndSize(roundedRectangle,
-                10, 0, taskContextWidth-20, taskContextHeight-0);
-            roundedRectangle.setLineVisible(true);
- 
-            // if added Class has no resource we add it to the resource
-            // of the diagram
-            // in a real scenario the business model would have its own resource
-            if (taskContext.eResource() == null) {
-                     getDiagram().eResource().getContents().add(taskContext);
-            }
-            // create link and wire it
-            link(shape, taskContext);
-        }
- 
-        // SHAPE WITH LINE
-        {
-            // create shape for line
-            Shape shape = peCreateService.createShape(taskContextContainerShape, false);
- 
-            // create and set graphics algorithm
-            Polyline polyline =
-                gaService.createPolyline(shape, new int[] { 10, 20, taskContextWidth, 20 });
-            polyline.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
-            polyline.setLineWidth(2);
-        }
- 
-        // SHAPE WITH TEXT
-        {
-            // create shape for text
-            Shape shape = peCreateService.createShape(taskContextContainerShape, false);
- 
-            // create and set text graphics algorithm
-            Text text = gaService.createText(shape, taskContext.getName());
-            text.setStyle(StyleUtil.getStyleForText(getDiagram()));
-            text.setHorizontalAlignment(Orientation.ALIGNMENT_CENTER );
-            // vertical alignment has as default value "center"
-            text.setFont(gaService.manageDefaultFont(getDiagram(), false, true));
-            gaService.setLocationAndSize(text, 8, 0, taskContextWidth-16, 20);
- 
-            // create link and wire it
-            link(shape, taskContext);
-        }
-        
-        
-        // SHAPE WITH Rectangle endport box left
-        {
-            // create shape for text
-            Shape shape = peCreateService.createContainerShape(taskContextContainerShape, false);
-            
-            // create and set text graphics algorithm
-            Rectangle rectangle = gaService.createPlainRectangle(shape);
-            rectangle.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
-            rectangle.setLineWidth(2);
-            rectangle.setTransparency(1.0);
-            gaService.setLocationAndSize(rectangle, 10, 20, ((taskContextWidth/2)-(taskContextWidth/10)) + 10, taskContextHeight-26);
-            
-            // create link and wire it
-            ChopboxAnchor boxAnchor = peCreateService.createChopboxAnchor(shape);
-            boxAnchor.setReferencedGraphicsAlgorithm(rectangle);
-            link(shape, taskContext);
-        }
-        
-        // SHAPE WITH Rectangle endport box right
-        {
-            // create shape for text
-            Shape shape = peCreateService.createContainerShape(taskContextContainerShape, false);
- 
-            // create and set text graphics algorithm
-            Rectangle rectangle2 = gaService.createPlainRectangle(shape);
-            rectangle2.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
-            rectangle2.setLineWidth(2);
-            rectangle2.setTransparency(1.0);
-            gaService.setLocationAndSize(rectangle2, (taskContextWidth/2) + 10 , 20, ((taskContextWidth/2)-(taskContextWidth/10)) - 10, taskContextHeight-26);
-            
-            // create link and wire it
-            ChopboxAnchor boxAnchor = peCreateService.createChopboxAnchor(shape);
-            boxAnchor.setReferencedGraphicsAlgorithm(rectangle2);
-            link(shape, taskContext);
-        }
-        
-        // SHAPE WITH Rectangle activity box
-        {
-            // create shape for rectangel
-            Shape shape = peCreateService.createContainerShape(taskContextContainerShape, false);
-            
-            // create and set text graphics algorithm
-            Rectangle rectangle3 = gaService.createPlainRectangle(shape);
-            rectangle3.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
-            rectangle3.setLineWidth(2);
-            rectangle3.setTransparency(0.0);
-            gaService.setLocationAndSize(rectangle3, 10 , 19, taskContextWidth-20, 25);
-            
-            // create link and wire it
-            ChopboxAnchor boxAnchor = peCreateService.createChopboxAnchor(shape);
-            boxAnchor.setReferencedGraphicsAlgorithm(rectangle3);
-            
-            Text text = gaService.createText(rectangle3, "act");
-            text.setTransparency(0.4);
-            text.setStyle(StyleUtil.getStyleForTextTip(getDiagram()));
-            text.setHorizontalAlignment(Orientation.ALIGNMENT_RIGHT );
-            // vertical alignment has as default value "center"
-            text.setFont(gaService.manageDefaultFont(getDiagram(), false, true));
-            gaService.setLocationAndSize(text, 10, 0, taskContextWidth-35, 20);
-            
-            link(shape, taskContext);
-        }
-        
-     // SHAPE WITH Rectangle values box
-        {
-            // create shape for rectangel
-            Shape shape = peCreateService.createContainerShape(taskContextContainerShape, false);
-            
-            // create and set text graphics algorithm
-            Rectangle rectangle3 = gaService.createPlainRectangle(shape);
-            rectangle3.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
-            rectangle3.setLineWidth(2);
-            rectangle3.setTransparency(0.0);
-            gaService.setLocationAndSize(rectangle3, 10 , 42, taskContextWidth-20, 25);
-            
-            // create link and wire it
-            ChopboxAnchor boxAnchor = peCreateService.createChopboxAnchor(shape);
-            boxAnchor.setReferencedGraphicsAlgorithm(rectangle3);
-            
-            Text text = gaService.createText(rectangle3, "props");
-            text.setTransparency(0.4);
-            text.setStyle(StyleUtil.getStyleForTextTip(getDiagram()));
-            text.setHorizontalAlignment(Orientation.ALIGNMENT_RIGHT );
-            // vertical alignment has as default value "center"
-            text.setFont(gaService.manageDefaultFont(getDiagram(), false, true));
-            gaService.setLocationAndSize(text, 10, 0, taskContextWidth-35, 20);
-            
-            link(shape, taskContext);
-        }
-        
-        // SHAPE WITH Rectangle values box
-        {
-            // create shape for rectangel
-            Shape shape = peCreateService.createContainerShape(taskContextContainerShape, false);
-            
-            // create and set text graphics algorithm
-            Rectangle rectangle3 = gaService.createPlainRectangle(shape);
-            rectangle3.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
-            rectangle3.setLineWidth(2);
-            rectangle3.setTransparency(0.0);
-            gaService.setLocationAndSize(rectangle3, 10 , 67, taskContextWidth-20, 25);
-            
-            // create link and wire it
-            ChopboxAnchor boxAnchor = peCreateService.createChopboxAnchor(shape);
-            boxAnchor.setReferencedGraphicsAlgorithm(rectangle3);
-            
-            Text text = gaService.createText(rectangle3, "ops");
-            text.setTransparency(0.4);
-            text.setStyle(StyleUtil.getStyleForTextTip(getDiagram()));
-            text.setHorizontalAlignment(Orientation.ALIGNMENT_RIGHT );
-            // vertical alignment has as default value "center"
-            text.setFont(gaService.manageDefaultFont(getDiagram(), false, true));
-            gaService.setLocationAndSize(text, 10, 0, taskContextWidth-35, 20);
-            
-            link(shape, taskContext);
-        }
-        
-        final IDirectEditingInfo directEditingInfo = getFeatureProvider().getDirectEditingInfo();
-        // set container shape for direct editing after object creation
-        directEditingInfo.setMainPictogramElement(taskContextContainerShape);
-        
-        layoutPictogramElement(taskContextContainerShape);
-        
-        addActivity(taskContextContainerShape, taskContext);
-        
-        return taskContextContainerShape;
+		taskContext = (TaskContext) context.getNewObject();
+		
+		ContainerShape taskContextShape = Graphiti.getPeCreateService().createContainerShape(
+				context.getTargetContainer(), true);
+		RoundedRectangle taskContextRectangle = Graphiti.getGaService().createRoundedRectangle(taskContextShape, 10, 10);
+		taskContextRectangle.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
+		taskContextRectangle.setLineWidth(2);
+		Graphiti.getGaService().setLocationAndSize(taskContextRectangle, context.getX(), context.getY(),
+				TASK_CONTEXT_DEFAULT_WIDTH, TASK_CONTEXT_DEFAULT_HEIGHT);
+		taskContextRectangle.setLineVisible(true);
+		link(taskContextShape, taskContext);
+	
+		Shape taskContextNameShape = Graphiti.getPeCreateService().createShape(taskContextShape, false);
+		Text tastContextText = Graphiti.getGaService().createText(taskContextNameShape, taskContext.getName());
+		tastContextText.setStyle(StyleUtil.getStyleForText(getDiagram()));
+		tastContextText.setHorizontalAlignment(Orientation.ALIGNMENT_CENTER);
+		tastContextText.setFont(Graphiti.getGaService().manageDefaultFont(getDiagram(), false, true));
+		Graphiti.getGaService().setLocationAndSize(tastContextText, 0, 0, TASK_CONTEXT_DEFAULT_WIDTH, TEXT_BOX_HEIGHT);
+		link(taskContextNameShape, taskContext);
+		
+		addActivity(taskContextShape, taskContext);
+		//addPropertiesShape(taskContextShape);
+		//addOperationShape(taskContextShape);
+
+		IDirectEditingInfo directEditingInfo = getFeatureProvider().getDirectEditingInfo();
+		directEditingInfo.setMainPictogramElement(taskContextShape);
+
+		layoutPictogramElement(taskContextShape);
+		return taskContextShape;
+	}
+	
+	private void addActivity(ContainerShape taskContextShape, TaskContext taskContext) {
+
+		Activity activity = taskContext.getActivity();
+
+		ContainerShape activityShape = Graphiti.getPeCreateService().createContainerShape(taskContextShape, true);
+		Rectangle activityRectangle = Graphiti.getGaService().createPlainRectangle(activityShape);
+		activityRectangle.setStyle(StyleUtil.getStyleForActivity(getDiagram()));
+		activityRectangle.setLineWidth(1);
+		activityRectangle.setTransparency(0.7);
+		Graphiti.getGaService().setLocationAndSize(activityRectangle, 0, TEXT_BOX_HEIGHT,
+				TASK_CONTEXT_DEFAULT_WIDTH, TEXT_BOX_HEIGHT);
+		link(activityShape, activity);
+
+		Shape activityTextShape = Graphiti.getPeCreateService().createShape(activityShape, false);
+		Text activityNameText = Graphiti.getGaService().createText(activityTextShape, activity.getName());
+		activityNameText.setStyle(StyleUtil.getStyleForText(getDiagram()));
+		Graphiti.getGaService().setLocationAndSize(activityNameText, BUFFER_SPACE, 0,
+				TASK_CONTEXT_DEFAULT_WIDTH, TEXT_BOX_HEIGHT);
+		activityNameText.setHorizontalAlignment(Orientation.ALIGNMENT_LEFT);
+		link(activityTextShape, activity);
+
+		layoutPictogramElement(activityShape);
 	}
 
-	private void addActivity(ContainerShape taskContextContainerShape, TaskContext taskContext) {
-		final int width = taskContextContainerShape.getGraphicsAlgorithm().getWidth();        
-			 
-		final Activity activity = taskContext.getActivity();
-  
-        // CONTAINER SHAPE WITH ROUNDED RECTANGLE
-        final IPeCreateService peCreateService = Graphiti.getPeCreateService();
-        final ContainerShape activityContainerShape =
-            peCreateService.createContainerShape(taskContextContainerShape, true);
+	private void addPropertiesShape(final ContainerShape taskContextContainerShape) {
 
-        IGaService gaService = Graphiti.getGaService();
-        RoundedRectangle roundedRectangle; // need to access it later       
- 
-        {
-            // create and set graphics algorithm
-            roundedRectangle = gaService.createRoundedRectangle(activityContainerShape, 5, 5);
-            roundedRectangle.setStyle(StyleUtil.getStyleForActivity(getDiagram()));
-            roundedRectangle.setLineWidth(1);
-            roundedRectangle.setTransparency(0.7);
-			//final Object target = getBusinessObjectForPictogramElement(context.getTargetContainer());
-            
-            gaService.setLocationAndSize(roundedRectangle,10, 19, width-50, 24);
-            // if added Class has no resource we add it to the resource
-            // of the diagram
-            // in a real scenario the business model would have its own resource
-            if (activity.eResource() == null) {
-                     getDiagram().eResource().getContents().add(activity);
-            }
-            
-            // create link and wire it
-            link(activityContainerShape, activity);
-        }
-        
-        // SHAPE WITH TEXT
-        {
-            // create shape for text
-            Shape shape = peCreateService.createShape(activityContainerShape, false);
- 
-            // create and set text graphics algorithm
-            Text text = gaService.createText(shape, activity.getName());
-            text.setStyle(StyleUtil.getStyleForText(getDiagram()));
-            // vertical alignment has as default value "center"
-            gaService.setLocationAndSize(text, 5, 0, taskContextContainerShape.getGraphicsAlgorithm().getWidth() - 22, 20);
-            text.setHorizontalAlignment(Orientation.ALIGNMENT_LEFT );
- 
-            // create link and wire it
-            link(shape, activity);
-        }
-        
-        layoutPictogramElement(activityContainerShape);
-		
+		Shape propertyShape = Graphiti.getPeCreateService().createContainerShape(taskContextContainerShape, false);
+		Rectangle propertyRectangle = Graphiti.getGaService().createPlainRectangle(propertyShape);
+		propertyRectangle.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
+		propertyRectangle.setLineWidth(1);
+		propertyRectangle.setTransparency(0.0);
+		Graphiti.getGaService().setLocationAndSize(propertyRectangle, BORDER_WIDTH, TEXT_BOX_HEIGHT * 2, TASK_CONTEXT_DEFAULT_WIDTH - (BORDER_WIDTH * 2), 25);
+		link(propertyShape, taskContext);
+	}
+
+	private void addOperationShape(final ContainerShape taskContextContainerShape) {
+
+		Shape operationShape = Graphiti.getPeCreateService().createContainerShape(taskContextContainerShape, false);
+		Rectangle operationPlainRectangle = Graphiti.getGaService().createPlainRectangle(operationShape);
+		operationPlainRectangle.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
+		operationPlainRectangle.setLineWidth(2);
+		operationPlainRectangle.setTransparency(0.0);
+		Graphiti.getGaService().setLocationAndSize(operationPlainRectangle, 10, 67, TASK_CONTEXT_DEFAULT_WIDTH - 20, 25);
+		link(operationShape, taskContext);
 	}
 
 }
