@@ -5,7 +5,6 @@ import org.eclipse.graphiti.features.IFeatureProvider;
 import org.eclipse.graphiti.features.context.IAddConnectionContext;
 import org.eclipse.graphiti.features.context.IAddContext;
 import org.eclipse.graphiti.features.impl.AbstractAddShapeFeature;
-import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.Polyline;
 import org.eclipse.graphiti.mm.algorithms.Text;
 import org.eclipse.graphiti.mm.pictograms.Connection;
@@ -35,10 +34,10 @@ public class ConnectionPolicyAddFeature extends AbstractAddShapeFeature {
 	@Override
     public PictogramElement add(IAddContext context) {
         IAddConnectionContext addConContext = (IAddConnectionContext) context;
-        ConnectionPolicy addedEReference = (ConnectionPolicy) context.getNewObject();
+        ConnectionPolicy connectionPolicy = (ConnectionPolicy) context.getNewObject();
         IPeCreateService peCreateService = Graphiti.getPeCreateService();
        
-        // CONNECTION WITH POLYLINE
+        // Connection polyline
         Connection connection = peCreateService
             .createFreeFormConnection(getDiagram());
         connection.setStart(addConContext.getSourceAnchor());
@@ -49,41 +48,21 @@ public class ConnectionPolicyAddFeature extends AbstractAddShapeFeature {
         polyline.setLineWidth(2);
         polyline.setForeground(manageColor(E_REFERENCE_FOREGROUND));
  
-        // add dynamic text decorator for the association name
+        // Text decorator for connection name
         ConnectionDecorator textDecorator =
             peCreateService.createConnectionDecorator(connection, true,
             0.5, true);
         Text text = gaService.createDefaultText(getDiagram(),textDecorator);
         text.setForeground(manageColor(IColorConstant.BLACK));
         gaService.setLocation(text, 10, 0);
-        // set reference name in the text decorator
-        ConnectionPolicy eReference = (ConnectionPolicy) context.getNewObject();
-        text.setValue(eReference.getName());
-    
-        // add static graphical decorator (composition and navigable)
-        ConnectionDecorator cd;
-        cd = peCreateService
-              .createConnectionDecorator(connection, false, 1.0, true);
-        createArrow(cd);
+        text.setValue(connectionPolicy.getName());
         
         IDirectEditingInfo directEditingInfo =
                 getFeatureProvider().getDirectEditingInfo();
-            // set container shape for direct editing after object creation
             directEditingInfo.setMainPictogramElement(textDecorator);
         
-        link(connection, addedEReference);
+        link(connection, connectionPolicy);
         return connection;
     }
-	
-	//create an arrow shape for the connection
-	private Polyline createArrow(GraphicsAlgorithmContainer gaContainer) {
-	    IGaService gaService = Graphiti.getGaService();
-	    Polyline polyline =
-	        gaService.createPolyline(gaContainer, new int[] { -15, 10, 0, 0, -15,
-	                -10 });
-	    polyline.setForeground(manageColor(E_REFERENCE_FOREGROUND));
-	    polyline.setLineWidth(2);
-	    return polyline;
-	}
 
 }
