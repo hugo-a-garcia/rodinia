@@ -24,11 +24,6 @@ import be.kuleuven.rodinia.graphiti.rtt.util.StyleUtil;
 
 public class TaskContextAddFeature extends AbstractAddShapeFeature {
 	
-	private static int TASK_CONTEXT_DEFAULT_HEIGHT = 160;
-	private static int TASK_CONTEXT_DEFAULT_WIDTH = 160;
-	private static int BORDER_WIDTH = 2;
-	private static int TEXT_BOX_HEIGHT = 24;
-	private static int BUFFER_SPACE = 5;
 	private TaskContext taskContext;
 
 	public TaskContextAddFeature(IFeatureProvider fp) {
@@ -56,7 +51,7 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
 		taskContextRectangle.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
 		taskContextRectangle.setLineWidth(2);
 		Graphiti.getGaService().setLocationAndSize(taskContextRectangle, context.getX(), context.getY(),
-				TASK_CONTEXT_DEFAULT_WIDTH, TASK_CONTEXT_DEFAULT_HEIGHT);
+				IPictogramConstants.TASK_CONTEXT_DEFAULT_WIDTH, IPictogramConstants.TASK_CONTEXT_DEFAULT_HEIGHT);
 		taskContextRectangle.setLineVisible(true);
 		link(taskContextShape, taskContext);
 	
@@ -65,7 +60,7 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
 		tastContextText.setStyle(StyleUtil.getStyleForText(getDiagram()));
 		tastContextText.setHorizontalAlignment(Orientation.ALIGNMENT_CENTER);
 		tastContextText.setFont(Graphiti.getGaService().manageDefaultFont(getDiagram(), false, true));
-		Graphiti.getGaService().setLocationAndSize(tastContextText, 0, 0, TASK_CONTEXT_DEFAULT_WIDTH, TEXT_BOX_HEIGHT);
+		Graphiti.getGaService().setLocationAndSize(tastContextText, 0, 0, IPictogramConstants.TASK_CONTEXT_DEFAULT_WIDTH, IPictogramConstants.TEXT_BOX_HEIGHT);
 		link(taskContextNameShape, taskContext);
 		
 		addActivity(taskContextShape, taskContext);
@@ -88,19 +83,17 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
 		activityRectangle.setStyle(StyleUtil.getStyleForActivity(getDiagram()));
 		activityRectangle.setLineWidth(1);
 		activityRectangle.setTransparency(0.7);
-		Graphiti.getGaService().setLocationAndSize(activityRectangle, 0, TEXT_BOX_HEIGHT,
-				TASK_CONTEXT_DEFAULT_WIDTH, TEXT_BOX_HEIGHT);
+		Graphiti.getGaService().setLocationAndSize(activityRectangle, 0, IPictogramConstants.TEXT_BOX_HEIGHT,
+				IPictogramConstants.TASK_CONTEXT_DEFAULT_WIDTH, IPictogramConstants.TEXT_BOX_HEIGHT);
 		link(activityShape, activity);
 
 		Shape activityTextShape = Graphiti.getPeCreateService().createShape(activityShape, false);
 		Text activityNameText = Graphiti.getGaService().createText(activityTextShape, activity.getName());
 		activityNameText.setStyle(StyleUtil.getStyleForText(getDiagram()));
-		Graphiti.getGaService().setLocationAndSize(activityNameText, BUFFER_SPACE, 0,
-				TASK_CONTEXT_DEFAULT_WIDTH, TEXT_BOX_HEIGHT);
+		Graphiti.getGaService().setLocationAndSize(activityNameText, IPictogramConstants.BUFFER_SPACE, 0,
+				IPictogramConstants.TASK_CONTEXT_DEFAULT_WIDTH, IPictogramConstants.TEXT_BOX_HEIGHT);
 		activityNameText.setHorizontalAlignment(Orientation.ALIGNMENT_LEFT);
 		link(activityTextShape, activity);
-
-		layoutPictogramElement(activityShape);
 	}
 
 	private void addPropertiesShape(final ContainerShape taskContextContainerShape) {
@@ -110,7 +103,7 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
 		propertyRectangle.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
 		propertyRectangle.setLineWidth(1);
 		propertyRectangle.setTransparency(0.0);
-		Graphiti.getGaService().setLocationAndSize(propertyRectangle, BORDER_WIDTH, TEXT_BOX_HEIGHT * 2, TASK_CONTEXT_DEFAULT_WIDTH - (BORDER_WIDTH * 2), 25);
+		Graphiti.getGaService().setLocationAndSize(propertyRectangle, IPictogramConstants.BORDER_WIDTH, IPictogramConstants.TEXT_BOX_HEIGHT * 2, IPictogramConstants.TASK_CONTEXT_DEFAULT_WIDTH - (IPictogramConstants.BORDER_WIDTH * 2), 25);
 		link(propertyShape, taskContext);
 	}
 
@@ -121,7 +114,7 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
 		operationPlainRectangle.setStyle(StyleUtil.getStyleForTaskContext(getDiagram()));
 		operationPlainRectangle.setLineWidth(2);
 		operationPlainRectangle.setTransparency(0.0);
-		Graphiti.getGaService().setLocationAndSize(operationPlainRectangle, 10, 67, TASK_CONTEXT_DEFAULT_WIDTH - 20, 25);
+		Graphiti.getGaService().setLocationAndSize(operationPlainRectangle, 10, 67, IPictogramConstants.TASK_CONTEXT_DEFAULT_WIDTH - 20, 25);
 		link(operationShape, taskContext);
 	}
 

@@ -63,6 +63,7 @@ import be.kuleuven.rodinia.graphiti.rtt.features.TaskContextAddFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.TaskContextCreateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.TaskContextLayoutFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.TaskContextUpdateFeature;
+import be.kuleuven.rodinia.graphiti.rtt.features.TaskContextLayoutFeature2;
 
 public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 
@@ -98,7 +99,7 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 
 	@Override
 	public ICreateFeature[] getCreateFeatures() {
-		 return new ICreateFeature[] { new ActivityCreateFeature(this), new TaskContextCreateFeature(this), new InputPortCreateFeature(this), new OutputPortCreateFeature(this), new EventPortCreateFeature(this), new PropertyCreateFeature(this) };
+		 return new ICreateFeature[] { new ActivityCreateFeature(this), new TaskContextCreateFeature(this), new InputPortCreateFeature(this), new OutputPortCreateFeature(this), new EventPortCreateFeature(this), };// new PropertyCreateFeature(this);
 	}
 	
 	@Override
@@ -106,10 +107,7 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	    PictogramElement pictogramElement = context.getPictogramElement();
 	    Object bo = getBusinessObjectForPictogramElement(pictogramElement);
 	    if (bo instanceof TaskContext) {
-	        //return new TaskContextLayoutFeature(this);
-	    }
-	    if (bo instanceof Activity){
-	    	//return new ActivityLayoutFeature(this);
+	        return new TaskContextLayoutFeature2(this);
 	    }
 	    if (bo instanceof Property){
 	    	//return new PropertyLayoutFeature(this);
@@ -121,19 +119,19 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	public IMoveShapeFeature getMoveShapeFeature(IMoveShapeContext context) {
 	    Shape shape = context.getShape();
 	    Object bo = getBusinessObjectForPictogramElement(shape);
-	    if (bo instanceof InputPort) {
-	        return new InputPortMoveFeature(this);
-	    }
-	    if (bo instanceof OutputPort) {
-	        return new OutputPortMoveFeature(this);
-	    }
-	    if (bo instanceof EventPort) {
-	        return new EventPortMoveFeature(this);
-	    }
-	    if (bo instanceof Property){
-	    	///return new PropertyMoveFeature(this);
-	    	return super.getMoveShapeFeature(context);
-	    }
+//	    if (bo instanceof InputPort) {
+//	        return new InputPortMoveFeature(this);
+//	    }
+//	    if (bo instanceof OutputPort) {
+//	        return new OutputPortMoveFeature(this);
+//	    }
+//	    if (bo instanceof EventPort) {
+//	        return new EventPortMoveFeature(this);
+//	    }
+//	    if (bo instanceof Property){
+//	    	///return new PropertyMoveFeature(this);
+//	    	return super.getMoveShapeFeature(context);
+//	    }
 	    return super.getMoveShapeFeature(context);
 	} 
 	
@@ -142,21 +140,21 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	        IResizeShapeContext context) {
 	    Shape shape = context.getShape();
 	    Object bo = getBusinessObjectForPictogramElement(shape);
-	    if (bo instanceof InputPort) {
-	        return new InputPortResizeFeature(this);
-	    }
-	    if (bo instanceof OutputPort) {
-	        return new OutputPortResizeFeature(this);
-	    }
-	    if (bo instanceof EventPort) {
-	        return new EventPortResizeFeature(this);
-	    }
-	    if (bo instanceof Activity){
-	    	return new ActivityResizeFeature(this);
-	    }
-	    if (bo instanceof Property){
-	    	return new PropertyResizeFeature(this);
-	    }
+//	    if (bo instanceof InputPort) {
+//	        return new InputPortResizeFeature(this);
+//	    }
+//	    if (bo instanceof OutputPort) {
+//	        return new OutputPortResizeFeature(this);
+//	    }
+//	    if (bo instanceof EventPort) {
+//	        return new EventPortResizeFeature(this);
+//	    }
+//	    if (bo instanceof Activity){
+//	    	return new ActivityResizeFeature(this);
+//	    }
+//	    if (bo instanceof Property){
+//	    	return new PropertyResizeFeature(this);
+//	    }
 	    return super.getResizeShapeFeature(context);
 	}
 	
@@ -185,24 +183,24 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	       if (bo instanceof TaskContext) {
 	           return new TaskContextUpdateFeature(this);
 	       }
-	       if (bo instanceof Activity) {
-	           return new ActivityUpdateFeature(this);
-	       }
-	       if (bo instanceof InputPort) {
-	           return new InputPortUpdateFeature(this);
-	       }
-	       if (bo instanceof OutputPort) {
-	           return new OutputPortUpdateFeature(this);
-	       }
-	       if (bo instanceof EventPort) {
-	           return new EventPortUpdateFeature(this);
-	       }
-	       if (bo instanceof ConnectionPolicy) {
-	           return new OutputPortUpdateFeature(this);
-	       }
-	       if (bo instanceof Property) {
-	    	   return new PropertyUpdateFeature(this);
-	       }
+//	       if (bo instanceof Activity) {
+//	           return new ActivityUpdateFeature(this);
+//	       }
+//	       if (bo instanceof InputPort) {
+//	           return new InputPortUpdateFeature(this);
+//	       }
+//	       if (bo instanceof OutputPort) {
+//	           return new OutputPortUpdateFeature(this);
+//	       }
+//	       if (bo instanceof EventPort) {
+//	           return new EventPortUpdateFeature(this);
+//	       }
+//	       if (bo instanceof ConnectionPolicy) {
+//	           return new OutputPortUpdateFeature(this);
+//	       }
+//	       if (bo instanceof Property) {
+//	    	   return new PropertyUpdateFeature(this);
+//	       }
 	   }
 	   return super.getUpdateFeature(context);
 	} 
