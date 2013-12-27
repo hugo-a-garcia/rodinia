@@ -133,29 +133,6 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 //	    	return super.getMoveShapeFeature(context);
 //	    }
 	    return super.getMoveShapeFeature(context);
-	} 
-	
-	@Override
-	public IResizeShapeFeature getResizeShapeFeature(
-	        IResizeShapeContext context) {
-	    Shape shape = context.getShape();
-	    Object bo = getBusinessObjectForPictogramElement(shape);
-//	    if (bo instanceof InputPort) {
-//	        return new InputPortResizeFeature(this);
-//	    }
-//	    if (bo instanceof OutputPort) {
-//	        return new OutputPortResizeFeature(this);
-//	    }
-//	    if (bo instanceof EventPort) {
-//	        return new EventPortResizeFeature(this);
-//	    }
-//	    if (bo instanceof Activity){
-//	    	return new ActivityResizeFeature(this);
-//	    }
-//	    if (bo instanceof Property){
-//	    	return new PropertyResizeFeature(this);
-//	    }
-	    return super.getResizeShapeFeature(context);
 	}
 	
 	 @Override
