@@ -8,9 +8,12 @@ import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.services.Graphiti;
 import org.eclipse.graphiti.ui.platform.GFPropertySection;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.CCombo;
 import org.eclipse.swt.custom.CLabel;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.layout.FormAttachment;
 import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.widgets.Composite;
@@ -20,6 +23,7 @@ import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetWidgetFactory;
 
 import be.kueleuven.rodinia.model.rtt.Activity;
+import be.kueleuven.rodinia.model.rtt.Scheduler;
 
 public class ActivitySection extends GFPropertySection implements ITabbedPropertyConstants {
 	
@@ -27,6 +31,7 @@ public class ActivitySection extends GFPropertySection implements ITabbedPropert
 	private Text cpuAffinityText;
 	private Text periodText;
 	private Text priorityText;
+	private CCombo schedulerCombo;
 	
 	private ModifyListener nameTextListener = new ModifyListener() {
 
@@ -79,6 +84,43 @@ public class ActivitySection extends GFPropertySection implements ITabbedPropert
 				CustomContext context = new CustomContext();
 				execute(feature, context);
 			}
+		}
+	};
+	
+	private SelectionListener schedulerComboListener = new SelectionListener() {
+		
+		@Override
+		public void widgetSelected(SelectionEvent e) {
+
+			
+			int selectionIndex = schedulerCombo.getSelectionIndex();
+			final String item = schedulerCombo.getItem(selectionIndex);
+			
+			IFeature feature = new AbstractFeature(getDiagramTypeProvider().getFeatureProvider()) {
+				@Override
+				public boolean canExecute(IContext context) {
+					return true;
+				}
+				@Override
+				public void execute(IContext context) {
+					PictogramElement pe = getSelectedPictogramElement();
+		   			if (pe != null) {
+		   				Object bo = Graphiti.getLinkService().getBusinessObjectForLinkedPictogramElement(pe);
+		   				if (bo == null)
+		   					return;
+		   		   		if (bo instanceof Activity){
+		   		   			Activity activity = (Activity) bo;
+		   		   			activity.setScheduler(Scheduler.get(item));
+		   		   		}
+		   			}
+				}	
+			};
+	   		CustomContext context = new CustomContext();
+	   		execute(feature, context);
+		}
+		
+		@Override
+		public void widgetDefaultSelected(SelectionEvent e) {
 		}
 	};
 	
@@ -206,6 +248,12 @@ public class ActivitySection extends GFPropertySection implements ITabbedPropert
 		nameText = factory.createText(composite, "");
 		CLabel periodLabel = factory.createCLabel(composite, "Period:");
 		periodText = factory.createText(composite, "");
+		CLabel schedulerLabel = factory.createCLabel(composite, "Scheduler:");
+		schedulerCombo = factory.createCCombo(composite);
+		for (Scheduler scheduler : Scheduler.values()) {
+			schedulerCombo.add(scheduler.getName());
+		}
+
 		CLabel priorityLabel = factory.createCLabel(composite, "Priority:");
 		priorityText = factory.createText(composite, "");
 		CLabel cpuAffinityLabel = factory.createCLabel(composite, "CPU Afinity:");
@@ -224,9 +272,20 @@ public class ActivitySection extends GFPropertySection implements ITabbedPropert
 		nameText.setLayoutData(nameTextData);
 		nameText.addModifyListener(nameTextListener);
 		
+		FormData schedulerLabelData = new FormData();
+		schedulerLabelData.left = new FormAttachment(0, 0);
+		schedulerLabelData.top = new FormAttachment(nameLabel, ITabbedPropertyConstants.VSPACE);
+		schedulerLabel.setLayoutData(schedulerLabelData);
+		
+		FormData schedulerComboData = new FormData();
+		schedulerComboData.left = new FormAttachment(longestLabel, ITabbedPropertyConstants.HSPACE);
+		schedulerComboData.right = new FormAttachment(100);
+		schedulerComboData.top = new FormAttachment(schedulerLabel, 0, SWT.CENTER);
+		schedulerCombo.setLayoutData(schedulerComboData);
+		
 		FormData periodLabelData = new FormData();
 		periodLabelData.left = new FormAttachment(0, 0);
-		periodLabelData.top = new FormAttachment(nameLabel, ITabbedPropertyConstants.VSPACE);
+		periodLabelData.top = new FormAttachment(schedulerLabel, ITabbedPropertyConstants.VSPACE);
 		periodLabel.setLayoutData(periodLabelData);
 		
 		FormData periodTextData = new FormData();
@@ -264,6 +323,7 @@ public class ActivitySection extends GFPropertySection implements ITabbedPropert
 	@Override
 	public void refresh() {
 		nameText.removeModifyListener(nameTextListener);
+		schedulerCombo.removeSelectionListener(schedulerComboListener);
 		cpuAffinityText.removeModifyListener(cpuAffinityModify);
 		periodText.removeModifyListener(periodModifyTextListener);
 		priorityText.removeModifyListener(priorityModifyLisstener);
@@ -276,12 +336,19 @@ public class ActivitySection extends GFPropertySection implements ITabbedPropert
 			}
 			if (bo instanceof Activity) {
 				nameText.setText(((Activity) bo).getName());
+				String schedulerName = ((Activity) bo).getScheduler().getName();
+				for (int index = 0; index < schedulerCombo.getItemCount(); index++) {
+					if (schedulerCombo.getItem(index).equals(schedulerName)) {
+						schedulerCombo.select(index);
+					}
+				}
 				cpuAffinityText.setText(((Activity) bo).getCpuAffinity());
 				periodText.setText("" + ((Activity) bo).getPeriod());
 				priorityText.setText("" + ((Activity) bo).getPriority());
 			}
 		}
 		nameText.addModifyListener(nameTextListener);
+		schedulerCombo.addSelectionListener(schedulerComboListener);
 		cpuAffinityText.addModifyListener(cpuAffinityModify);
 		periodText.addModifyListener(periodModifyTextListener);
 		priorityText.addModifyListener(priorityModifyLisstener);

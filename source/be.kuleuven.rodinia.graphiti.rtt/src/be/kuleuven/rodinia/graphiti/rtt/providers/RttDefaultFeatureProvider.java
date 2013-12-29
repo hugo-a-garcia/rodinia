@@ -29,6 +29,7 @@ import be.kueleuven.rodinia.model.rtt.Property;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
 import be.kuleuven.rodinia.graphiti.rtt.features.ActivityAddFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.ActivityCreateFeature;
+import be.kuleuven.rodinia.graphiti.rtt.features.ActivityUpdateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.ConnectionPolicyAddFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.ConnectionPolicyCreateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.ConnectionPolicyReconnectFeature;
@@ -141,9 +142,9 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	       if (bo instanceof TaskContext) {
 	           return new TaskContextUpdateFeature(this);
 	       }
-//	       if (bo instanceof Activity) {
-//	           return new ActivityUpdateFeature(this);
-//	       }
+	       if (bo instanceof Activity) {
+	           return new ActivityUpdateFeature(this);
+	       }
 //	       if (bo instanceof InputPort) {
 //	           return new InputPortUpdateFeature(this);
 //	       }
