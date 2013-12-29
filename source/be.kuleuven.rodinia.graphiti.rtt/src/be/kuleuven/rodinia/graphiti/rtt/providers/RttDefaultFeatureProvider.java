@@ -31,8 +31,6 @@ import be.kueleuven.rodinia.model.rtt.InputPort;
 import be.kueleuven.rodinia.model.rtt.OutputPort;
 import be.kueleuven.rodinia.model.rtt.Property;
 import be.kueleuven.rodinia.model.rtt.TaskContext;
-import be.kuleuven.rodinia.graphiti.rtt.features.ActivityAddFeature;
-import be.kuleuven.rodinia.graphiti.rtt.features.ActivityCreateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.ActivityUpdateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.ConnectionPolicyAddFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.ConnectionPolicyCreateFeature;
