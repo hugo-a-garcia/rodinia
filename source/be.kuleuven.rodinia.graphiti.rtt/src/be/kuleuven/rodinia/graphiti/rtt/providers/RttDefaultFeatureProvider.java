@@ -4,15 +4,19 @@ import org.eclipse.graphiti.dt.IDiagramTypeProvider;
 import org.eclipse.graphiti.features.IAddFeature;
 import org.eclipse.graphiti.features.ICreateConnectionFeature;
 import org.eclipse.graphiti.features.ICreateFeature;
+import org.eclipse.graphiti.features.IDeleteFeature;
 import org.eclipse.graphiti.features.ILayoutFeature;
 import org.eclipse.graphiti.features.IMoveShapeFeature;
 import org.eclipse.graphiti.features.IReconnectionFeature;
+import org.eclipse.graphiti.features.IRemoveFeature;
 import org.eclipse.graphiti.features.IUpdateFeature;
 import org.eclipse.graphiti.features.context.IAddContext;
 import org.eclipse.graphiti.features.context.ICustomContext;
+import org.eclipse.graphiti.features.context.IDeleteContext;
 import org.eclipse.graphiti.features.context.ILayoutContext;
 import org.eclipse.graphiti.features.context.IMoveShapeContext;
 import org.eclipse.graphiti.features.context.IReconnectionContext;
+import org.eclipse.graphiti.features.context.IRemoveContext;
 import org.eclipse.graphiti.features.context.IUpdateContext;
 import org.eclipse.graphiti.features.custom.ICustomFeature;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
@@ -70,9 +74,6 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	    if (context.getNewObject() instanceof ConnectionPolicy){
 	    	return new ConnectionPolicyAddFeature(this);
 	    }
-	    if (context.getNewObject() instanceof Activity){
-	    	return new ActivityAddFeature(this);
-	    }
 	    if (context.getNewObject() instanceof Property){
 	    	return new PropertyAddFeature(this);
 	    }
@@ -81,7 +82,7 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 
 	@Override
 	public ICreateFeature[] getCreateFeatures() {
-		 return new ICreateFeature[] { new ActivityCreateFeature(this), new TaskContextCreateFeature(this), new InputPortCreateFeature(this), new OutputPortCreateFeature(this), new EventPortCreateFeature(this), };// new PropertyCreateFeature(this);
+		 return new ICreateFeature[] { new TaskContextCreateFeature(this), new InputPortCreateFeature(this), new OutputPortCreateFeature(this), new EventPortCreateFeature(this), };// new PropertyCreateFeature(this);
 	}
 	
 	@Override
@@ -162,6 +163,26 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 //	       }
 	   }
 	   return super.getUpdateFeature(context);
-	} 
+	}
+	
+	@Override
+	public IDeleteFeature getDeleteFeature(IDeleteContext context) {
+		PictogramElement pictogramElement = context.getPictogramElement();
+	    Object bo = getBusinessObjectForPictogramElement(pictogramElement);
+	    if (bo instanceof Activity) {
+	    	return null;
+	    }
+		return super.getDeleteFeature(context);
+	}
+
+	@Override
+	public IRemoveFeature getRemoveFeature(IRemoveContext context) {
+		PictogramElement pictogramElement = context.getPictogramElement();
+	    Object bo = getBusinessObjectForPictogramElement(pictogramElement);
+	    if (bo instanceof Activity) {
+	    	return null;
+	    }
+		return super.getRemoveFeature(context);
+	}
 
 }
