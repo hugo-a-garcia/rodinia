@@ -41,6 +41,7 @@ import be.kuleuven.rodinia.graphiti.rtt.features.EventPortAddFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.EventPortCreateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.InputPortAddFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.InputPortCreateFeature;
+import be.kuleuven.rodinia.graphiti.rtt.features.InputPortUpdateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.OutputPortAddFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.OutputPortCreateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.PropertyAddFeature;
@@ -144,9 +145,9 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	       if (bo instanceof Activity) {
 	           return new ActivityUpdateFeature(this);
 	       }
-//	       if (bo instanceof InputPort) {
-//	           return new InputPortUpdateFeature(this);
-//	       }
+	       if (bo instanceof InputPort) {
+	           return new InputPortUpdateFeature(this);
+	       }
 //	       if (bo instanceof OutputPort) {
 //	           return new OutputPortUpdateFeature(this);
 //	       }
