@@ -20,16 +20,19 @@ public class TaskContextLayoutFeature2 extends AbstractLayoutFeature {
 	private boolean anythingChanged;
 
 	public TaskContextLayoutFeature2(IFeatureProvider fp) {
+
 		super(fp);
 	}
 
 	@Override
 	public boolean canLayout(ILayoutContext context) {
+
 		return true;
 	}
 
 	@Override
 	public boolean layout(ILayoutContext context) {
+
 		anythingChanged = false;
 		ContainerShape containerShape = (ContainerShape) context.getPictogramElement();
 		GraphicsAlgorithm containerGa = containerShape.getGraphicsAlgorithm();
@@ -46,10 +49,13 @@ public class TaskContextLayoutFeature2 extends AbstractLayoutFeature {
 		}
 		int containerWidth = containerGa.getWidth();
 		int containerHeight = containerGa.getHeight();
-		for (GraphicsAlgorithm child :containerGa.getGraphicsAlgorithmChildren() ) {
+		for (GraphicsAlgorithm child : containerGa.getGraphicsAlgorithmChildren()) {
 			if (child instanceof RoundedRectangle) {
-				child.setWidth(containerWidth-2*IPictogramConstants.MARGIN);
-				child.setHeight(containerHeight-2*IPictogramConstants.MARGIN);
+				child.setWidth(containerWidth - 2 * IPictogramConstants.MARGIN);
+				child.setHeight(containerHeight - 2 * IPictogramConstants.MARGIN);
+			}
+			if (child instanceof Text) {
+				child.setWidth(containerWidth - 2 * IPictogramConstants.MARGIN);
 			}
 		}
 		search(containerShape);
@@ -57,10 +63,9 @@ public class TaskContextLayoutFeature2 extends AbstractLayoutFeature {
 	}
 
 	private void search(ContainerShape containerShape) {
+
 		GraphicsAlgorithm containerGa = containerShape.getGraphicsAlgorithm();
-		
 		int containerWidth = containerGa.getWidth();
-		int containerHeight = containerGa.getHeight();
 
 		IGaService gaService = Graphiti.getGaService();
 		for (Shape shape : containerShape.getChildren()) {
@@ -68,26 +73,24 @@ public class TaskContextLayoutFeature2 extends AbstractLayoutFeature {
 				if (!((ContainerShape) shape).getChildren().isEmpty()) {
 					search((ContainerShape) shape);
 				}
-				containerGa.setWidth(containerWidth - 2 * IPictogramConstants.MARGIN);
-				containerGa.setHeight(containerHeight - 2 * IPictogramConstants.MARGIN);
 			}
 			GraphicsAlgorithm graphicsAlgorithm = shape.getGraphicsAlgorithm();
-			
 			IDimension size = gaService.calculateSize(graphicsAlgorithm);
 			if (containerWidth != size.getWidth()) {
 				if (graphicsAlgorithm instanceof Text) {
 					gaService.setWidth(graphicsAlgorithm, containerWidth - 2 * IPictogramConstants.MARGIN);
 					anythingChanged = true;
 				}
-				if(graphicsAlgorithm instanceof Rectangle) {
-					gaService.setWidth(graphicsAlgorithm, containerWidth);
+				if (graphicsAlgorithm instanceof Rectangle) {
+					gaService.setWidth(graphicsAlgorithm, containerWidth - 2 * IPictogramConstants.MARGIN);
 					if (getBusinessObjectForPictogramElement(graphicsAlgorithm.getPictogramElement()) instanceof Activity) {
 						gaService.setHeight(graphicsAlgorithm, IPictogramConstants.TEXT_BOX_HEIGHT);
-					};
+					}
+					;
 					anythingChanged = true;
 				}
 			}
-		}	
+		}
 	}
 
 }
