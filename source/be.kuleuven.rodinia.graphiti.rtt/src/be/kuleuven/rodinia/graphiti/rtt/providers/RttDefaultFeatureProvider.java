@@ -142,9 +142,9 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	       if (bo instanceof TaskContext) {
 	           return new TaskContextUpdateFeature(this);
 	       }
-	       if (bo instanceof Activity) {
-	           return new ActivityUpdateFeature(this);
-	       }
+//	       if (bo instanceof Activity) {
+//	           return new ActivityUpdateFeature(this);
+//	       }
 	       if (bo instanceof InputPort) {
 	           return new InputPortUpdateFeature(this);
 	       }

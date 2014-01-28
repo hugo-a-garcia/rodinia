@@ -12,13 +12,13 @@ public class RttDiagramTypeProvider extends AbstractDiagramTypeProvider {
 		setFeatureProvider(new RttDefaultFeatureProvider(this));
 	}
 	
-//    @Override
-//    public IToolBehaviorProvider[] getAvailableToolBehaviorProviders() {
-//        if (toolBehaviorProviders == null) {
-//            toolBehaviorProviders =
-//                new IToolBehaviorProvider[] { new RttToolBehaviorProvider(this) };
-//        }
-//        return toolBehaviorProviders;
-//    }
+    @Override
+    public IToolBehaviorProvider[] getAvailableToolBehaviorProviders() {
+        if (toolBehaviorProviders == null) {
+            toolBehaviorProviders =
+                new IToolBehaviorProvider[] { new RttToolBehaviorProvider(this) };
+        }
+        return toolBehaviorProviders;
+    }
 
 }
