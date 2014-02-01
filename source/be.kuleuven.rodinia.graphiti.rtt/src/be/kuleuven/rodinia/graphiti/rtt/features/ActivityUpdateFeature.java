@@ -8,7 +8,6 @@ import org.eclipse.graphiti.features.impl.Reason;
 import org.eclipse.graphiti.mm.algorithms.Text;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.PictogramElement;
-import org.eclipse.graphiti.mm.pictograms.Shape;
 
 import be.kueleuven.rodinia.model.rtt.Activity;
 
@@ -25,55 +24,43 @@ public class ActivityUpdateFeature extends AbstractUpdateFeature {
     }
  
     public IReason updateNeeded(IUpdateContext context) {
-        String pictogramName = null;
+        String textValue = null;
         PictogramElement pictogramElement = context.getPictogramElement();
         if (pictogramElement instanceof ContainerShape) {
             ContainerShape containerShape = (ContainerShape) pictogramElement;
-            for (Shape shape : containerShape.getChildren()) {
-                if (shape.getGraphicsAlgorithm() instanceof Text) {
-                    Text text = (Text) shape.getGraphicsAlgorithm();
-                    pictogramName = text.getValue();
+                if (containerShape.getGraphicsAlgorithm() instanceof Text) {
+                    Text text = (Text) containerShape.getGraphicsAlgorithm();
+                    textValue = text.getValue();
                 }
-            }
         }
- 
-        String businessName = null;
+        String actvityName = null;
         Object businessObject = getBusinessObjectForPictogramElement(pictogramElement);
         if (businessObject instanceof Activity) {
             Activity activity = (Activity) businessObject;
-            businessName = activity.getName();
+            actvityName = activity.getName();
         }
- 
-        boolean updateNameNeeded =
-            ((pictogramName == null && businessName != null) ||
-                (pictogramName != null && !pictogramName.equals(businessName)));
-        if (updateNameNeeded) {
+        if (!textValue.equals(actvityName)) {
             return Reason.createTrueReason("Name is out of date");
-        } else {
-            return Reason.createFalseReason();
         }
+        return Reason.createFalseReason();
     }
  
     public boolean update(IUpdateContext context) {
-        String businessName = null;
+        String activityName = null;
         PictogramElement pictogramElement = context.getPictogramElement();
 		Object businessObject = getBusinessObjectForPictogramElement(pictogramElement);
         if (businessObject instanceof Activity) {
-            Activity eClass = (Activity) businessObject;
-            businessName = eClass.getName();
+            Activity activity = (Activity) businessObject;
+            activityName = activity.getName();
         }
- 
         if (pictogramElement instanceof ContainerShape) {
-            ContainerShape cs = (ContainerShape) pictogramElement;
-            for (Shape shape : cs.getChildren()) {
-                if (shape.getGraphicsAlgorithm() instanceof Text) {
-                    Text text = (Text) shape.getGraphicsAlgorithm();
-                    text.setValue(businessName);
+            ContainerShape containerShape = (ContainerShape) pictogramElement;
+                if (containerShape.getGraphicsAlgorithm() instanceof Text) {
+                    Text text = (Text) containerShape.getGraphicsAlgorithm();
+                    text.setValue(activityName);
                     return true;
                 }
-            }
         }
- 
         return false;
     }
 

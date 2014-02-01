@@ -88,22 +88,24 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
 		{
 			Activity activity = taskContext.getActivity();
 
-			ContainerShape activityShape = peCreateService.createContainerShape(mainContainerShape, true);
-			Rectangle activityRectangle = gaService.createPlainRectangle(activityShape);
-			// activityRectangle.setStyle(StyleUtil.getStyleForActivity(getDiagram()));
-			activityRectangle.setLineVisible(false);
-			activityRectangle.setTransparency(0.7);
-			activityRectangle.setFilled(true);
-			activityRectangle.setBackground(gaService.manageColor(targetDiagram, ACTIVITY_BACKGROUND));
-			gaService.setLocationAndSize(activityRectangle, margin, textBoxHeight + margin, taskContextWidth,
-					textBoxHeight);
-			link(activityShape, activity);
+//			ContainerShape activityShape = peCreateService.createContainerShape(mainContainerShape, false);
+//			Rectangle activityRectangle = gaService.createPlainRectangle(activityShape);
+//			// activityRectangle.setStyle(StyleUtil.getStyleForActivity(getDiagram()));
+//			activityRectangle.setLineVisible(false);
+//			activityRectangle.setTransparency(0.7);
+//			activityRectangle.setFilled(true);
+//			activityRectangle.setBackground(gaService.manageColor(targetDiagram, ACTIVITY_BACKGROUND));
+//			gaService.setLocationAndSize(activityRectangle, margin, textBoxHeight + margin, taskContextWidth,
+//					textBoxHeight);
+			//link(activityShape, activity);
 
-			Shape activityTextShape = Graphiti.getPeCreateService().createShape(mainContainerShape, false);
+			ContainerShape activityTextShape = Graphiti.getPeCreateService().createContainerShape(mainContainerShape, true);
 			Text activityNameText = Graphiti.getGaService().createText(activityTextShape, activity.getName());
 			// activityNameText.setStyle(StyleUtil.getStyleForText(getDiagram()));
 			activityNameText.setFont(gaService.manageDefaultFont(getDiagram(), false, false));
+			activityNameText.setLineVisible(false);
 			activityNameText.setForeground(gaService.manageColor(targetDiagram, ACTIVITY_FOREGROUND));
+			activityNameText.setBackground(gaService.manageColor(targetDiagram, ACTIVITY_BACKGROUND));
 			Graphiti.getGaService().setLocationAndSize(activityNameText, margin + bufferSpace, textBoxHeight + margin,
 					taskContextWidth - bufferSpace, textBoxHeight);
 			activityNameText.setHorizontalAlignment(Orientation.ALIGNMENT_LEFT);
@@ -112,8 +114,8 @@ public class TaskContextAddFeature extends AbstractAddShapeFeature {
 		// addPropertiesShape(taskContextShape);
 		// addOperationShape(taskContextShape);
 
-		IDirectEditingInfo directEditingInfo = getFeatureProvider().getDirectEditingInfo();
-		directEditingInfo.setMainPictogramElement(mainContainerShape);
+		//IDirectEditingInfo directEditingInfo = getFeatureProvider().getDirectEditingInfo();
+		//directEditingInfo.setMainPictogramElement(mainContainerShape);
 
 		layoutPictogramElement(mainContainerShape);
 		return mainContainerShape;
