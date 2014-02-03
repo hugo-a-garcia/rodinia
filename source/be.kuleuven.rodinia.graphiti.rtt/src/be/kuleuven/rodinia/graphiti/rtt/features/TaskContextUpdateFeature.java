@@ -9,7 +9,6 @@ import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.algorithms.Text;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.PictogramElement;
-import org.eclipse.graphiti.mm.pictograms.Shape;
 
 import be.kueleuven.rodinia.model.rtt.TaskContext;
 
@@ -27,38 +26,26 @@ public class TaskContextUpdateFeature extends AbstractUpdateFeature {
 	}
 
 	public IReason updateNeeded(IUpdateContext context) {
-
-		String activityNamePic = null;
-		String taskContextNamePic = null;
+		
+		String textValue = null;
 		PictogramElement pictogramElement = context.getPictogramElement();
 		if (pictogramElement instanceof ContainerShape) {
 			ContainerShape containerShape = (ContainerShape) pictogramElement;
-			for (Shape shape : containerShape.getChildren()) {
-				if (shape.getGraphicsAlgorithm() instanceof Text) {
-					Text text = (Text) shape.getGraphicsAlgorithm();
-					activityNamePic = text.getValue();
-					System.out.println("PIC = " + activityNamePic);
-				}
-			}
 			for (GraphicsAlgorithm child : containerShape.getGraphicsAlgorithm().getGraphicsAlgorithmChildren()) {
 				if (child instanceof Text) {
-					taskContextNamePic = ((Text) child).getValue();
-					System.out.println("TA = " + taskContextNamePic);
+					textValue = ((Text) child).getValue();
 				}
 			}
 		}
 
 		String taskContextName = null;
-		String activityName = null;
 		Object businessObject = getBusinessObjectForPictogramElement(pictogramElement);
 		if (businessObject instanceof TaskContext) {
 			TaskContext taskContext = (TaskContext) businessObject;
 			taskContextName = taskContext.getName();
-			System.out.println("BN = " + taskContextName);
-			activityName = taskContext.getActivity().getName();
 		}
 
-		if (!(taskContextName.equals(taskContextNamePic)) || !(activityName.equals(activityNamePic))) {
+		if (!(taskContextName.equals(textValue))) {
 			return Reason.createTrueReason("Update Needed");
 		}
 		return Reason.createFalseReason();
