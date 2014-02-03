@@ -48,6 +48,7 @@ import be.kuleuven.rodinia.graphiti.rtt.features.PropertyAddFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.TaskContextAddFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.TaskContextCreateFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.TaskContextLayoutFeature2;
+import be.kuleuven.rodinia.graphiti.rtt.features.TaskContextLayoutFeature;
 import be.kuleuven.rodinia.graphiti.rtt.features.TaskContextUpdateFeature;
 
 public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
@@ -89,7 +90,7 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	    PictogramElement pictogramElement = context.getPictogramElement();
 	    Object bo = getBusinessObjectForPictogramElement(pictogramElement);
 	    if (bo instanceof TaskContext) {
-	        return new TaskContextLayoutFeature2(this);
+	        return new TaskContextLayoutFeature(this);
 	    }
 	    if (bo instanceof Property){
 	    	//return new PropertyLayoutFeature(this);
@@ -142,9 +143,9 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	       if (bo instanceof TaskContext) {
 	           return new TaskContextUpdateFeature(this);
 	       }
-//	       if (bo instanceof Activity) {
-//	           return new ActivityUpdateFeature(this);
-//	       }
+	       if (bo instanceof Activity) {
+	           return new ActivityUpdateFeature(this);
+	       }
 	       if (bo instanceof InputPort) {
 	           return new InputPortUpdateFeature(this);
 	       }
@@ -164,24 +165,24 @@ public class RttDefaultFeatureProvider extends DefaultFeatureProvider {
 	   return super.getUpdateFeature(context);
 	}
 	
-	@Override
-	public IDeleteFeature getDeleteFeature(IDeleteContext context) {
-		PictogramElement pictogramElement = context.getPictogramElement();
-	    Object bo = getBusinessObjectForPictogramElement(pictogramElement);
-	    if (bo instanceof Activity) {
-	    	return null;
-	    }
-		return super.getDeleteFeature(context);
-	}
-
-	@Override
-	public IRemoveFeature getRemoveFeature(IRemoveContext context) {
-		PictogramElement pictogramElement = context.getPictogramElement();
-	    Object bo = getBusinessObjectForPictogramElement(pictogramElement);
-	    if (bo instanceof Activity) {
-	    	return null;
-	    }
-		return super.getRemoveFeature(context);
-	}
+//	@Override
+//	public IDeleteFeature getDeleteFeature(IDeleteContext context) {
+//		PictogramElement pictogramElement = context.getPictogramElement();
+//	    Object bo = getBusinessObjectForPictogramElement(pictogramElement);
+//	    if (bo instanceof Activity) {
+//	    	return null;
+//	    }
+//		return super.getDeleteFeature(context);
+//	}
+//
+//	@Override
+//	public IRemoveFeature getRemoveFeature(IRemoveContext context) {
+//		PictogramElement pictogramElement = context.getPictogramElement();
+//	    Object bo = getBusinessObjectForPictogramElement(pictogramElement);
+//	    if (bo instanceof Activity) {
+//	    	return null;
+//	    }
+//		return super.getRemoveFeature(context);
+//	}
 
 }
